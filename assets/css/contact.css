@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    line-height: 1.6;
+    padding: 20px;
+    color: #333;
+}
+
+nav.main-nav {
+    background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav.main-nav a:hover {
+    color: #ffeb3b;
+    text-decoration: underline;
+}
+
+nav.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+
+
+.contact {
+    /* background-color: black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    /* color: red; */
+    padding-top: 9px;
+    margin-top: 2.5%;
+
+
+
+}
+
+.con {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: red;
+}
+
+p {
+    background-color: blueviolet;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 1s ease;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 15%;
+    margin-left: 15%;
+    border-radius: 8px;
+    text-align: center;
+
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #007bff;
+    margin-bottom: 25px;
+    font-size: 24px;
+    background: white;
+    border: 3px solid #007bff;
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 420px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-left: 500px;
+
+}
+
+form:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: #007bff;
+}
+
+/* General Page Styling */
+/* body {
+  font-family: "Poppins", sans-serif;
+  background: #f3f6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+} */
+
+/* Contact Form Box */
+.contact-container {
+    background: white;
+    border: 3px solid #007bff;
+    border-radius: 20px;
+    padding: 40px 50px;
+    width: 420px;
+    max-width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Title */
+.contact-container h2 {
+    color: #007bff;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Row layout for two inputs */
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Input fields */
+input,
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1.5px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.3);
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 15px;
+}
+
+/* Submit Button */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056d2;
+}
+
+/* ---------------------------
+   RESPONSIVE DESIGN
+---------------------------- */
+@media (max-width: 600px) {
+    .row {
+        flex-direction: column;
+        /* Stack inputs vertically */
+    }
+
+    .contact-container {
+        width: 95%;
+        padding: 30px 25px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input,
+    textarea {
+        font-size: 15px;
+    }
+}
+
+.about-intro h2 {
+    color: #7e3a3e;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.about-intro h2 span {
+    color: #5a61d6;
+}
+
+.about-intro h4 {
+    color: #7e3a3e;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    margin-top: 10px;
+}
+
+.about-intro h4 span {
+    color: #5a61d6;
+}
