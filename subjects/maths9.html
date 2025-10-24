@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .subject-section {
+            margin-bottom: 4rem;
+        }
+
+        .subject-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 2rem 0 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+
+        .topic-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .topic-content ul li {
+            position: relative;
+            padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .topic-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+        }
+
+        .topic-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .topic-content > p {
+            background: #fff9e6;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .topic-content p strong {
+            color: #667eea;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .formula-box {
+            background: #f0f9ff;
+            border-left: 4px solid #0ea5e9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../school.html" class="active">School</a></li>
+                    <li><a href="../college.html">College</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="../school.html">School</a> / <a href="../class9.html">Class 9</a> / <span>Mathematics</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Class 9 Mathematics</h1>
+            <p class="page-description">Complete chapter-wise notes following NCERT curriculum with formulas and examples</p>
+
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary>Chapter 1: Number Systems</summary>
+                    <div class="topic-content">
+                        <p>Learn about rational and irrational numbers, real numbers, their properties, representation on number line, and operations on real numbers.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Number Systems</li>
+                            <li>Irrational Numbers</li>
+                            <li>Real Numbers and Their Decimal Expansions</li>
+                            <li>Representing Real Numbers on the Number Line</li>
+                            <li>Operations on Real Numbers</li>
+                            <li>Laws of Exponents for Real Numbers</li>
+                            <li>Rationalization of Denominators</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Formulas:</strong><br>
+                            • √(ab) = √a × √b<br>
+                            • √(a/b) = √a / √b<br>
+                            • (√a + √b)(√a - √b) = a - b<br>
+                            • (a + √b)(a - √b) = a² - b
+                        </div>
+                        <a href="number-system9.html" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 2: Polynomials</summary>
+                    <div class="topic-content">
+                        <p>Understand polynomials in one variable, degree of polynomial, zeros of polynomial, remainder theorem, factorization, and algebraic identities.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Polynomials</li>
+                            <li>Polynomials in One Variable</li>
+                            <li>Zeros of a Polynomial</li>
+                            <li>Remainder Theorem</li>
+                            <li>Factor Theorem</li>
+                            <li>Factorization of Polynomials</li>
+                            <li>Algebraic Identities</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Identities:</strong><br>
+                            • (x + y)² = x² + 2xy + y²<br>
+                            • (x - y)² = x² - 2xy + y²<br>
+                            • x² - y² = (x + y)(x - y)<br>
+                            • (x + a)(x + b) = x² + (a+b)x + ab<br>
+                            • (x + y + z)² = x² + y² + z² + 2xy + 2yz + 2zx<br>
+                            • (x + y)³ = x³ + y³ + 3xy(x + y)<br>
+                            • x³ + y³ + z³ - 3xyz = (x+y+z)(x²+y²+z²-xy-yz-zx)
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 3: Coordinate Geometry</summary>
+                    <div class="topic-content">
+                        <p>Introduction to Cartesian plane, plotting points, coordinates, quadrants, and finding distance between two points.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Coordinate Geometry</li>
+                            <li>Cartesian System</li>
+                            <li>Plotting Points in the Plane</li>
+                            <li>Coordinates of a Point</li>
+                            <li>Four Quadrants</li>
+                            <li>Abscissa and Ordinate</li>
+                            <li>Origin and Axes</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Concepts:</strong><br>
+                            • Point notation: P(x, y)<br>
+                            • Origin: O(0, 0)<br>
+                            • x-axis: y = 0<br>
+                            • y-axis: x = 0
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 4: Linear Equations in Two Variables</summary>
+                    <div class="topic-content">
+                        <p>Solving linear equations with two variables, graphical representation of linear equations, and equations of lines parallel to axes.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Linear Equations</li>
+                            <li>Linear Equations in Two Variables</li>
+                            <li>Solution of a Linear Equation</li>
+                            <li>Graph of a Linear Equation in Two Variables</li>
+                            <li>Equations of Lines Parallel to x-axis and y-axis</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Standard Forms:</strong><br>
+                            • Linear equation: ax + by + c = 0<br>
+                            • Slope-intercept form: y = mx + c<br>
+                            • Two-point form: (y-y₁)/(y₂-y₁) = (x-x₁)/(x₂-x₁)
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 5: Introduction to Euclid's Geometry</summary>
+                    <div class="topic-content">
+                        <p>Learn about Euclid's definitions, axioms, postulates, and the axiomatic approach to geometry.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Euclid's Geometry</li>
+                            <li>Euclid's Definitions</li>
+                            <li>Euclid's Axioms</li>
+                            <li>Euclid's Postulates</li>
+                            <li>Equivalent Versions of Euclid's Fifth Postulate</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Euclid's Axioms (Examples):</strong><br>
+                            • Things which are equal to the same thing are equal to one another<br>
+                            • If equals are added to equals, the wholes are equal<br>
+                            • If equals are subtracted from equals, remainders are equal<br>
+                            • The whole is greater than the part
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 6: Lines and Angles</summary>
+                    <div class="topic-content">
+                        <p>Study types of angles, parallel lines, transversals, angle relationships, and theorems on angles.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Basic Terms and Definitions</li>
+                            <li>Intersecting Lines and Non-intersecting Lines</li>
+                            <li>Pairs of Angles</li>
+                            <li>Parallel Lines and a Transversal</li>
+                            <li>Corresponding Angles</li>
+                            <li>Alternate Interior Angles</li>
+                            <li>Alternate Exterior Angles</li>
+                            <li>Interior Angles on the Same Side of Transversal</li>
+                            <li>Lines Parallel to the Same Line</li>
+                            <li>Angle Sum Property of a Triangle</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Results:</strong><br>
+                            • Sum of angles in a triangle = 180°<br>
+                            • Linear pair of angles = 180°<br>
+                            • Vertically opposite angles are equal<br>
+                            • Corresponding angles are equal (parallel lines)<br>
+                            • Alternate interior angles are equal (parallel lines)
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 7: Triangles</summary>
+                    <div class="topic-content">
+                        <p>Learn about congruence of triangles, criteria for congruence (SSS, SAS, ASA, RHS), properties of triangles, and inequalities in triangles.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Triangles</li>
+                            <li>Congruence of Triangles</li>
+                            <li>Criteria for Congruence of Triangles</li>
+                            <li>SSS Congruence Rule</li>
+                            <li>SAS Congruence Rule</li>
+                            <li>ASA Congruence Rule</li>
+                            <li>RHS Congruence Rule</li>
+                            <li>Some Properties of a Triangle</li>
+                            <li>Inequalities in a Triangle</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Congruence Criteria:</strong><br>
+                            • SSS: Side-Side-Side<br>
+                            • SAS: Side-Angle-Side<br>
+                            • ASA: Angle-Side-Angle<br>
+                            • AAS: Angle-Angle-Side<br>
+                            • RHS: Right angle-Hypotenuse-Side
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 8: Quadrilaterals</summary>
+                    <div class="topic-content">
+                        <p>Study properties of parallelograms, rectangles, rhombus, squares, trapeziums, and the mid-point theorem.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Quadrilaterals</li>
+                            <li>Angle Sum Property of a Quadrilateral</li>
+                            <li>Types of Quadrilaterals</li>
+                            <li>Properties of a Parallelogram</li>
+                            <li>Another Condition for a Quadrilateral to be a Parallelogram</li>
+                            <li>The Mid-point Theorem</li>
+                            <li>Properties of Rectangle</li>
+                            <li>Properties of Rhombus</li>
+                            <li>Properties of Square</li>
+                            <li>Properties of Trapezium</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Properties:</strong><br>
+                            • Sum of angles in a quadrilateral = 360°<br>
+                            • Opposite sides of parallelogram are equal<br>
+                            • Opposite angles of parallelogram are equal<br>
+                            • Diagonals of rectangle are equal<br>
+                            • Diagonals of rhombus bisect at right angles
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 9: Areas of Parallelograms and Triangles</summary>
+                    <div class="topic-content">
+                        <p>Learn about areas of parallelograms and triangles on the same base and between the same parallels.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Areas</li>
+                            <li>Figures on the Same Base and Between the Same Parallels</li>
+                            <li>Parallelograms on the Same Base and Between the Same Parallels</li>
+                            <li>Triangles on the Same Base and Between the Same Parallels</li>
+                            <li>Relationship Between Area of Parallelogram and Triangle</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Results:</strong><br>
+                            • Area of parallelogram = base × height<br>
+                            • Area of triangle = ½ × base × height<br>
+                            • Triangles on same base and between same parallels are equal in area<br>
+                            • Area of triangle = ½ × area of parallelogram (same base & parallels)
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 10: Circles</summary>
+                    <div class="topic-content">
+                        <p>Study circle properties, chords, arcs, angles subtended by chords, cyclic quadrilaterals, and circle theorems.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Circles</li>
+                            <li>Chords of a Circle</li>
+                            <li>Equal Chords and Their Distances from the Centre</li>
+                            <li>Angle Subtended by an Arc of a Circle</li>
+                            <li>Angle Subtended by a Chord at a Point</li>
+                            <li>Cyclic Quadrilaterals</li>
+                            <li>Perpendicular from the Centre to a Chord</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Circle Theorems:</strong><br>
+                            • Equal chords are equidistant from centre<br>
+                            • Angle in a semicircle is a right angle<br>
+                            • Angles in the same segment are equal<br>
+                            • Opposite angles of cyclic quadrilateral = 180°<br>
+                            • Perpendicular from centre bisects the chord
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 11: Constructions</summary>
+                    <div class="topic-content">
+                        <p>Learn geometric constructions using compass and ruler - bisecting angles, perpendiculars, and constructing triangles.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Constructions</li>
+                            <li>Basic Constructions</li>
+                            <li>Construction of Bisector of a Line Segment</li>
+                            <li>Construction of Bisector of an Angle</li>
+                            <li>Construction of Perpendicular Lines</li>
+                            <li>Construction of an Angle Equal to a Given Angle</li>
+                            <li>Some Constructions of Triangles</li>
+                            <li>Construction of Triangle Given Base, Base Angle and Sum of Other Two Sides</li>
+                            <li>Construction of Triangle Given Base, Base Angle and Difference of Other Two Sides</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 12: Heron's Formula</summary>
+                    <div class="topic-content">
+                        <p>Application of Heron's formula to find area of triangles and quadrilaterals when sides are given.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Heron's Formula</li>
+                            <li>Area of a Triangle - by Heron's Formula</li>
+                            <li>Application of Heron's Formula in Finding Areas of Quadrilaterals</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Heron's Formula:</strong><br>
+                            • Area of triangle = √[s(s-a)(s-b)(s-c)]<br>
+                            • where s = (a+b+c)/2 (semi-perimeter)<br>
+                            • a, b, c are the sides of triangle
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 13: Surface Areas and Volumes</summary>
+                    <div class="topic-content">
+                        <p>Calculate surface area and volume of cubes, cuboids, cylinders, cones, spheres, and hemispheres.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Surface Areas and Volumes</li>
+                            <li>Surface Area of a Cuboid and a Cube</li>
+                            <li>Surface Area of a Right Circular Cylinder</li>
+                            <li>Surface Area of a Right Circular Cone</li>
+                            <li>Surface Area of a Sphere</li>
+                            <li>Volume of a Cuboid</li>
+                            <li>Volume of a Cylinder</li>
+                            <li>Volume of a Right Circular Cone</li>
+                            <li>Volume of a Sphere</li>
+                            <li>Volume of a Hemisphere</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Important Formulas:</strong><br>
+                            <strong>Cuboid:</strong> TSA = 2(lb+bh+hl), Volume = l×b×h<br>
+                            <strong>Cube:</strong> TSA = 6a², Volume = a³<br>
+                            <strong>Cylinder:</strong> CSA = 2πrh, TSA = 2πr(r+h), Volume = πr²h<br>
+                            <strong>Cone:</strong> CSA = πrl, TSA = πr(l+r), Volume = ⅓πr²h<br>
+                            <strong>Sphere:</strong> SA = 4πr², Volume = 4/3πr³<br>
+                            <strong>Hemisphere:</strong> CSA = 2πr², TSA = 3πr², Volume = 2/3πr³
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 14: Statistics</summary>
+                    <div class="topic-content">
+                        <p>Collection and presentation of data, mean, median, mode, graphical representation of data, and frequency distribution.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Statistics</li>
+                            <li>Collection of Data</li>
+                            <li>Presentation of Data</li>
+                            <li>Graphical Representation of Data</li>
+                            <li>Bar Graphs</li>
+                            <li>Histograms</li>
+                            <li>Frequency Polygons</li>
+                            <li>Measures of Central Tendency</li>
+                            <li>Mean (Arithmetic Mean)</li>
+                            <li>Median</li>
+                            <li>Mode</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Formulas:</strong><br>
+                            • Mean = Sum of observations / Number of observations<br>
+                            • Median = Middle value when arranged in order<br>
+                            • Mode = Most frequently occurring value<br>
+                            • Range = Highest value - Lowest value
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Chapter 15: Probability</summary>
+                    <div class="topic-content">
+                        <p>Introduction to probability, experimental and theoretical probability, random experiments, outcomes, and events.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Probability</li>
+                            <li>Random Experiments</li>
+                            <li>Outcomes and Events</li>
+                            <li>Experimental Probability</li>
+                            <li>Theoretical Probability</li>
+                            <li>Probability of an Event</li>
+                            <li>Equally Likely Outcomes</li>
+                            <li>Complementary Events</li>
+                        </ul>
+                        <div class="formula-box">
+                            <strong>Basic Formulas:</strong><br>
+                            • Probability of event E: P(E) = Number of favorable outcomes / Total number of outcomes<br>
+                            • 0 ≤ P(E) ≤ 1<br>
+                            • P(sure event) = 1<br>
+                            • P(impossible event) = 0<br>
+                            • P(not E) = 1 - P(E)
+                        </div>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+
+            <div class="notes-cta">
+                <h3>📚 Download Complete Mathematics Notes</h3>
+                <p>Access comprehensive notes for all 15 chapters with formulas, solved examples, and practice questions</p>
+                <a href="#" target="_blank" class="btn-primary">View on Google Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
