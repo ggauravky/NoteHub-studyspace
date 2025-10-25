@@ -20,7 +20,7 @@ NoteHub is a free, open-source platform designed by students, for students. We b
 ## 🚀 Quick Start
 
 ### View Live Demo
-Visit the live website: [NoteHub StudySpace](https://itsnoteshub.netlify.app/)
+Visit the live website: [NoteHub StudySpace](https://notehub-studyspace.netlify.app/)
 
 ### Run Locally
 
@@ -168,7 +168,7 @@ If you find NoteHub helpful, please consider:
 Have questions or suggestions? Reach out to us:
 
 - **GitHub Issues**: [Create an issue](https://github.com/ggauravky/NoteHub-studyspace/issues)
- - **Contact Page**: Visit our [contact page](https://itsnoteshub.netlify.app/contact/contact)
+ - **Contact Page**: Visit our [contact page](https://notehub-studyspace.netlify.app/contact/contact)
 
 ## 🎓 Our Mission
 
