@@ -1,9 +1,3 @@
-// ===============================================
-// NoteHub - Main JavaScript File
-// Handles navigation, scroll effects, and interactions
-// ===============================================
-
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
     // ===== Mobile Menu Toggle =====
