@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Sanskrit - NoteHub</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .subject-section {
+            margin-bottom: 4rem;
+        }
+
+        .subject-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 2rem 0 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+
+        .topic-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .topic-content ul li {
+            position: relative;
+            padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .topic-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+        }
+
+        .topic-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .topic-content > p {
+            background: #fff9e6;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .topic-content p strong {
+            color: #667eea;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .shloka-box {
+            background: #fef3c7;
+            border-left: 4px solid #d97706;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #78350f;
+            font-weight: 500;
+        }
+
+        .grammar-box {
+            background: #f0fdf4;
+            border-left: 4px solid #16a34a;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            color: #14532d;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../school.html" class="active">School</a></li>
+                    <li><a href="../college.html">College</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="../school.html">School</a> / <a href="../class9.html">Class 9</a> / <span>Sanskrit</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Class 9 Sanskrit</h1>
+            <p class="page-description">Complete notes covering Shemushi (Gadya & Padya) and Vyakaranam</p>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">📖 शेमुषी भाग 1 - गद्य खंड (Shemushi - Prose)</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>पाठ 1: भारतीवसन्तगीतिः (भारत की वसंत गीति)</summary>
+                        <div class="topic-content">
+                            <p>भारत की प्राकृतिक सुंदरता और वसंत ऋतु के आगमन का वर्णन करता काव्यमय गद्य।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>वसंत ऋतु का आगमन (Arrival of Spring Season)</li>
+                                <li>प्रकृति का सौंदर्य वर्णन (Description of Nature's Beauty)</li>
+                                <li>पुष्पों और वृक्षों का चित्रण (Depiction of Flowers and Trees)</li>
+                                <li>कोकिल का मधुर गान (Sweet Song of Cuckoo)</li>
+                                <li>भारतीय संस्कृति में वसंत (Spring in Indian Culture)</li>
+                                <li>विषय: प्रकृति, ऋतु, सौंदर्य</li>
+                            </ul>
+                            <div class="shloka-box">
+                                <strong>प्रमुख पंक्तियाँ:</strong><br>
+                                "वसन्तः आगच्छति, प्रकृतिः सुन्दरा भवति।"<br>
+                                (Spring arrives, nature becomes beautiful)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 2: स्वर्णकाकः (सोने का कौआ)</summary>
+                        <div class="topic-content">
+                            <p>एक कौए की कहानी जो लालच के कारण अपना सब कुछ खो देता है।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>कौए का चरित्र (Character of the Crow)</li>
+                                <li>सुनार की चालाकी (Goldsmith's Cleverness)</li>
+                                <li>लोभ का परिणाम (Result of Greed)</li>
+                                <li>नैतिक शिक्षा (Moral Lesson)</li>
+                                <li>संस्कृत कहानी की शैली (Style of Sanskrit Story)</li>
+                                <li>विषय: लोभ, नीति, बुद्धिमत्ता</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 3: गोदोहनम् (गाय का दूध दोहना)</summary>
+                        <div class="topic-content">
+                            <p>ग्रामीण जीवन और गाय के महत्व का वर्णन करता पाठ।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>ग्रामीण जीवन का चित्रण (Picture of Rural Life)</li>
+                                <li>गाय की महत्ता (Importance of Cow)</li>
+                                <li>दूध दोहन की प्रक्रिया (Milking Process)</li>
+                                <li>भारतीय संस्कृति में गाय (Cow in Indian Culture)</li>
+                                <li>कृषि और पशुपालन (Agriculture and Animal Husbandry)</li>
+                                <li>विषय: ग्रामीण जीवन, पशुपालन, संस्कृति</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 4: सूक्तयः (सूक्तियाँ - सुभाषित)</summary>
+                        <div class="topic-content">
+                            <p>संस्कृत की प्रसिद्ध सूक्तियाँ और उनका जीवन में महत्व।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>विभिन्न सूक्तियों का संग्रह (Collection of Aphorisms)</li>
+                                <li>जीवन में नैतिक मूल्य (Moral Values in Life)</li>
+                                <li>ज्ञान और विद्या की महिमा (Glory of Knowledge and Education)</li>
+                                <li>सत्य और धर्म (Truth and Righteousness)</li>
+                                <li>संस्कृत साहित्य की विशेषता (Specialty of Sanskrit Literature)</li>
+                                <li>विषय: नीति, ज्ञान, मूल्य</li>
+                            </ul>
+                            <div class="shloka-box">
+                                <strong>प्रमुख सूक्ति:</strong><br>
+                                "सत्यं वद धर्मं चर।"<br>
+                                (Speak truth, practice righteousness)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 5: भ्रान्तो बालः (भटका हुआ बालक)</summary>
+                        <div class="topic-content">
+                            <p>एक बच्चे के खो जाने और फिर मिल जाने की कहानी।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>बालक का चरित्र (Character of the Child)</li>
+                                <li>माता-पिता का स्नेह (Parents' Love)</li>
+                                <li>खो जाने की घटना (Incident of Getting Lost)</li>
+                                <li>सहायता और करुणा (Help and Compassion)</li>
+                                <li>पुनर्मिलन की खुशी (Joy of Reunion)</li>
+                                <li>विषय: परिवार, स्नेह, सुरक्षा</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 6: प्रत्यभिज्ञानम् (पहचान)</summary>
+                        <div class="topic-content">
+                            <p>अभिज्ञान शाकुन्तलम् से लिया गया अंश जो शकुंतला और दुष्यंत की पहचान की कहानी है।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>शकुंतला और दुष्यंत की कथा (Story of Shakuntala and Dushyanta)</li>
+                                <li>अंगूठी का महत्व (Importance of the Ring)</li>
+                                <li>स्मृति लोप और पहचान (Memory Loss and Recognition)</li>
+                                <li>कालिदास का साहित्य (Kalidasa's Literature)</li>
+                                <li>संस्कृत नाटक की शैली (Style of Sanskrit Drama)</li>
+                                <li>विषय: प्रेम, पहचान, साहित्य</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 7: सिकतासेतुः (रेत का पुल)</summary>
+                        <div class="topic-content">
+                            <p>बच्चों के खेल और उनकी कल्पनाशीलता का सुंदर चित्रण।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>बालकों का खेल (Children's Play)</li>
+                                <li>रेत से पुल निर्माण (Building Bridge with Sand)</li>
+                                <li>कल्पना और रचनात्मकता (Imagination and Creativity)</li>
+                                <li>बाल मनोविज्ञान (Child Psychology)</li>
+                                <li>प्रकृति के साथ खेल (Playing with Nature)</li>
+                                <li>विषय: बचपन, खेल, कल्पना</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 8: लौहतुला (लोहे की तराजू)</summary>
+                        <div class="topic-content">
+                            <p>एक व्यापारी की चालाकी और उसे मिली सजा की कहानी।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>व्यापारी का चरित्र (Character of the Merchant)</li>
+                                <li>छल-कपट का प्रयोग (Use of Deceit)</li>
+                                <li>बुद्धिमान ब्राह्मण (Intelligent Brahmin)</li>
+                                <li>सजा और न्याय (Punishment and Justice)</li>
+                                <li>नैतिक शिक्षा (Moral Teaching)</li>
+                                <li>विषय: ईमानदारी, न्याय, बुद्धि</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 9: विशेषालङ्कारः (विशेष अलंकार)</summary>
+                        <div class="topic-content">
+                            <p>संस्कृत काव्य में प्रयुक्त विभिन्न अलंकारों का परिचय।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>अलंकार का अर्थ और महत्व (Meaning and Importance of Alankar)</li>
+                                <li>उपमा अलंकार (Simile)</li>
+                                <li>रूपक अलंकार (Metaphor)</li>
+                                <li>उत्प्रेक्षा अलंकार (Fancy)</li>
+                                <li>अन्य प्रमुख अलंकार (Other Important Figures of Speech)</li>
+                                <li>विषय: काव्य, अलंकार, सौंदर्य</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>पाठ 10: पर्यावरणम् (पर्यावरण)</summary>
+                        <div class="topic-content">
+                            <p>पर्यावरण संरक्षण और प्रकृति के प्रति हमारी जिम्मेदारी।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>पर्यावरण का महत्व (Importance of Environment)</li>
+                                <li>प्रदूषण की समस्या (Problem of Pollution)</li>
+                                <li>वृक्षारोपण (Tree Plantation)</li>
+                                <li>जल संरक्षण (Water Conservation)</li>
+                                <li>प्राचीन भारत में पर्यावरण चेतना (Environmental Awareness in Ancient India)</li>
+                                <li>विषय: पर्यावरण, संरक्षण, जिम्मेदारी</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">📝 शेमुषी भाग 1 - पद्य खंड (Poetry Section)</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>श्लोक 1: भूलोकवीराः (पृथ्वी के वीर)</summary>
+                        <div class="topic-content">
+                            <p>भारत के महान वीरों और उनके शौर्य का गुणगान करते श्लोक।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>भारतीय वीरों का वर्णन (Description of Indian Heroes)</li>
+                                <li>शौर्य और पराक्रम (Valor and Bravery)</li>
+                                <li>देशभक्ति की भावना (Feeling of Patriotism)</li>
+                                <li>प्राचीन योद्धाओं की महिमा (Glory of Ancient Warriors)</li>
+                                <li>प्रेरणादायक संदेश (Inspirational Message)</li>
+                                <li>विषय: वीरता, देशप्रेम, इतिहास</li>
+                            </ul>
+                            <div class="shloka-box">
+                                <strong>श्लोक:</strong><br>
+                                "वीराः भारतभूमेः गर्वेण स्मर्यन्ते।"<br>
+                                (The heroes of India are remembered with pride)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Analysis</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>श्लोक 2: सत्यकारं विद्महि (सत्य का आचरण करें)</summary>
+                        <div class="topic-content">
+                            <p>सत्य और धर्म के मार्ग पर चलने की प्रेरणा देते श्लोक।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>सत्य का महत्व (Importance of Truth)</li>
+                                <li>धर्म और नीति (Righteousness and Ethics)</li>
+                                <li>ईमानदारी और सच्चाई (Honesty and Truthfulness)</li>
+                                <li>जीवन में मूल्य (Values in Life)</li>
+                                <li>वेदों की शिक्षा (Teachings of Vedas)</li>
+                                <li>विषय: सत्य, धर्म, नैतिकता</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Analysis</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">📚 व्याकरणम् (Sanskrit Grammar - Vyakaranam)</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>संधि (Sandhi - Combination of Letters)</summary>
+                        <div class="topic-content">
+                            <p>संस्कृत में दो वर्णों या शब्दों के मेल से होने वाले परिवर्तन।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>स्वर संधि (Vowel Sandhi)</li>
+                                <li>व्यञ्जन संधि (Consonant Sandhi)</li>
+                                <li>विसर्ग संधि (Visarga Sandhi)</li>
+                                <li>संधि विच्छेद (Breaking of Sandhi)</li>
+                                <li>नियम और उदाहरण (Rules and Examples)</li>
+                            </ul>
+                            <div class="grammar-box">
+                                <strong>उदाहरण:</strong><br>
+                                • सूर्य + उदयः = सूर्योदयः<br>
+                                • वाक् + ईशः = वागीशः<br>
+                                • मनः + रथः = मनोरथः
+                            </div>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>समास (Samaas - Compound Words)</summary>
+                        <div class="topic-content">
+                            <p>दो या अधिक पदों के मेल से बनने वाले समस्त पद।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>अव्ययीभाव समास (Avyayibhava)</li>
+                                <li>तत्पुरुष समास (Tatpurusha)</li>
+                                <li>द्वन्द्व समास (Dvandva)</li>
+                                <li>बहुव्रीहि समास (Bahuvrihi)</li>
+                                <li>कर्मधारय समास (Karmadharaya)</li>
+                                <li>द्विगु समास (Dvigu)</li>
+                                <li>समास विग्रह (Breaking of Compound)</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>शब्द रूप (Shabda Roop - Word Forms/Declensions)</summary>
+                        <div class="topic-content">
+                            <p>संज्ञा और सर्वनाम शब्दों के विभिन्न विभक्तियों में रूप।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>पुल्लिंग शब्द रूप (Masculine Gender Forms)</li>
+                                <li>स्त्रीलिंग शब्द रूप (Feminine Gender Forms)</li>
+                                <li>नपुंसकलिंग शब्द रूप (Neuter Gender Forms)</li>
+                                <li>सर्वनाम शब्द रूप (Pronoun Forms)</li>
+                                <li>विभक्ति और वचन (Cases and Numbers)</li>
+                                <li>उदाहरण: बालक, लता, फल, तत्, किम्</li>
+                            </ul>
+                            <div class="grammar-box">
+                                <strong>विभक्तियाँ:</strong><br>
+                                प्रथमा, द्वितीया, तृतीया, चतुर्थी, पञ्चमी, षष्ठी, सप्तमी, सम्बोधन
+                            </div>
+                            <a href="#" class="btn-secondary">View Declension Tables</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>धातु रूप (Dhaatu Roop - Verb Forms/Conjugations)</summary>
+                        <div class="topic-content">
+                            <p>क्रिया पदों के विभिन्न लकारों, पुरुषों और वचनों में रूप।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>लट् लकार (Present Tense)</li>
+                                <li>लृट् लकार (Future Tense)</li>
+                                <li>लङ् लकार (Past Tense)</li>
+                                <li>लोट् लकार (Imperative)</li>
+                                <li>विधिलिङ् लकार (Potential Mood)</li>
+                                <li>प्रमुख धातुएँ: पठ्, गम्, लिख्, भू, अस्</li>
+                                <li>परस्मैपद और आत्मनेपद (Active and Reflexive)</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Conjugation Tables</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>उपसर्ग और प्रत्यय (Prefixes and Suffixes)</summary>
+                        <div class="topic-content">
+                            <p>धातुओं और शब्दों के साथ जुड़ने वाले उपसर्ग और प्रत्यय।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>प्रमुख उपसर्ग (Major Prefixes)</li>
+                                <li>उपसर्गों का प्रयोग और अर्थ (Usage and Meaning)</li>
+                                <li>कृत् प्रत्यय (Primary Suffixes)</li>
+                                <li>तद्धित प्रत्यय (Secondary Suffixes)</li>
+                                <li>स्त्री प्रत्यय (Feminine Suffixes)</li>
+                                <li>उदाहरण और अभ्यास (Examples and Practice)</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>कारक (Karak - Cases)</summary>
+                        <div class="topic-content">
+                            <p>क्रिया के साथ संज्ञा या सर्वनाम के संबंध को बताने वाले विभक्ति चिह्न।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>कर्ता कारक (Nominative)</li>
+                                <li>कर्म कारक (Accusative)</li>
+                                <li>करण कारक (Instrumental)</li>
+                                <li>सम्प्रदान कारक (Dative)</li>
+                                <li>अपादान कारक (Ablative)</li>
+                                <li>सम्बन्ध कारक (Genitive)</li>
+                                <li>अधिकरण कारक (Locative)</li>
+                                <li>सम्बोधन कारक (Vocative)</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>वाच्य परिवर्तन (Voice Transformation)</summary>
+                        <div class="topic-content">
+                            <p>कर्तृवाच्य, कर्मवाच्य और भाववाच्य में परिवर्तन।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>कर्तृवाच्य (Active Voice)</li>
+                                <li>कर्मवाच्य (Passive Voice)</li>
+                                <li>भाववाच्य (Impersonal Voice)</li>
+                                <li>वाच्य परिवर्तन के नियम (Rules of Voice Change)</li>
+                                <li>उदाहरण और अभ्यास (Examples and Practice)</li>
+                            </ul>
+                            <div class="grammar-box">
+                                <strong>उदाहरण:</strong><br>
+                                • कर्तृवाच्य: रामः पठति। (Ram reads)<br>
+                                • कर्मवाच्य: रामेण पठ्यते। (Reading is done by Ram)
+                            </div>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>अव्यय (Indeclinables)</summary>
+                        <div class="topic-content">
+                            <p>जिन शब्दों के रूप में लिंग, वचन, विभक्ति आदि से कोई परिवर्तन नहीं होता।</p>
+                            <p><strong>मुख्य विषय:</strong></p>
+                            <ul>
+                                <li>क्रिया विशेषण अव्यय (Adverbial Indeclinables)</li>
+                                <li>समुच्चयबोधक अव्यय (Conjunctions)</li>
+                                <li>विस्मयादिबोधक अव्यय (Interjections)</li>
+                                <li>प्रमुख अव्यय शब्द (Important Indeclinable Words)</li>
+                                <li>उदाहरण: इति, अपि, च, वा, तथा, एव</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Grammar Rules</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="notes-cta">
+                <h3>📚 संपूर्ण संस्कृत नोट्स डाउनलोड करें</h3>
+                <p>शेमुषी, व्याकरण और सभी पाठों के विस्तृत नोट्स प्राप्त करें</p>
+                <a href="#" target="_blank" class="btn-primary">View on Google Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
