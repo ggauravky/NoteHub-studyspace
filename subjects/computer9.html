@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 9 Computer Applications - NoteHub</title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .subject-section {
+            margin-bottom: 4rem;
+        }
+
+        .subject-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 2rem 0 1.5rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+
+        .topic-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+
+        .topic-content ul li {
+            position: relative;
+            padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .topic-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+        }
+
+        .topic-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .topic-content > p {
+            background: #fff9e6;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .topic-content p strong {
+            color: #667eea;
+            font-size: 1.05rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .code-box {
+            background: #1e293b;
+            border-left: 4px solid #3b82f6;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-family: 'Courier New', monospace;
+            color: #e2e8f0;
+            overflow-x: auto;
+        }
+
+        .tech-box {
+            background: #ecfdf5;
+            border-left: 4px solid #10b981;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 1rem 0;
+            color: #065f46;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../school.html" class="active">School</a></li>
+                    <li><a href="../college.html">College</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="../index.html">Home</a> / <a href="../school.html">School</a> / <a href="../class9.html">Class 9</a> / <span>Computer Applications</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Class 9 Computer Applications</h1>
+            <p class="page-description">Complete notes covering Computer Fundamentals, MS Office, Internet & Programming Basics</p>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">💻 Computer Fundamentals</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>Chapter 1: Introduction to Computers</summary>
+                        <div class="topic-content">
+                            <p>Learn about computers, their evolution, types, characteristics, and basic components.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>What is a Computer?</li>
+                                <li>Characteristics of Computers - Speed, Accuracy, Storage</li>
+                                <li>Evolution of Computers - Generations</li>
+                                <li>Types of Computers - Supercomputer, Mainframe, Mini, Micro</li>
+                                <li>Applications of Computers</li>
+                                <li>Advantages and Limitations</li>
+                            </ul>
+                            <div class="tech-box">
+                                <strong>Computer Generations:</strong><br>
+                                • 1st Gen (1940-56): Vacuum Tubes<br>
+                                • 2nd Gen (1956-63): Transistors<br>
+                                • 3rd Gen (1964-71): Integrated Circuits<br>
+                                • 4th Gen (1971-Present): Microprocessors<br>
+                                • 5th Gen (Present-Future): AI & Quantum
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 2: Computer Hardware</summary>
+                        <div class="topic-content">
+                            <p>Understanding computer hardware components including input, output, processing, and storage devices.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Input Devices - Keyboard, Mouse, Scanner, Microphone</li>
+                                <li>Output Devices - Monitor, Printer, Speakers, Projector</li>
+                                <li>Central Processing Unit (CPU)</li>
+                                <li>Memory - RAM, ROM, Cache</li>
+                                <li>Storage Devices - Hard Disk, SSD, Pen Drive, CD/DVD</li>
+                                <li>Motherboard and its Components</li>
+                                <li>Ports and Connectors</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 3: Computer Software</summary>
+                        <div class="topic-content">
+                            <p>Learn about different types of software, operating systems, and application programs.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>What is Software?</li>
+                                <li>System Software vs Application Software</li>
+                                <li>Operating Systems - Windows, Linux, macOS</li>
+                                <li>Utility Software</li>
+                                <li>Application Software - MS Office, Browsers, Media Players</li>
+                                <li>Programming Languages</li>
+                                <li>Software Installation and Updates</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 4: Number Systems</summary>
+                        <div class="topic-content">
+                            <p>Understanding different number systems used in computers and conversions between them.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Binary Number System (Base 2)</li>
+                                <li>Decimal Number System (Base 10)</li>
+                                <li>Octal Number System (Base 8)</li>
+                                <li>Hexadecimal Number System (Base 16)</li>
+                                <li>Conversion between Number Systems</li>
+                                <li>Binary Arithmetic - Addition, Subtraction</li>
+                                <li>1's Complement and 2's Complement</li>
+                            </ul>
+                            <div class="code-box">
+                                <strong>Number System Conversions:</strong><br>
+                                Decimal 10 = Binary 1010<br>
+                                Decimal 10 = Octal 12<br>
+                                Decimal 10 = Hexadecimal A
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 5: Data Representation</summary>
+                        <div class="topic-content">
+                            <p>Learn how data is represented in computers using bits, bytes, and various coding schemes.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Bit, Nibble, Byte, Kilobyte, Megabyte, Gigabyte</li>
+                                <li>ASCII Code</li>
+                                <li>Unicode</li>
+                                <li>EBCDIC</li>
+                                <li>BCD (Binary Coded Decimal)</li>
+                                <li>Character Representation</li>
+                                <li>Image, Audio, and Video Representation</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">📄 Microsoft Office Applications</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>Chapter 6: MS Word - Word Processing</summary>
+                        <div class="topic-content">
+                            <p>Master Microsoft Word for creating, formatting, and editing documents.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Introduction to MS Word Interface</li>
+                                <li>Creating and Saving Documents</li>
+                                <li>Text Formatting - Font, Size, Style, Color</li>
+                                <li>Paragraph Formatting - Alignment, Spacing, Indentation</li>
+                                <li>Insert Pictures, Tables, and Charts</li>
+                                <li>Page Layout and Margins</li>
+                                <li>Headers, Footers, and Page Numbers</li>
+                                <li>Spell Check and Grammar</li>
+                                <li>Mail Merge</li>
+                                <li>Printing Documents</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 7: MS Excel - Spreadsheet</summary>
+                        <div class="topic-content">
+                            <p>Learn spreadsheet operations, formulas, functions, and data analysis in Excel.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Introduction to MS Excel Interface</li>
+                                <li>Workbook, Worksheet, Cells, Rows, Columns</li>
+                                <li>Data Entry and Editing</li>
+                                <li>Formatting Cells and Data</li>
+                                <li>Basic Formulas and Functions - SUM, AVERAGE, MAX, MIN</li>
+                                <li>IF Function and Logical Operations</li>
+                                <li>Creating Charts and Graphs</li>
+                                <li>Sorting and Filtering Data</li>
+                                <li>Page Setup and Printing</li>
+                            </ul>
+                            <div class="code-box">
+                                <strong>Common Excel Formulas:</strong><br>
+                                =SUM(A1:A10)<br>
+                                =AVERAGE(B1:B5)<br>
+                                =IF(C1>50,"Pass","Fail")<br>
+                                =MAX(D1:D20)<br>
+                                =COUNT(E1:E15)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 8: MS PowerPoint - Presentations</summary>
+                        <div class="topic-content">
+                            <p>Create effective presentations with slides, animations, and multimedia.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Introduction to MS PowerPoint</li>
+                                <li>Creating and Managing Slides</li>
+                                <li>Slide Layouts and Themes</li>
+                                <li>Adding Text, Images, and Shapes</li>
+                                <li>Inserting Tables and Charts</li>
+                                <li>Slide Transitions</li>
+                                <li>Animations and Effects</li>
+                                <li>Adding Audio and Video</li>
+                                <li>Slide Show and Presentation</li>
+                                <li>Saving and Printing Presentations</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">🌐 Internet and Networking</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>Chapter 9: Introduction to Internet</summary>
+                        <div class="topic-content">
+                            <p>Understanding the Internet, its services, and applications.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>What is Internet?</li>
+                                <li>Evolution and History of Internet</li>
+                                <li>Internet Service Providers (ISP)</li>
+                                <li>Types of Internet Connections - Broadband, DSL, Fiber</li>
+                                <li>World Wide Web (WWW)</li>
+                                <li>Web Browsers - Chrome, Firefox, Edge</li>
+                                <li>Search Engines - Google, Bing, Yahoo</li>
+                                <li>URLs and Domain Names</li>
+                                <li>HTTP and HTTPS</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 10: Email and Communication</summary>
+                        <div class="topic-content">
+                            <p>Learn about email services, communication tools, and online etiquette.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Email - Electronic Mail</li>
+                                <li>Creating Email Account - Gmail, Yahoo, Outlook</li>
+                                <li>Composing and Sending Emails</li>
+                                <li>Attachments and Forwarding</li>
+                                <li>Email Etiquette</li>
+                                <li>Spam and Phishing</li>
+                                <li>Instant Messaging - WhatsApp, Telegram</li>
+                                <li>Video Conferencing - Zoom, Google Meet</li>
+                                <li>Social Media - Facebook, Twitter, Instagram</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 11: Computer Networks</summary>
+                        <div class="topic-content">
+                            <p>Understanding computer networks, types, and network devices.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>What is a Computer Network?</li>
+                                <li>Types of Networks - LAN, WAN, MAN, PAN</li>
+                                <li>Network Topologies - Star, Bus, Ring, Mesh</li>
+                                <li>Network Devices - Router, Switch, Hub, Modem</li>
+                                <li>IP Address and MAC Address</li>
+                                <li>Client-Server and Peer-to-Peer Networks</li>
+                                <li>Wireless Networks - Wi-Fi, Bluetooth</li>
+                                <li>Network Security</li>
+                            </ul>
+                            <div class="tech-box">
+                                <strong>Network Types:</strong><br>
+                                • LAN: Local Area Network (Small area)<br>
+                                • WAN: Wide Area Network (Large area)<br>
+                                • MAN: Metropolitan Area Network (City)<br>
+                                • PAN: Personal Area Network (Personal devices)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 12: Cyber Safety and Security</summary>
+                        <div class="topic-content">
+                            <p>Learn about online safety, cyber threats, and security measures.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Cyber Safety and Ethics</li>
+                                <li>Password Security and Best Practices</li>
+                                <li>Viruses, Worms, and Trojans</li>
+                                <li>Malware and Ransomware</li>
+                                <li>Phishing and Social Engineering</li>
+                                <li>Antivirus Software</li>
+                                <li>Firewall Protection</li>
+                                <li>Safe Browsing Practices</li>
+                                <li>Privacy and Data Protection</li>
+                                <li>Cyber Bullying and Online Harassment</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">⌨️ Programming Fundamentals</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>Chapter 13: Introduction to Programming</summary>
+                        <div class="topic-content">
+                            <p>Understanding programming concepts, algorithms, and flowcharts.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>What is Programming?</li>
+                                <li>Programming Languages - Low Level and High Level</li>
+                                <li>Compiler and Interpreter</li>
+                                <li>Algorithm - Steps to Solve a Problem</li>
+                                <li>Flowchart - Graphical Representation</li>
+                                <li>Flowchart Symbols</li>
+                                <li>Pseudocode</li>
+                                <li>Problem Solving Techniques</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 14: HTML Basics</summary>
+                        <div class="topic-content">
+                            <p>Learn HTML for creating web pages with text, images, and links.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Introduction to HTML</li>
+                                <li>HTML Tags and Elements</li>
+                                <li>Structure of HTML Document</li>
+                                <li>Headings and Paragraphs</li>
+                                <li>Text Formatting Tags</li>
+                                <li>Creating Lists - Ordered and Unordered</li>
+                                <li>Inserting Images</li>
+                                <li>Creating Hyperlinks</li>
+                                <li>Tables in HTML</li>
+                                <li>Forms and Input Elements</li>
+                            </ul>
+                            <div class="code-box">
+                                <strong>Basic HTML Structure:</strong><br>
+                                &lt;html&gt;<br>
+                                &nbsp;&nbsp;&lt;head&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;My Page&lt;/title&gt;<br>
+                                &nbsp;&nbsp;&lt;/head&gt;<br>
+                                &nbsp;&nbsp;&lt;body&gt;<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Hello World!&lt;/h1&gt;<br>
+                                &nbsp;&nbsp;&lt;/body&gt;<br>
+                                &lt;/html&gt;
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Chapter 15: Introduction to Python/Scratch</summary>
+                        <div class="topic-content">
+                            <p>Basic programming concepts using Python or visual programming with Scratch.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Introduction to Python Programming</li>
+                                <li>Python IDE and IDLE</li>
+                                <li>Variables and Data Types</li>
+                                <li>Input and Output</li>
+                                <li>Operators - Arithmetic, Relational, Logical</li>
+                                <li>Comments in Python</li>
+                                <li>Simple Programs</li>
+                                <li>OR: Introduction to Scratch</li>
+                                <li>Scratch Interface and Blocks</li>
+                                <li>Creating Simple Animations</li>
+                            </ul>
+                            <div class="code-box">
+                                <strong>Simple Python Program:</strong><br>
+                                # Print Hello World<br>
+                                print("Hello World!")<br><br>
+                                # Calculate Sum<br>
+                                a = 10<br>
+                                b = 20<br>
+                                sum = a + b<br>
+                                print("Sum is:", sum)
+                            </div>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="subject-section">
+                <h2 class="subject-heading">🛠️ Practical Skills & Labs</h2>
+
+                <div class="topics-list">
+                    <details class="topic-item">
+                        <summary>Lab 1: MS Office Practical Tasks</summary>
+                        <div class="topic-content">
+                            <p>Hands-on practice with Word, Excel, and PowerPoint.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Create formatted documents in MS Word</li>
+                                <li>Design resume and letter templates</li>
+                                <li>Create spreadsheets and perform calculations</li>
+                                <li>Build charts and graphs in Excel</li>
+                                <li>Design presentations with animations</li>
+                                <li>Apply themes and transitions</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Lab Manual</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Lab 2: Internet and Email Tasks</summary>
+                        <div class="topic-content">
+                            <p>Practical exercises for internet browsing and email communication.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Searching information using search engines</li>
+                                <li>Creating and managing email accounts</li>
+                                <li>Sending emails with attachments</li>
+                                <li>Downloading and uploading files</li>
+                                <li>Using cloud storage - Google Drive, OneDrive</li>
+                                <li>Safe browsing practices</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Lab Manual</a>
+                        </div>
+                    </details>
+
+                    <details class="topic-item">
+                        <summary>Lab 3: Programming and Web Design</summary>
+                        <div class="topic-content">
+                            <p>Hands-on coding practice with HTML and basic programming.</p>
+                            <p><strong>Key Topics:</strong></p>
+                            <ul>
+                                <li>Create simple web pages using HTML</li>
+                                <li>Design web page layouts with tables</li>
+                                <li>Add images and links to web pages</li>
+                                <li>Write simple Python programs</li>
+                                <li>Create flowcharts for algorithms</li>
+                                <li>Use Scratch for visual programming</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Lab Manual</a>
+                        </div>
+                    </details>
+                </div>
+            </div>
+
+            <div class="notes-cta">
+                <h3>📚 Download Complete Computer Applications Notes</h3>
+                <p>Access comprehensive notes for all chapters with diagrams, examples, and practical exercises</p>
+                <a href="#" target="_blank" class="btn-primary">View on Google Drive</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
