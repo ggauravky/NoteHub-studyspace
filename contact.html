@@ -5,7 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="stylesheet" href="/assets/css/contact.css" />
+  <link rel="stylesheet" href="contact.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</style>
+
 </head>
 
 <body>
@@ -13,55 +16,78 @@
     <h1>Notes Hub</h1>
     <div class="nav">
       <a href="/index.html">Home</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
+      <a href="/about/about.html">About</a>
+      <a href="/contact/contact.html">Contact</a>
+      <a href="services.html">Services</a>
     </div>
   </nav>
- <section class="about-intro">
+  <section class="about-intro">
 
-  <section class="about-section">
-    <div class="about-content">
-      <h2> Contact Us ☎️ <span></span></h2>
-      </section>
-       <h4><span>NotesHub</span></h4>
+    <section class="about-section">
+      <div class="about-content">
+        <a href="#form"><h2> Contact Us  </h2></a>
 
-  <!-- <div class="contact">
+    </section>
+  </section>
+    <!-- <h4><span>
+        <pre>  NotesHub     </pre>
+      </span></h4> -->
+
+    <!-- <div class="contact">
     <span class="con"> <pre>            Contact me !           </pre></span>
   </div> -->
-  <p>
+    <p class="about-noteshub">
+      Have questions, feedback, or suggestions about NotesHub? I’d love to hear
+      from you! Fill out the form below, and I’ll get back to you as soon as
+      possible. Your input helps improve NotesHub and makes it a better resource
+      for everyone.
+    </p>
     
-    Have questions, feedback, or suggestions about NotesHub? I’d love to hear
-    from you! Fill out the form below, and I’ll get back to you as soon as
-    possible. Your input helps improve NotesHub and makes it a better resource
-    for everyone.
-  </p>
-  
+    <br><br>
 
-  <form>
- <div class="contact">
-  
-    <span>
-      <h2>Get in Touch</h2>
 
-      <form>
-        <div class="row">
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
+    <form id="form">
+      <div class="contact">
+
+        <span>
+          <h2>Get in Touch</h2>
+
+          <form>
+            <div class="row">
+              <input type="text" placeholder="First Name" required />
+              <input type="text" placeholder="Last Name" required />
+            </div>
+
+            <div class="row">
+              <input type="email" placeholder="Email" required />
+              <input type="tel" placeholder="Phone No." required />
+            </div>
+
+
+            <textarea placeholder="About" rows="4"></textarea>
+
+
+            <button type="submit">CONTACT US </button>
+      </div>
+    </form></span>
+    </form>
+    <!-- ================== FOOTER SECTION ================== -->
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>NotesHub</h3>
+        <p class="footer-upper">Your one-stop hub for Academic notes.</p>
+
+        <div class="footer-links">
+          <a href="/index.html">Home</a>
+          <a href="/about/about.html">About</a>
+          <a href="/contact/contact.html">Contact</a>
+          <a href="/services.html">Services</a>
         </div>
-
-        <div class="row">
-          <input type="email" placeholder="Email" required />
-          <input type="tel" placeholder="Phone No." required />
-        </div>
-      
-
-        <textarea placeholder="About" rows="4"></textarea>
-      
-
-        <button type="submit">Submit</button>
-      </div> 
-      </form></span>
-  </form>
+        <p class="footer-bottom">
+          © 2025 NotesHub | Designed by  <strong> &nbsp; Gaurav , Devansh and Nikhil </strong>
+          
+      </div>
+    </footer>
 </body>
 
 </html>
