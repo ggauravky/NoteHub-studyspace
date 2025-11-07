@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Desinging | BCA Semester 1 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> /
+            <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/bcasem1/sem1/sem1_bca.html">Semester 1</a> /
+            <span>Web Desinging</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Web Designing</h1>
+            <p class="page-description">Complete Unit-wise notes following Syllabus</p>
+
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary>Unit 1: MS Word</summary>
+                    <div class="topic-content">
+                        <p>MS Word basics: Working with documents, formatting tools, page setup, tables, graphics,
+                            document management, and essential editing features.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to MS Word</li>
+                            <li>Working with Documents (Open, Save, Edit, Insert, Delete, Copy-Paste)</li>
+                            <li>Document Formatting (Fonts, Paragraphs, Alignment, Bullets, Numbering)</li>
+                            <li>Page Formatting (Margins, Layout, Columns, Header & Footer)</li>
+                            <li>Breaks & Sections (Page, Column, Line Breaks, Wrapping, Frames)</li>
+                            <li>Tables (Create, Format, Merge, Split, Sort, Formulas)</li>
+                            <li>Tools & Features (Spell Check, Mail Merge, Templates)</li>
+                            <li>Graphics & Drawing Tools (ClipArt, Pictures, Symbols)</li>
+                            <li>Document Management (TOC, Index, Page Numbers, Footnotes)</li>
+                            <li>Security & Printing (Digital Signature, Track Changes, Shortcuts)</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 2: DHTML and CSS</summary>
+                    <div class="topic-content">
+                        <p>Understand Uses, and Features of DHTML, CSS Basics ( Font, Color, BG ,Text) and Attributes (
+                            Border, Margin, and List Attributes) , Types of CSS, CSSP, DOM, and JSSS .</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction, Uses, and Features of DHTML</li>
+                            <li>Components, Advantages & Disadvantages of DHTML</li>
+                            <li>CSS Basics and Attributes</li>
+                            <li>Types of CSS: Inline, Internal, External</li>
+                            <li>CSS Positioning (CSSP)</li>
+                            <li>Document Object Model (DOM)</li>
+                            <li>JSSS (JavaScript Assisted Style Sheet)</li>
+                            <li>Browser Objects and DHTML Events</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 3: JavaScript Fundamentals</summary>
+                    <div class="topic-content">
+                        <p>Introduction to JS, Data Types and Variables, Array, Expressions ( Arithmetic, Logical,
+                            Comparison, String) Conditional Statements and Loops, Functions and Dialog Boxes.</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to JavaScript</li>
+                            <li>Types and Variables</li>
+                            <li>Arrays in JavaScript</li>
+                            <li>Operators and Expressions</li>
+                            <li>Programming Constructs - Conditional Statements and Loops</li>
+                            <li>Functions: Built-in & User-defined</li>
+                            <li>Dialog Boxes: Alert, Confirm, Prompt</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 4: JavaScript DOM & Advanced Concepts</summary>
+                    <div class="topic-content">
+                        <p>Introduction to DOM , Event Handling , Form objecrt and Methods , Learn about Text and Button
+                            Element , Built in Object , Client site validation , Cookies and Page redirect and Error
+                            Handling .</p>
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>DOM Object Hierarchy</li>
+                            <li>Event Handling</li>
+                            <li>Form Object, Methods & Properties</li>
+                            <li>Text and Button Elements</li>
+                            <li>Built-in Objects: String, Math, Date</li>
+                            <li>Client-Side Form Validation</li>
+                            <li>Regular Expressions</li>
+                            <li>Cookies & Page Redirect</li>
+                            <li>Built-in Objects: String, Math, Date</li>
+                            <li>Session Storage</li>
+                            <li>Error Handling and Debugging</li>
+                        </ul>
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
