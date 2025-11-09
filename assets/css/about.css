@@ -235,7 +235,7 @@ body {
     height: 120px;
     margin: 0 auto 1.5rem;
     border-radius: 50%;
-    padding: 5px;
+    padding: 3px;
     background: var(--gradient-primary);
 }
 
