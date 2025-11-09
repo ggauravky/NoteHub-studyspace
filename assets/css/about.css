@@ -27,14 +27,14 @@ body {
   line-height: 1.6;
   margin: 0;
 }
-/*  Container  */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-/*  Header & Navigation  */
+
 .header {
     background: var(--color-white);
     box-shadow: var(--shadow-sm);
