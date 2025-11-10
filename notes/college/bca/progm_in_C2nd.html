@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programming In C | BCA Semester 2 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> /
+            <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/bcasem1/sem1/sem2_bca.html">Semester 2</a> /
+            <span>Programming In C</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Programming In C</h1>
+            <p class="page-description">Complete Unit-wise notes following Syllabus</p>
+
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary>Unit 1: Introduction to Programming in C</summary>
+                    <div class="topic-content">
+                        <p>Learn the evolution of programming languages, approaches to
+                            problem-solving, fundamentals of C programming, data types, operators, control statements,
+                            and basic coding concepts.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Evolution of Programming Languages</li>
+                            <li>Programming Approaches (Top-down & Bottom-up)</li>
+                            <li>Algorithms and Flowcharts</li>
+                            <li>Source Code, Object Code, and Executable File</li>
+                            <li>Basic Structure of a C Program</li>
+                            <li>Data Types in C (Primitive, Derived, User-defined)</li>
+                            <li>Operators and Expressions</li>
+                            <li>Tokens in C (Variables, Constants, Identifiers, etc.)</li>
+                            <li>Type Conversion and Typecasting</li>
+                            <li>Control Statements (Decision, Looping & Jump Statements)</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 2: Arrays and Strings in C</summary>
+                    <div class="topic-content">
+                        <p>Understand array declaration, initialization, and operations such as
+                            insertion, deletion, searching, and sorting. Learn about character arrays, strings, and
+                            string handling functions used in C programming.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Arrays</li>
+                            <li>Declaration and Initialization of Arrays</li>
+                            <li>Types of Arrays (1D & 2D Arrays)</li>
+                            <li>Address Calculation of Array Elements</li>
+                            <li>Insertion and Deletion in Arrays</li>
+                            <li>Searching Techniques (Linear & Binary Search)</li>
+                            <li>Sorting Techniques (Bubble, Selection, Insertion Sort)</li>
+                            <li>Introduction to Character Arrays and Strings</li>
+                            <li>String Input and Output Operations</li>
+                            <li>String Handling Functions (strcat(), strcmp(), strcpy(), strlen())</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 3: Functions, Pointers, and Structures in C</summary>
+                    <div class="topic-content">
+                        <p>Functions, Pointers, and Structures in C: Learn about defining and using functions, passing
+                            parameters, pointer concepts, and structured data types. Understand memory management,
+                            function calls, and relationships between pointers, arrays, and structures.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Functions and User-Defined Functions</li>
+                            <li>Function Declaration and Definition</li>
+                            <li>Function Arguments – Actual and Formal Parameters</li>
+                            <li>Function Calling Methods – Call by Value & Call by Reference</li>
+                            <li>Passing Arrays as Function Parameters</li>
+                            <li>Storage Classes in C</li>
+                            <li>Introduction to Pointers and Pointer Arithmetic</li>
+                            <li>Pointers with Arrays and Strings</li>
+                            <li>Structures, Unions, and Their Arrays</li>
+                            <li>Pointers with Structures and Enumerations</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 4: File Handling and Preprocessor Directives in C</summary>
+                    <div class="topic-content">
+                        <p>File Handling and Preprocessor in C: Learn how to work with files for reading, writing, and
+                            managing data. Understand file modes, command line arguments, and preprocessor directives
+                            used to enhance program functionality and modularity.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Opening and Closing a File</li>
+                            <li>File Opening Modes (Read, Write, Append, etc.)</li>
+                            <li>Reading from and Writing to a File</li>
+                            <li>Copying Contents from One File to Another</li>
+                            <li>File Handling Library Functions</li>
+                            <li>Command Line Arguments</li>
+                            <li>Introduction to Preprocessor Directives</li>
+                            <li>Common Header Files in C (stdio.h, conio.h, math.h, stdlib.h)</li>
+                            <li>Additional Header Files (setjmp.h, signal.h, time.h, stdarg.h, graphics.h)</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
