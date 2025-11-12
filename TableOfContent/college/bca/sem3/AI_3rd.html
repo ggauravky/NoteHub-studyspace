@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numerical & Statistical Methods | BCA Semester 3 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/TableOfContent/college/bca/sem3/AI_3rd.html">Semester 3</a> /
+            <span>Numerical & Statistical Methods</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Artificial Intelligence</h1>
+            <p class="page-description">
+                Complete Unit-wise notes following BCA Semester 3 syllabus
+            </p>
+
+            <div class="topics-list">
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 1: Introduction to Artificial Intelligence and Problem
+                        Solving
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Understand the
+                            fundamentals of Artificial Intelligence, intelligent agents,
+                            search techniques, and how AI approaches real-world
+                            problem-solving through rational and goal-based systems.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Definition and Meaning of Artificial Intelligence</li>
+                            <li>Scope and Importance of AI in Modern Technology</li>
+                            <li>General Issues and Overview of AI</li>
+                            <li>
+                                AI Techniques – Search, Knowledge, and Learning Approaches
+                            </li>
+                            <li>AI Problems and Their Characteristics</li>
+                            <li>Intelligent Agents – Definition and Role in AI</li>
+                            <li>
+                                Types of Agents – Rational, Simple Reflex, Model-Based,
+                                Goal-Based, and Utility-Based
+                            </li>
+                            <li>
+                                Agent’s Environment – Types of Environments (Deterministic,
+                                Static, Dynamic, etc.)
+                            </li>
+                            <li>
+                                Problem Solving as State Space Search – Definition and Steps
+                            </li>
+                            <li>
+                                Production System – Components, Search Space, and Control
+                                Strategies
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 2: Search Algorithms in Artificial Intelligence
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Learn different search strategies for
+                            problem-solving. Explore uninformed and informed search
+                            techniques such as BFS, DFS, Hill Climbing, A*, AO*, and CSPs.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Search Algorithms and Their Role in AI</li>
+                            <li>
+                                Types of Search Algorithms – Uninformed and Informed Search
+                            </li>
+                            <li>
+                                Uninformed (Blind) Search: Breadth-First Search (Steps &
+                                Example)
+                            </li>
+                            <li>
+                                Uninformed (Blind) Search: Depth-First Search (Steps &
+                                Example)
+                            </li>
+                            <li>Informed (Heuristic) Search – Introduction and Uses</li>
+                            <li>
+                                Hill Climbing Search and Its Variations (Simple,
+                                Steepest-Ascent, Random)
+                            </li>
+                            <li>Best-First Search Algorithm</li>
+                            <li>A* (A-Star) Search Algorithm</li>
+                            <li>AO* Search and Branch & Bound Techniques</li>
+                            <li>
+                                Problem Reduction and Constraint Satisfaction Problems (CSPs)
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 3: Knowledge Representation and Reasoning
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Study how knowledge is
+                            represented, processed, and reasoned in AI systems using logic,
+                            semantic networks, frames, and uncertainty handling methods like
+                            Bayes’ theorem.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Knowledge Representation – Definition and Importance</li>
+                            <li>Predicate Logic – Unification and Modus Ponens</li>
+                            <li>Declarative and Procedural Knowledge Representation</li>
+                            <li>Rule-Based Systems – Concept and Application</li>
+                            <li>Structured Representation – Semantic Networks</li>
+                            <li>Frames – Slots, Defaults, and Exceptions</li>
+                            <li>Conceptual Dependency – Meaning Representation</li>
+                            <li>
+                                Handling Incomplete and Inconsistent Knowledge – Truth
+                                Maintenance Systems (TMS)
+                            </li>
+                            <li>
+                                Reasoning Techniques – Deductive, Inductive, and Non-Monotonic
+                                Reasoning
+                            </li>
+                            <li>Concept of Uncertainty and Bayes’ Theorem</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 4: Machine Learning and Knowledge in Learning
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore core
+                            learning paradigms such as supervised, unsupervised, and
+                            reinforcement learning, and understand algorithms like Decision
+                            Trees, Ensemble Methods, and Inductive Logic Programming.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>
+                                Forms of Learning – Supervised, Unsupervised, Reinforcement
+                            </li>
+                            <li>Learning from Observations and Examples</li>
+                            <li>Inductive Learning – Concept and Applications</li>
+                            <li>Decision Tree Learning (ID3, C4.5)</li>
+                            <li>Ensemble Learning – Bagging, Boosting, Random Forests</li>
+                            <li>Knowledge in Learning – Logical Formulation of Learning</li>
+                            <li>Explanation-Based Learning (EBL)</li>
+                            <li>Inductive Logic Programming (ILP)</li>
+                            <li>
+                                Statistical Learning Methods – Regression, Probability Models
+                            </li>
+                            <li>
+                                Instance-Based Learning – k-Nearest Neighbor and Case-Based
+                                Reasoning
+                            </li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

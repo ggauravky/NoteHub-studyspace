@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud Computing | BCA Semester 3 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> /
+            <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/TableOfContent/college/bca/sem3/Cloud_computing_3rd.html">Semester 3</a> /
+            <span>Cloud Computing</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Cloud Computing</h1>
+            <p class="page-description">Complete Unit-wise notes following BCA Semester 3 syllabus</p>
+
+            <div class="topics-list">
+
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>Unit 1: Cloud Computing Basics</summary>
+                    <div class="topic-content">
+                        <p>Learn the evolution, need, and importance of cloud computing. Understand
+                            its characteristics, advantages, challenges, and business benefits in modern IT
+                            infrastructure.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>History and Evolution of Cloud Computing</li>
+                            <li>Need and Importance of Cloud Computing</li>
+                            <li>Advantages of Cloud Computing (Cost, Scalability, Flexibility)</li>
+                            <li>Possible Disadvantages and Risks of Cloud Computing</li>
+                            <li>Key Characteristics of Cloud – On-demand Service, Pay-per-use, Elasticity</li>
+                            <li>Resource Pooling and Scalability in Cloud</li>
+                            <li>Comparison: Grid Computing vs. Parallel Computing</li>
+                            <li>Major Challenges in Cloud Computing (Security, Privacy, etc.)</li>
+                            <li>Impact of Cloud Computing on Business and Society</li>
+                            <li>Business Perspective and Economic Benefits of Cloud Computing</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>Unit 2: Cloud Deployment Models and Architecture</summary>
+                    <div class="topic-content">
+                        <p>Understand various deployment and service models in
+                            cloud computing, including Public, Private, Hybrid, and Community Clouds. Learn cloud
+                            architecture layers and the NIST reference model.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Cloud Deployment Models – Public Cloud</li>
+                            <li>Private Cloud – Features and Use Cases</li>
+                            <li>Hybrid Cloud – Integration and Benefits</li>
+                            <li>Community Cloud – Shared Access and Collaboration</li>
+                            <li>Other Deployment Models (Multi-Cloud, Inter-Cloud)</li>
+                            <li>Cloud Architecture – Layered View (Infrastructure, Platform, Application Layers)</li>
+                            <li>NIST Cloud Computing Reference Architecture</li>
+                            <li>Cloud Service Models – SaaS (Software as a Service)</li>
+                            <li>PaaS (Platform as a Service) and IaaS (Infrastructure as a Service)</li>
+                            <li>Hypervisor – Definition, Function, and Types (Type 1 and Type 2)</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>Unit 3: Virtualization and Cloud Service Providers</summary>
+                    <div class="topic-content">
+                        <p>Explore the concept of virtualization, its advantages, and
+                            various techniques. Learn about major cloud service providers like Google Cloud, Microsoft
+                            Azure, and Amazon Web Services (AWS).</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Need and Importance of Virtualization in Cloud Computing</li>
+                            <li>Pros and Cons of Virtualization</li>
+                            <li>Software Virtualization and Its Role in Cloud</li>
+                            <li>Memory and Storage Virtualization Concepts</li>
+                            <li>Server Virtualization – Techniques and Benefits</li>
+                            <li>Network Virtualization – VLANs and Virtual Switches</li>
+                            <li>Types of Hardware Virtualization – Full, Partial, Para-Virtualization</li>
+                            <li>Overview of Popular Cloud Service Providers</li>
+                            <li>Google Cloud Platform – Services and Features</li>
+                            <li>Microsoft Azure and Amazon Web Services (AWS) – Comparison and Applications</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>Unit 4: Cloud Security and Data Protection</summary>
+                    <div class="topic-content">
+                        <p>Learn about cloud security principles, governance, and
+                            standards. Understand encryption, hashing, and identity management to ensure secure cloud
+                            environments.</p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Cloud Security and Its Importance</li>
+                            <li>Cloud Security Fundamentals – CIA (Confidentiality, Integrity, Availability)</li>
+                            <li>Key Security Concepts – Authenticity, Threats, Vulnerability, Risk</li>
+                            <li>Common Cloud Security Threats and Attacks</li>
+                            <li>Cloud Security Governance and Compliance</li>
+                            <li>Security Standards and Frameworks for Cloud (ISO, NIST, etc.)</li>
+                            <li>Introduction to Green Cloud Computing</li>
+                            <li>Data Security in Cloud – Encryption Techniques</li>
+                            <li>Hashing and Digital Signatures for Data Protection</li>
+                            <li>Identity and Access Control Management in Cloud</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

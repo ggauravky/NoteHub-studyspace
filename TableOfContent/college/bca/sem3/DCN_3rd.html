@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Communication and Network | BCA Semester 3 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> /
+            <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/TableOfContent/college/bca/sem3/DCN_3rd.html">Semester 3</a> /
+            <span>Data Communication and Network</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Data Communication and Network</h1>
+            <p class="page-description">Complete Unit-wise notes following Syllabus</p>
+
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary> Unit 1: Introduction to Data Communication and Computer Networks</summary>
+                    <div class="topic-content">
+                        <p>Understand the fundamentals of data communication,
+                            transmission methods, transmission media, and computer network types. Learn about different transmission modes,
+                            topologies, and communication systems.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Basic Data Communication System – Data, Signaling, and Transmission System</li>
+                            <li>Synchronous and Asynchronous Transmission</li>
+                            <li>Transmission Modes – Serial and Parallel</li>
+                            <li>Transmission Types – Simplex, Half Duplex, and Full Duplex</li>
+                            <li>Transmission Media – Guided and Unguided</li>
+                            <li>Introduction to Computer Networks – Definition and Importance</li>
+                            <li>Goals and Applications of Computer Networks</li>
+                            <li>Types of Networks – PAN, LAN, MAN, WAN</li>
+                            <li>Types of Topologies – Point-to-Point, Multipoint, Centralized, Distributed, and Collaborative</li>
+                            <li>Types of Data Communication Systems – Wired and Wireless Communication</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 2: Network Connections and Architecture</summary>
+                    <div class="topic-content">
+                        <p>Learn about internet types, bandwidth and capacity formulas, network
+                            architectures, layered approaches, and standard models like OSI and TCP/IP. Understand multiplexing and
+                            switching techniques used in communication systems.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Internet, Intranet, Extranet, and VPNs</li>
+                            <li>Bandwidth, Band, and Channel Capacity</li>
+                            <li>Nyquist Capacity and Shannon Capacity Formulas</li>
+                            <li>Network Architecture – Monolithic vs. Layered Approach</li>
+                            <li>Design Issues of Layered Approach</li>
+                            <li>Services, Interfaces, Standards, and Protocols</li>
+                            <li>ISO-OSI Reference Model</li>
+                            <li>TCP/IP Reference Model</li>
+                            <li>Multiplexing Techniques – SDM, FDM, TDM, WDM</li>
+                            <li>Switching Techniques – Circuit, Message, and Packet Switching (Including PSTN & ISDN)</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary> Unit 3: Data Link, Network, and Transport Layers </summary>
+                <div class="topic-content">
+                    <p>Data Link, Network, and Transport Layers: Learn about framing, error detection, and correction techniques.
+                        Understand network routing, IP addressing, and transport layer mechanisms such as connection management, flow
+                        control, and transport protocols.</p>
+                
+                    <p><strong>Key Topics:</strong></p>
+                    <ul>
+                        <li>Framing and Error Control – VRC, LRC, CRC, Checksum</li>
+                        <li>Flow Control and Error Correction – Hamming Code</li>
+                        <li>LLC and MAC Sublayers</li>
+                        <li>Data Link Layer Protocols – Stop and Wait, Sliding Window, Go-Back-N</li>
+                        <li>LAN Protocols – IEEE Standards, Frame Relay, ATM, Cell Relay</li>
+                        <li>Network Layer Functions – Routing, Congestion Control, QoS, and Internetworking</li>
+                        <li>Routing Algorithms – Distance Vector and Link State</li>
+                        <li>IP Addressing – IPv4 and IPv6</li>
+                        <li>Transport Layer Concepts – Connection Management, Segmentation, Flow and Error Control</li>
+                        <li>Transport Protocols – TCP (Connection-oriented) and UDP (Connection-less)</li>
+                    </ul>
+                
+                    <a href="#" class="btn-secondary">View Complete Notes</a>
+                </div>
+
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 4: Upper Layers and Network Applications</summary>
+                    <div class="topic-content">
+                        <p>Upper Layers and Network Applications: Understand the functions of session, presentation, and application layers
+                            in network communication. Learn about encryption, data compression, web-based protocols, and quality of service
+                            in modern networks.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Session Layer – Logical Session Management and Token Management</li>
+                            <li>Synchronization, Event Management, and Exception Handling</li>
+                            <li>Presentation Layer – Data Presentation, Compression, and Encryption</li>
+                            <li>Data Compression Techniques – Text, Image, Audio, Video</li>
+                            <li>Cryptography – Basics, Symmetric and Asymmetric Encryption</li>
+                            <li>Private Key and Public Key Encryption</li>
+                            <li>Application Layer Protocols – HTTP, HTTPS, FTP, Telnet, DNS, Email System</li>
+                            <li>Internet Browser and Web-based Communication</li>
+                            <li>Quality of Service (QoS) in Upper Layers</li>
+                            <li>Overview of End-to-End Communication in OSI and TCP/IP Models</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

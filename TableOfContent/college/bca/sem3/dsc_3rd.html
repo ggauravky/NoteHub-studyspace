@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structure Using C | BCA Semester 3 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> /
+            <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/TableOfContent/college/bca/sem3/dsc_3rd.html">Semester 3</a> /
+            <span>Data Structure Using C</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Data Structure Using C</h1>
+            <p class="page-description">Complete Unit-wise notes following Syllabus</p>
+
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary> Unit 1: Introduction to Data Structures</summary>
+                    <div class="topic-content">
+                        <p>Learn the fundamental concepts, need, and classification of data structures.
+                            Understand array representation, operations, memory allocation, and applications, along with the concept of
+                            sparse matrices.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction and Need of Data Structures</li>
+                            <li>Classification of Data Structures (Linear & Non-linear)</li>
+                            <li>Operations on Data Structures (Insertion, Deletion, Traversal, Searching, Sorting)</li>
+                            <li>Dynamic Memory Allocation (malloc, calloc, realloc, free)</li>
+                            <li>Arrays and Their Representation in Memory</li>
+                            <li>Address Calculation in Arrays</li>
+                            <li>Applications of Arrays</li>
+                            <li>Limitations of Arrays</li>
+                            <li>Arrays as Function Parameters (Passing Arrays in Functions)</li>
+                            <li>Sparse Matrices – Concept, Representation, and Applications</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 2: Stack, Queue, and Recursion</summary>
+                <div class="topic-content">
+                    <p>Learn the concepts and operations of stack and queue data structures, including
+                        their array representations. Understand recursion, its principles, and applications like expression evaluation
+                        and the Tower of Hanoi problem.</p>
+                
+                    <p><strong>Key Topics:</strong></p>
+                    <ul>
+                        <li>Stack – Definition and Array Representation</li>
+                        <li>Stack Operations – Push and Pop</li>
+                        <li>Applications of Stack (Expression Conversion and Evaluation)</li>
+                        <li>Conversion of Infix to Prefix and Postfix Expressions</li>
+                        <li>Evaluation of Postfix Expressions using Stack</li>
+                        <li>Recursion – Definition and Process</li>
+                        <li>Principles of Recursion</li>
+                        <li>Tower of Hanoi Problem</li>
+                        <li>Recursion vs. Iteration</li>
+                        <li>Queue – Array Representation, Operations (Create, Add, Delete), and Types (Circular, Dequeue, Priority
+                            Queue)</li>
+                    </ul>
+                
+                    <a href="#" class="btn-secondary">View Complete Notes</a>
+                </div>
+
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary> Unit 3:Linked Lists and Their Operations </summary>
+                    <div class="topic-content">
+                        <p>Learn the concept, structure, and types of linked lists. Understand how to
+                            create, traverse, insert, delete, and sort nodes in different types of linked lists, along with their advantages
+                            over arrays.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Concept of Linear List</li>
+                            <li>Difference between List and Array</li>
+                            <li>Linked List Terminology and Memory Representation</li>
+                            <li>Types of Linked Lists:</li>
+                            <ul>
+                                <li>Singly Linked List</li>
+                                <li>Doubly Linked List</li>
+                                <li>Circular Linked List</li>
+                                <li>Circular Doubly Linked List</li>
+                            </ul>
+                            <li>Creating a Linked List</li>
+                            <li>Insertion in Linked List (Beginning, Middle, End)</li>
+                            <li>Deletion in Linked List (First Node, Specific Node)</li>
+                            <li>Traversing and Printing Nodes</li>
+                            <li>Searching and Counting Nodes in Linked List</li>
+                            <li>Sorting of Linked Lists</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+
+                <details class="topic-item">
+                    <summary>Unit 4: Trees, Graphs, Sorting, and Searching</summary>
+                    <div class="topic-content">
+                        <p>Learn the fundamental concepts and terminologies of trees and graphs.
+                            Understand different types of binary trees, traversals, expression trees, and binary search trees along with
+                            sorting and searching techniques.</p>
+                    
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Trees and Basic Terminology</li>
+                            <li>Binary Trees – Definition and Types</li>
+                            <li>Representation of Binary Tree in Memory</li>
+                            <li>Tree Traversals – Inorder, Preorder, Postorder</li>
+                            <li>Expression Tree and Tree Representation of Expressions</li>
+                            <li>Binary Search Tree (BST) – Concept, Insertion, and Deletion</li>
+                            <li>Graph Terminology and Representation</li>
+                            <li>Sorting Techniques – Bubble, Selection, Insertion, Shell, Quick, Merge</li>
+                            <li>Searching Techniques – Sequential (Linear) and Binary Search</li>
+                            <li>Applications of Trees and Graphs</li>
+                        </ul>
+                    
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+
+
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
