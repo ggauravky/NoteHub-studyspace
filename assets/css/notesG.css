@@ -1,0 +1,12 @@
+.notes-subtitle {
+    /* font-size: 1.2rem; */
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 900;
+
+}
+
+h2.notes-subtitle {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
