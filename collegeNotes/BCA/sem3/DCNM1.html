@@ -1,195 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Communication and Network Module 1 | Notes | NoteHub</title>
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="stylesheet" href="/assets/css/notesG.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      a {
-        text-decoration: underline;
-        color: #333;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <nav class="navbar">
-          <div class="logo">
-            <span class="logo-icon">📚</span>
-            <span class="logo-text">NoteHub</span>
-          </div>
-          <ul class="nav-menu" id="navMenu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../school.html">School</a></li>
-            <li><a href="../college.html">College</a></li>
-            <li><a href="../about.html">About</a></li>
-            <li><a href="../contact.html">Contact</a></li>
-          </ul>
-          <div class="hamburger" id="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </nav>
-      </div>
-    </header>
 
-    <!-- 
-table of content for mule 1 of dcn notes
-<li>Basic Data Communication System – Data, Signaling, and Transmission System</li>
-<li>Synchronous and Asynchronous Transmission</li>
-<li>Transmission Modes – Serial and Parallel</li>
-<li>Transmission Types – Simplex, Half Duplex, and Full Duplex</li>
-<li>Transmission Media – Guided and Unguided</li>
-<li>Introduction to Computer Networks – Definition and Importance</li>
-<li>Goals and Applications of Computer Networks</li>
-<li>Types of Networks – PAN, LAN, MAN, WAN</li>
-<li>Types of Topologies – Point-to-Point, Multipoint, Centralized, Distributed, and Collaborative</li>
-<li>Types of Data Communication Systems – Wired and Wireless Communication</li> 
--->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Communication and Network Module 1 | Notes | NoteHub</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/NOTESD.CSS">
+  <link rel="stylesheet" href="">
 
-    <section class="notes-section">
-      <div class="container">
-        <h1 class="notes-title">Data Communication and Network - Module 1</h1>
-        <div class="notes-content">
-          <h2>Table of Contents</h2>
-          <ul class="notes-toc">
-            <a href="#1.1"
-              ><li>
-                1.1 - Basic Data Communication System – Data, Signaling, and
-                Transmission System
-              </li></a
-            >
-            <a href="#"
-              ><li>1.2 - Synchronous and Asynchronous Transmission</li></a
-            >
-            <a href="#"
-              ><li>1.3 - Transmission Modes – Serial and Parallel</li></a
-            >
-            <a href="#"
-              ><li>
-                1.4 - Transmission Types – Simplex, Half Duplex, and Full Duplex
-              </li></a
-            >
-            <a href="#"
-              ><li>1.5 - Transmission Media – Guided and Unguided</li></a
-            >
-            <a href="#"
-              ><li>
-                1.6 - Introduction to Computer Networks – Definition and
-                Importance
-              </li></a
-            >
-            <a href="#"
-              ><li>1.7 - Goals and Applications of Computer Networks</li></a
-            >
-            <a href="#"
-              ><li>1.8 - Types of Networks – PAN, LAN, MAN, WAN</li></a
-            >
-            <a href="#"
-              ><li>
-                1.9 - Types of Topologies – Point-to-Point, Multipoint,
-                Centralized, Distributed, and Collaborative
-              </li></a
-            >
-            <a href="#"
-              ><li>
-                1.10 - Types of Data Communication Systems – Wired and Wireless
-                Communication
-              </li></a
-            >
-          </ul>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    a {
+      text-decoration: underline;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">
+          <span class="logo-icon">📚</span>
+          <span class="logo-text">NoteHub</span>
         </div>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../school.html">School</a></li>
+          <li><a href="../college.html">College</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="notes-section">
+    <div class="container">
+      <h1 class="notes-title">Data Communication and Network - Module 1</h1>
+      <div class="notes-content">
+        <h2>Table of Contents</h2>
+        <ul class="notes-toc">
+          <a href="#1.1">
+            <li>
+              1.1 - Basic Data Communication System – Data, Signaling, and
+              Transmission System
+            </li>
+          </a>
+          <a href="#">
+            <li>1.2 - Synchronous and Asynchronous Transmission</li>
+          </a>
+          <a href="#">
+            <li>1.3 - Transmission Modes – Serial and Parallel</li>
+          </a>
+          <a href="#">
+            <li>
+              1.4 - Transmission Types – Simplex, Half Duplex, and Full Duplex
+            </li>
+          </a>
+          <a href="#">
+            <li>1.5 - Transmission Media – Guided and Unguided</li>
+          </a>
+          <a href="#">
+            <li>
+              1.6 - Introduction to Computer Networks – Definition and
+              Importance
+            </li>
+          </a>
+          <a href="#">
+            <li>1.7 - Goals and Applications of Computer Networks</li>
+          </a>
+          <a href="#">
+            <li>1.8 - Types of Networks – PAN, LAN, MAN, WAN</li>
+          </a>
+          <a href="#">
+            <li>
+              1.9 - Types of Topologies – Point-to-Point, Multipoint,
+              Centralized, Distributed, and Collaborative
+            </li>
+          </a>
+          <a href="#">
+            <li>
+              1.10 - Types of Data Communication Systems – Wired and Wireless
+              Communication
+            </li>
+          </a>
+        </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="notes-section">
-      <div class="container" id="1.1">
-        <div class="notes-content">
-          <h2 class="notes-subtitle">
-            1.1 - Basic Data Communication System – Data, Signaling, and
-            Transmission System
-          </h2>
-          <h2>1.1.1 Introduction to Data Communications</h2>
-          <p>
-            Data Communication means the process of sending and receiving data
-            (like text, images, video, etc.) from one place to another using
-            some medium (like wire, air, fiber optics).
-            <br /><br />
-            <strong>Definition:</strong> Data Communication is the exchange of
-            Communication is the exchange of data between two or more devices
-            through some transmission medium such as a wire cable or wireless
-            signal.
-          </p>
+  <section class="notes-section">
+    <div class="container" id="1.1">
+      <div class="notes-content">
+        <h1 class="notes-subtitle pad-bottom-2" >
+          1.1 - Basic Data Communication System – Data, Signaling, and
+          Transmission System :-
+        </h1>
+        <h2>1.1.1 Introduction to Data Communications</h2>
+        <p>
+          Data Communication means the process of sending and receiving data
+          (like text, images, video, etc.) from one place to another using
+          some medium (like wire, air, fiber optics).
+          <br /><br />
+          <strong>Definition:</strong> Data Communication is the exchange of
+          Communication is the exchange of data between two or more devices
+          through some transmission medium such as a wire cable or wireless
+          signal.
+        </p>
 
-          <h2>1.1.2 Basic Data Communication System</h2>
+        <h2>1.1.2 Basic Data Communication System</h2>
+        <p>
+          A Basic Data Communication System consists of the following
+          components:
+        </p>
+        <p style="font-size: medium">Component Description:</p>
+        <ul>
+          <li>
+            <strong>Message:</strong> The data or information to be
+            communicated (text, image, video, etc.)
+          </li>
+          <li>
+            <strong>Sender:</strong> The device that sends the message (e.g.,
+            computer, phone)
+          </li>
+          <li>
+            <strong>Receiver:</strong> The device that receives the message
+            (e.g., another computer)
+          </li>
+          <li>
+            <strong>Transmission Medium:</strong> The channel through which
+            the data travels (e.g., cables, air)
+          </li>
+          <li>
+            <strong>Protocol:</strong> Set of rules that both sender and
+            receiver follow for communication
+          </li>
+        </ul>
+
+        <div class="imagine-box">
+          <h3 class="pad-bottom-1">Real Life Example :-</h3>
           <p>
-            A Basic Data Communication System consists of the following
-            components:
+            💡Imagine you send a photo from your phone to your friend's phone
+            using WhatsApp:
           </p>
-          <p style="font-size: medium">Component Description:</p>
           <ul>
+            <li><strong>Sender:</strong> Your phone</li>
+            <li><strong>Message:</strong> The photo</li>
+            <li><strong>Receiver:</strong> Friend's phone</li>
             <li>
-              <strong>Message:</strong> The data or information to be
-              communicated (text, image, video, etc.)
+              <strong>Medium:</strong> Internet (via mobile network or Wi-Fi)
             </li>
             <li>
-              <strong>Sender:</strong> The device that sends the message (e.g.,
-              computer, phone)
-            </li>
-            <li>
-              <strong>Receiver:</strong> The device that receives the message
-              (e.g., another computer)
-            </li>
-            <li>
-              <strong>Transmission Medium:</strong> The channel through which
-              the data travels (e.g., cables, air)
-            </li>
-            <li>
-              <strong>Protocol:</strong> Set of rules that both sender and
-              receiver follow for communication
+              <strong>Protocol:</strong> WhatsApp uses TCP/IP for
+              communication
             </li>
           </ul>
+        </div>
 
-          <div class="imagine-box">
-            <h3>Real Life Example</h3>
-            <p>
-              💡Imagine you send a photo from your phone to your friend's phone
-              using WhatsApp:
-            </p>
-            <ul>
-              <li><strong>Sender:</strong> Your phone</li>
-              <li><strong>Message:</strong> The photo</li>
-              <li><strong>Receiver:</strong> Friend's phone</li>
-              <li>
-                <strong>Medium:</strong> Internet (via mobile network or Wi-Fi)
-              </li>
-              <li>
-                <strong>Protocol:</strong> WhatsApp uses TCP/IP for
-                communication
-              </li>
-            </ul>
-          </div>
+        <h2 class="pad-bottom-1">1.1.3 Signaling</h2>
+        <strong> Definition:</strong>
+        <p>
+          Signaling is the process of converting data into signals so that it
+          can be transmitted over a communication medium such as wires,
+          optical fibers, or air <br />(in case of wireless communication).
+        </p>
+
+        <p>
+          In simple terms, signaling determines how information is represented
+          and sent from one device to another.
+        </p>
+
+        <p>
+          When data needs to travel between devices, it cannot move as raw
+          binary or text. Instead, it must be converted into electrical,
+          optical, or electromagnetic signals that can move through the
+          transmission medium.
+        </p>
+
+        <h2>Types of Signals :-</h2>
+        <p>
+          There are mainly two types of signals used in communication systems:
+        </p>
+        <div class="pad-bottom-2">
+          <h4>(i) Analog Signal</h4>
+          <h4>(ii) Digital Signal</h4>
+        </div>
+
+
+        <h4 class="pad-bottom-1">(i) Analog Signal</h4>
+        <div class="pad-bottom-1"><p>
+          <strong> Definition:</strong> An analog signal is a continuous wave
+          that changes smoothly over time and represents variations in some
+          physical quantity such as voltage, current, or frequency.
+        </p>
+
+        <p><strong>Nature: </strong>Continuous in both time and amplitude.</p>
+
+        <p>
+          <strong>Used In: </strong> Traditional communication systems like
+          radios, telephones, and TV transmissions.
+        </p>
+
+        <p>
+          <strong>Example : </strong> When you speak on a traditional
+          (landline) phone, your voice produces sound waves that are
+          continuous. These sound waves are converted into an analog
+          electrical signal that varies smoothly according to the pressure and
+          tone of your voice.
+        </p>
+        <p>
+          <strong>Graph Representation : </strong>
+
+          The waveform of a digital signal looks like a square wave with clear
+          transitions between two levels (high and low).
+        </p></div>
+        
+
+        <h4 class="pad-bottom-1">(ii) Digital Signal</h4>
+        <div class="pad-bottom-1 ">
+         
+          <p>
+            <strong> Definition:</strong> A digital signal consists of discrete
+            values, usually represented by binary digits (0 and 1). Each bit
+            represents a distinct voltage level.
+          </p>
+
+          <p>
+            <strong>Nature: </strong>Discrete in both time and amplitude (not
+            continuous).
+          </p>
+
+          <p>
+            <strong>Used In: </strong> Computers, digital communication systems,
+            and modern devices like smartphones, routers, and digital
+            televisions.
+          </p>
+
+          <p>
+            <strong>Example : </strong>When you speak on a mobile phone, your
+            analog voice is first converted into a digital signal (a sequence of
+            0s and 1s). This digital data is then transmitted through the
+            network. At the receiver's end, it is again converted back into an
+            analog form so that the person can hear your voice naturally.
+          </p>
+          <p>
+            <strong>Graph Representation : </strong>
+
+            The waveform of a digital signal looks like a square wave with clear
+            transitions between two levels (high and low).
+        </div>
+        </p>
+
+        <h2 class="pad-bottom-1">Key Differences Between Analog and Digital Signals :</h2>
+
+        <div class="Center back-col">
+          <table border="1" cellpadding="20px" cellspacing="5">
+            <thead>
+              <tr>
+                <th class="text-big">Feature</th>
+                <th class="text-big">Analog Signal</th>
+                <th class="text-big">Digital Signal</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td><strong>Nature</strong></td>
+                <td>Continuous signal</td>
+                <td>Discrete signal</td>
+              </tr>
+
+              <tr>
+                <td> <strong>Representation</strong></td>
+                <td>Varies continuously (waveform)</td>
+                <td>Represented by 0s and 1s</td>
+              </tr>
+
+              <tr>
+                <td><strong>Accuracy</strong> </td>
+                <td>More prone to noise and distortion</td>
+                <td>Less affected by noise</td>
+              </tr>
+
+              <tr>
+                <td><strong>Transmission</strong></td>
+                <td>Used in old communication systems</td>
+                <td>Used in modern digital systems</td>
+              </tr>
+
+              <tr>
+                <td><strong>Example</strong></td>
+                <td>Voice in landline phones, radio</td>
+                <td>Data in computers, mobile communication</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
-        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+      <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+    </div>
+  </footer>
 
-    <button id="backToTop" class="back-to-top">↑</button>
+  <button id="backToTop" class="back-to-top">↑</button>
 
-    <script src="../assets/js/main.js"></script>
-  </body>
+  <script src="../assets/js/main.js"></script>
+</body>
+
 </html>
