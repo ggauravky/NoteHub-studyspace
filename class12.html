@@ -3,43 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comming Soon | NoteHub</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Class 12 Notes - NoteHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-
-    .coming-soon {
-        text-align: center;
-        padding: 100px 20px;
-    }
-
-    .coming-soon-title {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-
-    .coming-soon-message {
-        font-size: 24px;
-        margin-bottom: 40px;
-    }
-
-    .coming-soon a {
-        text-decoration: none;
-        color: #fff;
-        background-color: #007BFF;
-        padding: 12px 24px;
-        border-radius: 5px;
-        font-size: 18px;
-    }
-
-    .coming-soon a:hover {
-        background-color: #0056b3;
-    }
-
-    </style>
 </head>
 <body>
+
+
     <header class="header">
         <div class="container">
             <nav class="navbar">
@@ -48,11 +19,11 @@
                     <span class="logo-text">NoteHub</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../school.html" >School</a></li>
-                    <li><a href="../college.html">College</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="school.html" class="active">School</a></li>
+                    <li><a href="college.html">College</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -63,17 +34,124 @@
         </div>
     </header>
 
-    <section class="coming-soon">
+
+    <div class="breadcrumb">
         <div class="container">
-            <h1 class="coming-soon-title">Coming Soon!</h1>
-            <p class="coming-soon-message">We're working hard to bring you this feature. Stay tuned!</p>
-            <a href="../index.html" class="btn-primary">Back to Home</a>
+            <a href="index.html">Home</a> /
+            <a href="school.html">School</a> /
+            <span>Class 12</span>
+        </div>
+    </div>
+
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Class 12 Notes</h1>
+            <p class="page-description">Select a subject to access comprehensive notes and study materials</p>
+
+            <div class="cards-grid">
+
+                <a href="/subjects/school/class_12/physics12.html" class="content-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Physics</h3>
+                    <p>Electrostatics, Magnetism, Optics, Modern Physics</p>
+                </a>
+
+                <a href="/subjects/school/class_12/chemistry12.html" class="content-card">
+                    <div class="card-icon">🧪</div>
+                    <h3>Chemistry</h3>
+                    <p>Electrochemistry, Organic, Kinetics, Biomolecules</p>
+                </a>
+
+                <a href="/subjects/school/class_12/maths12.html" class="content-card">
+                    <div class="card-icon">📐</div>
+                    <h3>Mathematics</h3>
+                    <p>Calculus, Vectors, Algebra, Probability</p>
+                </a>
+
+                <a href="/subjects/school/class_12/biology12.html" class="content-card">
+                    <div class="card-icon">🧬</div>
+                    <h3>Biology</h3>
+                    <p>Reproduction, Genetics, Evolution, Human Physiology</p>
+                </a>
+
+
+                <a href="/subjects/school/class_12/accountancy12.html" class="content-card">
+                    <div class="card-icon">📊</div>
+                    <h3>Accountancy</h3>
+                    <p>Partnership, Companies, Financial Statements</p>
+                </a>
+
+                <a href="/subjects/school/class_12/business12.html" class="content-card">
+                    <div class="card-icon">💼</div>
+                    <h3>Business Studies</h3>
+                    <p>Management, Marketing, Finance</p>
+                </a>
+
+                <a href="/subjects/school/class_12/economics12.html" class="content-card">
+                    <div class="card-icon">📈</div>
+                    <h3>Economics</h3>
+                    <p>Macroeconomics & Indian Economic Development</p>
+                </a>
+
+                <a href="/subjects/school/class_12/history12.html" class="content-card">
+                    <div class="card-icon">🏺</div>
+                    <h3>History</h3>
+                    <p>Ancient Civilizations to Modern World</p>
+                </a>
+
+                <a href="/subjects/school/class_12/geography12.html" class="content-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Geography</h3>
+                    <p>Human Geography, Cartography, Resources</p>
+                </a>
+
+                <a href="/subjects/school/class_12/politicalscience12.html" class="content-card">
+                    <div class="card-icon">🏛️</div>
+                    <h3>Political Science</h3>
+                    <p>Contemporary World Politics, Constitution</p>
+                </a>
+
+                <a href="/subjects/school/class_12/sociology12.html" class="content-card">
+                    <div class="card-icon">👥</div>
+                    <h3>Sociology</h3>
+                    <p>Indian Society, Social Change, Development</p>
+                </a>
+
+                <a href="/subjects/school/class_12/english12.html" class="content-card">
+                    <div class="card-icon">📘</div>
+                    <h3>English</h3>
+                    <p>Flamingo, Vistas & Grammar</p>
+                </a>
+
+                <a href="/subjects/school/class_12/hindi12.html" class="content-card">
+                    <div class="card-icon">🇮🇳</div>
+                    <h3>Hindi</h3>
+                    <p>आरोह, वितान, लेखन एवं व्याकरण</p>
+                </a>
+
+                <a href="/subjects/school/class_12/sanskrit12.html" class="content-card">
+                    <div class="card-icon">🕉️</div>
+                    <h3>Sanskrit</h3>
+                    <p>भाषा, साहित्य, संस्कृत व्याकरण</p>
+                </a>
+
+                <a href="/subjects/school/class_12/computer12.html" class="content-card">
+                    <div class="card-icon">💻</div>
+                    <h3>Computer Science</h3>
+                    <p>Python, OOP, Data Structures, Networking</p>
+                </a>
+
+
+                <a href="/subjects/school/class_12/pe12.html" class="content-card">
+                    <div class="card-icon">🏃</div>
+                    <h3>Physical Education</h3>
+                    <p>Fitness, Sports, Physiology</p>
+                </a>
+
+            </div>
         </div>
     </section>
-
-
-
-
 
     <footer class="footer">
         <div class="container">
@@ -84,6 +162,6 @@
 
     <button id="backToTop" class="back-to-top">↑</button>
 
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
