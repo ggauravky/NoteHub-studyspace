@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 10 Science - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .subject-section { margin-bottom: 4rem; }
+        .subject-heading {
+            font-size: 2rem; font-weight: 700; color: #667eea;
+            margin: 2rem 0 1.5rem; padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea; border-radius: 8px;
+        }
+        .topic-content ul { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .topic-content ul li {
+            position: relative; padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe; border-radius: 8px;
+            color: #555; font-size: 0.95rem; transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .topic-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102,126,234,0.15);
+        }
+        .topic-content ul li::before {
+            content: "✓"; position: absolute;
+            left: 15px; top: 50%; transform: translateY(-50%);
+            width: 22px; height: 22px; background: linear-gradient(135deg,#667eea,#764ba2);
+            color: white; border-radius: 50%; display: flex;
+            align-items: center; justify-content: center;
+            font-size: 12px; font-weight: bold;
+        }
+        .topic-content p strong { color:#667eea; font-size:1.05rem; display:block; margin-bottom:8px; }
+        .topic-content > p {
+            background: #fff9e6; padding: 15px 20px; border-radius: 8px;
+            border-left: 4px solid #ffc107; margin-bottom: 1.5rem;
+            line-height: 1.8; color:#555;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html" class="active">School</a></li>
+                    <li><a href="/college.html">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / 
+            <a href="/school.html">School</a> / 
+            <a href="/class10.html">Class 10</a> / 
+            <span>Science</span>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Class 10 Science</h1>
+            <p class="page-description">Complete NCERT-based notes for Class 10 Science — Physics, Chemistry & Biology.</p>
+
+            <!-- Chapter List -->
+            <div class="subject-section">
+                <h2 class="subject-heading">🔬 Class 10 Science – Chapters</h2>
+
+                <div class="topics-list">
+
+                    <!-- Chapter 1 -->
+                    <details class="topic-item">
+                        <summary>Chapter 1: Chemical Reactions and Equations</summary>
+                        <div class="topic-content">
+                            <p><strong>Learn how substances react and form new products.</strong></p>
+                            <ul>
+                                <li>Types of Chemical Reactions</li>
+                                <li>Balancing Chemical Equations</li>
+                                <li>Combination & Decomposition</li>
+                                <li>Displacement & Double Displacement</li>
+                                <li>Oxidation & Reduction</li>
+                                <li>Corrosion & Rancidity</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <!-- Chapter 2 -->
+                    <details class="topic-item">
+                        <summary>Chapter 2: Acids, Bases and Salts</summary>
+                        <div class="topic-content">
+                            <p><strong>Study chemical properties & daily-life applications.</strong></p>
+                            <ul>
+                                <li>Acids & Bases Properties</li>
+                                <li>pH Scale</li>
+                                <li>Neutralization Reaction</li>
+                                <li>Important Salts</li>
+                                <li>Plaster of Paris, Baking Soda, Washing Soda</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <!-- Chapter 3 -->
+                    <details class="topic-item">
+                        <summary>Chapter 3: Metals and Non-Metals</summary>
+                        <div class="topic-content">
+                            <p><strong>Physical & chemical properties of metals and non-metals.</strong></p>
+                            <ul>
+                                <li>Properties of Metals/Non-Metals</li>
+                                <li>Reactivity Series</li>
+                                <li>Formation of Ionic Compounds</li>
+                                <li>Corrosion and Prevention</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <!-- Chapter 4 -->
+                    <details class="topic-item">
+                        <summary>Chapter 4: Carbon and Its Compounds</summary>
+                        <div class="topic-content">
+                            <p><strong>Understand bonding, hydrocarbons & functional groups.</strong></p>
+                            <ul>
+                                <li>Covalent Bonding</li>
+                                <li>Hydrocarbons</li>
+                                <li>Functional Groups</li>
+                                <li>Ethanol & Ethanoic Acid</li>
+                                <li>Soap & Detergents</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <!-- Chapter 5 -->
+                    <details class="topic-item">
+                        <summary>Chapter 5: Periodic Classification of Elements</summary>
+                        <div class="topic-content">
+                            <p><strong>Mendeleev to Modern periodic table & trends.</strong></p>
+                            <ul>
+                                <li>Dobereiner, Newlands, Mendeleev</li>
+                                <li>Modern Periodic Table</li>
+                                <li>Trends: Valency, Atomic Size, Electronegativity</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- PHYSICS SECTION -->
+
+                    <!-- Chapter 6 -->
+                    <details class="topic-item">
+                        <summary>Chapter 6: Life Processes</summary>
+                        <div class="topic-content">
+                            <p><strong>Learn how living organisms survive & function.</strong></p>
+                            <ul>
+                                <li>Nutrition – Autotrophic & Heterotrophic</li>
+                                <li>Respiration</li>
+                                <li>Transportation in Plants & Animals</li>
+                                <li>Excretion</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+                    <!-- Chapter 7 -->
+                    <details class="topic-item">
+                        <summary>Chapter 7: Control and Coordination</summary>
+                        <div class="topic-content">
+                            <p><strong>Nervous system, endocrine system & plant movements.</strong></p>
+                            <ul>
+                                <li>Nervous System</li>
+                                <li>Reflex Actions</li>
+                                <li>Endocrine System (Hormones)</li>
+                                <li>Plant Movements</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 8 -->
+                    <details class="topic-item">
+                        <summary>Chapter 8: How do Organisms Reproduce?</summary>
+                        <div class="topic-content">
+                            <p><strong>Reproduction in plants & animals.</strong></p>
+                            <ul>
+                                <li>Asexual Reproduction</li>
+                                <li>Sexual Reproduction</li>
+                                <li>Human Reproductive System</li>
+                                <li>Fertilization & Development</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 9 -->
+                    <details class="topic-item">
+                        <summary>Chapter 9: Heredity and Evolution</summary>
+                        <div class="topic-content">
+                            <p><strong>Traits, genetic variation & evolution.</strong></p>
+                            <ul>
+                                <li>Mendel’s Laws</li>
+                                <li>Genotype & Phenotype</li>
+                                <li>Evolution & Speciation</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 10 -->
+                    <details class="topic-item">
+                        <summary>Chapter 10: Light – Reflection and Refraction</summary>
+                        <div class="topic-content">
+                            <p><strong>Mirrors, lenses, and ray diagrams.</strong></p>
+                            <ul>
+                                <li>Reflection of Light</li>
+                                <li>Mirror Formula</li>
+                                <li>Refraction of Light</li>
+                                <li>Lenses & Lens Formula</li>
+                                <li>Power of Lens</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 11 -->
+                    <details class="topic-item">
+                        <summary>Chapter 11: Human Eye and the Colourful World</summary>
+                        <div class="topic-content">
+                            <p><strong>Vision, accommodation & natural phenomena.</strong></p>
+                            <ul>
+                                <li>Structure of Human Eye</li>
+                                <li>Defects of Vision</li>
+                                <li>Scattering of Light</li>
+                                <li>Rainbow Formation</li>
+                                <li>Tyndall Effect</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 12 -->
+                    <details class="topic-item">
+                        <summary>Chapter 12: Electricity</summary>
+                        <div class="topic-content">
+                            <p><strong>Electric current, Ohm’s law & circuits.</strong></p>
+                            <ul>
+                                <li>Electric Current</li>
+                                <li>Ohm’s Law</li>
+                                <li>Resistance & Resistivity</li>
+                                <li>Series & Parallel Combination</li>
+                                <li>Heating Effect of Current</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 13 -->
+                    <details class="topic-item">
+                        <summary>Chapter 13: Magnetic Effects of Electric Current</summary>
+                        <div class="topic-content">
+                            <p><strong>Electromagnets, motors & Oersted’s experiment.</strong></p>
+                            <ul>
+                                <li>Magnetic Field</li>
+                                <li>Electromagnetism</li>
+                                <li>Fleming’s Rule</li>
+                                <li>Electric Motor & Generator</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 14 -->
+                    <details class="topic-item">
+                        <summary>Chapter 14: Sources of Energy</summary>
+                        <div class="topic-content">
+                            <p><strong>Renewable & non-renewable sources of energy.</strong></p>
+                            <ul>
+                                <li>Conventional Sources</li>
+                                <li>Non-Conventional Sources</li>
+                                <li>Solar Energy</li>
+                                <li>Wind & Hydropower</li>
+                                <li>Nuclear Energy</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                    <!-- Chapter 15 -->
+                    <details class="topic-item">
+                        <summary>Chapter 15: Our Environment</summary>
+                        <div class="topic-content">
+                            <p><strong>Ecosystems, food chains & environmental issues.</strong></p>
+                            <ul>
+                                <li>Biodegradable & Non-biodegradable</li>
+                                <li>Food Web & Trophic Levels</li>
+                                <li>Ozone Layer & Its Depletion</li>
+                            </ul>
+                            <a href="#" class="btn-secondary">View Complete Notes</a>
+                        </div>
+                    </details>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
