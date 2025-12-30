@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coordinate Geometry - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      .diagram-box {
+        background: #f5f5f5;
+        border: 2px dashed #667eea;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+
+      .diagram-box h4 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram-box p {
+        color: #666;
+        font-style: italic;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Coordinate Geometry</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📐 Coordinate Geometry - Class 9</h1>
+        <p class="page-description">
+          Complete notes with diagrams, examples, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">
+            1. Introduction to Coordinate Geometry
+          </h2>
+          <p>
+            Coordinate Geometry (also called Cartesian Geometry or Analytic
+            Geometry) is a branch of mathematics that uses numbers to represent
+            geometric figures and positions. It bridges algebra and geometry,
+            allowing us to describe shapes using equations.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is Coordinate Geometry?</h4>
+            <p>
+              Coordinate Geometry is the study of geometry using a coordinate
+              system. We use two perpendicular lines (axes) to locate any point
+              on a plane using two numbers called coordinates.
+            </p>
+            <p>
+              This system was developed by the French mathematician René
+              Descartes, which is why it's called the Cartesian system.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Why Study Coordinate Geometry?</h3>
+          <ul>
+            <li>
+              It helps us represent geometric shapes using algebraic equations.
+            </li>
+            <li>
+              We can calculate distances, midpoints, and areas using simple
+              formulas.
+            </li>
+            <li>
+              It's used in GPS systems, computer graphics, architecture, and
+              engineering.
+            </li>
+            <li>
+              It provides a powerful tool to solve geometric problems
+              algebraically.
+            </li>
+            <li>
+              Makes complex geometric proofs simpler using coordinate methods.
+            </li>
+          </ul>
+
+          <!-- Cartesian Plane -->
+          <h2 class="chapter-heading">2. The Cartesian Plane</h2>
+          <p>
+            The Cartesian plane is formed by two perpendicular number lines that
+            intersect at a point called the origin.
+          </p>
+
+          <h3 class="sub-heading">2.1 Components of Cartesian Plane</h3>
+          <ul>
+            <li>
+              <strong>X-axis (Horizontal axis):</strong> The horizontal number
+              line running left to right.
+            </li>
+            <li>
+              <strong>Y-axis (Vertical axis):</strong> The vertical number line
+              running bottom to top.
+            </li>
+            <li>
+              <strong>Origin (O):</strong> The point where both axes intersect,
+              represented as (0, 0).
+            </li>
+            <li>
+              <strong>Quadrants:</strong> The four regions created by the
+              intersection of axes.
+            </li>
+            <li>
+              The axes divide the plane into four equal parts called quadrants.
+            </li>
+          </ul>
+
+          <div class="diagram-box">
+            <h4>📊 Cartesian Plane Structure</h4>
+            <p>
+              Imagine a "+" sign: the horizontal line is the X-axis, and the
+              vertical line is the Y-axis.
+            </p>
+            <p>The meeting point in the center is the Origin (0, 0).</p>
+            <p>
+              Right = positive X, Left = negative X, Up = positive Y, Down =
+              negative Y
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 The Four Quadrants</h3>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Quadrant</th>
+                  <th>Position</th>
+                  <th>X-coordinate</th>
+                  <th>Y-coordinate</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>I (First)</td>
+                  <td>Top-Right</td>
+                  <td>Positive (+)</td>
+                  <td>Positive (+)</td>
+                  <td>(3, 4)</td>
+                </tr>
+                <tr>
+                  <td>II (Second)</td>
+                  <td>Top-Left</td>
+                  <td>Negative (-)</td>
+                  <td>Positive (+)</td>
+                  <td>(-2, 5)</td>
+                </tr>
+                <tr>
+                  <td>III (Third)</td>
+                  <td>Bottom-Left</td>
+                  <td>Negative (-)</td>
+                  <td>Negative (-)</td>
+                  <td>(-4, -3)</td>
+                </tr>
+                <tr>
+                  <td>IV (Fourth)</td>
+                  <td>Bottom-Right</td>
+                  <td>Positive (+)</td>
+                  <td>Negative (-)</td>
+                  <td>(5, -2)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Remember: Quadrant Signs</h4>
+            <ul>
+              <li>I: (+, +) → Both positive</li>
+              <li>II: (-, +) → X negative, Y positive</li>
+              <li>III: (-, -) → Both negative</li>
+              <li>IV: (+, -) → X positive, Y negative</li>
+              <li>Mnemonic: Start from top-right, go anticlockwise</li>
+            </ul>
+          </div>
+
+          <!-- Coordinates -->
+          <h2 class="chapter-heading">3. Coordinates of a Point</h2>
+          <p>
+            Every point on the Cartesian plane can be uniquely identified by an
+            ordered pair of numbers called coordinates.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What are Coordinates?</h4>
+            <p>
+              Coordinates are a pair of numbers written as (x, y) that represent
+              the position of a point on the plane.
+            </p>
+            <p>
+              <strong>x-coordinate (Abscissa):</strong> The distance from the
+              Y-axis (horizontal distance).
+            </p>
+            <p>
+              <strong>y-coordinate (Ordinate):</strong> The distance from the
+              X-axis (vertical distance).
+            </p>
+            <p>Format: Point P = (x, y) where x comes first, then y.</p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Understanding Coordinates</h3>
+          <ul>
+            <li>
+              The first number (x) tells how far to move horizontally from the
+              origin.
+            </li>
+            <li>
+              The second number (y) tells how far to move vertically from the
+              origin.
+            </li>
+            <li>Positive x means move right; negative x means move left.</li>
+            <li>Positive y means move up; negative y means move down.</li>
+            <li>Order matters! (3, 5) and (5, 3) are different points.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Plotting Points</h4>
+            <p><strong>Q1:</strong> Plot the point A(4, 3)</p>
+            <p><strong>Solution:</strong></p>
+            <p>• Start at origin (0, 0)</p>
+            <p>• Move 4 units to the RIGHT (positive x)</p>
+            <p>• Then move 3 units UP (positive y)</p>
+            <p>• Mark the point A(4, 3) in Quadrant I</p>
+            <br />
+            <p><strong>Q2:</strong> Plot the point B(-3, 2)</p>
+            <p><strong>Solution:</strong></p>
+            <p>• Start at origin (0, 0)</p>
+            <p>• Move 3 units to the LEFT (negative x)</p>
+            <p>• Then move 2 units UP (positive y)</p>
+            <p>• Mark the point B(-3, 2) in Quadrant II</p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Special Positions</h3>
+          <ul>
+            <li>
+              <strong>Origin:</strong> (0, 0) - The center point where axes
+              meet.
+            </li>
+            <li>
+              <strong>On X-axis:</strong> Points like (5, 0), (-3, 0) -
+              Y-coordinate is 0.
+            </li>
+            <li>
+              <strong>On Y-axis:</strong> Points like (0, 4), (0, -2) -
+              X-coordinate is 0.
+            </li>
+            <li>Points on axes don't belong to any quadrant.</li>
+            <li>Distance from X-axis = |y-coordinate|</li>
+            <li>Distance from Y-axis = |x-coordinate|</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Identifying Positions</h4>
+            <p>
+              <strong>Q:</strong> In which quadrant or on which axis do these
+              points lie?
+            </p>
+            <p>a) (5, 3) b) (-2, -4) c) (0, 5) d) (3, 0) e) (-3, 2)</p>
+            <p><strong>Solution:</strong></p>
+            <p>a) (5, 3) → Both positive → Quadrant I</p>
+            <p>b) (-2, -4) → Both negative → Quadrant III</p>
+            <p>c) (0, 5) → X is 0 → On Y-axis (above origin)</p>
+            <p>d) (3, 0) → Y is 0 → On X-axis (right of origin)</p>
+            <p>e) (-3, 2) → X negative, Y positive → Quadrant II</p>
+          </div>
+
+          <!-- Plotting Points -->
+          <h2 class="chapter-heading">4. Plotting Points on Graph</h2>
+          <p>
+            Plotting means marking the exact position of a point on the
+            coordinate plane based on its coordinates.
+          </p>
+
+          <h3 class="sub-heading">4.1 Steps to Plot a Point</h3>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Draw two perpendicular axes (X and Y)
+              intersecting at origin.
+            </li>
+            <li>
+              <strong>Step 2:</strong> Mark equal intervals on both axes
+              (scale).
+            </li>
+            <li><strong>Step 3:</strong> Start from the origin (0, 0).</li>
+            <li>
+              <strong>Step 4:</strong> Move horizontally according to
+              x-coordinate (right if +, left if -).
+            </li>
+            <li>
+              <strong>Step 5:</strong> From there, move vertically according to
+              y-coordinate (up if +, down if -).
+            </li>
+            <li><strong>Step 6:</strong> Mark the point and label it.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important: Choosing Scale</h4>
+            <p>
+              Always choose a suitable scale depending on the values of
+              coordinates.
+            </p>
+            <p>
+              If coordinates are large (like 50, 100), use larger intervals (1
+              cm = 10 units).
+            </p>
+            <p>
+              If coordinates are small (like 2, 3), use smaller intervals (1 cm
+              = 1 unit).
+            </p>
+            <p>Keep the same scale on both axes unless specified otherwise.</p>
+          </div>
+
+          <!-- Distance Formula -->
+          <h2 class="chapter-heading">5. Distance Between Two Points</h2>
+          <p>
+            In coordinate geometry, we can calculate the distance between any
+            two points using a formula derived from the Pythagorean theorem.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Distance Formula</h4>
+            <p>The distance between two points P(x₁, y₁) and Q(x₂, y₂) is:</p>
+            <p><strong>d = √[(x₂ - x₁)² + (y₂ - y₁)²]</strong></p>
+            <p>
+              This formula gives the straight-line distance between the two
+              points.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Understanding the Formula</h3>
+          <ul>
+            <li>
+              The formula is based on the Pythagorean theorem (a² + b² = c²).
+            </li>
+            <li>
+              (x₂ - x₁) represents the horizontal distance between points.
+            </li>
+            <li>(y₂ - y₁) represents the vertical distance between points.</li>
+            <li>
+              We square these distances, add them, and take the square root.
+            </li>
+            <li>
+              The result is always positive (distance cannot be negative).
+            </li>
+            <li>
+              Order doesn't matter: distance from A to B = distance from B to A.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Calculating Distance</h4>
+            <p>
+              <strong>Q1:</strong> Find the distance between A(2, 3) and B(5, 7)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Here, x₁ = 2, y₁ = 3, x₂ = 5, y₂ = 7</p>
+            <p>Using distance formula:</p>
+            <p>d = √[(5-2)² + (7-3)²]</p>
+            <p>d = √[3² + 4²]</p>
+            <p>d = √[9 + 16]</p>
+            <p>d = √25</p>
+            <p><strong>d = 5 units</strong></p>
+            <br />
+            <p>
+              <strong>Q2:</strong> Find distance between P(1, 2) and Q(4, 6)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>d = √[(4-1)² + (6-2)²]</p>
+            <p>d = √[3² + 4²]</p>
+            <p>d = √[9 + 16]</p>
+            <p>d = √25 = 5 units</p>
+            <br />
+            <p>
+              <strong>Q3:</strong> Find distance from origin to point (3, 4)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Origin is (0, 0), Point is (3, 4)</p>
+            <p>d = √[(3-0)² + (4-0)²]</p>
+            <p>d = √[9 + 16] = √25 = 5 units</p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Special Cases</h3>
+          <ul>
+            <li>
+              <strong>Horizontal line:</strong> Points like (2, 3) and (5, 3) -
+              Same y-coordinate, distance = |x₂ - x₁|
+            </li>
+            <li>
+              <strong>Vertical line:</strong> Points like (4, 2) and (4, 7) -
+              Same x-coordinate, distance = |y₂ - y₁|
+            </li>
+            <li>
+              <strong>Distance from origin:</strong> For point (x, y), distance
+              = √(x² + y²)
+            </li>
+            <li>If distance is 0, both points are the same.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Special Cases</h4>
+            <p><strong>Q1:</strong> Distance between (2, 5) and (7, 5)</p>
+            <p>
+              <strong>Solution:</strong> Same y-coordinate (horizontal line)
+            </p>
+            <p>Distance = |7 - 2| = 5 units</p>
+            <br />
+            <p><strong>Q2:</strong> Distance between (3, 1) and (3, 6)</p>
+            <p><strong>Solution:</strong> Same x-coordinate (vertical line)</p>
+            <p>Distance = |6 - 1| = 5 units</p>
+          </div>
+
+          <!-- Applications -->
+          <h2 class="chapter-heading">6. Applications and Problem Solving</h2>
+
+          <h3 class="sub-heading">6.1 Verifying Geometric Shapes</h3>
+          <ul>
+            <li>
+              We can verify if points form specific shapes using distance
+              formula.
+            </li>
+            <li>
+              <strong>Equilateral triangle:</strong> All three sides equal.
+            </li>
+            <li><strong>Isosceles triangle:</strong> Two sides equal.</li>
+            <li>
+              <strong>Right triangle:</strong> Use Pythagorean theorem: a² + b²
+              = c²
+            </li>
+            <li>
+              <strong>Square:</strong> All sides equal and diagonals equal.
+            </li>
+            <li>
+              <strong>Rectangle:</strong> Opposite sides equal and diagonals
+              equal.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Verifying Triangle Type</h4>
+            <p>
+              <strong>Q:</strong> Show that points A(0, 0), B(3, 0), and C(0, 4)
+              form a right triangle.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Calculate all three sides:</p>
+            <p>AB = √[(3-0)² + (0-0)²] = √9 = 3</p>
+            <p>BC = √[(0-3)² + (4-0)²] = √(9+16) = √25 = 5</p>
+            <p>CA = √[(0-0)² + (0-4)²] = √16 = 4</p>
+            <br />
+            <p>Check Pythagorean theorem: AB² + CA² = BC²?</p>
+            <p>3² + 4² = 9 + 16 = 25</p>
+            <p>5² = 25</p>
+            <p>
+              <strong>Yes! It's a right triangle (right angle at A)</strong>
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Collinearity of Points</h3>
+          <ul>
+            <li>
+              Three points are collinear if they lie on the same straight line.
+            </li>
+            <li>
+              Check: If A, B, C are collinear, then AB + BC = AC (or any other
+              combination).
+            </li>
+            <li>
+              If the sum of two distances equals the third, points are
+              collinear.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Checking Collinearity</h4>
+            <p>
+              <strong>Q:</strong> Are points A(1, 2), B(3, 4), and C(5, 6)
+              collinear?
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>AB = √[(3-1)² + (4-2)²] = √(4+4) = √8 = 2√2</p>
+            <p>BC = √[(5-3)² + (6-4)²] = √(4+4) = √8 = 2√2</p>
+            <p>AC = √[(5-1)² + (6-2)²] = √(16+16) = √32 = 4√2</p>
+            <br />
+            <p>Check: AB + BC = 2√2 + 2√2 = 4√2 = AC ✓</p>
+            <p><strong>Yes! The points are collinear.</strong></p>
+          </div>
+
+          <!-- Lines Parallel to Axes -->
+          <h2 class="chapter-heading">7. Lines Parallel to Axes</h2>
+          <p>
+            Some lines on the coordinate plane are parallel to either the X-axis
+            or Y-axis and have special properties.
+          </p>
+
+          <h3 class="sub-heading">7.1 Line Parallel to X-axis</h3>
+          <ul>
+            <li>
+              A line parallel to X-axis has the same y-coordinate for all
+              points.
+            </li>
+            <li>Equation form: y = k (where k is a constant)</li>
+            <li>Example: y = 3 (all points have y-coordinate = 3)</li>
+            <li>Points on this line: (1, 3), (2, 3), (-5, 3), etc.</li>
+            <li>The X-axis itself is y = 0.</li>
+          </ul>
+
+          <h3 class="sub-heading">7.2 Line Parallel to Y-axis</h3>
+          <ul>
+            <li>
+              A line parallel to Y-axis has the same x-coordinate for all
+              points.
+            </li>
+            <li>Equation form: x = k (where k is a constant)</li>
+            <li>Example: x = 2 (all points have x-coordinate = 2)</li>
+            <li>Points on this line: (2, 1), (2, 5), (2, -3), etc.</li>
+            <li>The Y-axis itself is x = 0.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Remember</h4>
+            <p>
+              <strong>Parallel to X-axis:</strong> y-coordinate is constant →
+              Horizontal line
+            </p>
+            <p>
+              <strong>Parallel to Y-axis:</strong> x-coordinate is constant →
+              Vertical line
+            </p>
+            <p>Perpendicular lines: One parallel to X-axis, other to Y-axis</p>
+          </div>
+
+          <!-- Practical Applications -->
+          <h2 class="chapter-heading">8. Real-Life Applications</h2>
+
+          <h3 class="sub-heading">8.1 Where is Coordinate Geometry Used?</h3>
+          <ul>
+            <li>
+              <strong>GPS and Navigation:</strong> Location tracking uses
+              coordinates (latitude, longitude).
+            </li>
+            <li>
+              <strong>Computer Graphics:</strong> Every pixel on screen has
+              coordinates.
+            </li>
+            <li>
+              <strong>Architecture:</strong> Building designs use coordinate
+              systems for precision.
+            </li>
+            <li>
+              <strong>Maps:</strong> Cities and locations are marked using
+              coordinates.
+            </li>
+            <li>
+              <strong>Video Games:</strong> Character positions tracked using
+              coordinates.
+            </li>
+            <li>
+              <strong>Robotics:</strong> Robot movements programmed using
+              coordinate geometry.
+            </li>
+            <li>
+              <strong>Aviation:</strong> Flight paths calculated using
+              coordinate systems.
+            </li>
+          </ul>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Coordinate Geometry</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic Definitions</h3>
+                <p>Point: P(x, y)</p>
+                <p>x = Abscissa (horizontal)</p>
+                <p>y = Ordinate (vertical)</p>
+                <p>Origin: O(0, 0)</p>
+                <p class="formula-desc">Order matters: (x, y) ≠ (y, x)</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Quadrants</h3>
+                <p>I: (+, +) - Top Right</p>
+                <p>II: (-, +) - Top Left</p>
+                <p>III: (-, -) - Bottom Left</p>
+                <p>IV: (+, -) - Bottom Right</p>
+                <p class="formula-desc">Axes points: Not in any quadrant</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Distance Formula</h3>
+                <p>Between P(x₁,y₁) and Q(x₂,y₂):</p>
+                <p>d = √[(x₂-x₁)² + (y₂-y₁)²]</p>
+                <p><strong>From Origin:</strong></p>
+                <p>d = √(x² + y²)</p>
+                <p class="formula-desc">Based on Pythagorean theorem</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Special Distances</h3>
+                <p><strong>Horizontal line:</strong></p>
+                <p>Points (x₁,y) & (x₂,y): d = |x₂-x₁|</p>
+                <p><strong>Vertical line:</strong></p>
+                <p>Points (x,y₁) & (x,y₂): d = |y₂-y₁|</p>
+                <p class="formula-desc">Same coordinate simplifies formula</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Position Properties</h3>
+                <p>Distance from X-axis = |y|</p>
+                <p>Distance from Y-axis = |x|</p>
+                <p>On X-axis: y = 0</p>
+                <p>On Y-axis: x = 0</p>
+                <p class="formula-desc">Absolute value gives distance</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Lines Parallel to Axes</h3>
+                <p><strong>Parallel to X-axis:</strong></p>
+                <p>y = k (constant)</p>
+                <p><strong>Parallel to Y-axis:</strong></p>
+                <p>x = k (constant)</p>
+                <p class="formula-desc">k can be any real number</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Triangle Verification</h3>
+                <p><strong>Right Triangle:</strong></p>
+                <p>a² + b² = c² (Pythagoras)</p>
+                <p><strong>Equilateral:</strong></p>
+                <p>All sides equal: AB = BC = CA</p>
+                <p><strong>Isosceles:</strong> Two sides equal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Collinearity Test</h3>
+                <p>Points A, B, C collinear if:</p>
+                <p>AB + BC = AC (or similar)</p>
+                <p class="formula-desc">
+                  Sum of two distances = third distance
+                </p>
+                <p class="formula-desc">All three points on same line</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Coordinate Geometry</h4>
+            <p>
+              • Always draw a rough diagram before solving problems -
+              visualization helps!
+            </p>
+            <p>
+              • Remember the quadrant signs: I(+,+), II(-,+), III(-,-), IV(+,-)
+            </p>
+            <p>
+              • In distance formula, squaring removes the sign, so order doesn't
+              matter.
+            </p>
+            <p>• Use graph paper for accurate plotting and measurement.</p>
+            <p>• Check your answers: distance should always be positive.</p>
+            <p>
+              • Practice plotting points daily to become comfortable with the
+              coordinate system.
+            </p>
+            <p>
+              • For large numbers, choose an appropriate scale to fit the graph.
+            </p>
+            <p>• Remember: Horizontal = X-axis, Vertical = Y-axis</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>Don't confuse (x, y) with (y, x) - order is crucial!</li>
+              <li>Don't forget to take square root in distance formula.</li>
+              <li>Remember to square the differences: (x₂-x₁)², not x₂²-x₁²</li>
+              <li>Check which quadrant - sign errors are common.</li>
+              <li>On axes, one coordinate is always zero.</li>
+              <li>
+                Distance cannot be negative - use absolute value if needed.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
