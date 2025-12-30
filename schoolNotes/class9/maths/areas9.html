@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Areas of Parallelograms and Triangles - Class 9 Mathematics - NoteHub
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Areas</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">
+          📐 Areas of Parallelograms and Triangles - Class 9
+        </h1>
+        <p class="page-description">
+          Complete notes with theorems, proofs, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Areas</h2>
+          <p>
+            This chapter focuses on calculating areas of parallelograms and
+            triangles, particularly when they share the same base and lie
+            between the same parallel lines. These concepts are fundamental for
+            understanding geometric relationships.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Basic Concepts</h4>
+            <p>
+              <strong>Area:</strong> The measure of the surface enclosed by a
+              closed figure.
+            </p>
+            <p>
+              <strong>Congruent Figures:</strong> Have equal areas (and same
+              shape/size).
+            </p>
+            <p>
+              <strong>Equal Figures:</strong> Have equal areas (but may have
+              different shapes).
+            </p>
+            <p>
+              Note: All congruent figures are equal, but not all equal figures
+              are congruent.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">
+            2. Figures on the Same Base and Between Same Parallels
+          </h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              Two figures are on the same base and between the same parallels
+              if:
+            </p>
+            <p>• They have a common base (side)</p>
+            <p>
+              • The vertices opposite to the base lie on a line parallel to the
+              base
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Key Understanding</h3>
+          <ul>
+            <li>The base is the common side shared by both figures.</li>
+            <li>
+              The opposite vertices must lie on a line parallel to this base.
+            </li>
+            <li>
+              The perpendicular distance between the two parallel lines is the
+              height.
+            </li>
+            <li>
+              Figures with the same base and between same parallels have equal
+              areas.
+            </li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Area of Parallelograms</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Area Formula for Parallelogram</h4>
+            <p><strong>Area = Base × Height</strong></p>
+            <p>
+              Where height is the perpendicular distance between the base and
+              its opposite side.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Important Theorems on Parallelograms</h3>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 1</h4>
+            <p>
+              Parallelograms on the same base and between the same parallels are
+              equal in area.
+            </p>
+            <p>
+              Area of parallelogram = Base × Height (perpendicular distance
+              between parallels)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 2</h4>
+            <p>
+              If a parallelogram and a rectangle are on the same base and
+              between the same parallels, they have equal areas.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Parallelogram Area</h4>
+            <p>
+              <strong>Q:</strong> A parallelogram has a base of 12 cm and height
+              of 8 cm. Find its area.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Area = Base × Height</p>
+            <p>= 12 × 8</p>
+            <p><strong>= 96 cm²</strong></p>
+            <br />
+            <p>
+              <strong>Q:</strong> Two parallelograms ABCD and ABEF are on the
+              same base AB and between same parallels AB and CF. If area of ABCD
+              = 60 cm², what is area of ABEF?
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>
+              By Theorem 1, parallelograms on same base and between same
+              parallels have equal areas.
+            </p>
+            <p><strong>Area of ABEF = 60 cm²</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Area of Triangles</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Area Formula for Triangle</h4>
+            <p><strong>Area = ½ × Base × Height</strong></p>
+            <p>
+              Where height is the perpendicular distance from the base to the
+              opposite vertex.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Important Theorems on Triangles</h3>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 3</h4>
+            <p>
+              Triangles on the same base and between the same parallels are
+              equal in area.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 4</h4>
+            <p>
+              The area of a triangle is half the area of a parallelogram on the
+              same base and between the same parallels.
+            </p>
+            <p>
+              Area of △ = ½ × Area of parallelogram (when on same base and
+              between same parallels)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Triangle Area</h4>
+            <p>
+              <strong>Q:</strong> A triangle has base 10 cm and height 6 cm.
+              Find its area.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Area = ½ × Base × Height</p>
+            <p>= ½ × 10 × 6</p>
+            <p>= ½ × 60</p>
+            <p><strong>= 30 cm²</strong></p>
+            <br />
+            <p>
+              <strong>Q:</strong> A parallelogram ABCD and triangle ABE have the
+              same base AB and are between same parallels. If area of
+              parallelogram is 80 cm², find area of triangle.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>By Theorem 4:</p>
+            <p>Area of triangle = ½ × Area of parallelogram</p>
+            <p>= ½ × 80</p>
+            <p><strong>= 40 cm²</strong></p>
+          </div>
+
+          <h3 class="sub-heading">
+            4.2 Relationship Between Triangle and Parallelogram
+          </h3>
+          <ul>
+            <li>
+              A diagonal divides a parallelogram into two triangles of equal
+              area.
+            </li>
+            <li>Each triangle has area = ½ × area of the parallelogram.</li>
+            <li>
+              Triangles on same base and between same parallels are equal in
+              area.
+            </li>
+            <li>
+              Two triangles with equal bases and equal heights have equal areas.
+            </li>
+          </ul>
+
+          <h2 class="chapter-heading">5. Median and Area of Triangle</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 5: Median Divides Triangle into Equal Areas</h4>
+            <p>
+              A median of a triangle divides it into two triangles of equal
+              area.
+            </p>
+            <p>
+              Each smaller triangle has area = ½ × area of original triangle.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Properties of Median</h3>
+          <ul>
+            <li>
+              A median connects a vertex to the midpoint of the opposite side.
+            </li>
+            <li>A triangle has three medians.</li>
+            <li>
+              Each median divides the triangle into two triangles of equal area.
+            </li>
+            <li>
+              The three medians divide a triangle into six smaller triangles of
+              equal area.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Median and Area</h4>
+            <p>
+              <strong>Q:</strong> In triangle ABC, D is the midpoint of BC. If
+              area of ABC is 48 cm², find area of triangle ABD.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>AD is a median (connects vertex A to midpoint D of BC)</p>
+            <p>By median theorem, AD divides triangle into two equal areas</p>
+            <p>Area of △ABD = ½ × Area of △ABC</p>
+            <p>= ½ × 48</p>
+            <p><strong>= 24 cm²</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">6. Important Results</h2>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Concept</th>
+                  <th>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Parallelograms (same base, same parallels)</td>
+                  <td>Equal areas</td>
+                </tr>
+                <tr>
+                  <td>Triangles (same base, same parallels)</td>
+                  <td>Equal areas</td>
+                </tr>
+                <tr>
+                  <td>Triangle vs Parallelogram (same base, same parallels)</td>
+                  <td>Triangle area = ½ × Parallelogram area</td>
+                </tr>
+                <tr>
+                  <td>Median of triangle</td>
+                  <td>Divides into two equal areas</td>
+                </tr>
+                <tr>
+                  <td>Diagonal of parallelogram</td>
+                  <td>Divides into two equal triangles</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Key Points to Remember</h4>
+            <ul>
+              <li>Height must be perpendicular to the base</li>
+              <li>Same base + same parallels → equal areas</li>
+              <li>Triangle area = ½ × base × height</li>
+              <li>Parallelogram area = base × height</li>
+              <li>Median creates two equal areas</li>
+              <li>
+                Congruent figures have equal areas, but equal areas doesn't mean
+                congruent
+              </li>
+            </ul>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Areas</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Parallelogram Area</h3>
+                <p>Area = Base × Height</p>
+                <p>A = b × h</p>
+                <p class="formula-desc">Height is perpendicular distance</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Triangle Area</h3>
+                <p>Area = ½ × Base × Height</p>
+                <p>A = ½ × b × h</p>
+                <p class="formula-desc">Half of parallelogram formula</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Same Base & Parallels</h3>
+                <p>Parallelograms → Equal areas</p>
+                <p>Triangles → Equal areas</p>
+                <p>Triangle = ½ × Parallelogram</p>
+                <p class="formula-desc">Fundamental theorem</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Median Property</h3>
+                <p>Median divides triangle</p>
+                <p>Two equal areas created</p>
+                <p>Each = ½ × original area</p>
+                <p class="formula-desc">Important for problems</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Diagonal Property</h3>
+                <p>Diagonal of parallelogram</p>
+                <p>Creates 2 congruent triangles</p>
+                <p>Each = ½ × parallelogram area</p>
+                <p class="formula-desc">Equal areas</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Rectangle Area</h3>
+                <p>Area = Length × Width</p>
+                <p>A = l × w</p>
+                <p class="formula-desc">Special parallelogram</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Square Area</h3>
+                <p>Area = Side × Side</p>
+                <p>A = s²</p>
+                <p class="formula-desc">All sides equal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Quick Tips</h3>
+                <p>• Always find perpendicular height</p>
+                <p>• Same base & parallels → equal areas</p>
+                <p>• Triangle = ½ parallelogram</p>
+                <p class="formula-desc">Problem-solving strategy</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Areas</h4>
+            <p>• Always draw clear diagrams showing base and height.</p>
+            <p>• Mark parallel lines clearly on your diagrams.</p>
+            <p>• Remember: height is ALWAYS perpendicular to the base.</p>
+            <p>
+              • "Same base and between same parallels" is a key phrase -
+              memorize what it means!
+            </p>
+            <p>
+              • Triangle area is always half of parallelogram area (same base,
+              same parallels).
+            </p>
+            <p>• Don't confuse slant height with perpendicular height.</p>
+            <p>
+              • Practice identifying which figures share the same base and
+              parallels.
+            </p>
+            <p>
+              • Median problems are common - remember it divides area equally!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>Using slant side instead of perpendicular height</li>
+              <li>Forgetting to multiply by ½ for triangle areas</li>
+              <li>Confusing "equal areas" with "congruent figures"</li>
+              <li>Not identifying the correct base and height</li>
+              <li>Assuming different-looking figures can't have equal areas</li>
+              <li>
+                Forgetting that median creates TWO equal areas (not just
+                divides)
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Practice Problems with Solutions</h4>
+            <p>
+              <strong>Q1:</strong> Parallelogram ABCD has base 15 cm and area
+              120 cm². Find its height.
+            </p>
+            <p>
+              <strong>Solution:</strong> Area = base × height → 120 = 15 × h → h
+              = 8 cm
+            </p>
+            <br />
+            <p>
+              <strong>Q2:</strong> A triangle and parallelogram have the same
+              base 10 cm and are between same parallels. If triangle area is 35
+              cm², find parallelogram area.
+            </p>
+            <p>
+              <strong>Solution:</strong> Triangle area = ½ × Parallelogram area
+            </p>
+            <p>35 = ½ × P → P = 70 cm²</p>
+            <br />
+            <p>
+              <strong>Q3:</strong> Triangle PQR has area 60 cm². S is midpoint
+              of QR. Find area of triangle PQS.
+            </p>
+            <p>
+              <strong>Solution:</strong> PS is median → divides into equal areas
+            </p>
+            <p>Area of PQS = ½ × 60 = 30 cm²</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

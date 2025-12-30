@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circles - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Circles</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">⭕ Circles - Class 9</h1>
+        <p class="page-description">
+          Complete notes with theorems, properties, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Circles</h2>
+          <p>
+            A circle is a collection of all points in a plane that are at a
+            fixed distance from a fixed point. Circles are one of the most
+            important shapes in geometry with numerous real-life applications.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Basic Definitions</h4>
+            <p>
+              <strong>Circle:</strong> Set of all points in a plane at a fixed
+              distance from a fixed point.
+            </p>
+            <p>
+              <strong>Centre:</strong> The fixed point from which all points on
+              the circle are equidistant.
+            </p>
+            <p>
+              <strong>Radius:</strong> The fixed distance from the centre to any
+              point on the circle.
+            </p>
+            <p>
+              <strong>Diameter:</strong> A line segment passing through the
+              centre with endpoints on the circle.
+            </p>
+            <p>Diameter = 2 × Radius</p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Parts of a Circle</h3>
+          <ul>
+            <li>
+              <strong>Chord:</strong> A line segment joining any two points on
+              the circle.
+            </li>
+            <li>
+              <strong>Diameter:</strong> The longest chord passing through the
+              centre.
+            </li>
+            <li>
+              <strong>Arc:</strong> A continuous portion of the circle between
+              two points.
+            </li>
+            <li>
+              <strong>Semicircle:</strong> Half of a circle (arc with diameter
+              as chord).
+            </li>
+            <li>
+              <strong>Circumference:</strong> The perimeter or boundary of the
+              circle.
+            </li>
+            <li>
+              <strong>Segment:</strong> Region between a chord and the arc it
+              cuts off.
+            </li>
+            <li>
+              <strong>Sector:</strong> Region between two radii and the arc they
+              form.
+            </li>
+            <li>
+              <strong>Secant:</strong> A line that intersects the circle at two
+              points.
+            </li>
+            <li>
+              <strong>Tangent:</strong> A line that touches the circle at
+              exactly one point.
+            </li>
+          </ul>
+
+          <h2 class="chapter-heading">2. Chords and Their Properties</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 1: Equal Chords and Centre</h4>
+            <p>Equal chords of a circle are equidistant from the centre.</p>
+            <p>
+              Converse: Chords equidistant from the centre are equal in length.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 2: Perpendicular from Centre to Chord</h4>
+            <p>
+              The perpendicular from the centre of a circle to a chord bisects
+              the chord.
+            </p>
+            <p>
+              Converse: The line joining the centre to the midpoint of a chord
+              is perpendicular to the chord.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 3: Equal Chords and Angles at Centre</h4>
+            <p>Equal chords of a circle subtend equal angles at the centre.</p>
+            <p>
+              Converse: If angles subtended by chords at the centre are equal,
+              the chords are equal.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Chord Properties</h4>
+            <p>
+              <strong>Q:</strong> In a circle with centre O, chord AB = 12 cm.
+              The perpendicular distance from O to AB is 8 cm. Find the radius.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Let M be the foot of perpendicular from O to AB</p>
+            <p>OM ⊥ AB, so M bisects AB (by theorem)</p>
+            <p>AM = ½ × AB = ½ × 12 = 6 cm</p>
+            <p>In right triangle OMA:</p>
+            <p>OA² = OM² + AM² (Pythagoras)</p>
+            <p>r² = 8² + 6²</p>
+            <p>r² = 64 + 36 = 100</p>
+            <p><strong>r = 10 cm</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">
+            3. Angles Subtended by Arcs and Chords
+          </h2>
+
+          <div class="important-note">
+            <h4>
+              ⚠️ Theorem 4: Angle Subtended by Arc at Centre and Circumference
+            </h4>
+            <p>
+              The angle subtended by an arc at the centre is double the angle
+              subtended by it at any point on the remaining part of the circle.
+            </p>
+            <p>∠AOB = 2 × ∠ACB (where C is on the circle)</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 5: Angles in Same Segment</h4>
+            <p>Angles in the same segment of a circle are equal.</p>
+            <p>If points P and Q are on the same arc, then ∠APB = ∠AQB</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 6: Angle in a Semicircle</h4>
+            <p>The angle in a semicircle is a right angle (90°).</p>
+            <p>
+              If AB is a diameter and C is any point on the circle, then ∠ACB =
+              90°
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Angles and Arcs</h4>
+            <p>
+              <strong>Q:</strong> In a circle with centre O, arc AB subtends 60°
+              at the centre. Find the angle subtended at any point C on the
+              major arc.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Angle at centre = 60°</p>
+            <p>By theorem: Angle at circumference = ½ × angle at centre</p>
+            <p>∠ACB = ½ × 60°</p>
+            <p><strong>∠ACB = 30°</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Cyclic Quadrilaterals</h2>
+
+          <div class="definition-box">
+            <h4>📖 Cyclic Quadrilateral</h4>
+            <p>
+              A quadrilateral is called cyclic if all four vertices lie on a
+              circle.
+            </p>
+            <p>The circle is called the circumcircle of the quadrilateral.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 7: Opposite Angles of Cyclic Quadrilateral</h4>
+            <p>The sum of opposite angles of a cyclic quadrilateral is 180°.</p>
+            <p>∠A + ∠C = 180° and ∠B + ∠D = 180°</p>
+            <p>
+              Converse: If opposite angles of a quadrilateral sum to 180°, it's
+              cyclic.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 8: Exterior Angle of Cyclic Quadrilateral</h4>
+            <p>
+              The exterior angle of a cyclic quadrilateral equals the opposite
+              interior angle.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Cyclic Quadrilateral</h4>
+            <p>
+              <strong>Q:</strong> ABCD is a cyclic quadrilateral where ∠A = 70°,
+              ∠B = 100°, ∠C = 110°. Find ∠D.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>In cyclic quadrilateral: opposite angles sum to 180°</p>
+            <p>∠A + ∠C = 180°</p>
+            <p>70° + 110° = 180° ✓ (verified)</p>
+            <p>∠B + ∠D = 180°</p>
+            <p>100° + ∠D = 180°</p>
+            <p><strong>∠D = 80°</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">5. Important Properties and Results</h2>
+
+          <h3 class="sub-heading">5.1 Properties of Chords</h3>
+          <ul>
+            <li>Equal chords are equidistant from the centre.</li>
+            <li>Perpendicular from centre to chord bisects the chord.</li>
+            <li>Equal chords subtend equal angles at the centre.</li>
+            <li>Diameter is the longest chord.</li>
+            <li>Chords equidistant from centre are equal.</li>
+          </ul>
+
+          <h3 class="sub-heading">5.2 Properties of Angles</h3>
+          <ul>
+            <li>Angle at centre = 2 × angle at circumference (same arc).</li>
+            <li>Angles in the same segment are equal.</li>
+            <li>Angle in semicircle = 90°.</li>
+            <li>Opposite angles of cyclic quadrilateral = 180°.</li>
+          </ul>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Concept</th>
+                  <th>Property</th>
+                  <th>Use</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Equal chords</td>
+                  <td>Equidistant from centre</td>
+                  <td>Finding distances</td>
+                </tr>
+                <tr>
+                  <td>Perpendicular to chord</td>
+                  <td>Bisects the chord</td>
+                  <td>Finding chord length</td>
+                </tr>
+                <tr>
+                  <td>Angle at centre</td>
+                  <td>Double of angle at circumference</td>
+                  <td>Finding angles</td>
+                </tr>
+                <tr>
+                  <td>Semicircle</td>
+                  <td>Angle = 90°</td>
+                  <td>Right angle problems</td>
+                </tr>
+                <tr>
+                  <td>Cyclic quadrilateral</td>
+                  <td>Opposite angles = 180°</td>
+                  <td>Angle calculations</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Circles</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic Formulas</h3>
+                <p>Diameter = 2r</p>
+                <p>Circumference = 2πr</p>
+                <p>Area = πr²</p>
+                <p class="formula-desc">r = radius</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Chord Properties</h3>
+                <p>Equal chords → Equidistant from centre</p>
+                <p>Perpendicular from centre → Bisects chord</p>
+                <p>Equal chords → Equal angles at centre</p>
+                <p class="formula-desc">Fundamental theorems</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Angle at Centre vs Circumference</h3>
+                <p>Angle at centre = 2 × angle at circumference</p>
+                <p>∠AOB = 2∠ACB</p>
+                <p class="formula-desc">Same arc AB</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Angles in Same Segment</h3>
+                <p>All angles in same segment are equal</p>
+                <p>∠APB = ∠AQB = ∠ARB</p>
+                <p class="formula-desc">P, Q, R on same arc</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Semicircle Property</h3>
+                <p>Angle in semicircle = 90°</p>
+                <p>If AB is diameter, ∠ACB = 90°</p>
+                <p class="formula-desc">Very important!</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cyclic Quadrilateral</h3>
+                <p>∠A + ∠C = 180°</p>
+                <p>∠B + ∠D = 180°</p>
+                <p>Opposite angles supplementary</p>
+                <p class="formula-desc">Key property</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Arc and Sector</h3>
+                <p>Arc length = (θ/360°) × 2πr</p>
+                <p>Sector area = (θ/360°) × πr²</p>
+                <p class="formula-desc">θ in degrees</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Quick Tips</h3>
+                <p>• Draw clear diagrams</p>
+                <p>• Mark centre and radii</p>
+                <p>• Use Pythagoras for chords</p>
+                <p>• Remember 90° in semicircle!</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Circles</h4>
+            <p>• Always draw a clear diagram with centre marked.</p>
+            <p>• Mark all radii - they're always equal!</p>
+            <p>
+              • Look for right triangles formed by perpendiculars to chords.
+            </p>
+            <p>
+              • Remember: angle at centre = 2 × angle at circumference (most
+              used theorem!).
+            </p>
+            <p>• Semicircle always gives 90° - memorize this!</p>
+            <p>
+              • For cyclic quadrilaterals, opposite angles always sum to 180°.
+            </p>
+            <p>
+              • Use Pythagoras theorem frequently with radius, chord, and
+              perpendicular distance.
+            </p>
+            <p>• Practice identifying same segments for equal angles.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>
+                Don't forget that diameter = 2 × radius (not radius = 2 ×
+                diameter!)
+              </li>
+              <li>
+                Angle at centre is DOUBLE, not half, of angle at circumference
+              </li>
+              <li>
+                Not all quadrilaterals are cyclic - check if opposite angles sum
+                to 180°
+              </li>
+              <li>
+                Perpendicular from centre bisects chord, but any line doesn't
+              </li>
+              <li>90° angle only in SEMICIRCLE, not any arc</li>
+              <li>Equal chords must be in the SAME circle to be equidistant</li>
+              <li>
+                Always verify which arc you're working with (major or minor)
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Practice Problems with Solutions</h4>
+            <p>
+              <strong>Q1:</strong> A chord of length 16 cm is at distance 6 cm
+              from centre. Find radius.
+            </p>
+            <p><strong>Solution:</strong> Half chord = 8 cm, distance = 6 cm</p>
+            <p>r² = 8² + 6² = 64 + 36 = 100 → r = 10 cm</p>
+            <br />
+            <p>
+              <strong>Q2:</strong> Arc subtends 80° at centre. Find angle at
+              circumference.
+            </p>
+            <p>
+              <strong>Solution:</strong> Angle at circumference = ½ × 80° = 40°
+            </p>
+            <br />
+            <p>
+              <strong>Q3:</strong> In cyclic quadrilateral, ∠P = 85°, ∠Q = 70°.
+              Find ∠R.
+            </p>
+            <p>
+              <strong>Solution:</strong> ∠P + ∠R = 180° → 85° + ∠R = 180° → ∠R =
+              95°
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructions - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .step-box {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .step-box h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .step-box p {
+        color: #555;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Constructions</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📐 Constructions - Class 9</h1>
+        <p class="page-description">
+          Complete notes with step-by-step construction methods and guide
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Constructions</h2>
+          <p>
+            Geometric constructions are drawings made using only a compass and a
+            straightedge (ruler without markings). These constructions are
+            fundamental to geometry and help us understand geometric
+            relationships better.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Tools for Construction</h4>
+            <p>
+              <strong>Compass:</strong> Used to draw circles and arcs of
+              specific radii.
+            </p>
+            <p>
+              <strong>Straightedge (Ruler):</strong> Used to draw straight lines
+              between points.
+            </p>
+            <p>
+              <strong>Set Square:</strong> Used to draw perpendicular and
+              parallel lines.
+            </p>
+            <p>
+              <strong>Protractor:</strong> Used to measure and draw specific
+              angles.
+            </p>
+            <p>
+              Note: In pure geometric construction, only compass and unmarked
+              straightedge are used.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Basic Constructions Review</h3>
+          <ul>
+            <li>Bisecting a line segment (finding midpoint)</li>
+            <li>Drawing perpendicular bisector of a line segment</li>
+            <li>Bisecting an angle</li>
+            <li>Constructing angles (60°, 90°, 120°, etc.)</li>
+            <li>Drawing parallel lines</li>
+            <li>Drawing perpendicular lines</li>
+          </ul>
+
+          <h2 class="chapter-heading">2. Construction of Triangles</h2>
+          <p>
+            This chapter focuses on constructing triangles when certain
+            measurements are given. Different conditions require different
+            construction methods.
+          </p>
+
+          <h3 class="sub-heading">2.1 Triangle Given Three Sides (SSS)</h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: SSS Criterion</h4>
+            <p><strong>Given:</strong> Three sides a, b, c</p>
+            <p>
+              <strong>To Construct:</strong> Triangle ABC with sides AB = c, BC
+              = a, CA = b
+            </p>
+            <p><strong>Steps:</strong></p>
+            <p>1. Draw a line segment BC of length a.</p>
+            <p>2. With B as centre, draw an arc of radius c.</p>
+            <p>3. With C as centre, draw an arc of radius b.</p>
+            <p>4. Let the arcs intersect at point A.</p>
+            <p>5. Join AB and AC.</p>
+            <p>6. Triangle ABC is the required triangle.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Important Condition</h4>
+            <p>
+              Triangle is possible only if: Sum of any two sides > Third side
+            </p>
+            <p>Example: For sides 3, 4, 5 → Check: 3+4>5, 4+5>3, 5+3>4 ✓</p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.2 Triangle Given Two Sides and Included Angle (SAS)
+          </h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: SAS Criterion</h4>
+            <p><strong>Given:</strong> Two sides b, c and included angle A</p>
+            <p>
+              <strong>To Construct:</strong> Triangle ABC with AB = c, AC = b,
+              ∠BAC = A
+            </p>
+            <p><strong>Steps:</strong></p>
+            <p>1. Draw a line segment AB of length c.</p>
+            <p>2. At point A, construct an angle equal to given angle A.</p>
+            <p>3. On this ray, mark point C such that AC = b.</p>
+            <p>4. Join BC.</p>
+            <p>5. Triangle ABC is the required triangle.</p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.3 Triangle Given Two Angles and Included Side (ASA)
+          </h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: ASA Criterion</h4>
+            <p><strong>Given:</strong> Two angles A, B and included side c</p>
+            <p>
+              <strong>To Construct:</strong> Triangle ABC with AB = c, ∠BAC = A,
+              ∠ABC = B
+            </p>
+            <p><strong>Steps:</strong></p>
+            <p>1. Draw a line segment AB of length c.</p>
+            <p>2. At point A, construct angle equal to A.</p>
+            <p>3. At point B, construct angle equal to B.</p>
+            <p>4. Let the two rays intersect at point C.</p>
+            <p>5. Triangle ABC is the required triangle.</p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.4 Triangle Given Base, Base Angle, and Sum of Other Two Sides
+          </h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: Base + Angle + Sum of Sides</h4>
+            <p><strong>Given:</strong> Base BC = a, ∠B, and AB + AC = m</p>
+            <p><strong>Steps:</strong></p>
+            <p>1. Draw base BC = a.</p>
+            <p>2. At B, construct ∠XBC equal to given base angle.</p>
+            <p>3. From ray BX, cut line segment BD = AB + AC = m.</p>
+            <p>4. Join DC.</p>
+            <p>
+              5. Draw perpendicular bisector of DC to intersect BD at point A.
+            </p>
+            <p>6. Join AC.</p>
+            <p>7. Triangle ABC is the required triangle.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Construction Problem</h4>
+            <p>
+              <strong>Q:</strong> Construct a triangle ABC where BC = 6 cm, ∠B =
+              60°, and AB + AC = 9 cm.
+            </p>
+            <p><strong>Solution Steps:</strong></p>
+            <p>1. Draw BC = 6 cm</p>
+            <p>2. At B, construct ∠XBC = 60°</p>
+            <p>3. Cut BD = 9 cm on ray BX</p>
+            <p>4. Join D to C</p>
+            <p>5. Draw perpendicular bisector of DC (intersects BD at A)</p>
+            <p>6. Join A to C</p>
+            <p><strong>Result: Triangle ABC is constructed</strong></p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.5 Triangle Given Base, Base Angle, and Difference of Other Two
+            Sides
+          </h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: Base + Angle + Difference of Sides</h4>
+            <p>
+              <strong>Given:</strong> Base BC = a, ∠B, and AB - AC = m (or AC -
+              AB = m)
+            </p>
+            <p><strong>Case 1: When AB > AC (AB - AC = m):</strong></p>
+            <p>1. Draw base BC = a.</p>
+            <p>2. At B, construct ∠XBC equal to given base angle.</p>
+            <p>3. From ray BX, cut line segment BD = AB - AC = m.</p>
+            <p>4. Join DC.</p>
+            <p>
+              5. Draw perpendicular bisector of DC to intersect BX at point A.
+            </p>
+            <p>6. Join AC.</p>
+            <p>7. Triangle ABC is the required triangle.</p>
+            <p><strong>Case 2: When AC > AB (AC - AB = m):</strong></p>
+            <p>Cut BD on opposite side of BC and follow similar steps.</p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.6 Triangle Given Perimeter and Base Angles
+          </h3>
+
+          <div class="step-box">
+            <h4>📏 Construction Steps: Perimeter + Two Base Angles</h4>
+            <p>
+              <strong>Given:</strong> Perimeter (AB + BC + CA) = p, ∠B and ∠C
+            </p>
+            <p><strong>Steps:</strong></p>
+            <p>1. Draw a line segment XY equal to perimeter p.</p>
+            <p>2. At X, construct angle equal to ∠B.</p>
+            <p>3. At Y, construct angle equal to ∠C.</p>
+            <p>4. Bisect these two angles; let bisectors meet at point A.</p>
+            <p>5. Draw perpendicular bisectors of AX and AY.</p>
+            <p>6. Let these bisectors intersect XY at B and C respectively.</p>
+            <p>7. Join AB and AC.</p>
+            <p>8. Triangle ABC is the required triangle.</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Important Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Key Construction Tips</h4>
+            <ul>
+              <li>Always use a sharp pencil for accurate constructions</li>
+              <li>
+                Keep compass width fixed when drawing arcs from different
+                centres
+              </li>
+              <li>
+                Draw construction lines lightly so they can be erased later
+              </li>
+              <li>Label all points clearly</li>
+              <li>Show construction arcs - don't erase them in exams!</li>
+              <li>Verify your construction by measuring</li>
+              <li>Use proper geometric instruments for accuracy</li>
+            </ul>
+          </div>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Given Information</th>
+                  <th>Method</th>
+                  <th>Key Step</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Three sides (SSS)</td>
+                  <td>Draw arcs from two points</td>
+                  <td>Arc intersection gives third vertex</td>
+                </tr>
+                <tr>
+                  <td>Two sides + included angle (SAS)</td>
+                  <td>Construct angle first</td>
+                  <td>Mark lengths on angle arms</td>
+                </tr>
+                <tr>
+                  <td>Two angles + side (ASA)</td>
+                  <td>Construct both angles</td>
+                  <td>Ray intersection gives vertex</td>
+                </tr>
+                <tr>
+                  <td>Base + angle + sum of sides</td>
+                  <td>Use perpendicular bisector</td>
+                  <td>Bisector of joined line</td>
+                </tr>
+                <tr>
+                  <td>Base + angle + difference</td>
+                  <td>Use perpendicular bisector</td>
+                  <td>Handle AB > AC or AC > AB</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Quick Reference Sheet - Constructions</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>SSS Construction</h3>
+                <p>Given: Three sides a, b, c</p>
+                <p>Method: Draw one side, then arcs from ends</p>
+                <p>Condition: a+b>c, b+c>a, c+a>b</p>
+                <p class="formula-desc">Most basic construction</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>SAS Construction</h3>
+                <p>Given: Two sides + included angle</p>
+                <p>Method: Construct angle, mark sides</p>
+                <p>Key: Angle must be between the two sides</p>
+                <p class="formula-desc">Angle-based method</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>ASA Construction</h3>
+                <p>Given: Two angles + included side</p>
+                <p>Method: Draw side, construct angles at ends</p>
+                <p>Result: Rays meet at third vertex</p>
+                <p class="formula-desc">Angle intersection</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Base + Angle + Sum</h3>
+                <p>Given: Base, angle, AB + AC</p>
+                <p>Method: Use perpendicular bisector</p>
+                <p>Key: Cut sum on angle ray</p>
+                <p class="formula-desc">Advanced construction</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Base + Angle + Difference</h3>
+                <p>Given: Base, angle, AB - AC</p>
+                <p>Method: Perpendicular bisector method</p>
+                <p>Two cases: AB > AC or AC > AB</p>
+                <p class="formula-desc">Handle carefully</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Perimeter + Angles</h3>
+                <p>Given: Perimeter + two base angles</p>
+                <p>Method: Angle bisectors + perpendicular bisectors</p>
+                <p>Complex but logical</p>
+                <p class="formula-desc">Multiple steps</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Construction Tools</h3>
+                <p>Compass: Draw arcs & circles</p>
+                <p>Straightedge: Draw lines</p>
+                <p>Set square: Perpendiculars</p>
+                <p>Protractor: Measure angles</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Important Tips</h3>
+                <p>• Keep compass fixed</p>
+                <p>• Show all arcs</p>
+                <p>• Label clearly</p>
+                <p>• Verify by measuring</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Constructions</h4>
+            <p>
+              • Practice is the ONLY way to master constructions - do at least 5
+              of each type!
+            </p>
+            <p>• Understand the logic behind each step, don't just memorize.</p>
+            <p>
+              • Always write steps clearly in exams - marks are given for
+              method, not just diagram.
+            </p>
+            <p>
+              • Keep your instruments in good condition - sharp compass and
+              clear ruler.
+            </p>
+            <p>
+              • Learn to construct common angles (30°, 45°, 60°, 90°, 120°)
+              without protractor.
+            </p>
+            <p>
+              • Perpendicular bisector is key to many advanced constructions.
+            </p>
+            <p>
+              • Don't erase construction marks in exams - they show your method!
+            </p>
+            <p>• Time yourself - constructions should be quick and accurate.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>
+                Changing compass width while drawing arcs (keep it fixed!)
+              </li>
+              <li>
+                Drawing too lightly or too darkly (medium pressure works best)
+              </li>
+              <li>Not showing construction arcs in final answer</li>
+              <li>Forgetting to label points</li>
+              <li>Using blunt compass or pencil (affects accuracy)</li>
+              <li>Not verifying construction by measuring</li>
+              <li>Erasing construction lines in exams (keep them visible!)</li>
+              <li>Confusing "sum" and "difference" constructions</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Practice Exercise</h4>
+            <p>
+              <strong>Exercise 1:</strong> Construct triangle PQR with PQ = 5
+              cm, QR = 6 cm, PR = 7 cm
+            </p>
+            <p><strong>Type:</strong> SSS Construction</p>
+            <br />
+            <p>
+              <strong>Exercise 2:</strong> Construct triangle ABC with BC = 7
+              cm, ∠B = 45°, AB + AC = 10 cm
+            </p>
+            <p><strong>Type:</strong> Base + Angle + Sum construction</p>
+            <br />
+            <p>
+              <strong>Exercise 3:</strong> Construct triangle XYZ with XY = 6
+              cm, ∠X = 50°, ∠Y = 60°
+            </p>
+            <p><strong>Type:</strong> ASA Construction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
