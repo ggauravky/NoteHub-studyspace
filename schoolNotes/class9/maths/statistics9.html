@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Statistics - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1rem 0;
+        font-size: 0.9rem;
+      }
+      .data-table th, .data-table td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: center;
+      }
+      .data-table th {
+        background: #667eea;
+        color: white;
+      }
+      .data-table tr:nth-child(even) {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Statistics</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📊 Statistics - Class 9</h1>
+        <p class="page-description">
+          Complete notes on data collection, representation, and measures of central tendency
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Statistics</h2>
+          <p>
+            Statistics is the branch of mathematics that deals with collection, organization, analysis, interpretation, and presentation of data. It helps us make sense of large amounts of information and draw meaningful conclusions.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is Statistics?</h4>
+            <p>
+              Statistics is the science of collecting, organizing, analyzing, and interpreting numerical data to make decisions or predictions.
+            </p>
+            <p><strong>Data:</strong> Facts or pieces of information collected for analysis.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Collection of Data</h2>
+
+          <h3 class="sub-heading">2.1 Types of Data</h3>
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Description</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Primary Data</td>
+                  <td>Data collected directly by the investigator for the first time</td>
+                  <td>Survey, Questionnaire, Interview</td>
+                </tr>
+                <tr>
+                  <td>Secondary Data</td>
+                  <td>Data collected from published or unpublished sources</td>
+                  <td>Census reports, Books, Websites</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">2.2 Types of Variables</h3>
+          <ul>
+            <li>
+              <strong>Raw Data:</strong> Data collected in its original form without any arrangement.
+            </li>
+            <li>
+              <strong>Ungrouped Data:</strong> Data that has not been organized into groups or classes.
+            </li>
+            <li>
+              <strong>Grouped Data:</strong> Data organized into groups or class intervals.
+            </li>
+            <li>
+              <strong>Frequency:</strong> The number of times a particular observation occurs.
+            </li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Presentation of Data</h2>
+
+          <h3 class="sub-heading">3.1 Frequency Distribution Table</h3>
+          <div class="definition-box">
+            <h4>📖 Frequency Distribution</h4>
+            <p>
+              A frequency distribution is a table that shows how data is distributed across different values or class intervals.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Ungrouped Frequency Distribution</h4>
+            <p><strong>Q:</strong> Marks obtained by 20 students: 5, 8, 5, 6, 7, 8, 5, 9, 6, 7, 8, 5, 6, 7, 8, 9, 5, 6, 7, 8</p>
+            <table class="data-table">
+              <tr><th>Marks</th><th>Tally</th><th>Frequency</th></tr>
+              <tr><td>5</td><td>||||</td><td>5</td></tr>
+              <tr><td>6</td><td>||||</td><td>4</td></tr>
+              <tr><td>7</td><td>||||</td><td>4</td></tr>
+              <tr><td>8</td><td>||||</td><td>5</td></tr>
+              <tr><td>9</td><td>||</td><td>2</td></tr>
+              <tr><td><strong>Total</strong></td><td></td><td><strong>20</strong></td></tr>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">3.2 Grouped Frequency Distribution</h3>
+          <div class="important-note">
+            <h4>⚠️ Key Terms</h4>
+            <p><strong>Class Interval:</strong> A range of values in which data is grouped. Example: 0-10, 10-20</p>
+            <p><strong>Class Size/Width:</strong> Difference between upper and lower class limits. Class size = Upper limit - Lower limit</p>
+            <p><strong>Class Mark:</strong> Mid-value of a class. Class Mark = (Lower limit + Upper limit) / 2</p>
+            <p><strong>Class Limits:</strong> The end values of a class interval (Lower and Upper limits)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Grouped Frequency Distribution</h4>
+            <p><strong>Q:</strong> Marks of 30 students in a test (out of 50):</p>
+            <table class="data-table">
+              <tr><th>Class Interval (Marks)</th><th>Class Mark</th><th>Frequency</th></tr>
+              <tr><td>0-10</td><td>5</td><td>3</td></tr>
+              <tr><td>10-20</td><td>15</td><td>5</td></tr>
+              <tr><td>20-30</td><td>25</td><td>8</td></tr>
+              <tr><td>30-40</td><td>35</td><td>9</td></tr>
+              <tr><td>40-50</td><td>45</td><td>5</td></tr>
+              <tr><td><strong>Total</strong></td><td></td><td><strong>30</strong></td></tr>
+            </table>
+            <p>Class Size = 10 - 0 = 10 (for first class)</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Graphical Representation of Data</h2>
+
+          <h3 class="sub-heading">4.1 Bar Graph</h3>
+          <ul>
+            <li>Used to represent ungrouped data.</li>
+            <li>Bars are drawn with equal width and equal gaps.</li>
+            <li>Height of bar represents the frequency.</li>
+            <li>Bars do not touch each other.</li>
+          </ul>
+
+          <h3 class="sub-heading">4.2 Histogram</h3>
+          <ul>
+            <li>Used to represent grouped continuous data.</li>
+            <li>Bars are drawn adjacent to each other (no gaps).</li>
+            <li>Width of bar represents the class interval.</li>
+            <li>Height represents the frequency.</li>
+            <li>Area of bar is proportional to the frequency.</li>
+          </ul>
+
+          <h3 class="sub-heading">4.3 Frequency Polygon</h3>
+          <ul>
+            <li>A graph formed by joining the mid-points of the tops of histogram bars.</li>
+            <li>Can be drawn with or without histogram.</li>
+            <li>The polygon is closed by adding zero-frequency classes at both ends.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Steps to Draw Frequency Polygon</h4>
+            <p>1. Calculate class marks for each class interval.</p>
+            <p>2. Plot class marks on X-axis and frequencies on Y-axis.</p>
+            <p>3. Join the points with straight lines.</p>
+            <p>4. Close the polygon by joining to the X-axis on both ends.</p>
+          </div>
+
+          <h2 class="chapter-heading">5. Measures of Central Tendency</h2>
+
+          <div class="definition-box">
+            <h4>📖 Central Tendency</h4>
+            <p>
+              A measure of central tendency is a single value that represents the center or typical value of a data set. The three main measures are Mean, Median, and Mode.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Mean (Arithmetic Average)</h3>
+          <div class="definition-box">
+            <h4>📖 Mean</h4>
+            <p>Mean is the sum of all observations divided by the total number of observations.</p>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; color: #667eea;">
+              Mean (x̄) = Sum of all observations / Number of observations = Σxᵢ / n
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Mean of Raw Data</h4>
+            <p><strong>Q:</strong> Find the mean of: 4, 6, 8, 10, 12</p>
+            <p><strong>Solution:</strong></p>
+            <p>Sum = 4 + 6 + 8 + 10 + 12 = 40</p>
+            <p>Number of observations (n) = 5</p>
+            <p>Mean = 40/5 = 8</p>
+            <p><strong>Therefore, Mean = 8</strong></p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Mean for Ungrouped Frequency Distribution</h3>
+          <div class="definition-box">
+            <h4>📖 Formula</h4>
+            <p style="text-align: center; font-size: 1.2rem; font-weight: bold; color: #667eea;">
+              Mean (x̄) = Σfᵢxᵢ / Σfᵢ
+            </p>
+            <p>Where fᵢ = frequency and xᵢ = observation</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Mean of Frequency Distribution</h4>
+            <p><strong>Q:</strong> Find the mean from the following data:</p>
+            <table class="data-table">
+              <tr><th>x</th><th>f</th><th>fx</th></tr>
+              <tr><td>5</td><td>4</td><td>20</td></tr>
+              <tr><td>10</td><td>6</td><td>60</td></tr>
+              <tr><td>15</td><td>8</td><td>120</td></tr>
+              <tr><td>20</td><td>2</td><td>40</td></tr>
+              <tr><td><strong>Total</strong></td><td><strong>20</strong></td><td><strong>240</strong></td></tr>
+            </table>
+            <p><strong>Solution:</strong></p>
+            <p>Mean = Σfx / Σf = 240/20 = 12</p>
+            <p><strong>Therefore, Mean = 12</strong></p>
+          </div>
+
+          <h3 class="sub-heading">5.3 Median</h3>
+          <div class="definition-box">
+            <h4>📖 Median</h4>
+            <p>Median is the middle value of a data set when arranged in ascending or descending order.</p>
+            <p><strong>For odd number of observations (n):</strong></p>
+            <p style="text-align: center; font-weight: bold; color: #667eea;">Median = ((n+1)/2)th observation</p>
+            <p><strong>For even number of observations (n):</strong></p>
+            <p style="text-align: center; font-weight: bold; color: #667eea;">Median = [(n/2)th + ((n/2)+1)th observations] / 2</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Median (Odd Number)</h4>
+            <p><strong>Q:</strong> Find the median of: 3, 7, 2, 9, 5</p>
+            <p><strong>Solution:</strong></p>
+            <p>Arrange in ascending order: 2, 3, 5, 7, 9</p>
+            <p>n = 5 (odd)</p>
+            <p>Median = ((5+1)/2)th = 3rd observation = 5</p>
+            <p><strong>Therefore, Median = 5</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Median (Even Number)</h4>
+            <p><strong>Q:</strong> Find the median of: 4, 8, 2, 10, 6, 12</p>
+            <p><strong>Solution:</strong></p>
+            <p>Arrange in ascending order: 2, 4, 6, 8, 10, 12</p>
+            <p>n = 6 (even)</p>
+            <p>Median = [(6/2)th + ((6/2)+1)th] / 2</p>
+            <p>Median = (3rd + 4th observations) / 2 = (6 + 8) / 2 = 7</p>
+            <p><strong>Therefore, Median = 7</strong></p>
+          </div>
+
+          <h3 class="sub-heading">5.4 Mode</h3>
+          <div class="definition-box">
+            <h4>📖 Mode</h4>
+            <p>Mode is the value that occurs most frequently in a data set.</p>
+            <p>A data set can have no mode, one mode (unimodal), two modes (bimodal), or more (multimodal).</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Mode</h4>
+            <p><strong>Q:</strong> Find the mode of: 2, 4, 4, 6, 4, 8, 6, 4</p>
+            <p><strong>Solution:</strong></p>
+            <p>Frequency of 2 = 1</p>
+            <p>Frequency of 4 = 4 (highest)</p>
+            <p>Frequency of 6 = 2</p>
+            <p>Frequency of 8 = 1</p>
+            <p><strong>Therefore, Mode = 4</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">6. Comparison of Mean, Median, and Mode</h2>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Measure</th>
+                  <th>Advantages</th>
+                  <th>Disadvantages</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mean</td>
+                  <td>Uses all data values; unique value</td>
+                  <td>Affected by extreme values (outliers)</td>
+                </tr>
+                <tr>
+                  <td>Median</td>
+                  <td>Not affected by extreme values; good for skewed data</td>
+                  <td>Doesn't use all values; arrangement needed</td>
+                </tr>
+                <tr>
+                  <td>Mode</td>
+                  <td>Easy to find; shows most common value</td>
+                  <td>May not exist; may have multiple modes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Empirical Relationship</h4>
+            <p>For a moderately skewed distribution:</p>
+            <p style="text-align: center; font-weight: bold; color: #2e7d32; font-size: 1.1rem;">
+              Mode = 3 × Median - 2 × Mean
+            </p>
+            <p>This relationship is useful when one measure is difficult to calculate.</p>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Statistics</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Mean (Average)</h3>
+                <p>Raw Data: x̄ = Σxᵢ / n</p>
+                <p>Frequency: x̄ = Σfᵢxᵢ / Σfᵢ</p>
+                <p class="formula-desc">Sum divided by count</p>
+              </div>
+              <div class="formula-card">
+                <h3>Median (Middle Value)</h3>
+                <p>Odd n: ((n+1)/2)th term</p>
+                <p>Even n: Average of (n/2)th and ((n/2)+1)th terms</p>
+                <p class="formula-desc">Middle value when arranged</p>
+              </div>
+              <div class="formula-card">
+                <h3>Mode (Most Frequent)</h3>
+                <p>Value with highest frequency</p>
+                <p>Mode = 3×Median - 2×Mean</p>
+                <p class="formula-desc">Most common value</p>
+              </div>
+              <div class="formula-card">
+                <h3>Class Interval</h3>
+                <p>Class Mark = (Upper + Lower) / 2</p>
+                <p>Class Size = Upper - Lower</p>
+                <p class="formula-desc">For grouped data</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips</h4>
+            <p>• Always arrange data in order before finding median.</p>
+            <p>• Calculate cumulative frequency for frequency distribution problems.</p>
+            <p>• Check your mean calculation by estimation first.</p>
+            <p>• Remember: Mean is affected by outliers, median is not.</p>
+            <p>• For grouped data, use class marks as representative values.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>Forgetting to arrange data in order before finding median</li>
+              <li>Confusing class limits with class boundaries</li>
+              <li>Using wrong formula for odd/even number of observations</li>
+              <li>Not including all values when calculating mean</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

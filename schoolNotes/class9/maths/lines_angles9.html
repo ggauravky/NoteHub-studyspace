@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lines and Angles - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Lines and Angles</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📐 Lines and Angles - Class 9</h1>
+        <p class="page-description">
+          Complete notes with theorems, proofs, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">1. Introduction to Lines and Angles</h2>
+          <p>
+            Lines and angles are fundamental concepts in geometry. Understanding
+            their properties and relationships is essential for solving
+            geometric problems and proving theorems.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Basic Concepts</h4>
+            <p>
+              <strong>Point:</strong> A location in space with no dimensions (no
+              length, width, or height).
+            </p>
+            <p>
+              <strong>Line:</strong> Extends infinitely in both directions, has
+              no endpoints.
+            </p>
+            <p>
+              <strong>Line Segment:</strong> Part of a line with two endpoints.
+            </p>
+            <p>
+              <strong>Ray:</strong> Starts from a point and extends infinitely
+              in one direction.
+            </p>
+            <p>
+              <strong>Angle:</strong> Formed by two rays sharing a common
+              endpoint (vertex).
+            </p>
+          </div>
+
+          <!-- Types of Angles -->
+          <h2 class="chapter-heading">2. Types of Angles</h2>
+
+          <h3 class="sub-heading">2.1 Based on Measure</h3>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Measure</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Acute Angle</td>
+                  <td>0° < θ < 90°</td>
+                  <td>Less than a right angle</td>
+                </tr>
+                <tr>
+                  <td>Right Angle</td>
+                  <td>θ = 90°</td>
+                  <td>Exactly 90 degrees</td>
+                </tr>
+                <tr>
+                  <td>Obtuse Angle</td>
+                  <td>90° < θ < 180°</td>
+                  <td>Greater than right, less than straight</td>
+                </tr>
+                <tr>
+                  <td>Straight Angle</td>
+                  <td>θ = 180°</td>
+                  <td>Forms a straight line</td>
+                </tr>
+                <tr>
+                  <td>Reflex Angle</td>
+                  <td>180° < θ < 360°</td>
+                  <td>Greater than straight angle</td>
+                </tr>
+                <tr>
+                  <td>Complete Angle</td>
+                  <td>θ = 360°</td>
+                  <td>Full rotation</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">
+            2.2 Complementary and Supplementary Angles
+          </h3>
+          <ul>
+            <li>
+              <strong>Complementary Angles:</strong> Two angles whose sum is
+              90°.
+            </li>
+            <li>Example: 30° and 60° are complementary (30° + 60° = 90°).</li>
+            <li>
+              <strong>Supplementary Angles:</strong> Two angles whose sum is
+              180°.
+            </li>
+            <li>
+              Example: 110° and 70° are supplementary (110° + 70° = 180°).
+            </li>
+            <li>Complementary angles don't need to be adjacent.</li>
+            <li>Supplementary angles don't need to be adjacent either.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Finding Angles</h4>
+            <p>
+              <strong>Q1:</strong> If two angles are complementary and one is
+              35°, find the other.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Sum of complementary angles = 90°</p>
+            <p>Let other angle = x</p>
+            <p>35° + x = 90°</p>
+            <p>x = 90° - 35° = 55°</p>
+            <p><strong>Answer: 55°</strong></p>
+            <br />
+            <p><strong>Q2:</strong> Find the supplement of 125°.</p>
+            <p><strong>Solution:</strong></p>
+            <p>Supplement = 180° - 125° = 55°</p>
+            <p><strong>Answer: 55°</strong></p>
+          </div>
+
+          <h3 class="sub-heading">2.3 Adjacent Angles</h3>
+          <ul>
+            <li>
+              Two angles are adjacent if they share a common vertex and a common
+              arm.
+            </li>
+            <li>The other arms are on opposite sides of the common arm.</li>
+            <li>Adjacent angles don't overlap.</li>
+            <li>
+              Example: If two angles share vertex O and arm OA, they're adjacent
+              if on different sides of OA.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">2.4 Linear Pair</h3>
+          <ul>
+            <li>
+              A linear pair consists of two adjacent angles whose sum is 180°.
+            </li>
+            <li>The non-common arms form a straight line.</li>
+            <li>
+              <strong>Linear Pair Axiom:</strong> If two angles form a linear
+              pair, their sum is 180°.
+            </li>
+            <li>
+              All linear pairs are supplementary, but not all supplementary
+              angles form a linear pair.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">2.5 Vertically Opposite Angles</h3>
+          <ul>
+            <li>When two lines intersect, they form four angles.</li>
+            <li>
+              The angles opposite to each other are called vertically opposite
+              angles.
+            </li>
+            <li>
+              <strong>Theorem:</strong> Vertically opposite angles are always
+              equal.
+            </li>
+            <li>
+              If lines AB and CD intersect at O, then ∠AOC = ∠BOD and ∠AOD =
+              ∠BOC.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Vertically Opposite Angles</h4>
+            <p>
+              <strong>Q:</strong> Two lines intersect at a point. If one angle
+              is 65°, find all four angles.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Let the angle be ∠1 = 65°</p>
+            <p>∠3 = ∠1 = 65° (vertically opposite)</p>
+            <p>∠1 + ∠2 = 180° (linear pair)</p>
+            <p>∠2 = 180° - 65° = 115°</p>
+            <p>∠4 = ∠2 = 115° (vertically opposite)</p>
+            <p><strong>Angles: 65°, 115°, 65°, 115°</strong></p>
+          </div>
+
+          <!-- Parallel Lines and Transversal -->
+          <h2 class="chapter-heading">3. Parallel Lines and Transversal</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definitions</h4>
+            <p>
+              <strong>Parallel Lines:</strong> Lines in the same plane that
+              never intersect, no matter how far extended.
+            </p>
+            <p>Symbol: ∥ (AB ∥ CD means line AB is parallel to line CD)</p>
+            <p>
+              <strong>Transversal:</strong> A line that intersects two or more
+              lines at distinct points.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Angles Formed by a Transversal</h3>
+          <p>
+            When a transversal intersects two lines, it creates 8 angles. These
+            angles have special names and relationships:
+          </p>
+
+          <ul>
+            <li>
+              <strong>Corresponding Angles:</strong> Angles in the same relative
+              position at each intersection.
+            </li>
+            <li>
+              <strong>Alternate Interior Angles:</strong> Interior angles on
+              opposite sides of the transversal.
+            </li>
+            <li>
+              <strong>Alternate Exterior Angles:</strong> Exterior angles on
+              opposite sides of the transversal.
+            </li>
+            <li>
+              <strong>Co-interior Angles (Consecutive Interior):</strong>
+              Interior angles on the same side of transversal.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">3.2 Properties When Lines are Parallel</h3>
+
+          <div class="important-note">
+            <h4>⚠️ Important Theorems</h4>
+            <p>When a transversal intersects two parallel lines:</p>
+            <p>1. <strong>Corresponding angles are equal.</strong></p>
+            <p>2. <strong>Alternate interior angles are equal.</strong></p>
+            <p>3. <strong>Alternate exterior angles are equal.</strong></p>
+            <p>
+              4. <strong>Co-interior angles are supplementary</strong> (sum =
+              180°).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Parallel Lines Problems</h4>
+            <p>
+              <strong>Q:</strong> Two parallel lines are cut by a transversal.
+              If one corresponding angle is 70°, find all angles.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Let one angle = 70°</p>
+            <p>
+              Corresponding angle = 70° (corresponding angles equal for parallel
+              lines)
+            </p>
+            <p>Alternate interior angle = 70°</p>
+            <p>Vertically opposite = 70°</p>
+            <p>Linear pairs with 70° = 180° - 70° = 110°</p>
+            <p><strong>Angles: Four 70° and four 110° angles</strong></p>
+          </div>
+
+          <h3 class="sub-heading">3.3 Tests for Parallel Lines</h3>
+          <p>
+            Two lines are parallel if any of these conditions hold when cut by a
+            transversal:
+          </p>
+
+          <ul>
+            <li>Corresponding angles are equal.</li>
+            <li>Alternate interior angles are equal.</li>
+            <li>Alternate exterior angles are equal.</li>
+            <li>Co-interior angles are supplementary.</li>
+          </ul>
+
+          <!-- Angle Sum Property -->
+          <h2 class="chapter-heading">4. Angle Sum Property of a Triangle</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Important Theorem</h4>
+            <p>
+              <strong>Angle Sum Property:</strong> The sum of the three angles
+              of a triangle is 180°.
+            </p>
+            <p>If a triangle has angles A, B, and C, then: A + B + C = 180°</p>
+            <p>This is one of the most fundamental theorems in geometry!</p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Proof of Angle Sum Property</h3>
+          <ul>
+            <li>Draw a triangle ABC with angles ∠A, ∠B, and ∠C.</li>
+            <li>Draw a line through A parallel to BC.</li>
+            <li>Use alternate interior angles theorem.</li>
+            <li>Show that angles at A form a straight line (180°).</li>
+            <li>Conclude that ∠A + ∠B + ∠C = 180°.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Triangle Angles</h4>
+            <p>
+              <strong>Q:</strong> In triangle ABC, ∠A = 50° and ∠B = 60°. Find
+              ∠C.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Using angle sum property:</p>
+            <p>∠A + ∠B + ∠C = 180°</p>
+            <p>50° + 60° + ∠C = 180°</p>
+            <p>∠C = 180° - 110°</p>
+            <p><strong>∠C = 70°</strong></p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Exterior Angle Property</h3>
+
+          <div class="important-note">
+            <h4>⚠️ Exterior Angle Theorem</h4>
+            <p>
+              An exterior angle of a triangle equals the sum of the two opposite
+              interior angles.
+            </p>
+            <p>If ∠ACD is an exterior angle at C, then: ∠ACD = ∠A + ∠B</p>
+          </div>
+
+          <ul>
+            <li>An exterior angle is formed when one side is extended.</li>
+            <li>Each vertex has two exterior angles (one on each side).</li>
+            <li>
+              Exterior angle + adjacent interior angle = 180° (linear pair).
+            </li>
+            <li>
+              The exterior angle is always greater than either non-adjacent
+              interior angle.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Exterior Angle</h4>
+            <p>
+              <strong>Q:</strong> In triangle PQR, ∠P = 40°, ∠Q = 65°. Find the
+              exterior angle at R.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Exterior angle at R = ∠P + ∠Q (exterior angle property)</p>
+            <p>= 40° + 65°</p>
+            <p><strong>= 105°</strong></p>
+            <br />
+            <p><strong>Verification:</strong></p>
+            <p>∠R = 180° - (40° + 65°) = 75°</p>
+            <p>Exterior at R = 180° - 75° = 105° ✓</p>
+          </div>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Lines and Angles</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Types of Angles</h3>
+                <p>Acute: 0° < θ < 90°</p>
+                <p>Right: θ = 90°</p>
+                <p>Obtuse: 90° < θ < 180°</p>
+                <p>Straight: θ = 180°</p>
+                <p>Reflex: 180° < θ < 360°</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Angle Pairs</h3>
+                <p><strong>Complementary:</strong> Sum = 90°</p>
+                <p><strong>Supplementary:</strong> Sum = 180°</p>
+                <p><strong>Linear Pair:</strong> Adjacent + Sum = 180°</p>
+                <p><strong>Vertically Opposite:</strong> Equal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Parallel Lines (∥)</h3>
+                <p>Corresponding angles = Equal</p>
+                <p>Alternate interior = Equal</p>
+                <p>Alternate exterior = Equal</p>
+                <p>Co-interior angles = 180°</p>
+                <p class="formula-desc">When cut by transversal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Triangle Angle Sum</h3>
+                <p>∠A + ∠B + ∠C = 180°</p>
+                <p class="formula-desc">Sum of three angles</p>
+                <p><strong>Exterior Angle:</strong></p>
+                <p>= Sum of opposite interior angles</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Important Results</h3>
+                <p>Angles on a straight line = 180°</p>
+                <p>Angles around a point = 360°</p>
+                <p>Exterior angle > Each non-adjacent interior angle</p>
+                <p class="formula-desc">Fundamental properties</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Finding Unknown Angles</h3>
+                <p>Complement of x = 90° - x</p>
+                <p>Supplement of x = 180° - x</p>
+                <p>Vertically opposite = Same</p>
+                <p>Linear pair = 180° - angle</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Parallel Line Tests</h3>
+                <p>If corresponding angles equal → Lines ∥</p>
+                <p>If alternate interior equal → Lines ∥</p>
+                <p>If co-interior = 180° → Lines ∥</p>
+                <p class="formula-desc">Converse theorems</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Quick Tips</h3>
+                <p>• Always mark known angles</p>
+                <p>• Look for angle relationships</p>
+                <p>• Use properties systematically</p>
+                <p>• Verify your answer</p>
+                <p class="formula-desc">Problem-solving approach</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Lines and Angles</h4>
+            <p>• Draw clear diagrams - half the solution is in the diagram!</p>
+            <p>• Mark all known angles and parallel lines on your diagram.</p>
+            <p>
+              • Learn to identify angle relationships quickly (vertically
+              opposite, linear pair, etc.).
+            </p>
+            <p>
+              • Practice identifying corresponding, alternate, and co-interior
+              angles.
+            </p>
+            <p>
+              • Remember: Parallel lines have special properties with
+              transversals.
+            </p>
+            <p>• The angle sum property (180°) is crucial for triangles.</p>
+            <p>
+              • Exterior angle = sum of two opposite interior angles - memorize
+              this!
+            </p>
+            <p>
+              • Always verify your answer makes sense (angles should be positive
+              and less than 360°).
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>Don't confuse corresponding with alternate angles.</li>
+              <li>
+                Remember: Vertically opposite angles are EQUAL, not
+                supplementary.
+              </li>
+              <li>
+                Co-interior angles sum to 180° (not equal) for parallel lines.
+              </li>
+              <li>
+                Linear pair must be adjacent - not all supplementary angles are
+                linear pairs.
+              </li>
+              <li>
+                Exterior angle equals sum of TWO opposite interior angles, not
+                one.
+              </li>
+              <li>
+                Draw accurate diagrams - wrong diagrams lead to wrong answers!
+              </li>
+              <li>Don't assume lines are parallel unless stated or proved.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

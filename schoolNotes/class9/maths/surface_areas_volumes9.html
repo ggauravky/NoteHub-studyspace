@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surface Areas and Volumes - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Surface Areas and Volumes</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📦 Surface Areas and Volumes - Class 9</h1>
+        <p class="page-description">
+          Complete notes with formulas, concepts, and solved problems
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to 3D Shapes</h2>
+          <p>
+            Three-dimensional (3D) shapes have length, width, and height.
+            Understanding their surface areas and volumes is essential for
+            real-world applications in architecture, engineering, and everyday
+            life.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Basic Concepts</h4>
+            <p>
+              <strong>Surface Area:</strong> Total area of all surfaces of a 3D
+              shape (measured in square units).
+            </p>
+            <p>
+              <strong>Volume:</strong> Amount of space occupied by a 3D shape
+              (measured in cubic units).
+            </p>
+            <p>
+              <strong>Lateral/Curved Surface Area:</strong> Area of all surfaces
+              except the top and bottom bases.
+            </p>
+            <p>
+              <strong>Total Surface Area:</strong> Area of all surfaces
+              including bases.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Cuboid (Rectangular Box)</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Cuboid?</h4>
+            <p>
+              A cuboid is a 3D shape with 6 rectangular faces, 12 edges, and 8
+              vertices.
+            </p>
+            <p>
+              It has three dimensions: length (l), breadth (b), and height (h).
+            </p>
+            <p>All angles are right angles (90°).</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Cuboid Formulas</h4>
+            <p><strong>Lateral Surface Area (LSA):</strong> 2h(l + b)</p>
+            <p><strong>Total Surface Area (TSA):</strong> 2(lb + bh + hl)</p>
+            <p><strong>Volume:</strong> l × b × h</p>
+            <p><strong>Diagonal:</strong> √(l² + b² + h²)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Cuboid</h4>
+            <p>
+              <strong>Q:</strong> A cuboid has dimensions 5 cm × 3 cm × 4 cm.
+              Find TSA and volume.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>l = 5 cm, b = 3 cm, h = 4 cm</p>
+            <p><strong>TSA:</strong> 2(lb + bh + hl)</p>
+            <p>= 2(5×3 + 3×4 + 4×5)</p>
+            <p>= 2(15 + 12 + 20)</p>
+            <p>= 2(47) = 94 cm²</p>
+            <p><strong>Volume:</strong> l × b × h = 5 × 3 × 4 = 60 cm³</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Cube</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Cube?</h4>
+            <p>
+              A cube is a special cuboid where all edges are equal (l = b = h =
+              a).
+            </p>
+            <p>It has 6 square faces, 12 equal edges, and 8 vertices.</p>
+            <p>All faces are congruent squares.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Cube Formulas</h4>
+            <p><strong>Lateral Surface Area:</strong> 4a²</p>
+            <p><strong>Total Surface Area:</strong> 6a²</p>
+            <p><strong>Volume:</strong> a³</p>
+            <p><strong>Diagonal:</strong> a√3</p>
+            <p class="formula-desc">where a = side length</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Cube</h4>
+            <p>
+              <strong>Q:</strong> A cube has side 7 cm. Find its surface area
+              and volume.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>a = 7 cm</p>
+            <p><strong>TSA:</strong> 6a² = 6 × 7² = 6 × 49 = 294 cm²</p>
+            <p><strong>Volume:</strong> a³ = 7³ = 343 cm³</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Cylinder</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Cylinder?</h4>
+            <p>
+              A cylinder has two parallel circular bases connected by a curved
+              surface.
+            </p>
+            <p>Parameters: radius (r) and height (h).</p>
+            <p>Examples: pipes, cans, drums.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Cylinder Formulas</h4>
+            <p><strong>Curved Surface Area (CSA):</strong> 2πrh</p>
+            <p><strong>Total Surface Area (TSA):</strong> 2πr(r + h)</p>
+            <p>Or: 2πr² + 2πrh (area of both circles + curved surface)</p>
+            <p><strong>Volume:</strong> πr²h</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Cylinder</h4>
+            <p>
+              <strong>Q:</strong> A cylinder has radius 7 cm and height 10 cm.
+              Find CSA, TSA, and volume. (Use π = 22/7)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>r = 7 cm, h = 10 cm</p>
+            <p><strong>CSA:</strong> 2πrh = 2 × (22/7) × 7 × 10 = 440 cm²</p>
+            <p>
+              <strong>TSA:</strong> 2πr(r + h) = 2 × (22/7) × 7 × (7 + 10) = 44
+              × 17 = 748 cm²
+            </p>
+            <p>
+              <strong>Volume:</strong> πr²h = (22/7) × 7² × 10 = 22 × 7 × 10 =
+              1540 cm³
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Cone</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Cone?</h4>
+            <p>
+              A cone has a circular base and a curved surface tapering to a
+              point (apex).
+            </p>
+            <p>Parameters: radius (r), height (h), slant height (l).</p>
+            <p>Relationship: l² = r² + h² (Pythagoras theorem)</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Cone Formulas</h4>
+            <p><strong>Slant Height:</strong> l = √(r² + h²)</p>
+            <p><strong>Curved Surface Area:</strong> πrl</p>
+            <p><strong>Total Surface Area:</strong> πr(r + l)</p>
+            <p>Or: πr² + πrl (base area + curved surface)</p>
+            <p><strong>Volume:</strong> (1/3)πr²h</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Cone</h4>
+            <p>
+              <strong>Q:</strong> A cone has radius 5 cm and height 12 cm. Find
+              slant height, CSA, and volume.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>r = 5 cm, h = 12 cm</p>
+            <p>
+              <strong>Slant height:</strong> l = √(r² + h²) = √(25 + 144) = √169
+              = 13 cm
+            </p>
+            <p><strong>CSA:</strong> πrl = (22/7) × 5 × 13 ≈ 204.3 cm²</p>
+            <p>
+              <strong>Volume:</strong> (1/3)πr²h = (1/3) × (22/7) × 25 × 12 ≈
+              314.3 cm³
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Sphere</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Sphere?</h4>
+            <p>
+              A sphere is a perfectly round 3D shape where all points on surface
+              are equidistant from centre.
+            </p>
+            <p>Parameter: radius (r).</p>
+            <p>Examples: ball, globe, planets.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Sphere Formulas</h4>
+            <p><strong>Surface Area:</strong> 4πr²</p>
+            <p><strong>Volume:</strong> (4/3)πr³</p>
+            <p>Note: Sphere has only one surface, no bases.</p>
+          </div>
+
+          <h2 class="chapter-heading">7. Hemisphere</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Hemisphere?</h4>
+            <p>A hemisphere is exactly half of a sphere.</p>
+            <p>It has a curved surface and a circular flat base.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Hemisphere Formulas</h4>
+            <p><strong>Curved Surface Area:</strong> 2πr²</p>
+            <p><strong>Total Surface Area:</strong> 3πr²</p>
+            <p>(CSA + base area = 2πr² + πr² = 3πr²)</p>
+            <p><strong>Volume:</strong> (2/3)πr³</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Sphere and Hemisphere</h4>
+            <p>
+              <strong>Q:</strong> A sphere has radius 6 cm. Find its surface
+              area and volume. Also find volume of hemisphere with same radius.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>r = 6 cm</p>
+            <p>
+              <strong>Sphere Surface Area:</strong> 4πr² = 4 × (22/7) × 36 ≈
+              452.4 cm²
+            </p>
+            <p>
+              <strong>Sphere Volume:</strong> (4/3)πr³ = (4/3) × (22/7) × 216 ≈
+              904.8 cm³
+            </p>
+            <p>
+              <strong>Hemisphere Volume:</strong> (2/3)πr³ = (2/3) × (22/7) ×
+              216 ≈ 452.4 cm³
+            </p>
+            <p><em>Note: Hemisphere volume = ½ × Sphere volume</em></p>
+          </div>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Shape</th>
+                  <th>TSA Formula</th>
+                  <th>Volume Formula</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Cuboid</td>
+                  <td>2(lb + bh + hl)</td>
+                  <td>l × b × h</td>
+                </tr>
+                <tr>
+                  <td>Cube</td>
+                  <td>6a²</td>
+                  <td>a³</td>
+                </tr>
+                <tr>
+                  <td>Cylinder</td>
+                  <td>2πr(r + h)</td>
+                  <td>πr²h</td>
+                </tr>
+                <tr>
+                  <td>Cone</td>
+                  <td>πr(r + l)</td>
+                  <td>(1/3)πr²h</td>
+                </tr>
+                <tr>
+                  <td>Sphere</td>
+                  <td>4πr²</td>
+                  <td>(4/3)πr³</td>
+                </tr>
+                <tr>
+                  <td>Hemisphere</td>
+                  <td>3πr²</td>
+                  <td>(2/3)πr³</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Complete Formula Sheet - Surface Areas & Volumes</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Cuboid</h3>
+                <p>TSA = 2(lb + bh + hl)</p>
+                <p>LSA = 2h(l + b)</p>
+                <p>Volume = l × b × h</p>
+                <p class="formula-desc">Rectangular box</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cube</h3>
+                <p>TSA = 6a²</p>
+                <p>LSA = 4a²</p>
+                <p>Volume = a³</p>
+                <p class="formula-desc">All sides equal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cylinder</h3>
+                <p>CSA = 2πrh</p>
+                <p>TSA = 2πr(r + h)</p>
+                <p>Volume = πr²h</p>
+                <p class="formula-desc">Circular bases</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cone</h3>
+                <p>Slant height: l = √(r²+h²)</p>
+                <p>CSA = πrl</p>
+                <p>TSA = πr(r + l)</p>
+                <p>Volume = (1/3)πr²h</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Sphere</h3>
+                <p>Surface Area = 4πr²</p>
+                <p>Volume = (4/3)πr³</p>
+                <p class="formula-desc">Perfectly round</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Hemisphere</h3>
+                <p>CSA = 2πr²</p>
+                <p>TSA = 3πr²</p>
+                <p>Volume = (2/3)πr³</p>
+                <p class="formula-desc">Half sphere</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Key Relationships</h3>
+                <p>Cone volume = 1/3 × Cylinder volume</p>
+                <p>Hemisphere volume = 1/2 × Sphere volume</p>
+                <p>l² = r² + h² (cone slant height)</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Units Remember</h3>
+                <p>Area → cm², m² (square units)</p>
+                <p>Volume → cm³, m³ (cubic units)</p>
+                <p>Always use π = 22/7 or 3.14</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Surface Areas and Volumes</h4>
+            <p>• Memorize ALL formulas - make flashcards for each shape!</p>
+            <p>
+              • Remember: Volume always has cubic units (cm³), Surface area has
+              square units (cm²).
+            </p>
+            <p>
+              • For cylinder and cone, distinguish between CSA (curved only) and
+              TSA (includes bases).
+            </p>
+            <p>
+              • Cone volume = 1/3 of cylinder volume (same base and height).
+            </p>
+            <p>• Always calculate slant height first for cone problems.</p>
+            <p>
+              • Hemisphere = Half sphere, but TSA includes flat circular base
+              too!
+            </p>
+            <p>
+              • Practice unit conversions: 1 m³ = 1,000,000 cm³, 1 litre = 1000
+              cm³.
+            </p>
+            <p>• Draw diagrams and label all given measurements clearly.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>
+                Confusing LSA (lateral) with TSA (total) - read question
+                carefully!
+              </li>
+              <li>Forgetting to square radius when calculating volume/area</li>
+              <li>Using diameter instead of radius (or vice versa)</li>
+              <li>
+                For cone: using height instead of slant height in CSA formula
+              </li>
+              <li>Not converting units before calculation (mixing cm and m)</li>
+              <li>Forgetting π in circular shape formulas</li>
+              <li>Hemisphere TSA = 3πr² (not 2πr² - includes base!)</li>
+              <li>
+                Wrong order of operations - calculate powers before
+                multiplication
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Mixed Practice Problems</h4>
+            <p>
+              <strong>Q1:</strong> A cuboid-shaped room is 5m × 4m × 3m. Find
+              cost of painting walls at ₹10/m².
+            </p>
+            <p>
+              <strong>Solution:</strong> LSA = 2h(l+b) = 2×3×(5+4) = 54 m². Cost
+              = 54×10 = ₹540
+            </p>
+            <br />
+            <p>
+              <strong>Q2:</strong> A cylindrical tank has diameter 14 m and
+              height 10 m. Find capacity in litres.
+            </p>
+            <p>
+              <strong>Solution:</strong> r = 7 m, Volume = πr²h = (22/7)×49×10 =
+              1540 m³ = 1,540,000 litres
+            </p>
+            <br />
+            <p>
+              <strong>Q3:</strong> Compare: Volume of sphere vs hemisphere with
+              radius 3 cm.
+            </p>
+            <p>
+              <strong>Solution:</strong> Sphere = (4/3)π(27) = 36π cm³,
+              Hemisphere = (2/3)π(27) = 18π cm³
+            </p>
+            <p>Hemisphere = ½ × Sphere (as expected!)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

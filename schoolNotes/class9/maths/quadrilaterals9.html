@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quadrilaterals - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span
+            ><span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Quadrilaterals</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🔶 Quadrilaterals - Class 9</h1>
+        <p class="page-description">
+          Complete notes with properties, theorems, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Quadrilaterals</h2>
+          <p>
+            A quadrilateral is a closed figure with four sides, four vertices,
+            and four angles. The word "quadrilateral" comes from Latin: "quadri"
+            means four and "lateral" means side.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Quadrilateral?</h4>
+            <p>
+              A quadrilateral is a polygon with four sides, four angles, and
+              four vertices.
+            </p>
+            <p><strong>Sum of all four angles = 360°</strong></p>
+            <p>
+              Notation: Quadrilateral ABCD has vertices A, B, C, D and sides AB,
+              BC, CD, DA.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Elements of a Quadrilateral</h3>
+          <ul>
+            <li><strong>Sides:</strong> Four line segments AB, BC, CD, DA.</li>
+            <li><strong>Vertices:</strong> Four corner points A, B, C, D.</li>
+            <li>
+              <strong>Angles:</strong> Four interior angles ∠A, ∠B, ∠C, ∠D.
+            </li>
+            <li>
+              <strong>Diagonals:</strong> Line segments joining opposite
+              vertices (AC and BD).
+            </li>
+            <li>
+              <strong>Adjacent sides:</strong> Sides that share a common vertex.
+            </li>
+            <li>
+              <strong>Opposite sides:</strong> Sides that don't share a common
+              vertex.
+            </li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Angle Sum Property of Quadrilateral</h4>
+            <p>
+              The sum of all four interior angles of a quadrilateral is 360°.
+            </p>
+            <p>∠A + ∠B + ∠C + ∠D = 360°</p>
+            <p>
+              This can be proved by dividing the quadrilateral into two
+              triangles using a diagonal.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Types of Quadrilaterals</h2>
+
+          <h3 class="sub-heading">2.1 Parallelogram</h3>
+          <div class="definition-box">
+            <h4>📖 Parallelogram</h4>
+            <p>A quadrilateral with both pairs of opposite sides parallel.</p>
+          </div>
+
+          <ul>
+            <li>
+              <strong>Opposite sides are equal:</strong> AB = CD and BC = AD
+            </li>
+            <li>
+              <strong>Opposite angles are equal:</strong> ∠A = ∠C and ∠B = ∠D
+            </li>
+            <li>
+              <strong>Adjacent angles are supplementary:</strong> ∠A + ∠B = 180°
+            </li>
+            <li>
+              <strong>Diagonals bisect each other:</strong> AC and BD bisect at
+              their midpoint
+            </li>
+            <li>Each diagonal divides it into two congruent triangles</li>
+          </ul>
+
+          <h3 class="sub-heading">2.2 Rectangle</h3>
+          <div class="definition-box">
+            <h4>📖 Rectangle</h4>
+            <p>A parallelogram with all four angles equal to 90°.</p>
+          </div>
+
+          <ul>
+            <li>All properties of parallelogram apply</li>
+            <li>
+              <strong>All angles are 90°:</strong> ∠A = ∠B = ∠C = ∠D = 90°
+            </li>
+            <li><strong>Diagonals are equal:</strong> AC = BD</li>
+            <li>Diagonals bisect each other</li>
+            <li>Opposite sides are equal and parallel</li>
+          </ul>
+
+          <h3 class="sub-heading">2.3 Square</h3>
+          <div class="definition-box">
+            <h4>📖 Square</h4>
+            <p>A rectangle with all four sides equal.</p>
+          </div>
+
+          <ul>
+            <li>All properties of rectangle and parallelogram apply</li>
+            <li><strong>All sides are equal:</strong> AB = BC = CD = DA</li>
+            <li><strong>All angles are 90°</strong></li>
+            <li>
+              <strong>Diagonals are equal and bisect each other at 90°</strong>
+            </li>
+            <li>
+              Diagonals bisect the angles (each diagonal makes 45° with sides)
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">2.4 Rhombus</h3>
+          <div class="definition-box">
+            <h4>📖 Rhombus</h4>
+            <p>A parallelogram with all four sides equal.</p>
+          </div>
+
+          <ul>
+            <li>All properties of parallelogram apply</li>
+            <li><strong>All sides are equal:</strong> AB = BC = CD = DA</li>
+            <li>Opposite angles are equal</li>
+            <li><strong>Diagonals bisect each other at 90°</strong></li>
+            <li>Diagonals bisect the angles</li>
+          </ul>
+
+          <h3 class="sub-heading">2.5 Trapezium</h3>
+          <div class="definition-box">
+            <h4>📖 Trapezium</h4>
+            <p>A quadrilateral with exactly one pair of parallel sides.</p>
+          </div>
+
+          <ul>
+            <li>One pair of opposite sides is parallel (called bases)</li>
+            <li>Other pair is non-parallel (called legs)</li>
+            <li>
+              <strong>Isosceles Trapezium:</strong> Non-parallel sides are equal
+            </li>
+            <li>In isosceles trapezium, base angles are equal</li>
+            <li>In isosceles trapezium, diagonals are equal</li>
+          </ul>
+
+          <h3 class="sub-heading">2.6 Kite</h3>
+          <div class="definition-box">
+            <h4>📖 Kite</h4>
+            <p>A quadrilateral with two pairs of adjacent sides equal.</p>
+          </div>
+
+          <ul>
+            <li>Two pairs of adjacent sides are equal: AB = AD and CB = CD</li>
+            <li>One diagonal is the perpendicular bisector of the other</li>
+            <li>
+              One pair of opposite angles are equal (the angles between unequal
+              sides)
+            </li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Important Theorems</h2>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 1: Diagonal of Parallelogram</h4>
+            <p>
+              A diagonal of a parallelogram divides it into two congruent
+              triangles.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 2: Opposite Sides of Parallelogram</h4>
+            <p>In a parallelogram, opposite sides are equal.</p>
+            <p>
+              Converse: If opposite sides of a quadrilateral are equal, it's a
+              parallelogram.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 3: Diagonals of Parallelogram</h4>
+            <p>The diagonals of a parallelogram bisect each other.</p>
+            <p>
+              Converse: If diagonals of a quadrilateral bisect each other, it's
+              a parallelogram.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Theorem 4: Mid-point Theorem</h4>
+            <p>
+              The line segment joining the mid-points of two sides of a triangle
+              is parallel to the third side and equal to half of it.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Parallelogram Properties</h4>
+            <p>
+              <strong>Q:</strong> In parallelogram ABCD, ∠A = 70°. Find all
+              other angles.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Given: ∠A = 70°</p>
+            <p>∠C = ∠A = 70° (opposite angles equal)</p>
+            <p>∠A + ∠B = 180° (adjacent angles supplementary)</p>
+            <p>70° + ∠B = 180°</p>
+            <p>∠B = 110°</p>
+            <p>∠D = ∠B = 110° (opposite angles equal)</p>
+            <p><strong>Angles: 70°, 110°, 70°, 110°</strong></p>
+          </div>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Quadrilateral</th>
+                  <th>Sides</th>
+                  <th>Angles</th>
+                  <th>Diagonals</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Parallelogram</td>
+                  <td>Opposite equal</td>
+                  <td>Opposite equal</td>
+                  <td>Bisect each other</td>
+                </tr>
+                <tr>
+                  <td>Rectangle</td>
+                  <td>Opposite equal</td>
+                  <td>All 90°</td>
+                  <td>Equal, bisect each other</td>
+                </tr>
+                <tr>
+                  <td>Square</td>
+                  <td>All equal</td>
+                  <td>All 90°</td>
+                  <td>Equal, ⊥ bisect</td>
+                </tr>
+                <tr>
+                  <td>Rhombus</td>
+                  <td>All equal</td>
+                  <td>Opposite equal</td>
+                  <td>⊥ bisect each other</td>
+                </tr>
+                <tr>
+                  <td>Trapezium</td>
+                  <td>One pair parallel</td>
+                  <td>No special property</td>
+                  <td>Not necessarily equal</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Quadrilaterals</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic Property</h3>
+                <p>Sum of all angles = 360°</p>
+                <p>∠A + ∠B + ∠C + ∠D = 360°</p>
+                <p class="formula-desc">Universal for all quadrilaterals</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Parallelogram</h3>
+                <p>Opposite sides equal</p>
+                <p>Opposite angles equal</p>
+                <p>Adjacent angles = 180°</p>
+                <p>Diagonals bisect each other</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Rectangle</h3>
+                <p>All angles = 90°</p>
+                <p>Opposite sides equal</p>
+                <p>Diagonals equal</p>
+                <p>Diagonals bisect each other</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Square</h3>
+                <p>All sides equal</p>
+                <p>All angles = 90°</p>
+                <p>Diagonals equal</p>
+                <p>Diagonals bisect at 90°</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Rhombus</h3>
+                <p>All sides equal</p>
+                <p>Opposite angles equal</p>
+                <p>Diagonals bisect at 90°</p>
+                <p>Diagonals bisect angles</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Trapezium</h3>
+                <p>One pair parallel sides</p>
+                <p>Isosceles: legs equal</p>
+                <p>Isosceles: base angles equal</p>
+                <p>Isosceles: diagonals equal</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Tests for Parallelogram</h3>
+                <p>Opposite sides equal → Parallelogram</p>
+                <p>Opposite angles equal → Parallelogram</p>
+                <p>Diagonals bisect → Parallelogram</p>
+                <p>One pair parallel & equal → Parallelogram</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Mid-point Theorem</h3>
+                <p>Line joining mid-points</p>
+                <p>∥ to third side</p>
+                <p>= ½ × third side</p>
+                <p class="formula-desc">Important for triangles</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Quadrilaterals</h4>
+            <p>
+              • Draw clear diagrams and mark equal sides/angles with same
+              symbols.
+            </p>
+            <p>
+              • Understand the hierarchy: Square → Rectangle → Parallelogram.
+            </p>
+            <p>• Square → Rhombus → Parallelogram.</p>
+            <p>• Every square is a rectangle, rhombus, and parallelogram!</p>
+            <p>
+              • Focus on properties of diagonals - they're crucial for
+              identification.
+            </p>
+            <p>• Practice converting "if-then" theorems to their converses.</p>
+            <p>• Memorize the angle sum property (360°) - use it frequently!</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>
+                Don't confuse parallelogram with trapezium (parallelogram has
+                BOTH pairs parallel)
+              </li>
+              <li>
+                Rectangle ≠ Square (rectangle doesn't need all sides equal)
+              </li>
+              <li>Rhombus angles are NOT necessarily 90° (that's a square)</li>
+              <li>
+                Remember: In rhombus, diagonals bisect at 90°, but aren't
+                necessarily equal
+              </li>
+              <li>Trapezium has only ONE pair of parallel sides (not both)</li>
+              <li>Mark all given information on your diagram before solving</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Practice Problems</h4>
+            <p>
+              <strong>Q1:</strong> Diagonals of a quadrilateral bisect each
+              other. What is it?
+            </p>
+            <p><strong>Answer:</strong> Parallelogram (by converse theorem)</p>
+            <br />
+            <p>
+              <strong>Q2:</strong> All sides equal + all angles 90°. What is it?
+            </p>
+            <p><strong>Answer:</strong> Square</p>
+            <br />
+            <p>
+              <strong>Q3:</strong> In a quadrilateral, three angles are 80°,
+              95°, 105°. Find the fourth.
+            </p>
+            <p>
+              <strong>Answer:</strong> 360° - (80° + 95° + 105°) = 360° - 280° =
+              80°
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
