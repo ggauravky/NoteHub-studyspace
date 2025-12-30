@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Polynomials - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Polynomials</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📐 Polynomials - Class 9</h1>
+        <p class="page-description">
+          Complete notes with examples, important theorems, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">1. Introduction to Polynomials</h2>
+          <p>
+            Polynomials are algebraic expressions that consist of variables and
+            coefficients, involving operations of addition, subtraction,
+            multiplication, and non-negative integer exponents. They are
+            fundamental in algebra and appear everywhere in mathematics.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Polynomial?</h4>
+            <p>
+              A polynomial is an expression of the form: p(x) = aₙxⁿ + aₙ₋₁xⁿ⁻¹
+              + ... + a₂x² + a₁x + a₀
+            </p>
+            <p>
+              Where aₙ, aₙ₋₁, ..., a₂, a₁, a₀ are constants (called
+              coefficients), and n is a non-negative integer.
+            </p>
+            <p><strong>Examples:</strong> 3x² + 2x + 1, 5x³ - 4x + 7, 2x - 3</p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Polynomial in One Variable</h3>
+          <ul>
+            <li>
+              A polynomial in one variable is an expression with only one
+              variable (usually x).
+            </li>
+            <li>
+              The variable should have only whole number exponents (0, 1, 2, 3,
+              ...).
+            </li>
+            <li>Examples: 2x + 3, x² - 5x + 6, 4x³ + 2x² - x + 9</li>
+            <li>
+              NOT polynomials: 1/x (negative exponent), √x (fractional
+              exponent), x² + 2/x
+            </li>
+          </ul>
+
+          <!-- Terms and Definitions -->
+          <h2 class="chapter-heading">2. Terms and Definitions</h2>
+
+          <h3 class="sub-heading">2.1 Terms of a Polynomial</h3>
+          <ul>
+            <li>
+              Each part of a polynomial separated by + or - is called a term.
+            </li>
+            <li>Example: In 3x² + 2x - 5, the terms are 3x², 2x, and -5.</li>
+            <li>A term consists of a coefficient and a variable part.</li>
+          </ul>
+
+          <h3 class="sub-heading">2.2 Coefficients</h3>
+          <ul>
+            <li>
+              The numerical factor in each term is called the coefficient.
+            </li>
+            <li>Example: In 5x³, the coefficient is 5.</li>
+            <li>In -3x², the coefficient is -3.</li>
+            <li>
+              Constant term: The term without any variable (coefficient of x⁰).
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">2.3 Degree of a Polynomial</h3>
+          <ul>
+            <li>
+              The degree is the highest power of the variable in the polynomial.
+            </li>
+            <li>
+              Example: In 4x³ + 2x² - 7x + 1, the degree is 3 (highest power).
+            </li>
+            <li>For a constant polynomial (like 5), the degree is 0.</li>
+            <li>
+              The zero polynomial (0) has no defined degree (or sometimes degree
+              -∞).
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Finding Degree</h4>
+            <p>
+              <strong>Q1:</strong> Find the degree of p(x) = 5x⁴ - 3x² + 7x - 2
+            </p>
+            <p>
+              <strong>Solution:</strong> The highest power of x is 4, so degree
+              = 4
+            </p>
+            <br />
+            <p><strong>Q2:</strong> Find the degree of p(x) = 7x - 5</p>
+            <p>
+              <strong>Solution:</strong> The highest power of x is 1, so degree
+              = 1
+            </p>
+            <br />
+            <p><strong>Q3:</strong> Find the degree of p(x) = 9</p>
+            <p>
+              <strong>Solution:</strong> This is a constant polynomial, so
+              degree = 0
+            </p>
+          </div>
+
+          <!-- Types of Polynomials -->
+          <h2 class="chapter-heading">3. Types of Polynomials</h2>
+
+          <h3 class="sub-heading">3.1 Based on Degree</h3>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Type</th>
+                  <th>Degree</th>
+                  <th>General Form</th>
+                  <th>Example</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Constant Polynomial</td>
+                  <td>0</td>
+                  <td>p(x) = a</td>
+                  <td>5, -3, 7</td>
+                </tr>
+                <tr>
+                  <td>Linear Polynomial</td>
+                  <td>1</td>
+                  <td>p(x) = ax + b</td>
+                  <td>2x + 3, 5x - 7</td>
+                </tr>
+                <tr>
+                  <td>Quadratic Polynomial</td>
+                  <td>2</td>
+                  <td>p(x) = ax² + bx + c</td>
+                  <td>x² - 5x + 6, 3x² + 2</td>
+                </tr>
+                <tr>
+                  <td>Cubic Polynomial</td>
+                  <td>3</td>
+                  <td>p(x) = ax³ + bx² + cx + d</td>
+                  <td>2x³ - 4x² + x - 1</td>
+                </tr>
+                <tr>
+                  <td>Biquadratic Polynomial</td>
+                  <td>4</td>
+                  <td>p(x) = ax⁴ + bx³ + cx² + dx + e</td>
+                  <td>x⁴ - 3x² + 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-heading">3.2 Based on Number of Terms</h3>
+          <ul>
+            <li>
+              <strong>Monomial:</strong> A polynomial with only ONE term.
+              Examples: 5x, 3x², -7x³, 9
+            </li>
+            <li>
+              <strong>Binomial:</strong> A polynomial with TWO terms. Examples:
+              2x + 3, x² - 5, 4x³ + 7
+            </li>
+            <li>
+              <strong>Trinomial:</strong> A polynomial with THREE terms.
+              Examples: x² + 3x + 2, 2x² - 5x + 1
+            </li>
+            <li>
+              <strong>Polynomial:</strong> General term for expressions with one
+              or more terms.
+            </li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important: Standard Form</h4>
+            <p>
+              A polynomial is in standard form when its terms are arranged in
+              descending order of their degrees.
+            </p>
+            <p>
+              <strong>Example:</strong> 5x³ + 2x² - 7x + 4 (degree 3 → 2 → 1 →
+              0)
+            </p>
+          </div>
+
+          <!-- Zeros of a Polynomial -->
+          <h2 class="chapter-heading">4. Zeros of a Polynomial</h2>
+          <p>
+            A zero of a polynomial is a value of the variable that makes the
+            polynomial equal to zero.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Zero?</h4>
+            <p>
+              If p(a) = 0, then 'a' is called a zero (or root) of the polynomial
+              p(x).
+            </p>
+            <p>
+              Geometrically, zeros are the x-coordinates where the graph of the
+              polynomial touches or crosses the x-axis.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Finding Zeros</h3>
+          <ul>
+            <li>
+              To find zeros, set the polynomial equal to zero and solve for x.
+            </li>
+            <li>For linear polynomial ax + b: Zero = -b/a</li>
+            <li>
+              For quadratic polynomial: Use factorization, completing square, or
+              quadratic formula.
+            </li>
+            <li>A polynomial of degree n can have at most n zeros.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Finding Zeros</h4>
+            <p><strong>Q1:</strong> Find the zero of p(x) = 2x - 6</p>
+            <p><strong>Solution:</strong></p>
+            <p>Set p(x) = 0</p>
+            <p>2x - 6 = 0</p>
+            <p>2x = 6</p>
+            <p>x = 3</p>
+            <p><strong>Therefore, zero = 3</strong></p>
+            <br />
+            <p><strong>Q2:</strong> Find the zeros of p(x) = x² - 5x + 6</p>
+            <p><strong>Solution:</strong></p>
+            <p>Set p(x) = 0</p>
+            <p>x² - 5x + 6 = 0</p>
+            <p>(x - 2)(x - 3) = 0</p>
+            <p>x - 2 = 0 or x - 3 = 0</p>
+            <p><strong>Therefore, zeros = 2 and 3</strong></p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Number of Zeros</h3>
+          <ul>
+            <li>A linear polynomial (degree 1) has exactly 1 zero.</li>
+            <li>A quadratic polynomial (degree 2) can have at most 2 zeros.</li>
+            <li>A cubic polynomial (degree 3) can have at most 3 zeros.</li>
+            <li>In general, a polynomial of degree n has at most n zeros.</li>
+            <li>Some polynomials may have no real zeros (e.g., x² + 1).</li>
+          </ul>
+
+          <!-- Remainder Theorem -->
+          <h2 class="chapter-heading">5. Remainder Theorem</h2>
+          <p>
+            The Remainder Theorem is a powerful tool that helps us find the
+            remainder when a polynomial is divided by a linear expression.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Remainder Theorem</h4>
+            <p>
+              If a polynomial p(x) is divided by (x - a), then the remainder is
+              p(a).
+            </p>
+            <p>
+              In other words: Simply substitute x = a in the polynomial to get
+              the remainder!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 How to Use Remainder Theorem</h3>
+          <ul>
+            <li>Step 1: Identify the divisor in the form (x - a).</li>
+            <li>Step 2: Find the value of 'a'.</li>
+            <li>Step 3: Substitute x = a in the polynomial p(x).</li>
+            <li>Step 4: The result p(a) is the remainder.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Remainder Theorem</h4>
+            <p>
+              <strong>Q1:</strong> Find the remainder when p(x) = x³ - 3x² + 2x
+              - 5 is divided by (x - 2)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Here, divisor is (x - 2), so a = 2</p>
+            <p>By Remainder Theorem, remainder = p(2)</p>
+            <p>p(2) = (2)³ - 3(2)² + 2(2) - 5</p>
+            <p>p(2) = 8 - 12 + 4 - 5</p>
+            <p>p(2) = -5</p>
+            <p><strong>Therefore, remainder = -5</strong></p>
+            <br />
+            <p>
+              <strong>Q2:</strong> Find the remainder when p(x) = 2x² + 3x - 1
+              is divided by (x + 1)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Divisor is (x + 1) = (x - (-1)), so a = -1</p>
+            <p>Remainder = p(-1)</p>
+            <p>p(-1) = 2(-1)² + 3(-1) - 1</p>
+            <p>p(-1) = 2 - 3 - 1 = -2</p>
+            <p><strong>Therefore, remainder = -2</strong></p>
+          </div>
+
+          <!-- Factor Theorem -->
+          <h2 class="chapter-heading">6. Factor Theorem</h2>
+          <p>
+            The Factor Theorem is a special case of the Remainder Theorem. It
+            helps us determine whether a linear expression is a factor of a
+            polynomial.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Factor Theorem</h4>
+            <p>
+              (x - a) is a factor of polynomial p(x) if and only if p(a) = 0.
+            </p>
+            <p>
+              In simple words: If substituting x = a makes the polynomial zero,
+              then (x - a) is a factor!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.1 Relationship with Zeros</h3>
+          <ul>
+            <li>
+              If p(a) = 0, then 'a' is a zero of p(x) AND (x - a) is a factor.
+            </li>
+            <li>Finding factors is the same as finding zeros.</li>
+            <li>Factor Theorem is used to factorize polynomials.</li>
+            <li>
+              It's a quick way to check if a number is a zero of a polynomial.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Factor Theorem</h4>
+            <p>
+              <strong>Q1:</strong> Check if (x - 2) is a factor of p(x) = x³ -
+              4x² + 5x - 2
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>By Factor Theorem, (x - 2) is a factor if p(2) = 0</p>
+            <p>p(2) = (2)³ - 4(2)² + 5(2) - 2</p>
+            <p>p(2) = 8 - 16 + 10 - 2</p>
+            <p>p(2) = 0</p>
+            <p><strong>Yes! (x - 2) is a factor since p(2) = 0</strong></p>
+            <br />
+            <p>
+              <strong>Q2:</strong> Check if (x + 3) is a factor of p(x) = x² +
+              4x + 3
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>(x + 3) = (x - (-3)), so check if p(-3) = 0</p>
+            <p>p(-3) = (-3)² + 4(-3) + 3</p>
+            <p>p(-3) = 9 - 12 + 3 = 0</p>
+            <p><strong>Yes! (x + 3) is a factor</strong></p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ Difference: Remainder vs Factor Theorem</h4>
+            <p>
+              <strong>Remainder Theorem:</strong> Find remainder when dividing.
+              Answer: p(a)
+            </p>
+            <p>
+              <strong>Factor Theorem:</strong> Check if it's a factor. Answer:
+              Yes (if p(a)=0) or No
+            </p>
+          </div>
+
+          <!-- Factorization -->
+          <h2 class="chapter-heading">7. Factorization of Polynomials</h2>
+          <p>
+            Factorization means writing a polynomial as a product of two or more
+            polynomials. It's like breaking down a number into prime factors.
+          </p>
+
+          <h3 class="sub-heading">7.1 Methods of Factorization</h3>
+
+          <h4
+            style="color: #764ba2; margin: 1.5rem 0 0.8rem; font-size: 1.2rem"
+          >
+            Method 1: Taking Common Factor
+          </h4>
+          <ul>
+            <li>Find the common factor in all terms and take it out.</li>
+            <li>Example: 6x² + 9x = 3x(2x + 3) [common factor is 3x]</li>
+            <li>Example: 4x³ - 8x² = 4x²(x - 2) [common factor is 4x²]</li>
+          </ul>
+
+          <h4
+            style="color: #764ba2; margin: 1.5rem 0 0.8rem; font-size: 1.2rem"
+          >
+            Method 2: Using Identities
+          </h4>
+          <ul>
+            <li>Use algebraic identities to factorize.</li>
+            <li>
+              Example: x² - 9 = (x + 3)(x - 3) [using a² - b² = (a+b)(a-b)]
+            </li>
+            <li>
+              Example: x² + 6x + 9 = (x + 3)² [using (a+b)² = a² + 2ab + b²]
+            </li>
+          </ul>
+
+          <h4
+            style="color: #764ba2; margin: 1.5rem 0 0.8rem; font-size: 1.2rem"
+          >
+            Method 3: Splitting Middle Term
+          </h4>
+          <ul>
+            <li>Used for quadratic expressions ax² + bx + c.</li>
+            <li>
+              Split the middle term (bx) into two parts whose product = ac.
+            </li>
+            <li>
+              Example: x² + 5x + 6 = x² + 2x + 3x + 6 = x(x+2) + 3(x+2) =
+              (x+2)(x+3)
+            </li>
+          </ul>
+
+          <h4
+            style="color: #764ba2; margin: 1.5rem 0 0.8rem; font-size: 1.2rem"
+          >
+            Method 4: Factor Theorem
+          </h4>
+          <ul>
+            <li>Find a zero by trial and error, then use Factor Theorem.</li>
+            <li>Divide the polynomial by the factor to get other factors.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Factorization Methods</h4>
+            <p><strong>Q1:</strong> Factorize x² - 16</p>
+            <p>
+              <strong>Solution:</strong> Using identity a² - b² = (a+b)(a-b)
+            </p>
+            <p>x² - 16 = x² - 4²</p>
+            <p>= (x + 4)(x - 4)</p>
+            <br />
+            <p><strong>Q2:</strong> Factorize x² + 7x + 12</p>
+            <p><strong>Solution:</strong> Split middle term (7x = 3x + 4x)</p>
+            <p>x² + 7x + 12 = x² + 3x + 4x + 12</p>
+            <p>= x(x + 3) + 4(x + 3)</p>
+            <p>= (x + 3)(x + 4)</p>
+            <br />
+            <p><strong>Q3:</strong> Factorize x³ - 8</p>
+            <p>
+              <strong>Solution:</strong> Using identity a³ - b³ = (a-b)(a² + ab
+              + b²)
+            </p>
+            <p>x³ - 8 = x³ - 2³</p>
+            <p>= (x - 2)(x² + 2x + 4)</p>
+          </div>
+
+          <!-- Algebraic Identities -->
+          <h2 class="chapter-heading">8. Algebraic Identities</h2>
+          <p>
+            Algebraic identities are equations that are true for all values of
+            the variables. They are extremely useful in factorization and
+            simplification.
+          </p>
+
+          <h3 class="sub-heading">
+            8.1 Basic Identities (From Earlier Classes)
+          </h3>
+          <ul>
+            <li>(a + b)² = a² + 2ab + b²</li>
+            <li>(a - b)² = a² - 2ab + b²</li>
+            <li>a² - b² = (a + b)(a - b)</li>
+          </ul>
+
+          <h3 class="sub-heading">8.2 New Identities for Class 9</h3>
+          <ul>
+            <li>(x + a)(x + b) = x² + (a+b)x + ab</li>
+            <li>(a + b + c)² = a² + b² + c² + 2ab + 2bc + 2ca</li>
+            <li>(a + b)³ = a³ + b³ + 3ab(a + b) = a³ + 3a²b + 3ab² + b³</li>
+            <li>(a - b)³ = a³ - b³ - 3ab(a - b) = a³ - 3a²b + 3ab² - b³</li>
+            <li>a³ + b³ = (a + b)(a² - ab + b²)</li>
+            <li>a³ - b³ = (a - b)(a² + ab + b²)</li>
+            <li>
+              a³ + b³ + c³ - 3abc = (a + b + c)(a² + b² + c² - ab - bc - ca)
+            </li>
+            <li>If a + b + c = 0, then a³ + b³ + c³ = 3abc</li>
+          </ul>
+
+          <div class="key-points">
+            <h4>🔑 When to Use Which Identity</h4>
+            <ul>
+              <li>For x² + 2xy + y² → Use (a + b)²</li>
+              <li>For x² - y² → Use a² - b² = (a+b)(a-b)</li>
+              <li>For x³ + y³ → Use a³ + b³ = (a+b)(a² - ab + b²)</li>
+              <li>For x³ - y³ → Use a³ - b³ = (a-b)(a² + ab + b²)</li>
+              <li>
+                For three variables with sum zero → Use a³ + b³ + c³ = 3abc
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Using Identities</h4>
+            <p><strong>Q1:</strong> Expand (2x + 3)³</p>
+            <p>
+              <strong>Solution:</strong> Using (a + b)³ = a³ + 3a²b + 3ab² + b³
+            </p>
+            <p>Here a = 2x, b = 3</p>
+            <p>(2x + 3)³ = (2x)³ + 3(2x)²(3) + 3(2x)(3)² + (3)³</p>
+            <p>= 8x³ + 36x² + 54x + 27</p>
+            <br />
+            <p><strong>Q2:</strong> Factorize x³ + 27</p>
+            <p>
+              <strong>Solution:</strong> Using a³ + b³ = (a + b)(a² - ab + b²)
+            </p>
+            <p>x³ + 27 = x³ + 3³</p>
+            <p>= (x + 3)(x² - 3x + 9)</p>
+            <br />
+            <p><strong>Q3:</strong> If x + y + z = 0, find x³ + y³ + z³</p>
+            <p>
+              <strong>Solution:</strong> Using: If a + b + c = 0, then a³ + b³ +
+              c³ = 3abc
+            </p>
+            <p>x³ + y³ + z³ = 3xyz</p>
+          </div>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Polynomials</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic Definitions</h3>
+                <p>Polynomial: p(x) = aₙxⁿ + ... + a₁x + a₀</p>
+                <p>Degree: Highest power of variable</p>
+                <p>Zero: Value where p(a) = 0</p>
+                <p>Constant term: a₀ (no variable)</p>
+                <p class="formula-desc">Maximum zeros = degree of polynomial</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Types by Degree</h3>
+                <p>Degree 0: Constant (a)</p>
+                <p>Degree 1: Linear (ax + b)</p>
+                <p>Degree 2: Quadratic (ax² + bx + c)</p>
+                <p>Degree 3: Cubic (ax³ + bx² + cx + d)</p>
+                <p>Degree 4: Biquadratic</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Important Theorems</h3>
+                <p><strong>Remainder Theorem:</strong></p>
+                <p>If p(x) ÷ (x-a), remainder = p(a)</p>
+                <p><strong>Factor Theorem:</strong></p>
+                <p>(x-a) is factor ⟺ p(a) = 0</p>
+                <p class="formula-desc">Zero and factor are related!</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Basic Identities</h3>
+                <p>(a + b)² = a² + 2ab + b²</p>
+                <p>(a - b)² = a² - 2ab + b²</p>
+                <p>a² - b² = (a+b)(a-b)</p>
+                <p>(x+a)(x+b) = x² + (a+b)x + ab</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cubic Identities</h3>
+                <p>(a+b)³ = a³ + 3a²b + 3ab² + b³</p>
+                <p>(a-b)³ = a³ - 3a²b + 3ab² - b³</p>
+                <p>a³ + b³ = (a+b)(a² - ab + b²)</p>
+                <p>a³ - b³ = (a-b)(a² + ab + b²)</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Special Identities</h3>
+                <p>(a+b+c)² = a² + b² + c² + 2ab + 2bc + 2ca</p>
+                <p>a³+b³+c³-3abc = (a+b+c)(a²+b²+c²-ab-bc-ca)</p>
+                <p><strong>Special Case:</strong></p>
+                <p>If a+b+c = 0, then a³+b³+c³ = 3abc</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Factorization Tips</h3>
+                <p>1. Take out common factors first</p>
+                <p>2. Use identities when possible</p>
+                <p>3. Split middle term for quadratics</p>
+                <p>4. Use Factor Theorem for higher degrees</p>
+                <p class="formula-desc">Always check by multiplying back!</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Quick Checks</h3>
+                <p>Linear zero: x = -b/a (from ax+b=0)</p>
+                <p>Quadratic zeros: 2 values max</p>
+                <p>Perfect square: b² = 4ac</p>
+                <p>Sum of zeros (quadratic): -b/a</p>
+                <p>Product of zeros: c/a</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Polynomials</h4>
+            <p>
+              • Memorize all the algebraic identities - they're used everywhere!
+            </p>
+            <p>
+              • Practice identifying which identity to use for different
+              problems.
+            </p>
+            <p>
+              • Always verify your factorization by multiplying the factors
+              back.
+            </p>
+            <p>
+              • For Factor Theorem, try simple values like ±1, ±2, ±3 first.
+            </p>
+            <p>
+              • Remainder Theorem is faster than long division - use it when
+              possible!
+            </p>
+            <p>
+              • When factorizing, look for patterns: common factors first, then
+              identities.
+            </p>
+            <p>
+              • Remember: Degree tells you maximum number of zeros possible.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

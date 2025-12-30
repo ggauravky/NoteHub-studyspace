@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Systems - Class 9 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Number Systems</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">📐 Number Systems - Class 9</h1>
+        <p class="page-description">
+          Complete notes with examples, important points, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">1. Introduction to Number Systems</h2>
+          <p>
+            Number Systems form the foundation of mathematics. In this chapter,
+            we will learn about different types of numbers, their properties,
+            and how to work with them.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Number System?</h4>
+            <p>
+              A number system is a way of representing numbers using symbols and
+              rules. It includes various types of numbers like natural numbers,
+              whole numbers, integers, rational numbers, and irrational numbers.
+            </p>
+          </div>
+
+          <!-- Types of Numbers -->
+          <h2 class="chapter-heading">2. Types of Numbers</h2>
+
+          <h3 class="sub-heading">2.1 Natural Numbers (ℕ)</h3>
+          <ul>
+            <li>
+              Natural numbers are counting numbers that start from 1 and go on
+              forever.
+            </li>
+            <li>Examples: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, ...</li>
+            <li>Symbol: ℕ = {1, 2, 3, 4, 5, ...}</li>
+            <li>
+              Natural numbers do NOT include zero, negative numbers, fractions,
+              or decimals.
+            </li>
+            <li>They are the most basic numbers we use in daily counting.</li>
+          </ul>
+
+          <h3 class="sub-heading">2.2 Whole Numbers (W)</h3>
+          <ul>
+            <li>Whole numbers are natural numbers plus zero.</li>
+            <li>Examples: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, ...</li>
+            <li>Symbol: W = {0, 1, 2, 3, 4, 5, ...}</li>
+            <li>
+              The only difference between natural and whole numbers is the
+              inclusion of 0.
+            </li>
+            <li>
+              Whole numbers also do NOT include negative numbers, fractions, or
+              decimals.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">2.3 Integers (ℤ)</h3>
+          <ul>
+            <li>
+              Integers include all whole numbers and their negative
+              counterparts.
+            </li>
+            <li>Examples: ..., -3, -2, -1, 0, 1, 2, 3, ...</li>
+            <li>Symbol: ℤ = {..., -3, -2, -1, 0, 1, 2, 3, ...}</li>
+            <li>
+              Positive integers: 1, 2, 3, 4, ... (same as natural numbers)
+            </li>
+            <li>Negative integers: -1, -2, -3, -4, ...</li>
+            <li>Zero (0) is neither positive nor negative.</li>
+            <li>Integers do NOT include fractions or decimals.</li>
+          </ul>
+
+          <h3 class="sub-heading">2.4 Rational Numbers (ℚ)</h3>
+          <ul>
+            <li>
+              Rational numbers are numbers that can be written as a fraction
+              p/q, where p and q are integers and q ≠ 0.
+            </li>
+            <li>
+              Examples: 1/2, 3/4, -5/7, 2 (can be written as 2/1), 0.5 (equals
+              1/2), 0.75 (equals 3/4)
+            </li>
+            <li>Symbol: ℚ (represents rational numbers)</li>
+            <li>
+              All integers are rational numbers because they can be written as
+              fractions (e.g., 5 = 5/1).
+            </li>
+            <li>
+              Decimal forms: Rational numbers have either terminating decimals
+              (like 0.5, 0.25) or repeating decimals (like 0.333..., 0.666...).
+            </li>
+            <li>
+              Examples of repeating decimals: 1/3 = 0.3333... (written as 0.3̅),
+              2/3 = 0.6666... (written as 0.6̅)
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Identifying Rational Numbers</h4>
+            <p>
+              <strong>Question:</strong> Which of the following are rational
+              numbers?
+            </p>
+            <p>a) 0.5 b) -7 c) 2/3 d) 5 e) 0.121212... (repeating)</p>
+            <p><strong>Answer:</strong> All of them are rational!</p>
+            <p>• 0.5 = 1/2 (terminating decimal)</p>
+            <p>• -7 = -7/1 (integer)</p>
+            <p>• 2/3 is already in fraction form</p>
+            <p>• 5 = 5/1 (integer)</p>
+            <p>• 0.121212... = 12/99 (repeating decimal)</p>
+          </div>
+
+          <h3 class="sub-heading">2.5 Irrational Numbers</h3>
+          <ul>
+            <li>
+              Irrational numbers CANNOT be written as a simple fraction p/q.
+            </li>
+            <li>
+              Their decimal representation is non-terminating and non-repeating.
+            </li>
+            <li>
+              Examples: √2, √3, √5, π (pi ≈ 3.14159...), e (Euler's number ≈
+              2.71828...)
+            </li>
+            <li>√2 = 1.414213562... (goes on forever without repeating)</li>
+            <li>π = 3.141592653... (never repeats or terminates)</li>
+            <li>Golden ratio (φ) = 1.618033988... is also irrational.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important: Difference Between Rational and Irrational</h4>
+            <p>
+              <strong>Rational:</strong> Can be written as fraction, decimals
+              terminate or repeat.
+            </p>
+            <p>
+              <strong>Irrational:</strong> Cannot be written as fraction,
+              decimals neither terminate nor repeat.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.6 Real Numbers (ℝ)</h3>
+          <ul>
+            <li>Real numbers include BOTH rational and irrational numbers.</li>
+            <li>Symbol: ℝ = Rational Numbers + Irrational Numbers</li>
+            <li>Every number on the number line is a real number.</li>
+            <li>Real numbers can be positive, negative, or zero.</li>
+            <li>
+              All natural, whole, integers, rational, and irrational numbers are
+              real numbers.
+            </li>
+          </ul>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Number Type</th>
+                  <th>Symbol</th>
+                  <th>Examples</th>
+                  <th>Key Feature</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Natural Numbers</td>
+                  <td>ℕ</td>
+                  <td>1, 2, 3, 4, 5, ...</td>
+                  <td>Counting numbers (no zero)</td>
+                </tr>
+                <tr>
+                  <td>Whole Numbers</td>
+                  <td>W</td>
+                  <td>0, 1, 2, 3, 4, ...</td>
+                  <td>Natural + Zero</td>
+                </tr>
+                <tr>
+                  <td>Integers</td>
+                  <td>ℤ</td>
+                  <td>..., -2, -1, 0, 1, 2, ...</td>
+                  <td>Whole + Negative numbers</td>
+                </tr>
+                <tr>
+                  <td>Rational Numbers</td>
+                  <td>ℚ</td>
+                  <td>1/2, -3/4, 0.5, 2</td>
+                  <td>Can be written as p/q</td>
+                </tr>
+                <tr>
+                  <td>Irrational Numbers</td>
+                  <td>-</td>
+                  <td>√2, π, √3, e</td>
+                  <td>Cannot be written as p/q</td>
+                </tr>
+                <tr>
+                  <td>Real Numbers</td>
+                  <td>ℝ</td>
+                  <td>All above numbers</td>
+                  <td>Rational + Irrational</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Representation on Number Line -->
+          <h2 class="chapter-heading">3. Representation on Number Line</h2>
+
+          <h3 class="sub-heading">3.1 Representing Integers</h3>
+          <ul>
+            <li>Draw a horizontal line and mark a point as 0 (origin).</li>
+            <li>Positive integers are marked to the right of 0.</li>
+            <li>Negative integers are marked to the left of 0.</li>
+            <li>Each point is equally spaced (unit distance).</li>
+            <li>Example: ..., -3, -2, -1, 0, 1, 2, 3, ...</li>
+          </ul>
+
+          <h3 class="sub-heading">3.2 Representing Rational Numbers</h3>
+          <ul>
+            <li>Rational numbers like 1/2, 3/4, etc. lie between integers.</li>
+            <li>To represent 1/2: Mark the midpoint between 0 and 1.</li>
+            <li>
+              To represent 3/4: Divide the distance between 0 and 1 into 4 equal
+              parts, mark the 3rd point.
+            </li>
+            <li>
+              Rational numbers fill the gaps between integers on the number
+              line.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">3.3 Representing Irrational Numbers</h3>
+          <ul>
+            <li>
+              Irrational numbers like √2, √3 can be represented using geometric
+              construction.
+            </li>
+            <li>
+              Method for √2: Draw a right triangle with both sides = 1 unit.
+              Hypotenuse = √2 (by Pythagoras theorem).
+            </li>
+            <li>Use compass to transfer this length to the number line.</li>
+            <li>
+              Similarly, √3, √5, and other square roots can be constructed.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Locating √2 on Number Line</h4>
+            <p><strong>Step 1:</strong> Draw a number line and mark 0 and 1.</p>
+            <p>
+              <strong>Step 2:</strong> At point 1, draw a perpendicular line of
+              length 1 unit upward.
+            </p>
+            <p>
+              <strong>Step 3:</strong> Join point 0 to the top of perpendicular.
+              This gives hypotenuse = √(1² + 1²) = √2.
+            </p>
+            <p>
+              <strong>Step 4:</strong> Using compass with center at 0 and radius
+              = √2, draw an arc to cut the number line.
+            </p>
+            <p>
+              <strong>Result:</strong> The point where arc cuts the line
+              represents √2 ≈ 1.414.
+            </p>
+          </div>
+
+          <!-- Operations on Real Numbers -->
+          <h2 class="chapter-heading">4. Operations on Real Numbers</h2>
+
+          <h3 class="sub-heading">4.1 Addition and Subtraction</h3>
+          <ul>
+            <li>
+              When you add or subtract two rational numbers, the result is
+              always rational.
+            </li>
+            <li>
+              When you add or subtract a rational and an irrational number, the
+              result is irrational.
+            </li>
+            <li>
+              Example: 2 + √3 is irrational (2 is rational, √3 is irrational).
+            </li>
+            <li>Example: √2 + √3 is irrational (both are irrational).</li>
+          </ul>
+
+          <h3 class="sub-heading">4.2 Multiplication and Division</h3>
+          <ul>
+            <li>Product of two rational numbers is always rational.</li>
+            <li>
+              Product of a non-zero rational and an irrational number is
+              irrational.
+            </li>
+            <li>Example: 2 × √3 = 2√3 (irrational).</li>
+            <li>Example: √2 × √3 = √6 (irrational).</li>
+            <li>
+              Special case: √2 × √2 = 2 (rational, because it's a perfect
+              square).
+            </li>
+          </ul>
+
+          <div class="key-points">
+            <h4>🔑 Key Points to Remember</h4>
+            <ul>
+              <li>Rational + Rational = Rational</li>
+              <li>Rational + Irrational = Irrational</li>
+              <li>Irrational + Irrational = Can be rational or irrational</li>
+              <li>Rational × Rational = Rational</li>
+              <li>Rational × Irrational = Irrational (if rational ≠ 0)</li>
+              <li>Irrational × Irrational = Can be rational or irrational</li>
+            </ul>
+          </div>
+
+          <!-- Laws of Exponents -->
+          <h2 class="chapter-heading">5. Laws of Exponents for Real Numbers</h2>
+          <p>
+            Exponents help us write repeated multiplication in a shorter form.
+            For any real numbers a and b, and positive integers m and n:
+          </p>
+
+          <h3 class="sub-heading">5.1 Basic Laws of Exponents</h3>
+          <ul>
+            <li>
+              <strong>Product Law:</strong> aᵐ × aⁿ = aᵐ⁺ⁿ (when bases are same,
+              add the exponents)
+            </li>
+            <li>
+              <strong>Quotient Law:</strong> aᵐ ÷ aⁿ = aᵐ⁻ⁿ (when bases are
+              same, subtract the exponents)
+            </li>
+            <li>
+              <strong>Power of a Power:</strong> (aᵐ)ⁿ = aᵐˣⁿ (multiply the
+              exponents)
+            </li>
+            <li><strong>Power of a Product:</strong> (ab)ᵐ = aᵐ × bᵐ</li>
+            <li><strong>Power of a Quotient:</strong> (a/b)ᵐ = aᵐ/bᵐ</li>
+            <li>
+              <strong>Zero Exponent:</strong> a⁰ = 1 (any number raised to power
+              0 equals 1, except 0⁰ which is undefined)
+            </li>
+            <li>
+              <strong>Negative Exponent:</strong> a⁻ᵐ = 1/aᵐ (negative exponent
+              means reciprocal)
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Applying Laws of Exponents</h4>
+            <p><strong>Q1:</strong> Simplify: 2³ × 2⁴</p>
+            <p><strong>Solution:</strong> 2³ × 2⁴ = 2³⁺⁴ = 2⁷ = 128</p>
+            <br />
+            <p><strong>Q2:</strong> Simplify: (3²)³</p>
+            <p><strong>Solution:</strong> (3²)³ = 3²ˣ³ = 3⁶ = 729</p>
+            <br />
+            <p><strong>Q3:</strong> Find the value of: 5⁻²</p>
+            <p><strong>Solution:</strong> 5⁻² = 1/5² = 1/25</p>
+          </div>
+
+          <!-- Rationalization -->
+          <h2 class="chapter-heading">6. Rationalization of Denominators</h2>
+          <p>
+            Rationalization means converting an irrational denominator into a
+            rational one by multiplying both numerator and denominator by a
+            suitable number.
+          </p>
+
+          <h3 class="sub-heading">6.1 Why Rationalize?</h3>
+          <ul>
+            <li>It makes calculations easier and more accurate.</li>
+            <li>
+              Standard form: We prefer not having square roots in the
+              denominator.
+            </li>
+            <li>
+              It helps in comparing and adding fractions with irrational
+              denominators.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">6.2 How to Rationalize?</h3>
+          <ul>
+            <li>
+              <strong>Single Term:</strong> For 1/√a, multiply both numerator
+              and denominator by √a.
+            </li>
+            <li>Result: 1/√a × √a/√a = √a/a</li>
+            <li><strong>Example:</strong> 1/√2 = (1 × √2)/(√2 × √2) = √2/2</li>
+          </ul>
+
+          <ul>
+            <li>
+              <strong>Binomial Form:</strong> For 1/(a + √b), multiply by
+              conjugate (a - √b).
+            </li>
+            <li>Conjugate pairs: (a + √b) and (a - √b)</li>
+            <li>Using identity: (a + √b)(a - √b) = a² - b</li>
+            <li>
+              <strong>Example:</strong> 1/(2 + √3) = (2 - √3)/[(2 + √3)(2 - √3)]
+              = (2 - √3)/(4 - 3) = 2 - √3
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Rationalization Problems</h4>
+            <p><strong>Q1:</strong> Rationalize: 1/√5</p>
+            <p><strong>Solution:</strong> 1/√5 × √5/√5 = √5/5</p>
+            <br />
+            <p><strong>Q2:</strong> Rationalize: 3/(√7 - √2)</p>
+            <p><strong>Solution:</strong> Multiply by conjugate (√7 + √2):</p>
+            <p>= 3(√7 + √2)/[(√7 - √2)(√7 + √2)]</p>
+            <p>= 3(√7 + √2)/(7 - 2)</p>
+            <p>= 3(√7 + √2)/5</p>
+          </div>
+
+          <!-- Converting Decimals -->
+          <h2 class="chapter-heading">7. Converting Decimals to Fractions</h2>
+
+          <h3 class="sub-heading">7.1 Terminating Decimals</h3>
+          <ul>
+            <li>Decimals that end after a finite number of digits.</li>
+            <li>
+              Method: Count decimal places, write denominator as 10ⁿ (where n =
+              number of decimal places).
+            </li>
+            <li>Example: 0.25 = 25/100 = 1/4</li>
+            <li>Example: 0.625 = 625/1000 = 5/8</li>
+          </ul>
+
+          <h3 class="sub-heading">7.2 Non-Terminating Repeating Decimals</h3>
+          <ul>
+            <li>Decimals where one or more digits repeat infinitely.</li>
+            <li>
+              Method: Let x = repeating decimal, multiply by 10ⁿ to shift
+              decimal, subtract to eliminate repeating part.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Converting Repeating Decimal to Fraction</h4>
+            <p><strong>Q:</strong> Convert 0.3̅ (0.333...) to a fraction.</p>
+            <p><strong>Solution:</strong></p>
+            <p>Let x = 0.333...</p>
+            <p>Multiply by 10: 10x = 3.333...</p>
+            <p>Subtract: 10x - x = 3.333... - 0.333...</p>
+            <p>9x = 3</p>
+            <p>x = 3/9 = 1/3</p>
+            <br />
+            <p><strong>Therefore, 0.3̅ = 1/3</strong></p>
+          </div>
+
+          <!-- Important Properties -->
+          <h2 class="chapter-heading">
+            8. Important Properties of Real Numbers
+          </h2>
+
+          <h3 class="sub-heading">8.1 Closure Property</h3>
+          <ul>
+            <li>
+              Addition: If a and b are real numbers, then a + b is also a real
+              number.
+            </li>
+            <li>
+              Multiplication: If a and b are real numbers, then a × b is also a
+              real number.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">8.2 Commutative Property</h3>
+          <ul>
+            <li>Addition: a + b = b + a (order doesn't matter)</li>
+            <li>Multiplication: a × b = b × a</li>
+            <li>Note: Subtraction and division are NOT commutative.</li>
+          </ul>
+
+          <h3 class="sub-heading">8.3 Associative Property</h3>
+          <ul>
+            <li>Addition: (a + b) + c = a + (b + c)</li>
+            <li>Multiplication: (a × b) × c = a × (b × c)</li>
+            <li>Grouping doesn't affect the result.</li>
+          </ul>
+
+          <h3 class="sub-heading">8.4 Distributive Property</h3>
+          <ul>
+            <li>a × (b + c) = (a × b) + (a × c)</li>
+            <li>Multiplication distributes over addition.</li>
+            <li>Example: 3 × (4 + 5) = (3 × 4) + (3 × 5) = 12 + 15 = 27</li>
+          </ul>
+
+          <h3 class="sub-heading">8.5 Identity Property</h3>
+          <ul>
+            <li>
+              Additive Identity: a + 0 = a (zero is the additive identity)
+            </li>
+            <li>
+              Multiplicative Identity: a × 1 = a (one is the multiplicative
+              identity)
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">8.6 Inverse Property</h3>
+          <ul>
+            <li>Additive Inverse: a + (-a) = 0 (negative of a number)</li>
+            <li>
+              Multiplicative Inverse: a × (1/a) = 1, where a ≠ 0 (reciprocal of
+              a number)
+            </li>
+          </ul>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Number Systems</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Types of Numbers</h3>
+                <p>Natural: ℕ = {1, 2, 3, ...}</p>
+                <p>Whole: W = {0, 1, 2, 3, ...}</p>
+                <p>Integers: ℤ = {..., -2, -1, 0, 1, 2, ...}</p>
+                <p>Rational: ℚ = p/q where q ≠ 0</p>
+                <p>Real: ℝ = Rational ∪ Irrational</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Laws of Exponents</h3>
+                <p>aᵐ × aⁿ = aᵐ⁺ⁿ</p>
+                <p>aᵐ ÷ aⁿ = aᵐ⁻ⁿ</p>
+                <p>(aᵐ)ⁿ = aᵐⁿ</p>
+                <p>(ab)ᵐ = aᵐbᵐ</p>
+                <p>a⁰ = 1</p>
+                <p>a⁻ᵐ = 1/aᵐ</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Rationalization</h3>
+                <p>1/√a = √a/a</p>
+                <p>1/(a+√b) × (a-√b)/(a-√b)</p>
+                <p class="formula-desc">Use conjugate: (a+√b)(a-√b) = a² - b</p>
+                <p>1/(√a+√b) = (√a-√b)/(a-b)</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Decimal Conversions</h3>
+                <p>Terminating: 0.25 = 25/100</p>
+                <p>Repeating: 0.3̅ = 1/3</p>
+                <p>0.6̅ = 2/3</p>
+                <p class="formula-desc">Use method: x = 0.abc̅, 10x - x = ...</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Important Identities</h3>
+                <p>(a+b)² = a² + 2ab + b²</p>
+                <p>(a-b)² = a² - 2ab + b²</p>
+                <p>a² - b² = (a+b)(a-b)</p>
+                <p>√(ab) = √a × √b</p>
+                <p>√(a/b) = √a/√b</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Properties</h3>
+                <p>Commutative: a+b = b+a</p>
+                <p>Associative: (a+b)+c = a+(b+c)</p>
+                <p>Distributive: a(b+c) = ab+ac</p>
+                <p>Identity: a+0=a, a×1=a</p>
+                <p>Inverse: a+(-a)=0, a×(1/a)=1</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Square Roots (Approximate)</h3>
+                <p>√2 ≈ 1.414</p>
+                <p>√3 ≈ 1.732</p>
+                <p>√5 ≈ 2.236</p>
+                <p>√7 ≈ 2.646</p>
+                <p>π ≈ 3.14159</p>
+                <p>e ≈ 2.71828</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Operations Results</h3>
+                <p>Rational ± Rational = Rational</p>
+                <p>Rational ± Irrational = Irrational</p>
+                <p>Rational × Rational = Rational</p>
+                <p>Rational × Irrational = Irrational*</p>
+                <p class="formula-desc">*if rational ≠ 0</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips</h4>
+            <p>• Practice locating numbers on the number line regularly.</p>
+            <p>
+              • Memorize the approximate values of √2, √3, √5 for quick
+              calculations.
+            </p>
+            <p>• Always simplify your answers by rationalizing denominators.</p>
+            <p>
+              • Remember that between any two rational numbers, there exist
+              infinite rational and irrational numbers.
+            </p>
+            <p>
+              • Practice converting repeating decimals to fractions using the
+              algebraic method.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
