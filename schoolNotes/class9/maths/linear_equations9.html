@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Linear Equations in Two Variables - Class 9 Mathematics - NoteHub
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      .diagram-box {
+        background: #f5f5f5;
+        border: 2px dashed #667eea;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+
+      .diagram-box h4 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram-box p {
+        color: #666;
+        font-style: italic;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Linear Equations in Two Variables</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">
+          📐 Linear Equations in Two Variables - Class 9
+        </h1>
+        <p class="page-description">
+          Complete notes with graphical methods, examples, and formula sheet
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">
+            1. Introduction to Linear Equations in Two Variables
+          </h2>
+          <p>
+            Linear equations are algebraic expressions that represent straight
+            lines when plotted on a graph. They are fundamental in mathematics
+            and have numerous real-world applications in science, economics, and
+            engineering.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Linear Equation in Two Variables?</h4>
+            <p>
+              A linear equation in two variables is an equation that can be
+              written in the form:
+            </p>
+            <p><strong>ax + by + c = 0</strong></p>
+            <p>
+              Where a, b, and c are real numbers, and a and b are not both zero.
+              The variables are x and y.
+            </p>
+            <p>
+              <strong>Examples:</strong> 2x + 3y = 6, x - y = 5, 3x + 4y - 12 =
+              0
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Why Two Variables?</h3>
+          <ul>
+            <li>
+              In Class 8, we learned about linear equations in one variable
+              (like 2x + 5 = 0).
+            </li>
+            <li>
+              Now we're extending to two variables (x and y), which gives us
+              more possibilities.
+            </li>
+            <li>
+              Two variables allow us to represent relationships between two
+              quantities.
+            </li>
+            <li>They help us model real-world situations more accurately.</li>
+            <li>
+              The graph of a linear equation in two variables is always a
+              straight line.
+            </li>
+          </ul>
+
+          <!-- Understanding Linear Equations -->
+          <h2 class="chapter-heading">2. Understanding Linear Equations</h2>
+
+          <h3 class="sub-heading">2.1 Standard Form</h3>
+          <ul>
+            <li>Standard form: <strong>ax + by + c = 0</strong></li>
+            <li>a is the coefficient of x</li>
+            <li>b is the coefficient of y</li>
+            <li>c is the constant term</li>
+            <li>
+              At least one of a or b must be non-zero (otherwise it's not an
+              equation in two variables).
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Identifying Linear Equations</h4>
+            <p>
+              <strong>Q:</strong> Which of the following are linear equations in
+              two variables?
+            </p>
+            <p>a) 2x + 3y = 5</p>
+            <p>b) x² + y = 4</p>
+            <p>c) 3x - 2y + 7 = 0</p>
+            <p>d) xy + 5 = 0</p>
+            <p>e) y = 2x - 3</p>
+            <br />
+            <p><strong>Solution:</strong></p>
+            <p>a) ✓ Linear (can be written as 2x + 3y - 5 = 0)</p>
+            <p>b) ✗ Not linear (x² means power is 2, not 1)</p>
+            <p>c) ✓ Linear (already in standard form)</p>
+            <p>d) ✗ Not linear (xy means product of variables)</p>
+            <p>e) ✓ Linear (can be written as 2x - y - 3 = 0)</p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Other Forms of Linear Equations</h3>
+          <ul>
+            <li>
+              <strong>General form:</strong> ax + by = c (like 2x + 3y = 6)
+            </li>
+            <li>
+              <strong>Slope-intercept form:</strong> y = mx + c (where m is
+              slope, c is y-intercept)
+            </li>
+            <li><strong>Point-slope form:</strong> y - y₁ = m(x - x₁)</li>
+            <li><strong>Intercept form:</strong> x/a + y/b = 1</li>
+            <li>All these forms can be converted to each other.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important: Linear vs Non-Linear</h4>
+            <p><strong>Linear equations have:</strong></p>
+            <p>• Variables with power 1 only (x, y, not x², y², √x, etc.)</p>
+            <p>• No products of variables (no xy, x²y, etc.)</p>
+            <p>• Straight line graphs</p>
+            <p>
+              <strong>Non-linear equations:</strong> Have higher powers,
+              products, or other operations
+            </p>
+          </div>
+
+          <!-- Solutions of Linear Equations -->
+          <h2 class="chapter-heading">3. Solutions of Linear Equations</h2>
+          <p>
+            A solution of a linear equation in two variables is a pair of values
+            (x, y) that satisfies the equation.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Solution?</h4>
+            <p>
+              A solution is an ordered pair (x, y) that makes the equation true
+              when substituted.
+            </p>
+            <p>For example, if (2, 3) is a solution of 2x + y = 7, then:</p>
+            <p>2(2) + 3 = 4 + 3 = 7 ✓ (True, so it's a solution)</p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Finding Solutions</h3>
+          <ul>
+            <li>Choose any value for one variable (say x).</li>
+            <li>Substitute it into the equation.</li>
+            <li>Solve for the other variable (y).</li>
+            <li>The pair (x, y) is a solution.</li>
+            <li>
+              A linear equation in two variables has infinitely many solutions.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Finding Solutions</h4>
+            <p><strong>Q:</strong> Find three solutions of 2x + y = 6</p>
+            <p><strong>Solution:</strong></p>
+            <p>
+              <strong>Method:</strong> Choose values for x, then find
+              corresponding y values
+            </p>
+            <br />
+            <p><strong>When x = 0:</strong></p>
+            <p>2(0) + y = 6</p>
+            <p>y = 6</p>
+            <p>Solution: (0, 6)</p>
+            <br />
+            <p><strong>When x = 1:</strong></p>
+            <p>2(1) + y = 6</p>
+            <p>2 + y = 6</p>
+            <p>y = 4</p>
+            <p>Solution: (1, 4)</p>
+            <br />
+            <p><strong>When x = 3:</strong></p>
+            <p>2(3) + y = 6</p>
+            <p>6 + y = 6</p>
+            <p>y = 0</p>
+            <p>Solution: (3, 0)</p>
+            <br />
+            <p><strong>Three solutions: (0, 6), (1, 4), (3, 0)</strong></p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Infinite Solutions</h3>
+          <ul>
+            <li>
+              A linear equation in two variables has infinitely many solutions.
+            </li>
+            <li>For every value of x, there's a corresponding value of y.</li>
+            <li>All these solutions lie on a straight line when graphed.</li>
+            <li>
+              We can find as many solutions as we want by choosing different x
+              values.
+            </li>
+          </ul>
+
+          <div class="key-points">
+            <h4>🔑 Key Points About Solutions</h4>
+            <ul>
+              <li>Every point on the line is a solution</li>
+              <li>Every solution is a point on the line</li>
+              <li>Solutions are written as ordered pairs (x, y)</li>
+              <li>Order matters: (2, 3) ≠ (3, 2)</li>
+              <li>We can verify solutions by substitution</li>
+            </ul>
+          </div>
+
+          <!-- Graphical Representation -->
+          <h2 class="chapter-heading">4. Graphical Representation</h2>
+          <p>
+            The graph of a linear equation in two variables is always a straight
+            line. Every point on the line represents a solution of the equation.
+          </p>
+
+          <h3 class="sub-heading">4.1 Steps to Draw a Graph</h3>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Find at least two solutions of the
+              equation (three is better for accuracy).
+            </li>
+            <li>
+              <strong>Step 2:</strong> Draw the Cartesian plane with X and Y
+              axes.
+            </li>
+            <li>
+              <strong>Step 3:</strong> Plot the points corresponding to the
+              solutions.
+            </li>
+            <li>
+              <strong>Step 4:</strong> Join the points with a straight line
+              using a ruler.
+            </li>
+            <li>
+              <strong>Step 5:</strong> Extend the line on both sides with
+              arrows.
+            </li>
+            <li><strong>Step 6:</strong> Label the line with the equation.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Drawing Graph</h4>
+            <p><strong>Q:</strong> Draw the graph of x + y = 5</p>
+            <p><strong>Solution:</strong></p>
+            <p><strong>Step 1: Find three solutions</strong></p>
+            <p>When x = 0: y = 5 → Point (0, 5)</p>
+            <p>When x = 2: y = 3 → Point (2, 3)</p>
+            <p>When x = 5: y = 0 → Point (5, 0)</p>
+            <br />
+            <p><strong>Step 2: Make a table</strong></p>
+            <p>x | 0 | 2 | 5</p>
+            <p>y | 5 | 3 | 0</p>
+            <br />
+            <p>
+              <strong>Step 3:</strong> Plot points (0,5), (2,3), (5,0) on graph
+            </p>
+            <p><strong>Step 4:</strong> Join them with a straight line</p>
+            <p>
+              <strong>Result:</strong> A straight line passing through these
+              points represents x + y = 5
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Important Observations</h3>
+          <ul>
+            <li>
+              The graph is always a straight line (hence called "linear").
+            </li>
+            <li>
+              Two points are enough to draw a line, but three points ensure
+              accuracy.
+            </li>
+            <li>
+              If three points don't lie on a straight line, check your
+              calculations!
+            </li>
+            <li>The line extends infinitely in both directions.</li>
+            <li>Every point on the line satisfies the equation.</li>
+            <li>Points not on the line do NOT satisfy the equation.</li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Tips for Graphing</h4>
+            <p>
+              • Always choose simple values for x (like 0, 1, 2, -1, etc.) to
+              make calculations easier.
+            </p>
+            <p>• Use graph paper for accuracy.</p>
+            <p>• Choose an appropriate scale based on the values.</p>
+            <p>• Label the axes and mark the scale clearly.</p>
+            <p>• Use a ruler to draw the line - it must be straight!</p>
+          </div>
+
+          <!-- Lines Parallel to Axes -->
+          <h2 class="chapter-heading">
+            5. Equations of Lines Parallel to Axes
+          </h2>
+          <p>
+            Some special linear equations represent lines parallel to the
+            coordinate axes.
+          </p>
+
+          <h3 class="sub-heading">5.1 Line Parallel to X-axis</h3>
+          <ul>
+            <li>
+              Equation form: <strong>y = k</strong> (where k is a constant)
+            </li>
+            <li>This means y-coordinate is constant for all points.</li>
+            <li>The line is horizontal (parallel to X-axis).</li>
+            <li>
+              Example: y = 3 (all points have y = 3, like (0,3), (1,3), (5,3),
+              etc.)
+            </li>
+            <li>The X-axis itself is the line y = 0.</li>
+            <li>Distance from X-axis = |k|</li>
+          </ul>
+
+          <h3 class="sub-heading">5.2 Line Parallel to Y-axis</h3>
+          <ul>
+            <li>
+              Equation form: <strong>x = k</strong> (where k is a constant)
+            </li>
+            <li>This means x-coordinate is constant for all points.</li>
+            <li>The line is vertical (parallel to Y-axis).</li>
+            <li>
+              Example: x = 2 (all points have x = 2, like (2,0), (2,3), (2,-1),
+              etc.)
+            </li>
+            <li>The Y-axis itself is the line x = 0.</li>
+            <li>Distance from Y-axis = |k|</li>
+          </ul>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Parallel to X-axis</th>
+                  <th>Parallel to Y-axis</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Equation</td>
+                  <td>y = k</td>
+                  <td>x = k</td>
+                </tr>
+                <tr>
+                  <td>Direction</td>
+                  <td>Horizontal</td>
+                  <td>Vertical</td>
+                </tr>
+                <tr>
+                  <td>Variable Constant</td>
+                  <td>y is constant</td>
+                  <td>x is constant</td>
+                </tr>
+                <tr>
+                  <td>Example</td>
+                  <td>y = 5</td>
+                  <td>x = 3</td>
+                </tr>
+                <tr>
+                  <td>Points</td>
+                  <td>(..., 5), any x with y=5</td>
+                  <td>(3, ...), any y with x=3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Lines Parallel to Axes</h4>
+            <p><strong>Q1:</strong> Draw the graph of y = 4</p>
+            <p><strong>Solution:</strong></p>
+            <p>y = 4 means y-coordinate is always 4</p>
+            <p>Points: (-2, 4), (0, 4), (1, 4), (3, 4)</p>
+            <p>
+              This is a horizontal line parallel to X-axis, 4 units above it.
+            </p>
+            <br />
+            <p><strong>Q2:</strong> Draw the graph of x = -2</p>
+            <p><strong>Solution:</strong></p>
+            <p>x = -2 means x-coordinate is always -2</p>
+            <p>Points: (-2, 0), (-2, 1), (-2, -3), (-2, 5)</p>
+            <p>
+              This is a vertical line parallel to Y-axis, 2 units to the left of
+              it.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.3 The Coordinate Axes</h3>
+          <ul>
+            <li>
+              <strong>X-axis equation:</strong> y = 0 (horizontal line through
+              origin)
+            </li>
+            <li>
+              <strong>Y-axis equation:</strong> x = 0 (vertical line through
+              origin)
+            </li>
+            <li>These are special cases of lines parallel to axes.</li>
+            <li>They pass through the origin (0, 0).</li>
+          </ul>
+
+          <!-- Equation from Graph -->
+          <h2 class="chapter-heading">6. Finding Equation from Graph</h2>
+          <p>
+            If a graph is given, we can find its equation by identifying two or
+            more points on the line.
+          </p>
+
+          <h3 class="sub-heading">6.1 Method</h3>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Identify at least two points on the line
+              from the graph.
+            </li>
+            <li>
+              <strong>Step 2:</strong> If the line is parallel to an axis, the
+              equation is immediate (x = k or y = k).
+            </li>
+            <li>
+              <strong>Step 3:</strong> Otherwise, substitute the points into the
+              general form ax + by + c = 0.
+            </li>
+            <li>
+              <strong>Step 4:</strong> Solve the resulting equations to find a,
+              b, and c.
+            </li>
+            <li><strong>Step 5:</strong> Write the final equation.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Finding Equation from Points</h4>
+            <p>
+              <strong>Q:</strong> Find the equation of a line passing through
+              (1, 2) and (3, 4)
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>
+              Using two-point form, we can see both points satisfy certain
+              patterns.
+            </p>
+            <p>Let's check if they satisfy y = mx + c</p>
+            <br />
+            <p>From (1, 2): 2 = m(1) + c → 2 = m + c ... (i)</p>
+            <p>From (3, 4): 4 = m(3) + c → 4 = 3m + c ... (ii)</p>
+            <br />
+            <p>Subtracting (i) from (ii):</p>
+            <p>4 - 2 = 3m + c - (m + c)</p>
+            <p>2 = 2m</p>
+            <p>m = 1</p>
+            <br />
+            <p>Substituting m = 1 in (i):</p>
+            <p>2 = 1 + c</p>
+            <p>c = 1</p>
+            <br />
+            <p>
+              <strong>Equation: y = x + 1</strong> or
+              <strong>x - y + 1 = 0</strong>
+            </p>
+          </div>
+
+          <!-- Real-Life Applications -->
+          <h2 class="chapter-heading">7. Real-Life Applications</h2>
+
+          <h3 class="sub-heading">7.1 Where Are Linear Equations Used?</h3>
+          <ul>
+            <li>
+              <strong>Economics:</strong> Cost-revenue analysis, profit
+              calculations, demand-supply curves.
+            </li>
+            <li>
+              <strong>Physics:</strong> Motion equations (distance = speed ×
+              time), conversion formulas.
+            </li>
+            <li>
+              <strong>Business:</strong> Calculating total cost, pricing
+              strategies, break-even analysis.
+            </li>
+            <li>
+              <strong>Chemistry:</strong> Concentration calculations, reaction
+              rates.
+            </li>
+            <li>
+              <strong>Daily Life:</strong> Taxi fares, mobile bills, shopping
+              discounts.
+            </li>
+            <li>
+              <strong>Engineering:</strong> Structural designs, electrical
+              circuits.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Real-Life Application</h4>
+            <p>
+              <strong>Problem:</strong> A taxi charges ₹20 as fixed charge and
+              ₹10 per km. Write an equation for total fare.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Let x = distance in km</p>
+            <p>Let y = total fare in ₹</p>
+            <br />
+            <p>Total fare = Fixed charge + Variable charge</p>
+            <p>y = 20 + 10x</p>
+            <p>
+              <strong>Equation: y = 10x + 20</strong> or
+              <strong>10x - y + 20 = 0</strong>
+            </p>
+            <br />
+            <p><strong>Using the equation:</strong></p>
+            <p>For 5 km: y = 10(5) + 20 = 50 + 20 = ₹70</p>
+            <p>For 10 km: y = 10(10) + 20 = 100 + 20 = ₹120</p>
+          </div>
+
+          <h3 class="sub-heading">7.2 More Application Problems</h3>
+          <ul>
+            <li>
+              <strong>Age problems:</strong> If father's age is twice son's age.
+            </li>
+            <li>
+              <strong>Money problems:</strong> Total value of notes of different
+              denominations.
+            </li>
+            <li>
+              <strong>Speed-time-distance:</strong> Train problems, meeting
+              point problems.
+            </li>
+            <li>
+              <strong>Work problems:</strong> Combined work, efficiency
+              calculations.
+            </li>
+            <li>
+              <strong>Mixture problems:</strong> Mixing liquids of different
+              concentrations.
+            </li>
+          </ul>
+
+          <!-- Problem-Solving Strategies -->
+          <h2 class="chapter-heading">8. Problem-Solving Strategies</h2>
+
+          <h3 class="sub-heading">8.1 Steps to Solve Word Problems</h3>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Read the problem carefully and identify
+              what is given and what is to be found.
+            </li>
+            <li>
+              <strong>Step 2:</strong> Assign variables to unknown quantities
+              (usually x and y).
+            </li>
+            <li>
+              <strong>Step 3:</strong> Translate the word problem into a
+              mathematical equation.
+            </li>
+            <li>
+              <strong>Step 4:</strong> Find solutions or draw the graph as
+              required.
+            </li>
+            <li>
+              <strong>Step 5:</strong> Verify your answer and check if it makes
+              sense in the context.
+            </li>
+            <li>
+              <strong>Step 6:</strong> Write the final answer with proper units.
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: Complete Problem</h4>
+            <p>
+              <strong>Problem:</strong> The sum of two numbers is 15. Express
+              this as a linear equation and find three solutions.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Let the two numbers be x and y</p>
+            <p>Given: Sum = 15</p>
+            <p><strong>Equation: x + y = 15</strong></p>
+            <br />
+            <p><strong>Finding three solutions:</strong></p>
+            <p>When x = 0: y = 15 → Solution (0, 15)</p>
+            <p>When x = 5: y = 10 → Solution (5, 10)</p>
+            <p>When x = 10: y = 5 → Solution (10, 5)</p>
+            <br />
+            <p><strong>Three solutions: (0, 15), (5, 10), (10, 5)</strong></p>
+            <br />
+            <p><strong>Interpretation:</strong></p>
+            <p>(0, 15) means first number is 0, second is 15</p>
+            <p>(5, 10) means first number is 5, second is 10</p>
+            <p>(10, 5) means first number is 10, second is 5</p>
+          </div>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Formula Sheet - Linear Equations in Two Variables</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Standard Form</h3>
+                <p>ax + by + c = 0</p>
+                <p class="formula-desc">Where a, b, c are real numbers</p>
+                <p class="formula-desc">a and b cannot both be zero</p>
+                <p class="formula-desc">Graph is always a straight line</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Other Forms</h3>
+                <p>General: ax + by = c</p>
+                <p>Slope-intercept: y = mx + c</p>
+                <p>Point-slope: y-y₁ = m(x-x₁)</p>
+                <p>Intercept: x/a + y/b = 1</p>
+                <p class="formula-desc">All forms are equivalent</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Finding Solutions</h3>
+                <p>1. Choose value for x</p>
+                <p>2. Substitute in equation</p>
+                <p>3. Solve for y</p>
+                <p>4. Write as ordered pair (x, y)</p>
+                <p class="formula-desc">Infinite solutions exist!</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Graphing Steps</h3>
+                <p>1. Find 3 solutions (points)</p>
+                <p>2. Draw coordinate axes</p>
+                <p>3. Plot the points</p>
+                <p>4. Join with straight line</p>
+                <p class="formula-desc">Use ruler for accuracy</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Lines Parallel to Axes</h3>
+                <p><strong>Parallel to X-axis:</strong></p>
+                <p>y = k (horizontal)</p>
+                <p><strong>Parallel to Y-axis:</strong></p>
+                <p>x = k (vertical)</p>
+                <p class="formula-desc">k is constant distance</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>The Axes Equations</h3>
+                <p>X-axis: y = 0</p>
+                <p>Y-axis: x = 0</p>
+                <p>Origin: (0, 0)</p>
+                <p class="formula-desc">Special lines through origin</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Verification</h3>
+                <p>To check if (a, b) is solution:</p>
+                <p>Substitute x=a and y=b</p>
+                <p>If equation true → Solution ✓</p>
+                <p>If equation false → Not solution ✗</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Key Properties</h3>
+                <p>• Infinitely many solutions</p>
+                <p>• Graph is straight line</p>
+                <p>• 2 points determine a line</p>
+                <p>• All points on line = solutions</p>
+                <p class="formula-desc">Remember: Linear = Straight!</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Linear Equations</h4>
+            <p>
+              • Always verify your solutions by substituting back into the
+              equation.
+            </p>
+            <p>
+              • When graphing, choose simple values (0, 1, 2, -1) for easier
+              calculations.
+            </p>
+            <p>
+              • Three points are better than two for accuracy when drawing
+              graphs.
+            </p>
+            <p>• Use graph paper for neat and accurate graphs.</p>
+            <p>• Remember: The graph must be a STRAIGHT line - use a ruler!</p>
+            <p>
+              • For word problems, carefully identify what each variable
+              represents.
+            </p>
+            <p>
+              • Check if your answer makes sense in the context of the problem.
+            </p>
+            <p>
+              • Practice different forms of equations - be comfortable
+              converting between them.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>Don't confuse (x, y) with (y, x) - order matters!</li>
+              <li>
+                Don't assume only positive solutions - negative values are valid
+                too.
+              </li>
+              <li>
+                Don't forget to extend the line with arrows on both sides.
+              </li>
+              <li>
+                Don't use only two points without verification - use three for
+                safety.
+              </li>
+              <li>
+                Remember: y = 5 is horizontal, x = 5 is vertical (not the
+                opposite!).
+              </li>
+              <li>Don't forget units when solving real-life problems.</li>
+              <li>
+                Check that your line is straight - if points don't align,
+                recheck calculations.
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box" style="margin-top: 2rem">
+            <h4>🎯 Quick Practice Questions</h4>
+            <p><strong>1.</strong> Find 3 solutions: 3x + 2y = 12</p>
+            <p><strong>2.</strong> Graph the equation: 2x - y = 4</p>
+            <p>
+              <strong>3.</strong> What is the equation of a line parallel to
+              X-axis at distance 7 units above it?
+            </p>
+            <p>
+              <strong>4.</strong> Check if (2, 5) is a solution of x + 2y = 12
+            </p>
+            <p>
+              <strong>5.</strong> A notebook costs ₹x and a pen costs ₹y. If
+              total cost of 3 notebooks and 2 pens is ₹50, write the equation.
+            </p>
+            <br />
+            <p><strong>Answers:</strong></p>
+            <p>1. (0,6), (2,3), (4,0) [or any valid solutions]</p>
+            <p>2. Plot points like (0,-4), (2,0), (3,2) and join</p>
+            <p>3. y = 7</p>
+            <p>4. 2 + 2(5) = 2 + 10 = 12 ✓ Yes, it's a solution!</p>
+            <p>5. 3x + 2y = 50</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

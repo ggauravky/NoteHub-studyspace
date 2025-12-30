@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Introduction to Euclid's Geometry - Class 9 Mathematics - NoteHub
+    </title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .important-note p {
+        color: #555;
+      }
+
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .definition-box p {
+        color: #555;
+      }
+
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+
+      .key-points {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .key-points h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .key-points ul {
+        margin-left: 1rem;
+      }
+
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+
+      .key-points ul li::before {
+        left: 0;
+      }
+
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+
+      .diagram-box {
+        background: #f5f5f5;
+        border: 2px dashed #667eea;
+        padding: 2rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+        text-align: center;
+      }
+
+      .diagram-box h4 {
+        color: #667eea;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+
+      .diagram-box p {
+        color: #666;
+        font-style: italic;
+      }
+
+      .axiom-box {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+
+      .axiom-box h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+
+      .axiom-box p {
+        color: #555;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <span class="logo-icon">📚</span>
+            <span class="logo-text">NoteHub</span>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/maths9.html">Mathematics</a> /
+        <span>Introduction to Euclid's Geometry</span>
+      </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">
+          📐 Introduction to Euclid's Geometry - Class 9
+        </h1>
+        <p class="page-description">
+          Complete notes with axioms, postulates, and fundamental concepts
+        </p>
+
+        <div class="notes-content">
+          <!-- Introduction -->
+          <h2 class="chapter-heading">1. Introduction to Euclid's Geometry</h2>
+          <p>
+            Euclid's Geometry is the foundation of modern geometry. It was
+            developed by the Greek mathematician Euclid around 300 BCE in his
+            famous work "Elements" (The Elements). This systematic approach to
+            geometry has influenced mathematics for over 2000 years.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Who was Euclid?</h4>
+            <p>
+              Euclid was a Greek mathematician known as the "Father of
+              Geometry." He lived in Alexandria, Egypt, around 300 BCE.
+            </p>
+            <p>
+              His book "Elements" is one of the most influential works in the
+              history of mathematics. It remained the main geometry textbook for
+              over 2000 years!
+            </p>
+            <p>
+              Euclid organized all known geometric knowledge of his time in a
+              logical, systematic manner.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 The Importance of Euclid's Work</h3>
+          <ul>
+            <li>
+              Euclid established geometry as a deductive science based on axioms
+              and postulates.
+            </li>
+            <li>
+              He introduced the axiomatic method - starting from basic
+              assumptions and proving everything else.
+            </li>
+            <li>
+              His work provided a logical framework that influenced not just
+              mathematics but all sciences.
+            </li>
+            <li>
+              The Elements contained 13 books covering plane geometry, solid
+              geometry, and number theory.
+            </li>
+            <li>
+              It introduced the concept of mathematical proof - showing why
+              something is true, not just that it is true.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">1.2 What is Geometry?</h3>
+          <ul>
+            <li>
+              The word "geometry" comes from Greek: "geo" (earth) + "metron"
+              (measurement).
+            </li>
+            <li>
+              Originally, geometry was practical - used for measuring land,
+              building structures.
+            </li>
+            <li>
+              Euclid transformed it into a theoretical science with logical
+              proofs.
+            </li>
+            <li>
+              Geometry studies shapes, sizes, positions, and properties of
+              space.
+            </li>
+            <li>
+              Euclid's geometry is also called "plane geometry" or "Euclidean
+              geometry."
+            </li>
+          </ul>
+
+          <!-- Euclid's Definitions -->
+          <h2 class="chapter-heading">2. Euclid's Definitions</h2>
+          <p>
+            Euclid began his Elements by defining basic geometric terms. These
+            definitions form the building blocks of geometry.
+          </p>
+
+          <h3 class="sub-heading">2.1 Important Definitions</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition 1: Point</h4>
+            <p>"A point is that which has no part."</p>
+            <p>
+              <strong>In simple words:</strong> A point has no length, no width,
+              no thickness. It has position only.
+            </p>
+            <p>
+              It is represented by a dot and denoted by capital letters like A,
+              B, P, Q.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Definition 2: Line</h4>
+            <p>"A line is breadthless length."</p>
+            <p>
+              <strong>In simple words:</strong> A line has length but no width
+              or thickness.
+            </p>
+            <p>
+              It extends infinitely in both directions. Represented by ←→ with
+              arrows on both ends.
+            </p>
+            <p>Example: Line AB is written as AB↔ or simply line AB.</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Definition 3: Surface</h4>
+            <p>"A surface is that which has length and breadth only."</p>
+            <p>
+              <strong>In simple words:</strong> A surface has two dimensions
+              (length and width) but no thickness.
+            </p>
+            <p>Examples: A flat tabletop, a sheet of paper, a plane.</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Definition 4: Straight Line</h4>
+            <p>
+              "A straight line is a line which lies evenly with the points on
+              itself."
+            </p>
+            <p>
+              <strong>In simple words:</strong> A straight line is the shortest
+              distance between two points.
+            </p>
+            <p>It doesn't curve or bend. It's completely straight.</p>
+          </div>
+
+          <h3 class="sub-heading">2.2 More Definitions</h3>
+          <ul>
+            <li>
+              <strong>Plane:</strong> A flat surface that extends infinitely in
+              all directions.
+            </li>
+            <li>
+              <strong>Plane Figure:</strong> A figure that lies entirely in one
+              plane (like triangles, circles).
+            </li>
+            <li>
+              <strong>Solid:</strong> A three-dimensional object that has
+              length, breadth, and height.
+            </li>
+            <li><strong>Boundary:</strong> The edge or limit of a figure.</li>
+            <li>
+              <strong>Angle:</strong> The inclination of two lines meeting at a
+              point.
+            </li>
+            <li>
+              <strong>Circle:</strong> A plane figure where all points are
+              equidistant from a fixed point (center).
+            </li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important Note</h4>
+            <p>
+              Some of Euclid's definitions are not perfectly precise by modern
+              standards, but they were revolutionary for his time!
+            </p>
+            <p>
+              Modern mathematics has refined these definitions, but Euclid's
+              basic ideas remain the foundation.
+            </p>
+          </div>
+
+          <!-- Axioms and Postulates -->
+          <h2 class="chapter-heading">3. Axioms and Postulates</h2>
+          <p>
+            Euclid's geometry is built on certain basic assumptions that are
+            accepted without proof. These are of two types: Axioms and
+            Postulates.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What are Axioms?</h4>
+            <p>
+              <strong>Axioms</strong> (also called "common notions") are
+              self-evident truths that apply to all sciences, not just geometry.
+            </p>
+            <p>
+              They are universal statements that everyone accepts as obviously
+              true.
+            </p>
+            <p>Example: "The whole is greater than the part."</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 What are Postulates?</h4>
+            <p>
+              <strong>Postulates</strong> are assumptions specific to geometry.
+            </p>
+            <p>They are geometric facts that we accept without proof.</p>
+            <p>
+              Example: "A straight line may be drawn from any point to any other
+              point."
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Euclid's Axioms (Common Notions)</h3>
+          <p>Euclid stated seven axioms. Here are the most important ones:</p>
+
+          <div class="axiom-box">
+            <h4>Axiom 1</h4>
+            <p>
+              <strong
+                >Things which are equal to the same thing are equal to one
+                another.</strong
+              >
+            </p>
+            <p>Meaning: If A = C and B = C, then A = B</p>
+            <p>
+              Example: If Ram's height = 5 feet and Shyam's height = 5 feet,
+              then Ram and Shyam have equal height.
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Axiom 2</h4>
+            <p>
+              <strong
+                >If equals are added to equals, the wholes are equal.</strong
+              >
+            </p>
+            <p>Meaning: If A = B, then A + C = B + C</p>
+            <p>
+              Example: If AB = CD, and we add equal lengths to both, results are
+              equal.
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Axiom 3</h4>
+            <p>
+              <strong
+                >If equals are subtracted from equals, the remainders are
+                equal.</strong
+              >
+            </p>
+            <p>Meaning: If A = B, then A - C = B - C</p>
+            <p>
+              Example: If two sticks are equal, and we cut equal parts from
+              both, remainders are equal.
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Axiom 4</h4>
+            <p>
+              <strong
+                >Things which coincide with one another are equal to one
+                another.</strong
+              >
+            </p>
+            <p>
+              Meaning: If two things fit exactly on top of each other, they are
+              equal.
+            </p>
+            <p>
+              Example: If triangle ABC fits exactly on triangle PQR, they are
+              congruent (equal).
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Axiom 5</h4>
+            <p><strong>The whole is greater than the part.</strong></p>
+            <p>
+              Meaning: A complete thing is always bigger than any of its parts.
+            </p>
+            <p>Example: A whole pizza is greater than a slice of that pizza.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>📝 Example: Using Axioms</h4>
+            <p>
+              <strong>Q:</strong> If AB = 5 cm, BC = 5 cm, and CD = 3 cm. Show
+              that AB = BC and find AB + CD.
+            </p>
+            <p><strong>Solution:</strong></p>
+            <p>Given: AB = 5 cm, BC = 5 cm</p>
+            <p>
+              Since both equal 5 cm, AB = BC (Axiom 1: things equal to same
+              thing are equal)
+            </p>
+            <br />
+            <p>AB + CD = 5 + 3 = 8 cm</p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Euclid's Postulates</h3>
+          <p>Euclid gave five postulates specifically for geometry:</p>
+
+          <div class="axiom-box">
+            <h4>Postulate 1</h4>
+            <p>
+              <strong
+                >A straight line may be drawn from any one point to any other
+                point.</strong
+              >
+            </p>
+            <p>
+              Meaning: Given any two points, we can always draw a unique
+              straight line through them.
+            </p>
+            <p>
+              This means: Through two points, only ONE straight line can pass.
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Postulate 2</h4>
+            <p>
+              <strong>A terminated line can be produced indefinitely.</strong>
+            </p>
+            <p>
+              Meaning: A line segment (with two endpoints) can be extended to
+              any length on either side.
+            </p>
+            <p>
+              We can extend line segment AB to form a line that goes on forever.
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Postulate 3</h4>
+            <p>
+              <strong
+                >A circle can be drawn with any center and any radius.</strong
+              >
+            </p>
+            <p>
+              Meaning: Given any point as center and any distance as radius, we
+              can draw a circle.
+            </p>
+            <p>This allows us to draw circles of any size at any location.</p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Postulate 4</h4>
+            <p><strong>All right angles are equal to one another.</strong></p>
+            <p>
+              Meaning: Every right angle measures exactly 90°, no matter where
+              it is.
+            </p>
+            <p>
+              This ensures uniformity - a right angle in India equals a right
+              angle anywhere in the world!
+            </p>
+          </div>
+
+          <div class="axiom-box">
+            <h4>Postulate 5 (Parallel Postulate)</h4>
+            <p>
+              <strong
+                >If a straight line falling on two straight lines makes the
+                interior angles on the same side less than two right angles, the
+                two straight lines, if produced indefinitely, meet on that
+                side.</strong
+              >
+            </p>
+            <p>
+              <strong>In simple words:</strong> This is about parallel lines. If
+              the sum of interior angles is less than 180°, the lines will meet.
+            </p>
+            <p>
+              Equivalent statement: Through a point not on a line, only ONE line
+              parallel to the given line can be drawn.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚠️ The Fifth Postulate - Most Controversial!</h4>
+            <p>
+              The fifth postulate (Parallel Postulate) is much more complex than
+              the others.
+            </p>
+            <p>
+              For 2000 years, mathematicians tried to prove it from the other
+              four - they failed!
+            </p>
+            <p>
+              This led to the development of non-Euclidean geometries in the
+              19th century.
+            </p>
+            <p>
+              But for class 9, we accept it as a basic truth of plane geometry.
+            </p>
+          </div>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Axioms</th>
+                  <th>Postulates</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Scope</td>
+                  <td>Universal (all sciences)</td>
+                  <td>Specific to geometry</td>
+                </tr>
+                <tr>
+                  <td>Examples</td>
+                  <td>Whole > Part, Equals</td>
+                  <td>Line through 2 points, Circles</td>
+                </tr>
+                <tr>
+                  <td>Nature</td>
+                  <td>Self-evident truths</td>
+                  <td>Geometric assumptions</td>
+                </tr>
+                <tr>
+                  <td>Proof</td>
+                  <td>Not required (obvious)</td>
+                  <td>Not required (assumed)</td>
+                </tr>
+                <tr>
+                  <td>Number</td>
+                  <td>7 axioms</td>
+                  <td>5 postulates</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Theorems -->
+          <h2 class="chapter-heading">4. Theorems</h2>
+          <p>
+            Unlike axioms and postulates, theorems are statements that CAN be
+            proved using axioms, postulates, definitions, and previously proved
+            theorems.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 What is a Theorem?</h4>
+            <p>
+              A theorem is a mathematical statement that can be proved to be
+              true using logical reasoning.
+            </p>
+            <p>
+              Every theorem requires a proof - a step-by-step logical argument
+              showing why it's true.
+            </p>
+            <p>
+              Theorems are built upon axioms, postulates, and previously proved
+              theorems.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Theorem vs Axiom/Postulate</h3>
+          <ul>
+            <li>
+              <strong>Axioms/Postulates:</strong> Accepted without proof
+              (starting points)
+            </li>
+            <li><strong>Theorems:</strong> Must be proved (derived results)</li>
+            <li>Axioms/Postulates are few in number; Theorems are many.</li>
+            <li>We use axioms/postulates to prove theorems.</li>
+            <li>Once proved, theorems can be used to prove other theorems.</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>📝 Example: A Simple Theorem</h4>
+            <p>
+              <strong>Theorem:</strong> Two distinct lines cannot have more than
+              one point in common.
+            </p>
+            <p><strong>Proof (by contradiction):</strong></p>
+            <p>Suppose two lines l and m have two common points A and B.</p>
+            <p>
+              By Postulate 1: Through two points A and B, only one line can
+              pass.
+            </p>
+            <p>But we assumed there are two lines l and m through A and B.</p>
+            <p>This is a contradiction!</p>
+            <p>Therefore, our assumption is wrong.</p>
+            <p>
+              <strong
+                >Hence, two distinct lines cannot have more than one point in
+                common. ✓</strong
+              >
+            </p>
+          </div>
+
+          <!-- Proof Methods -->
+          <h2 class="chapter-heading">5. Methods of Proof</h2>
+          <p>
+            Euclid introduced systematic methods to prove theorems.
+            Understanding these methods is crucial for geometry.
+          </p>
+
+          <h3 class="sub-heading">5.1 Direct Proof</h3>
+          <ul>
+            <li>
+              Start with known facts (axioms, postulates, or proved theorems).
+            </li>
+            <li>Use logical steps to reach the desired conclusion.</li>
+            <li>
+              Each step must be justified by a reason (axiom, postulate, or
+              theorem).
+            </li>
+            <li>Example: Proving that sum of angles in a triangle is 180°.</li>
+          </ul>
+
+          <h3 class="sub-heading">
+            5.2 Proof by Contradiction (Reductio ad Absurdum)
+          </h3>
+          <ul>
+            <li>Assume the opposite of what you want to prove.</li>
+            <li>Show that this assumption leads to a contradiction.</li>
+            <li>
+              Since the assumption is false, the original statement must be
+              true.
+            </li>
+            <li>
+              Example: Proving √2 is irrational, or two lines can't have two
+              common points.
+            </li>
+          </ul>
+
+          <div class="key-points">
+            <h4>🔑 Structure of a Geometric Proof</h4>
+            <ul>
+              <li><strong>Given:</strong> What information is provided</li>
+              <li><strong>To Prove:</strong> What we need to show</li>
+              <li>
+                <strong>Construction:</strong> Any additional lines/points
+                needed (if any)
+              </li>
+              <li>
+                <strong>Proof:</strong> Step-by-step logical argument with
+                reasons
+              </li>
+              <li><strong>Conclusion:</strong> Restate what was proved</li>
+            </ul>
+          </div>
+
+          <!-- Euclid's Method -->
+          <h2 class="chapter-heading">6. The Axiomatic Method</h2>
+          <p>
+            Euclid's greatest contribution was the axiomatic method - a
+            systematic way of building mathematics from the ground up.
+          </p>
+
+          <h3 class="sub-heading">6.1 Steps in Axiomatic Method</h3>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Start with clear definitions of basic
+              terms (point, line, etc.)
+            </li>
+            <li>
+              <strong>Step 2:</strong> State axioms and postulates (assumptions
+              we accept as true)
+            </li>
+            <li>
+              <strong>Step 3:</strong> Use logic to prove theorems from these
+              basics
+            </li>
+            <li>
+              <strong>Step 4:</strong> Build more complex results using proved
+              theorems
+            </li>
+            <li>
+              <strong>Step 5:</strong> Create an entire system of mathematics
+              this way
+            </li>
+          </ul>
+
+          <div class="diagram-box">
+            <h4>🏗️ Building Mathematics Like a Pyramid</h4>
+            <p><strong>Top:</strong> Complex Theorems</p>
+            <p>↑</p>
+            <p><strong>Middle:</strong> Simple Theorems (proved from below)</p>
+            <p>↑</p>
+            <p><strong>Bottom:</strong> Axioms & Postulates (foundation)</p>
+            <p>Everything is built logically from the foundation!</p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Why the Axiomatic Method is Important</h3>
+          <ul>
+            <li>
+              It provides certainty - we know exactly what we're assuming and
+              what we're proving.
+            </li>
+            <li>
+              It's economical - a few axioms generate thousands of theorems.
+            </li>
+            <li>
+              It's elegant - the logical structure is beautiful and clear.
+            </li>
+            <li>
+              It's influential - this method is now used in all of mathematics
+              and science.
+            </li>
+            <li>
+              It teaches rigorous thinking - every claim must be justified.
+            </li>
+          </ul>
+
+          <!-- Limitations -->
+          <h2 class="chapter-heading">7. Limitations of Euclid's Geometry</h2>
+          <p>
+            While revolutionary, Euclid's work had some limitations that were
+            addressed over time.
+          </p>
+
+          <h3 class="sub-heading">7.1 Issues in Definitions</h3>
+          <ul>
+            <li>
+              Some definitions are circular (using terms that need definition
+              themselves).
+            </li>
+            <li>Example: "A point has no part" - but what is a "part"?</li>
+            <li>
+              Some terms like "between" and "on" were used but never defined.
+            </li>
+            <li>Modern geometry has made these definitions more precise.</li>
+          </ul>
+
+          <h3 class="sub-heading">7.2 Missing Assumptions</h3>
+          <ul>
+            <li>
+              Euclid assumed some things without stating them as postulates.
+            </li>
+            <li>
+              Example: He assumed points on a line are ordered (one is between
+              others).
+            </li>
+            <li>He didn't explicitly state the concept of "betweenness."</li>
+            <li>
+              Later mathematicians like David Hilbert formalized these missing
+              pieces.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">7.3 The Fifth Postulate Problem</h3>
+          <ul>
+            <li>
+              The fifth postulate (parallel postulate) is much more complex than
+              the others.
+            </li>
+            <li>
+              For 2000 years, people tried to prove it from the other four -
+              nobody succeeded.
+            </li>
+            <li>
+              This led to non-Euclidean geometries where the fifth postulate
+              doesn't hold.
+            </li>
+            <li>
+              Einstein's theory of relativity uses non-Euclidean geometry!
+            </li>
+          </ul>
+
+          <div class="important-note">
+            <h4>⚠️ Important Understanding</h4>
+            <p>
+              Despite these limitations, Euclid's work remains one of the
+              greatest achievements in mathematics!
+            </p>
+            <p>
+              The flaws were discovered only after 2000+ years of use, and they
+              led to new branches of mathematics.
+            </p>
+            <p>
+              For everyday geometry (like in buildings, art, engineering),
+              Euclid's geometry works perfectly.
+            </p>
+          </div>
+
+          <!-- Applications -->
+          <h2 class="chapter-heading">8. Applications and Importance</h2>
+
+          <h3 class="sub-heading">8.1 Where is Euclidean Geometry Used?</h3>
+          <ul>
+            <li>
+              <strong>Architecture:</strong> Designing buildings, bridges,
+              monuments - all use Euclidean geometry.
+            </li>
+            <li>
+              <strong>Engineering:</strong> Mechanical designs, construction
+              plans rely on geometric principles.
+            </li>
+            <li>
+              <strong>Art and Design:</strong> Perspective drawing, symmetry,
+              patterns use geometric concepts.
+            </li>
+            <li>
+              <strong>Computer Graphics:</strong> 3D modeling, game design use
+              geometric transformations.
+            </li>
+            <li>
+              <strong>Navigation:</strong> Maps, GPS systems (though Earth's
+              curvature needs adjustments).
+            </li>
+            <li>
+              <strong>Science:</strong> Physics, chemistry, biology all use
+              geometric models.
+            </li>
+          </ul>
+
+          <h3 class="sub-heading">8.2 Why Study Euclid's Geometry?</h3>
+          <ul>
+            <li>It teaches logical thinking and rigorous reasoning.</li>
+            <li>It's the foundation for all higher mathematics.</li>
+            <li>It develops problem-solving skills.</li>
+            <li>It shows how to build complex systems from simple basics.</li>
+            <li>
+              It's practical - used in everyday life (construction, art,
+              design).
+            </li>
+            <li>
+              It's beautiful - the elegance of mathematical proof is satisfying.
+            </li>
+          </ul>
+
+          <!-- Formula Sheet -->
+          <div class="formula-sheet">
+            <h2>📚 Quick Reference Sheet - Euclid's Geometry</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Euclid's Legacy</h3>
+                <p>Father of Geometry (300 BCE)</p>
+                <p>Book: "Elements" (13 volumes)</p>
+                <p>Introduced: Axiomatic method</p>
+                <p>Impact: 2000+ years of influence</p>
+                <p class="formula-desc">Foundation of modern geometry</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Basic Definitions</h3>
+                <p>Point: Has no part (position only)</p>
+                <p>Line: Breadthless length</p>
+                <p>Surface: Length & breadth only</p>
+                <p>Straight line: Shortest distance</p>
+                <p class="formula-desc">Building blocks of geometry</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Key Axioms</h3>
+                <p>1. Equals to same = equal</p>
+                <p>2. Adding equals = equal</p>
+                <p>3. Subtracting equals = equal</p>
+                <p>4. Coinciding = equal</p>
+                <p>5. Whole > Part</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>The Five Postulates</h3>
+                <p>1. Line through 2 points</p>
+                <p>2. Line segment extendable</p>
+                <p>3. Circle with any center/radius</p>
+                <p>4. All right angles equal</p>
+                <p>5. Parallel postulate (complex)</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Axiom vs Postulate</h3>
+                <p><strong>Axiom:</strong> Universal truth</p>
+                <p>Applies to all sciences</p>
+                <p><strong>Postulate:</strong> Geometric assumption</p>
+                <p>Specific to geometry</p>
+                <p class="formula-desc">Both accepted without proof</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Theorems</h3>
+                <p>Must be proved (not assumed)</p>
+                <p>Proved using axioms/postulates</p>
+                <p>Once proved, can prove others</p>
+                <p>Example: Lines meet at 1 point max</p>
+                <p class="formula-desc">Derived results</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Proof Methods</h3>
+                <p><strong>Direct Proof:</strong></p>
+                <p>Known facts → Conclusion</p>
+                <p><strong>Contradiction:</strong></p>
+                <p>Assume opposite → Find error</p>
+                <p class="formula-desc">Logical reasoning tools</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Axiomatic Method</h3>
+                <p>1. Define basic terms</p>
+                <p>2. State axioms/postulates</p>
+                <p>3. Prove theorems logically</p>
+                <p>4. Build complex results</p>
+                <p class="formula-desc">Foundation of mathematics</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Additional Tips -->
+          <div class="important-note" style="margin-top: 2rem">
+            <h4>💡 Study Tips for Euclid's Geometry</h4>
+            <p>
+              • Memorize all five axioms and five postulates - they're
+              fundamental!
+            </p>
+            <p>
+              • Understand the difference between axioms, postulates, and
+              theorems clearly.
+            </p>
+            <p>
+              • Practice writing proofs with proper structure (Given, To Prove,
+              Proof, Conclusion).
+            </p>
+            <p>
+              • For each theorem, understand WHY it's true, not just memorize
+              it.
+            </p>
+            <p>
+              • Draw diagrams - visual representation helps understand geometric
+              concepts.
+            </p>
+            <p>
+              • Learn to identify when to use which axiom or postulate in
+              proofs.
+            </p>
+            <p>
+              • The fifth postulate is tricky - spend extra time understanding
+              it.
+            </p>
+            <p>• Remember: Geometry is logical - every step needs a reason!</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Mistakes to Avoid</h4>
+            <ul>
+              <li>
+                Don't confuse axioms with theorems - axioms don't need proof!
+              </li>
+              <li>
+                Don't skip steps in proofs - every step needs justification.
+              </li>
+              <li>
+                Don't assume things without stating them - state all
+                assumptions.
+              </li>
+              <li>
+                Remember: Postulate 1 says only ONE line through two points, not
+                many.
+              </li>
+              <li>
+                Don't forget to state which axiom/postulate you're using in each
+                step.
+              </li>
+              <li>
+                Understand that "point has no part" means no dimensions, not
+                "small."
+              </li>
+              <li>
+                A line has infinite length, a line segment has finite length -
+                know the difference!
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box" style="margin-top: 2rem">
+            <h4>🎯 Quick Practice Questions</h4>
+            <p><strong>1.</strong> State Euclid's first postulate.</p>
+            <p>
+              <strong>2.</strong> What is the difference between an axiom and a
+              postulate?
+            </p>
+            <p>
+              <strong>3.</strong> Which axiom states "The whole is greater than
+              the part"?
+            </p>
+            <p>
+              <strong>4.</strong> If AB = CD and CD = EF, what can you conclude?
+              Which axiom?
+            </p>
+            <p>
+              <strong>5.</strong> How many points are needed to determine a
+              unique line?
+            </p>
+            <br />
+            <p><strong>Answers:</strong></p>
+            <p>
+              1. A straight line may be drawn from any point to any other point.
+            </p>
+            <p>
+              2. Axiom is universal (all sciences), Postulate is geometric
+              (specific to geometry).
+            </p>
+            <p>3. Axiom 5</p>
+            <p>4. AB = EF (Axiom 1: Things equal to same thing are equal)</p>
+            <p>5. Two points (Postulate 1)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
