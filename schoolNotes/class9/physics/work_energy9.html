@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work and Energy - Class 9 Physics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-box {
+        background: #fce4ec;
+        border-left: 4px solid #e91e63;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .formula-box h4 {
+        color: #c2185b;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .formula-box p {
+        color: #555;
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/physics9.html">Physics</a> /
+        <span>Work and Energy</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">⚡ Work and Energy - Class 9 Physics</h1>
+        <p class="page-description">
+          Understanding work, energy, power, and their real-world applications
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Work</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Work?</h4>
+            <p>
+              In physics, <strong>work</strong> is said to be done when a force
+              applied on an object causes it to move in the direction of the
+              force. Work is the product of force and displacement.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula for Work</h4>
+            <p>
+              Work (W) = Force (F) × Displacement (s)<br />
+              W = F × s<br /><br />
+
+              SI Unit: Joule (J)<br />
+              1 Joule = 1 Newton × 1 meter<br />
+              1 J = 1 N⋅m
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Conditions for Work to be Done</h4>
+            <p>
+              For work to be done, TWO conditions must be satisfied:<br /><br />
+
+              <strong>1. Force must be applied</strong> on the object<br />
+              <strong>2. Object must move</strong> (there must be
+              displacement)<br /><br />
+
+              If any one condition is not satisfied, NO work is done!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Scientific vs Everyday Meaning of Work</h4>
+            <p>
+              In everyday life, we say "I worked all day" even while sitting at
+              a desk. But in physics, if you push a wall for hours and it
+              doesn't move - you did ZERO work!<br /><br />
+
+              <strong>Examples where NO work is done:</strong><br />
+              • Pushing a wall (no displacement)<br />
+              • Carrying a bag while walking (force is vertical, motion is
+              horizontal)<br />
+              • Holding a heavy object still (no displacement)<br />
+              • A coolie standing with luggage on head (no movement)<br /><br />
+
+              Physics cares only about: Did the force cause movement? If yes,
+              work is done!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Simple Work Calculation</h4>
+            <p>
+              A force of 10 N moves an object 5 m in the direction of the force.
+              Calculate the work done.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Force (F) = 10 N<br />
+              Displacement (s) = 5 m<br /><br />
+
+              Work = Force × Displacement<br />
+              W = F × s<br />
+              W = 10 × 5<br />
+              W = 50 J<br /><br />
+
+              <strong>Answer:</strong> 50 Joules of work is done.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Work Done by a Force at an Angle</h3>
+
+          <div class="formula-box">
+            <h4>📐 Formula When Force is at an Angle</h4>
+            <p>
+              When force is applied at an angle θ to the direction of motion:<br /><br />
+
+              Work (W) = F × s × cos θ<br /><br />
+
+              Where:<br />
+              F = Applied force<br />
+              s = Displacement<br />
+              θ = Angle between force and displacement
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Special Cases</h4>
+            <ul>
+              <li>
+                <strong>θ = 0°:</strong> Force and motion in same direction → W
+                = F × s (maximum work)
+              </li>
+              <li>
+                <strong>θ = 90°:</strong> Force perpendicular to motion → W = 0
+                (no work)
+              </li>
+              <li>
+                <strong>θ = 180°:</strong> Force opposite to motion → W = -F × s
+                (negative work)
+              </li>
+              <li>
+                <strong>0° < θ < 90°:</strong> Positive work (force helps
+                motion)
+              </li>
+              <li>
+                <strong>90° < θ < 180°:</strong> Negative work (force opposes
+                motion)
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Example: Carrying a Bag</h4>
+            <p>
+              When you walk horizontally while carrying a bag:<br /><br />
+
+              • Force applied: Upward (to hold bag)<br />
+              • Direction of motion: Horizontal (forward)<br />
+              • Angle between force and motion: 90°<br /><br />
+
+              Work done = F × s × cos 90°<br />
+              Since cos 90° = 0<br />
+              Work = 0<br /><br />
+
+              That's why scientifically, you do NO work on the bag while walking
+              with it! (Even though you feel tired - that's your body's internal
+              work)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.2 Positive, Negative, and Zero Work</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Type of Work</th>
+                <th>Condition</th>
+                <th>Example</th>
+                <th>Effect</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Positive Work</strong></td>
+                <td>Force and motion in same direction (0° ≤ θ < 90°)</td>
+                <td>Pushing a moving car forward</td>
+                <td>Speed increases</td>
+              </tr>
+              <tr>
+                <td><strong>Negative Work</strong></td>
+                <td>Force opposes motion (90° < θ ≤ 180°)</td>
+                <td>Applying brakes to stop a car</td>
+                <td>Speed decreases</td>
+              </tr>
+              <tr>
+                <td><strong>Zero Work</strong></td>
+                <td>
+                  Force perpendicular to motion (θ = 90°) or no displacement
+                </td>
+                <td>Carrying bag while walking, pushing a wall</td>
+                <td>No change in speed</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="analogy-box">
+            <h4>🌟 Understanding Negative Work</h4>
+            <p>
+              Imagine you're pushing a sled uphill, but it's sliding down. You
+              push up (your force), but it moves down (displacement). Your force
+              and motion are in opposite directions - you're doing NEGATIVE work
+              on the sled.<br /><br />
+
+              Negative work means you're trying to oppose the motion. When
+              friction slows down a moving object, friction does negative work.
+              When you catch a fast-moving ball, your hands do negative work to
+              stop it.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Energy</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Energy?</h4>
+            <p>
+              <strong>Energy</strong> is the capacity or ability to do work. An
+              object that has energy can exert a force on another object and do
+              work on it.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Unit of Energy</h4>
+            <p>
+              SI Unit: Joule (J)<br />
+              1 Joule = Work done when 1 N force moves object 1 m<br /><br />
+
+              Larger units:<br />
+              1 kilojoule (kJ) = 1000 J<br />
+              1 megajoule (MJ) = 1,000,000 J<br /><br />
+
+              Commercial unit:<br />
+              1 kilowatt-hour (kWh) = 3.6 × 10⁶ J
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Facts About Energy</h4>
+            <ul>
+              <li>
+                Energy is a scalar quantity (has magnitude only, no direction)
+              </li>
+              <li>Same unit as work (Joule)</li>
+              <li>Energy can be transferred from one object to another</li>
+              <li>Energy can be converted from one form to another</li>
+              <li>
+                Total energy of universe is constant (Energy Conservation)
+              </li>
+              <li>Energy exists in various forms</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of Energy Like Money</h4>
+            <p>
+              Just like money gives you the ability to buy things, energy gives
+              objects the ability to do work!<br /><br />
+
+              • A charged battery has energy = has "money" to spend<br />
+              • Using the battery (doing work) = spending money<br />
+              • Energy in different forms = money in different currencies<br />
+              • Energy conservation = money never disappears, just changes
+              hands<br /><br />
+
+              You can't see money or energy directly, but you see their effects
+              when they're used!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Forms of Energy</h3>
+
+          <div class="key-points">
+            <h4>🔑 Different Forms of Energy</h4>
+            <ul>
+              <li>
+                <strong>Kinetic Energy:</strong> Energy of motion (moving
+                objects)
+              </li>
+              <li>
+                <strong>Potential Energy:</strong> Energy stored due to position
+                or configuration
+              </li>
+              <li>
+                <strong>Heat Energy:</strong> Energy due to temperature
+                difference
+              </li>
+              <li><strong>Light Energy:</strong> Energy carried by light</li>
+              <li><strong>Sound Energy:</strong> Energy of vibrations</li>
+              <li>
+                <strong>Electrical Energy:</strong> Energy of moving electric
+                charges
+              </li>
+              <li>
+                <strong>Chemical Energy:</strong> Energy stored in chemical
+                bonds
+              </li>
+              <li><strong>Nuclear Energy:</strong> Energy in atomic nuclei</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Kinetic Energy</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Kinetic Energy?</h4>
+            <p>
+              <strong>Kinetic Energy</strong> is the energy possessed by an
+              object due to its motion. Any object that is moving has kinetic
+              energy.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula for Kinetic Energy</h4>
+            <p>
+              Kinetic Energy (KE) = ½ × mass × (velocity)²<br />
+              KE = ½mv²<br /><br />
+
+              Where:<br />
+              m = Mass of object (kg)<br />
+              v = Velocity of object (m/s)<br /><br />
+
+              SI Unit: Joule (J)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Kinetic Energy</h4>
+            <ul>
+              <li>All moving objects have kinetic energy</li>
+              <li>
+                KE is directly proportional to mass (double mass → double KE)
+              </li>
+              <li>
+                KE is proportional to square of velocity (double velocity → 4
+                times KE)
+              </li>
+              <li>KE is always positive (because v² is always positive)</li>
+              <li>Stationary objects have zero kinetic energy</li>
+              <li>KE depends on frame of reference (velocity is relative)</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Kinetic Energy Calculation</h4>
+            <p>
+              A car of mass 1000 kg is moving with velocity 20 m/s. Calculate
+              its kinetic energy.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 1000 kg<br />
+              Velocity (v) = 20 m/s<br /><br />
+
+              Kinetic Energy = ½mv²<br />
+              KE = ½ × 1000 × (20)²<br />
+              KE = ½ × 1000 × 400<br />
+              KE = 500 × 400<br />
+              KE = 200,000 J<br />
+              KE = 200 kJ<br /><br />
+
+              <strong>Answer:</strong> The car has kinetic energy of 200,000
+              Joules or 200 kJ.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Does Velocity Matter More?</h4>
+            <p>
+              Notice that kinetic energy depends on v² (velocity squared). This
+              means velocity has a HUGE effect!<br /><br />
+
+              Example: Compare two situations:<br />
+              • Doubling the mass → KE becomes 2 times<br />
+              • Doubling the velocity → KE becomes 4 times!<br /><br />
+
+              That's why speeding is so dangerous! If you drive at 100 km/h
+              instead of 50 km/h, your kinetic energy is 4 times greater. In a
+              crash, 4 times more energy needs to be absorbed, making it much
+              more destructive!<br /><br />
+
+              This is also why bullets (small mass but VERY high velocity) can
+              cause so much damage.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Work-Energy Theorem</h3>
+
+          <div class="definition-box">
+            <h4>📖 Work-Energy Theorem</h4>
+            <p>
+              The work done by a force on an object is equal to the change in
+              its kinetic energy. This is called the Work-Energy Theorem.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Mathematical Form</h4>
+            <p>
+              Work = Change in Kinetic Energy<br />
+              W = KE<sub>final</sub> - KE<sub>initial</sub><br />
+              W = ½m(v²) - ½m(u²)<br />
+              W = ½m(v² - u²)<br /><br />
+
+              Where:<br />
+              u = Initial velocity<br />
+              v = Final velocity<br />
+              m = Mass
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Work-Energy Theorem Application</h4>
+            <p>
+              A force accelerates a 5 kg object from rest to 10 m/s. Calculate
+              the work done.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 5 kg<br />
+              Initial velocity (u) = 0 m/s (starts from rest)<br />
+              Final velocity (v) = 10 m/s<br /><br />
+
+              Initial KE = ½mu² = ½ × 5 × 0² = 0 J<br />
+              Final KE = ½mv² = ½ × 5 × (10)² = ½ × 5 × 100 = 250 J<br /><br />
+
+              Work = Final KE - Initial KE<br />
+              W = 250 - 0<br />
+              W = 250 J<br /><br />
+
+              <strong>Answer:</strong> 250 Joules of work was done to accelerate
+              the object.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Potential Energy</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Potential Energy?</h4>
+            <p>
+              <strong>Potential Energy</strong> is the energy possessed by an
+              object due to its position or configuration. It is the stored
+              energy that can be converted to kinetic energy.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Gravitational Potential Energy</h3>
+
+          <div class="definition-box">
+            <h4>📖 Gravitational Potential Energy</h4>
+            <p>
+              The potential energy possessed by an object due to its height
+              above the ground is called
+              <strong>Gravitational Potential Energy</strong>.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Potential Energy (PE) = mass × g × height<br />
+              PE = mgh<br /><br />
+
+              Where:<br />
+              m = Mass of object (kg)<br />
+              g = Acceleration due to gravity (9.8 m/s²)<br />
+              h = Height above reference point (m)<br /><br />
+
+              SI Unit: Joule (J)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Potential Energy</h4>
+            <ul>
+              <li>Objects at greater height have more potential energy</li>
+              <li>PE is directly proportional to height</li>
+              <li>PE is directly proportional to mass</li>
+              <li>PE depends on reference point (where we consider h = 0)</li>
+              <li>PE can be negative if object is below reference point</li>
+              <li>When object falls, PE converts to KE</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Potential Energy Calculation</h4>
+            <p>
+              A 2 kg book is placed on a shelf 3 m above the floor. Calculate
+              its potential energy relative to the floor.<br />
+              (Take g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 2 kg<br />
+              Height (h) = 3 m<br />
+              g = 10 m/s²<br /><br />
+
+              Potential Energy = mgh<br />
+              PE = 2 × 10 × 3<br />
+              PE = 60 J<br /><br />
+
+              <strong>Answer:</strong> The book has 60 Joules of potential
+              energy relative to the floor.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of Height Like a Savings Account</h4>
+            <p>
+              When you lift an object to a height, you're doing work against
+              gravity - like putting money in a savings account. This work gets
+              "saved" as potential energy.<br /><br />
+
+              Later, when the object falls:<br />
+              • The "saved" potential energy is "withdrawn"<br />
+              • It converts to kinetic energy (motion)<br />
+              • The object gains speed as it falls<br /><br />
+
+              Example: Water stored in a dam has huge potential energy. When it
+              falls, this converts to kinetic energy, which turns turbines to
+              generate electricity. The height of the dam is like the "account
+              balance" - more height means more stored energy!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Applications</h4>
+            <p>
+              <strong>1. Hydroelectric Dams:</strong> Water stored at height has
+              PE, which converts to KE when it falls, turning turbines.<br /><br />
+
+              <strong>2. Roller Coasters:</strong> Pulled up to great height
+              (high PE), then falls converting PE to KE for thrilling ride.<br /><br />
+
+              <strong>3. Pendulum Clock:</strong> Raised weight has PE, which
+              gradually converts to KE to run the clock mechanism.<br /><br />
+
+              <strong>4. Bow and Arrow:</strong> Stretched bow stores PE
+              (elastic potential), which converts to KE of arrow when
+              released.<br /><br />
+
+              <strong>5. Pile Driver:</strong> Heavy weight lifted high has PE,
+              which converts to KE when dropped to drive piles into ground.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Law of Conservation of Energy</h2>
+
+          <div class="definition-box">
+            <h4>📖 Law of Conservation of Energy</h4>
+            <p>
+              Energy can neither be created nor destroyed. It can only be
+              transformed from one form to another. The total energy of an
+              isolated system remains constant.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ What This Law Means</h4>
+            <p>
+              This is one of the most fundamental laws in physics! It tells
+              us:<br /><br />
+
+              • Energy never appears out of nowhere<br />
+              • Energy never disappears into nothing<br />
+              • Energy only changes form (light → heat, PE → KE, etc.)<br />
+              • Total energy before = Total energy after (in any process)<br /><br />
+
+              This law has NEVER been violated in any experiment ever conducted!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Conservation of Mechanical Energy</h3>
+
+          <div class="definition-box">
+            <h4>📖 Mechanical Energy</h4>
+            <p>
+              <strong>Mechanical Energy</strong> is the sum of kinetic energy
+              and potential energy of an object.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Total Mechanical Energy = KE + PE<br />
+              E = ½mv² + mgh<br /><br />
+
+              For a freely falling body (no air resistance):<br />
+              Total Mechanical Energy = Constant<br />
+              KE + PE = Constant<br />
+              ½mv² + mgh = Constant
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Freely Falling Object</h4>
+            <p>
+              A 1 kg ball is dropped from height of 10 m. Calculate its PE, KE,
+              and total energy at:<br />
+              (a) Initial position (h = 10 m)<br />
+              (b) Middle position (h = 5 m)<br />
+              (c) Just before hitting ground (h = 0 m)<br />
+              (Take g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass = 1 kg, Initial height = 10 m, g = 10 m/s²<br /><br />
+
+              <strong>(a) At h = 10 m (starting point):</strong><br />
+              v = 0 (starts from rest)<br />
+              PE = mgh = 1 × 10 × 10 = 100 J<br />
+              KE = ½mv² = 0 J<br />
+              Total Energy = 100 + 0 = 100 J<br /><br />
+
+              <strong>(b) At h = 5 m (middle):</strong><br />
+              Using v² = u² + 2gs: v² = 0 + 2 × 10 × 5 = 100, so v = 10 m/s<br />
+              PE = mgh = 1 × 10 × 5 = 50 J<br />
+              KE = ½mv² = ½ × 1 × 100 = 50 J<br />
+              Total Energy = 50 + 50 = 100 J<br /><br />
+
+              <strong>(c) At h = 0 m (ground):</strong><br />
+              Using v² = u² + 2gs: v² = 0 + 2 × 10 × 10 = 200, so v = 14.14
+              m/s<br />
+              PE = mgh = 1 × 10 × 0 = 0 J<br />
+              KE = ½mv² = ½ × 1 × 200 = 100 J<br />
+              Total Energy = 0 + 100 = 100 J<br /><br />
+
+              <strong>Notice:</strong> Total energy remains 100 J at all
+              heights! As PE decreases, KE increases by the same amount.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 The Energy Transformation Story</h4>
+            <p>
+              Imagine energy as water in a container that can be split into two
+              connected vessels:<br /><br />
+
+              <strong>Left vessel = Potential Energy (height)</strong><br />
+              <strong>Right vessel = Kinetic Energy (motion)</strong
+              ><br /><br />
+
+              When object is at maximum height:<br />
+              Left vessel is FULL (high PE), Right vessel is EMPTY (no KE)<br /><br />
+
+              As object falls:<br />
+              Water flows from left to right vessel<br />
+              (PE converts to KE)<br /><br />
+
+              When object hits ground:<br />
+              Left vessel is EMPTY (no PE), Right vessel is FULL (maximum KE)<br /><br />
+
+              But total water (total energy) remains the same throughout!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Energy Transformations in Daily Life</h4>
+            <ul>
+              <li>
+                <strong>Electric bulb:</strong> Electrical energy → Light energy
+                + Heat energy
+              </li>
+              <li>
+                <strong>Solar panel:</strong> Light energy → Electrical energy
+              </li>
+              <li>
+                <strong>Photosynthesis:</strong> Light energy → Chemical energy
+                (in plants)
+              </li>
+              <li>
+                <strong>Battery:</strong> Chemical energy → Electrical energy
+              </li>
+              <li>
+                <strong>Speaker:</strong> Electrical energy → Sound energy
+              </li>
+              <li>
+                <strong>Microphone:</strong> Sound energy → Electrical energy
+              </li>
+              <li>
+                <strong>Generator:</strong> Mechanical (kinetic) energy →
+                Electrical energy
+              </li>
+              <li>
+                <strong>Motor:</strong> Electrical energy → Mechanical (kinetic)
+                energy
+              </li>
+              <li>
+                <strong>Digestion:</strong> Chemical energy (food) → Heat +
+                Kinetic energy (body movement)
+              </li>
+              <li>
+                <strong>Burning fuel:</strong> Chemical energy → Heat energy +
+                Light energy
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">6. Power</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Power?</h4>
+            <p>
+              <strong>Power</strong> is the rate at which work is done or energy
+              is transferred. It tells us how quickly work is being done.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula for Power</h4>
+            <p>
+              Power = Work done / Time taken<br />
+              P = W / t<br /><br />
+
+              Or<br /><br />
+
+              Power = Energy transferred / Time taken<br />
+              P = E / t<br /><br />
+
+              SI Unit: Watt (W)<br />
+              1 Watt = 1 Joule / 1 second<br />
+              1 W = 1 J/s<br /><br />
+
+              Larger units:<br />
+              1 kilowatt (kW) = 1000 W<br />
+              1 megawatt (MW) = 1,000,000 W<br />
+              1 horsepower (hp) = 746 W
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Power</h4>
+            <ul>
+              <li>Power measures how fast work is done</li>
+              <li>Same work done in less time = more power</li>
+              <li>Same work done in more time = less power</li>
+              <li>Power is a scalar quantity</li>
+              <li>More powerful machine does work faster</li>
+              <li>Power rating tells maximum energy consumption rate</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Power Calculation</h4>
+            <p>
+              A motor does 5000 J of work in 10 seconds. Calculate its power.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Work done (W) = 5000 J<br />
+              Time taken (t) = 10 s<br /><br />
+
+              Power = Work / Time<br />
+              P = 5000 / 10<br />
+              P = 500 W<br />
+              P = 0.5 kW<br /><br />
+
+              <strong>Answer:</strong> The motor has power of 500 Watts or 0.5
+              kilowatts.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Power is Like Speed of Work</h4>
+            <p>
+              Think of work as a distance you need to travel, and power as your
+              speed:<br /><br />
+
+              <strong>Situation 1:</strong> You walk 10 km in 2 hours (slow)<br />
+              <strong>Situation 2:</strong> You drive 10 km in 10 minutes
+              (fast)<br /><br />
+
+              Same distance (same work), but driving is faster (more power)!<br /><br />
+
+              Similarly:<br />
+              • A 100W bulb and 40W bulb both convert electrical to light
+              energy<br />
+              • But 100W bulb does it FASTER, so it's brighter<br />
+              • A powerful engine lifts a car faster than a weak engine<br />
+              • Both do the same work eventually, but powerful one is quicker!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Comparing Power of Two People</h4>
+            <p>
+              Person A lifts 50 kg to height of 2 m in 5 seconds.<br />
+              Person B lifts same 50 kg to same height of 2 m in 10 seconds.<br />
+              Who is more powerful? (g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+
+              <strong>Person A:</strong><br />
+              Work = Force × distance = (mg) × h = (50 × 10) × 2 = 1000 J<br />
+              Time = 5 s<br />
+              Power = 1000 / 5 = 200 W<br /><br />
+
+              <strong>Person B:</strong><br />
+              Work = Same = 1000 J<br />
+              Time = 10 s<br />
+              Power = 1000 / 10 = 100 W<br /><br />
+
+              <strong>Answer:</strong> Person A is more powerful (200 W vs 100
+              W) because they do the same work in less time!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.1 Commercial Unit of Energy</h3>
+
+          <div class="definition-box">
+            <h4>📖 Kilowatt-hour (kWh)</h4>
+            <p>
+              The commercial unit of electrical energy is
+              <strong>kilowatt-hour (kWh)</strong>, also known as a "unit" of
+              electricity. This is what your electricity meter measures.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Kilowatt-hour Definition</h4>
+            <p>
+              1 kilowatt-hour is the energy consumed when a device of power 1
+              kilowatt operates for 1 hour.<br /><br />
+
+              1 kWh = 1 kW × 1 h<br />
+              1 kWh = 1000 W × 3600 s<br />
+              1 kWh = 3,600,000 J<br />
+              1 kWh = 3.6 × 10⁶ J<br />
+              1 kWh = 3.6 MJ<br /><br />
+
+              <strong>Why use kWh instead of Joules?</strong><br />
+              Because Joule is too small for everyday electricity consumption. 1
+              kWh = 3.6 million Joules!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Electricity Bill Calculation</h4>
+            <p>
+              A 100 W bulb is used for 5 hours daily for 30 days. Calculate:<br />
+              (a) Energy consumed in kWh<br />
+              (b) Cost of electricity if rate is ₹5 per kWh<br /><br />
+
+              <strong>Solution:</strong><br />
+              Power = 100 W = 0.1 kW<br />
+              Time per day = 5 hours<br />
+              Number of days = 30<br />
+              Total time = 5 × 30 = 150 hours<br /><br />
+
+              <strong>(a) Energy consumed:</strong><br />
+              Energy = Power × Time<br />
+              E = 0.1 kW × 150 h<br />
+              E = 15 kWh (or 15 "units")<br /><br />
+
+              <strong>(b) Cost:</strong><br />
+              Cost = Energy × Rate<br />
+              Cost = 15 × ₹5<br />
+              Cost = ₹75<br /><br />
+
+              <strong>Answer:</strong> (a) 15 kWh, (b) ₹75
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Energy Saving Tips</h4>
+            <p>
+              Understanding power can help save electricity:<br /><br />
+
+              • Replace 100W bulbs with 20W LED bulbs (same brightness, 80% less
+              energy)<br />
+              • Turn off appliances when not in use<br />
+              • Use natural light during daytime<br />
+              • Higher power rating = more electricity consumption<br />
+              • Energy consumed = Power (kW) × Time (hours)<br />
+              • Small savings daily add up to big savings yearly!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Important Concepts Summary</h4>
+            <ul>
+              <li>
+                <strong>Work:</strong> W = F × s; done when force causes
+                displacement; SI unit: Joule (J)
+              </li>
+              <li>
+                <strong>Work conditions:</strong> Force must be applied AND
+                object must move
+              </li>
+              <li>
+                <strong>Positive work:</strong> Force helps motion; Negative
+                work: Force opposes motion; Zero work: No displacement or force
+                ⊥ motion
+              </li>
+              <li>
+                <strong>Energy:</strong> Capacity to do work; Same unit as work
+                (Joule)
+              </li>
+              <li>
+                <strong>Kinetic Energy:</strong> KE = ½mv²; energy of motion
+              </li>
+              <li>
+                <strong>Potential Energy:</strong> PE = mgh; energy due to
+                position
+              </li>
+              <li>
+                <strong>Work-Energy Theorem:</strong> W = ΔKE = ½m(v² - u²)
+              </li>
+              <li>
+                <strong>Conservation of Energy:</strong> Energy cannot be
+                created or destroyed, only transformed
+              </li>
+              <li>
+                <strong>Mechanical Energy:</strong> E = KE + PE = constant (for
+                freely falling body)
+              </li>
+              <li>
+                <strong>Power:</strong> P = W/t; rate of doing work; SI unit:
+                Watt (W)
+              </li>
+              <li>
+                <strong>1 Watt:</strong> 1 J/s; 1 kW = 1000 W; 1 hp = 746 W
+              </li>
+              <li>
+                <strong>Commercial unit:</strong> 1 kWh = 3.6 × 10⁶ J; used for
+                electricity billing
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">8. Practice Questions</h2>
+
+          <div class="example-box">
+            <h4>💡 Question 1: Work Done</h4>
+            <p>
+              A force of 50 N acts on an object and moves it 4 m in the
+              direction of force. Calculate the work done.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Force (F) = 50 N<br />
+              Displacement (s) = 4 m<br /><br />
+
+              Work = Force × Displacement<br />
+              W = 50 × 4<br />
+              W = 200 J<br /><br />
+
+              <strong>Answer:</strong> 200 Joules
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 2: Kinetic Energy</h4>
+            <p>
+              A bullet of mass 20 g is fired with velocity 500 m/s. Calculate
+              its kinetic energy.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 20 g = 0.02 kg<br />
+              Velocity (v) = 500 m/s<br /><br />
+
+              Kinetic Energy = ½mv²<br />
+              KE = ½ × 0.02 × (500)²<br />
+              KE = 0.01 × 250000<br />
+              KE = 2500 J<br />
+              KE = 2.5 kJ<br /><br />
+
+              <strong>Answer:</strong> 2500 J or 2.5 kJ (despite small mass,
+              high velocity gives large KE!)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 3: Potential Energy</h4>
+            <p>
+              A 5 kg object is raised to height of 10 m. Calculate the work done
+              against gravity and potential energy gained.<br />
+              (g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 5 kg<br />
+              Height (h) = 10 m<br />
+              g = 10 m/s²<br /><br />
+
+              Work done against gravity = Force × distance = (mg) × h<br />
+              W = (5 × 10) × 10 = 50 × 10 = 500 J<br /><br />
+
+              Potential Energy gained = mgh = 5 × 10 × 10 = 500 J<br /><br />
+
+              <strong>Answer:</strong> Work done = PE gained = 500 J (Work done
+              is stored as PE!)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 4: Conservation of Energy</h4>
+            <p>
+              A 2 kg stone is dropped from height of 20 m. Find its kinetic
+              energy when it is 5 m above the ground.<br />
+              (g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass = 2 kg, Initial height = 20 m, g = 10 m/s²<br /><br />
+
+              <strong>At starting point (h = 20 m):</strong><br />
+              Total Energy = PE = mgh = 2 × 10 × 20 = 400 J<br />
+              KE = 0 (at rest)<br /><br />
+
+              <strong>At h = 5 m:</strong><br />
+              PE = mgh = 2 × 10 × 5 = 100 J<br />
+              Total Energy = 400 J (constant)<br />
+              KE = Total Energy - PE = 400 - 100 = 300 J<br /><br />
+
+              Or, distance fallen = 20 - 5 = 15 m<br />
+              Work done by gravity = mgh = 2 × 10 × 15 = 300 J = KE<br /><br />
+
+              <strong>Answer:</strong> 300 J
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 5: Power</h4>
+            <p>
+              A pump lifts 200 kg of water to height of 5 m in 10 seconds.
+              Calculate:<br />
+              (a) Work done by pump<br />
+              (b) Power of pump<br />
+              (g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 200 kg<br />
+              Height (h) = 5 m<br />
+              Time (t) = 10 s<br />
+              g = 10 m/s²<br /><br />
+
+              <strong>(a) Work done:</strong><br />
+              Work = Force × distance = (mg) × h<br />
+              W = (200 × 10) × 5<br />
+              W = 2000 × 5<br />
+              W = 10,000 J = 10 kJ<br /><br />
+
+              <strong>(b) Power:</strong><br />
+              Power = Work / Time<br />
+              P = 10,000 / 10<br />
+              P = 1000 W = 1 kW<br /><br />
+
+              <strong>Answer:</strong> (a) 10,000 J or 10 kJ, (b) 1000 W or 1 kW
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 6: Electricity Consumption</h4>
+            <p>
+              An electric heater of 2 kW is used for 3 hours daily for 20 days.
+              Calculate:<br />
+              (a) Energy consumed in kWh<br />
+              (b) Energy consumed in Joules<br />
+              (c) Cost if rate is ₹6 per kWh<br /><br />
+
+              <strong>Solution:</strong><br />
+              Power = 2 kW<br />
+              Time per day = 3 hours<br />
+              Number of days = 20<br />
+              Total time = 3 × 20 = 60 hours<br /><br />
+
+              <strong>(a) Energy in kWh:</strong><br />
+              Energy = Power × Time<br />
+              E = 2 × 60 = 120 kWh<br /><br />
+
+              <strong>(b) Energy in Joules:</strong><br />
+              E = 120 × 3.6 × 10⁶<br />
+              E = 432 × 10⁶ J<br />
+              E = 4.32 × 10⁸ J<br /><br />
+
+              <strong>(c) Cost:</strong><br />
+              Cost = 120 × ₹6 = ₹720<br /><br />
+
+              <strong>Answer:</strong> (a) 120 kWh, (b) 4.32 × 10⁸ J, (c) ₹720
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">9. Problem-Solving Tips</h2>
+
+          <div class="important-note">
+            <h4>⚡ Strategy for Work and Energy Problems</h4>
+            <p>
+              <strong>For Work Problems:</strong><br />
+              • Identify force and displacement<br />
+              • Check if they're in same direction<br />
+              • If at angle, use W = F × s × cos θ<br />
+              • Check sign: same direction (+), opposite (-), perpendicular
+              (0)<br /><br />
+
+              <strong>For Kinetic Energy:</strong><br />
+              • Use KE = ½mv²<br />
+              • Remember: v² means velocity has large effect<br />
+              • Convert mass to kg, velocity to m/s<br />
+              • For change in KE, use Work-Energy theorem<br /><br />
+
+              <strong>For Potential Energy:</strong><br />
+              • Use PE = mgh<br />
+              • Height should be from reference point<br />
+              • Work done to lift = PE gained<br />
+              • g = 10 m/s² (approximation) or 9.8 m/s² (accurate)<br /><br />
+
+              <strong>For Conservation of Energy:</strong><br />
+              • Total energy at start = Total energy at end<br />
+              • (KE + PE)initial = (KE + PE)final<br />
+              • As object falls: PE → KE<br />
+              • As object rises: KE → PE<br /><br />
+
+              <strong>For Power:</strong><br />
+              • Use P = W/t or P = E/t<br />
+              • Convert units: kW to W, hours to seconds (if needed)<br />
+              • For electricity: Energy (kWh) = Power (kW) × Time (hours)<br />
+              • Cost = Energy × Rate per unit<br /><br />
+
+              <strong>Common Mistakes to Avoid:</strong><br />
+              • Forgetting to convert g to kg or cm to m<br />
+              • Using wrong formula (KE vs PE)<br />
+              • Not squaring velocity in KE = ½mv²<br />
+              • Mixing up power with energy or work<br />
+              • Forgetting that 1 kWh = 3.6 × 10⁶ J<br />
+              • Not including units in final answer
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 NoteHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

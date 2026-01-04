@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound - Class 9 Physics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-box {
+        background: #fce4ec;
+        border-left: 4px solid #e91e63;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .formula-box h4 {
+        color: #c2185b;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .formula-box p {
+        color: #555;
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/physics9.html">Physics</a> /
+        <span>Sound</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🔊 Sound - Class 9 Physics</h1>
+        <p class="page-description">
+          Understanding sound waves, their properties, and applications
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Sound</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Sound?</h4>
+            <p>
+              <strong>Sound</strong> is a form of energy that produces a
+              sensation of hearing in our ears. It is produced by vibrating
+              objects and travels in the form of waves through a medium.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 How Sound is Produced</h4>
+            <ul>
+              <li>Sound is produced by <strong>vibrating objects</strong></li>
+              <li>Vibration means rapid back-and-forth motion</li>
+              <li>All vibrating objects produce sound</li>
+              <li>When vibration stops, sound production stops</li>
+              <li>Our vocal cords vibrate to produce voice</li>
+              <li>Musical instruments produce sound through vibrations</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Understanding Vibrations</h4>
+            <p>
+              Pluck a stretched rubber band - it moves back and forth rapidly.
+              While it's vibrating, you hear sound. When it stops vibrating, the
+              sound stops too!<br /><br />
+
+              Same with:<br />
+              • Guitar strings vibrate → produce music<br />
+              • Drum skin vibrates → produces beats<br />
+              • Bell vibrates → produces ringing sound<br />
+              • Vocal cords in throat vibrate → produce voice<br /><br />
+
+              No vibration = No sound! It's that simple.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Sound Needs a Medium</h4>
+            <p>
+              Sound CANNOT travel through vacuum (empty space with no matter).
+              It needs a material medium like air, water, or solid to travel.<br /><br />
+
+              This is why:<br />
+              • There is no sound in space (no air)<br />
+              • Astronauts use radio waves to communicate (not sound)<br />
+              • You can't hear someone shouting in space even if they're next to
+              you<br />
+              • Sound travels through walls, water, metals, etc.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Bell Jar Experiment</h4>
+            <p>
+              <strong>Experiment:</strong> An electric bell is placed inside a
+              glass bell jar connected to a vacuum pump.<br /><br />
+
+              <strong>Observation:</strong><br />
+              • Initially (with air): Bell rings, sound is heard<br />
+              • As air is pumped out: Sound becomes fainter<br />
+              • When complete vacuum: Bell is still ringing (can see it), but NO
+              sound heard!<br /><br />
+
+              <strong>Conclusion:</strong> Sound needs a medium to travel.
+              Without air (in vacuum), sound cannot reach our ears even though
+              bell is vibrating.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Propagation of Sound</h2>
+
+          <div class="definition-box">
+            <h4>📖 How Sound Travels</h4>
+            <p>
+              Sound travels in the form of <strong>longitudinal waves</strong>.
+              When an object vibrates, it creates regions of compression (high
+              pressure) and rarefaction (low pressure) in the medium, which
+              travel as waves.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of Sound Like Dominos</h4>
+            <p>
+              Imagine a long line of dominoes. When you push the first one, it
+              doesn't directly touch the last one, but the push travels through
+              all the dominoes in between!<br /><br />
+
+              Similarly, when a sound source vibrates:<br />
+              • It pushes nearby air particles<br />
+              • These particles push the next particles<br />
+              • The push (compression) travels through air<br />
+              • But the air particles themselves don't travel far - they just
+              vibrate in place!<br /><br />
+
+              Sound is energy traveling through particles, not the particles
+              themselves traveling!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Compression and Rarefaction</h3>
+
+          <div class="definition-box">
+            <h4>📖 Compression</h4>
+            <p>
+              <strong>Compression</strong> is the region of high pressure where
+              particles are crowded together or compressed. This is formed when
+              the vibrating object moves forward.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Rarefaction</h4>
+            <p>
+              <strong>Rarefaction</strong> is the region of low pressure where
+              particles are spread apart or rarefied. This is formed when the
+              vibrating object moves backward.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Compressions and Rarefactions</h4>
+            <ul>
+              <li>They are formed alternately in the medium</li>
+              <li>
+                Compression: particles close together, high pressure, high
+                density
+              </li>
+              <li>
+                Rarefaction: particles far apart, low pressure, low density
+              </li>
+              <li>They travel through the medium carrying sound energy</li>
+              <li>One compression + one rarefaction = one complete wave</li>
+              <li>
+                More vibrations per second = more compressions and rarefactions
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">2.2 Sound Travels in Different Media</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Medium</th>
+                <th>Speed of Sound (approx.)</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Solids</strong></td>
+                <td>Fastest (~ 5000 m/s in steel)</td>
+                <td>Wood, metal, glass, concrete</td>
+              </tr>
+              <tr>
+                <td><strong>Liquids</strong></td>
+                <td>Moderate (~ 1500 m/s in water)</td>
+                <td>Water, oil, alcohol</td>
+              </tr>
+              <tr>
+                <td><strong>Gases</strong></td>
+                <td>Slowest (~ 340 m/s in air at 20°C)</td>
+                <td>Air, oxygen, nitrogen, helium</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="important-note">
+            <h4>⚡ Why Does Sound Travel Faster in Solids?</h4>
+            <p>
+              Particles in solids are very close together, so they can pass
+              vibrations to each other very quickly - like tightly packed
+              dominoes fall faster!<br /><br />
+
+              In gases, particles are far apart, so it takes longer for one
+              particle to hit the next - like widely spaced dominoes take longer
+              to fall.<br /><br />
+
+              That's why you can hear a train coming by putting your ear to the
+              railway track long before you hear it through air!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Characteristics of Sound Waves</h2>
+
+          <h3 class="sub-heading">3.1 Wavelength (λ)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Wavelength</h4>
+            <p>
+              <strong>Wavelength</strong> is the distance between two
+              consecutive compressions or two consecutive rarefactions. It is
+              the length of one complete wave. Symbol: λ (lambda).
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Wavelength</h4>
+            <p>
+              SI Unit: meter (m)<br /><br />
+
+              Wavelength = Distance between two consecutive compressions<br />
+              OR<br />
+              Wavelength = Distance between two consecutive rarefactions
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Frequency (ν or f)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Frequency</h4>
+            <p>
+              <strong>Frequency</strong> is the number of complete waves (or
+              oscillations) produced per second. It tells us how fast the object
+              is vibrating. Symbol: ν (nu) or f.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Frequency</h4>
+            <p>
+              Frequency = Number of oscillations / Time taken<br />
+              ν = n / t<br /><br />
+
+              SI Unit: Hertz (Hz)<br />
+              1 Hertz = 1 oscillation per second<br />
+              1 Hz = 1/s = 1 s⁻¹<br /><br />
+
+              Larger units:<br />
+              1 kilohertz (kHz) = 1000 Hz<br />
+              1 megahertz (MHz) = 1,000,000 Hz
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Frequency</h4>
+            <ul>
+              <li>
+                Higher frequency = more vibrations per second = higher pitch
+                sound
+              </li>
+              <li>
+                Lower frequency = fewer vibrations per second = lower pitch
+                sound
+              </li>
+              <li>Human voice: typically 85 Hz to 255 Hz</li>
+              <li>Musical instruments can produce various frequencies</li>
+              <li>Frequency determines the pitch of sound we hear</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">3.3 Time Period (T)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Time Period</h4>
+            <p>
+              <strong>Time Period</strong> is the time taken to produce one
+              complete wave (one compression + one rarefaction). It is the time
+              for one complete oscillation.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Time Period</h4>
+            <p>
+              Time Period = Time taken / Number of oscillations<br />
+              T = t / n<br /><br />
+
+              SI Unit: second (s)<br /><br />
+
+              Relationship with frequency:<br />
+              T = 1 / ν<br />
+              ν = 1 / T<br /><br />
+
+              Frequency and time period are reciprocals!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Frequency and Time Period</h4>
+            <p>
+              A sound source produces 500 oscillations in 2 seconds.
+              Calculate:<br />
+              (a) Frequency<br />
+              (b) Time period<br /><br />
+
+              <strong>Solution:</strong><br />
+              Number of oscillations (n) = 500<br />
+              Time (t) = 2 seconds<br /><br />
+
+              <strong>(a) Frequency:</strong><br />
+              ν = n / t<br />
+              ν = 500 / 2<br />
+              ν = 250 Hz<br /><br />
+
+              <strong>(b) Time period:</strong><br />
+              T = 1 / ν<br />
+              T = 1 / 250<br />
+              T = 0.004 s<br />
+              T = 4 milliseconds<br /><br />
+
+              <strong>Answer:</strong> (a) 250 Hz, (b) 0.004 s or 4 ms
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.4 Amplitude (A)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Amplitude</h4>
+            <p>
+              <strong>Amplitude</strong> is the maximum displacement of
+              particles from their mean position during vibration. It represents
+              the "strength" or intensity of the vibration.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Amplitude</h4>
+            <ul>
+              <li>Larger amplitude = louder sound</li>
+              <li>Smaller amplitude = softer sound</li>
+              <li>Amplitude determines the loudness of sound</li>
+              <li>SI Unit: meter (m)</li>
+              <li>
+                Energy of sound wave is proportional to square of amplitude
+              </li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Amplitude is Like Shouting vs Whispering</h4>
+            <p>
+              When you shout, your vocal cords vibrate with LARGE amplitude →
+              loud sound<br />
+              When you whisper, your vocal cords vibrate with SMALL amplitude →
+              soft sound<br /><br />
+
+              Same frequency (same pitch), but different amplitude (different
+              loudness)!<br /><br />
+
+              Think of a guitar string:<br />
+              • Pluck it gently (small amplitude) → soft sound<br />
+              • Pluck it hard (large amplitude) → loud sound<br />
+              • But the note (frequency) remains the same!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.5 Speed of Sound (v)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Speed of Sound</h4>
+            <p>
+              <strong>Speed of sound</strong> is the distance traveled by sound
+              per unit time. It depends on the properties of the medium through
+              which sound travels.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Relationship Between Speed, Frequency, and Wavelength</h4>
+            <p>
+              Speed = Frequency × Wavelength<br />
+              v = ν × λ<br /><br />
+
+              This is the wave equation - one of the most important formulas!<br /><br />
+
+              Where:<br />
+              v = Speed of sound (m/s)<br />
+              ν = Frequency (Hz)<br />
+              λ = Wavelength (m)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Speed of Sound in Air</h4>
+            <p>
+              At 20°C (room temperature): <strong>v ≈ 340 m/s</strong><br />
+              At 0°C: v ≈ 331 m/s<br />
+              At 25°C: v ≈ 346 m/s<br /><br />
+
+              For every 1°C increase in temperature, speed increases by about
+              0.6 m/s.<br /><br />
+
+              Why? Higher temperature → particles move faster → sound travels
+              faster!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Wave Equation</h4>
+            <p>
+              A sound wave has frequency 500 Hz and wavelength 0.68 m. Calculate
+              the speed of sound.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Frequency (ν) = 500 Hz<br />
+              Wavelength (λ) = 0.68 m<br /><br />
+
+              Speed = Frequency × Wavelength<br />
+              v = ν × λ<br />
+              v = 500 × 0.68<br />
+              v = 340 m/s<br /><br />
+
+              <strong>Answer:</strong> 340 m/s (this is the speed of sound in
+              air at 20°C!)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Finding Wavelength</h4>
+            <p>
+              A sound wave of frequency 1000 Hz travels in air at speed 340 m/s.
+              Find its wavelength.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Frequency (ν) = 1000 Hz<br />
+              Speed (v) = 340 m/s<br /><br />
+
+              Using v = ν × λ<br />
+              λ = v / ν<br />
+              λ = 340 / 1000<br />
+              λ = 0.34 m<br />
+              λ = 34 cm<br /><br />
+
+              <strong>Answer:</strong> 0.34 m or 34 cm
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Reflection of Sound</h2>
+
+          <div class="definition-box">
+            <h4>📖 Reflection of Sound</h4>
+            <p>
+              When sound waves strike a surface, they bounce back. This
+              phenomenon is called <strong>reflection of sound</strong>. The
+              sound waves follow the laws of reflection, just like light.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Laws of Reflection of Sound</h4>
+            <ul>
+              <li>Angle of incidence = Angle of reflection</li>
+              <li>
+                Incident sound wave, reflected sound wave, and normal all lie in
+                same plane
+              </li>
+              <li>
+                Hard, smooth surfaces reflect sound better than soft, rough
+                surfaces
+              </li>
+              <li>Reflection is the basis of echo</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">4.1 Echo</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Echo?</h4>
+            <p>
+              An <strong>echo</strong> is the repetition of sound caused by
+              reflection from a distant surface. We hear the original sound,
+              then after a short delay, we hear the reflected sound (echo).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Conditions for Hearing Echo</h4>
+            <p>
+              To hear an echo distinctly, two conditions must be met:<br /><br />
+
+              <strong>1. Minimum Distance:</strong> The reflecting surface
+              should be at least 17 m away (in air at 20°C)<br /><br />
+
+              <strong>2. Time Gap:</strong> There should be at least 0.1 second
+              gap between original sound and reflected sound<br /><br />
+
+              <strong>Why 0.1 second?</strong><br />
+              Human ear can distinguish two sounds only if they reach at least
+              0.1 second apart. This is called
+              <strong>persistence of hearing</strong>.<br /><br />
+
+              Calculation: If sound travels at 340 m/s, in 0.1 s it travels:<br />
+              Distance = speed × time = 340 × 0.1 = 34 m<br />
+              But sound goes to wall and comes back (travels twice the
+              distance)<br />
+              So minimum distance to wall = 34 / 2 = 17 m
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Echo Calculation</h4>
+            <p>
+              A person claps and hears an echo after 1.5 seconds. If speed of
+              sound is 340 m/s, how far is the reflecting surface?<br /><br />
+
+              <strong>Solution:</strong><br />
+              Time for echo (t) = 1.5 s<br />
+              Speed of sound (v) = 340 m/s<br /><br />
+
+              Total distance traveled by sound = v × t<br />
+              Total distance = 340 × 1.5 = 510 m<br /><br />
+
+              This is the distance to the wall and back (sound travels twice)<br />
+              Distance to reflecting surface = 510 / 2 = 255 m<br /><br />
+
+              <strong>Answer:</strong> 255 m
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Examples of Echo</h4>
+            <p>
+              <strong>1. Mountains and Valleys:</strong> Shout in a valley, hear
+              echo from mountains<br /><br />
+
+              <strong>2. Empty Halls:</strong> Clap in empty auditorium, sound
+              echoes from walls<br /><br />
+
+              <strong>3. Tunnels:</strong> Sound in tunnel echoes multiple
+              times<br /><br />
+
+              <strong>4. Bats:</strong> Use echolocation - produce ultrasonic
+              sounds and listen to echoes to navigate and hunt in darkness<br /><br />
+
+              <strong>5. Dolphins:</strong> Use echo to locate fish
+              underwater<br /><br />
+
+              <strong>6. Sonar:</strong> Ships use sound echoes to measure depth
+              of ocean and detect submarines
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Reverberation</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Reverberation?</h4>
+            <p>
+              <strong>Reverberation</strong> is the persistence of sound after
+              the source stops producing sound, caused by multiple reflections
+              from walls, ceiling, and floor of an enclosed space.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Reverberation</h4>
+            <ul>
+              <li>Caused by multiple rapid reflections</li>
+              <li>Sounds like prolonged, unclear noise</li>
+              <li>Excessive reverberation makes speech unclear</li>
+              <li>Can be reduced by using sound-absorbing materials</li>
+              <li>
+                Different from echo (echo is distinct, reverberation is blended)
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Reducing Reverberation in Buildings</h4>
+            <p>
+              In auditoriums, cinema halls, and conference rooms, reverberation
+              is reduced by:<br /><br />
+
+              • <strong>Carpets on floor:</strong> Absorb sound, reduce
+              reflection<br />
+              • <strong>Curtains on walls:</strong> Soft fabric absorbs sound<br />
+              • <strong>Acoustic ceiling tiles:</strong> Specially designed to
+              absorb sound<br />
+              • <strong>Upholstered seats:</strong> Cushions absorb sound<br />
+              • <strong>Perforated boards:</strong> Trap sound in holes<br /><br />
+
+              These materials absorb sound instead of reflecting it, making
+              speech clearer!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Range of Hearing</h2>
+
+          <div class="definition-box">
+            <h4>📖 Audible Range for Humans</h4>
+            <p>
+              The <strong>audible range</strong> for humans is
+              <strong>20 Hz to 20,000 Hz (20 kHz)</strong>. Sounds with
+              frequencies in this range can be heard by the human ear.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Types of Sound Based on Frequency</h3>
+
+          <div class="definition-box">
+            <h4>📖 Infrasonic Sound (Infrasound)</h4>
+            <p>
+              Sound with frequency <strong>less than 20 Hz</strong> is called
+              infrasonic sound or infrasound. Humans cannot hear it, but some
+              animals can.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Sources and Uses of Infrasound</h4>
+            <ul>
+              <li>
+                <strong>Natural sources:</strong> Earthquakes, volcanic
+                eruptions, ocean waves, avalanches
+              </li>
+              <li>
+                <strong>Animals:</strong> Elephants, rhinos, whales, alligators
+                use infrasound to communicate
+              </li>
+              <li>
+                <strong>Uses:</strong> Earthquake detection, tracking animal
+                movements, weather prediction
+              </li>
+              <li>Can travel very long distances</li>
+            </ul>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Audible Sound</h4>
+            <p>
+              Sound with frequency
+              <strong>between 20 Hz and 20,000 Hz</strong> is called audible
+              sound. This is the range humans can hear.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Ultrasonic Sound (Ultrasound)</h4>
+            <p>
+              Sound with frequency
+              <strong>greater than 20,000 Hz (20 kHz)</strong> is called
+              ultrasonic sound or ultrasound. Humans cannot hear it, but some
+              animals can.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Animals That Can Hear Ultrasound</h4>
+            <ul>
+              <li>
+                <strong>Dogs:</strong> Can hear up to 50,000 Hz (that's why dog
+                whistles work!)
+              </li>
+              <li><strong>Cats:</strong> Can hear up to 60,000 Hz</li>
+              <li>
+                <strong>Bats:</strong> Produce and hear ultrasound up to 120,000
+                Hz
+              </li>
+              <li>
+                <strong>Dolphins:</strong> Use ultrasound up to 150,000 Hz
+              </li>
+              <li><strong>Mice, rats:</strong> Can hear ultrasound</li>
+            </ul>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Type of Sound</th>
+                <th>Frequency Range</th>
+                <th>Can Humans Hear?</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Infrasonic</strong></td>
+                <td>Less than 20 Hz</td>
+                <td>No</td>
+                <td>Earthquakes, elephants</td>
+              </tr>
+              <tr>
+                <td><strong>Audible</strong></td>
+                <td>20 Hz to 20,000 Hz</td>
+                <td>Yes</td>
+                <td>Human speech, music</td>
+              </tr>
+              <tr>
+                <td><strong>Ultrasonic</strong></td>
+                <td>Above 20,000 Hz</td>
+                <td>No</td>
+                <td>Bats, medical ultrasound</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-heading">5.2 Applications of Ultrasound</h3>
+
+          <div class="key-points">
+            <h4>🔑 Medical Applications</h4>
+            <ul>
+              <li>
+                <strong>Ultrasound imaging:</strong> See inside body, check baby
+                in womb (sonography)
+              </li>
+              <li>
+                <strong>Echocardiography:</strong> Image of heart using
+                ultrasound
+              </li>
+              <li>
+                <strong>Breaking kidney stones:</strong> High-energy ultrasound
+                breaks stones into small pieces
+              </li>
+              <li>
+                <strong>Cleaning teeth:</strong> Ultrasonic dental scalers
+                remove plaque
+              </li>
+            </ul>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Industrial Applications</h4>
+            <ul>
+              <li>
+                <strong>Cleaning:</strong> Ultrasonic cleaners for jewelry,
+                watches, lenses
+              </li>
+              <li>
+                <strong>Detecting flaws:</strong> Find cracks in metals,
+                buildings
+              </li>
+              <li>
+                <strong>Thickness measurement:</strong> Measure thickness
+                without cutting
+              </li>
+              <li>
+                <strong>Sonar:</strong> Detect underwater objects, measure ocean
+                depth
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 How Do Bats Use Ultrasound?</h4>
+            <p>
+              Bats are mostly blind but can fly perfectly in complete darkness
+              using <strong>echolocation</strong>:<br /><br />
+
+              1. Bat produces ultrasonic sound (high frequency, can't be heard
+              by humans)<br />
+              2. Sound travels and hits obstacles (trees, insects, buildings)<br />
+              3. Sound reflects back as echo<br />
+              4. Bat hears the echo with its sensitive ears<br />
+              5. Brain calculates distance and direction from time taken for
+              echo<br />
+              6. Bat navigates, catches prey, and avoids obstacles!<br /><br />
+
+              This natural "sonar" is so precise that bats can catch tiny flying
+              insects in complete darkness!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">
+            6. SONAR (Sound Navigation and Ranging)
+          </h2>
+
+          <div class="definition-box">
+            <h4>📖 What is SONAR?</h4>
+            <p>
+              <strong>SONAR</strong> is a device that uses ultrasonic sound
+              waves to detect and locate objects underwater. It works on the
+              principle of reflection of ultrasound.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 How SONAR Works</h4>
+            <ul>
+              <li>Transmitter produces ultrasonic waves (high frequency)</li>
+              <li>Waves travel through water</li>
+              <li>
+                Waves hit object (submarine, fish, seabed) and reflect back
+              </li>
+              <li>Detector receives the reflected waves (echo)</li>
+              <li>Time between transmission and reception is measured</li>
+              <li>Distance is calculated using formula</li>
+            </ul>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 SONAR Distance Formula</h4>
+            <p>
+              2d = v × t<br /><br />
+
+              Distance to object: d = (v × t) / 2<br /><br />
+
+              Where:<br />
+              d = Distance to object (m)<br />
+              v = Speed of sound in water (≈ 1500 m/s)<br />
+              t = Time between transmission and reception of echo (s)<br /><br />
+
+              We divide by 2 because sound travels to the object and back (twice
+              the distance)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: SONAR Calculation</h4>
+            <p>
+              A SONAR device sends ultrasound and receives echo after 4 seconds.
+              If speed of sound in water is 1500 m/s, find the depth of the
+              ocean.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Time for echo (t) = 4 s<br />
+              Speed in water (v) = 1500 m/s<br /><br />
+
+              Total distance = v × t = 1500 × 4 = 6000 m<br /><br />
+
+              This is distance to seabed and back (twice the depth)<br />
+              Depth of ocean = 6000 / 2 = 3000 m = 3 km<br /><br />
+
+              <strong>Answer:</strong> 3000 m or 3 km
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Uses of SONAR</h4>
+            <ul>
+              <li>
+                <strong>Navigation:</strong> Ships use it to navigate safely
+              </li>
+              <li>
+                <strong>Measuring ocean depth:</strong> Find depth of sea or
+                river bed
+              </li>
+              <li>
+                <strong>Detecting submarines:</strong> Military use to locate
+                enemy submarines
+              </li>
+              <li><strong>Finding shipwrecks:</strong> Locate sunken ships</li>
+              <li>
+                <strong>Fish detection:</strong> Fishing boats locate schools of
+                fish
+              </li>
+              <li>
+                <strong>Underwater communication:</strong> Between submarines
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">7. Human Ear</h2>
+
+          <div class="definition-box">
+            <h4>📖 Structure of Human Ear</h4>
+            <p>
+              The human ear is a complex organ that converts sound waves into
+              electrical signals that the brain can understand. It has three
+              main parts: Outer Ear, Middle Ear, and Inner Ear.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Parts of the Ear and Their Functions</h4>
+            <ul>
+              <li>
+                <strong>Outer Ear (Pinna):</strong> Collects sound waves like a
+                funnel
+              </li>
+              <li>
+                <strong>Ear Canal:</strong> Directs sound waves to eardrum
+              </li>
+              <li>
+                <strong>Eardrum (Tympanic Membrane):</strong> Thin membrane that
+                vibrates when sound hits it
+              </li>
+              <li>
+                <strong>Middle Ear (Three bones):</strong> Hammer, Anvil,
+                Stirrup - amplify vibrations
+              </li>
+              <li>
+                <strong>Cochlea:</strong> Spiral-shaped tube with liquid,
+                converts vibrations to electrical signals
+              </li>
+              <li>
+                <strong>Auditory Nerve:</strong> Carries electrical signals to
+                brain
+              </li>
+              <li><strong>Brain:</strong> Interprets signals as sound</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 How We Hear: Step by Step</h4>
+            <p>
+              <strong>Step 1:</strong> Sound waves enter through pinna (outer
+              ear) - like a satellite dish collecting signals<br /><br />
+
+              <strong>Step 2:</strong> Waves travel through ear canal to eardrum
+              - like signal traveling through cable<br /><br />
+
+              <strong>Step 3:</strong> Eardrum vibrates like a drum skin -
+              converts sound waves to mechanical vibrations<br /><br />
+
+              <strong>Step 4:</strong> Three tiny bones (hammer, anvil, stirrup)
+              amplify vibrations - like a mechanical amplifier<br /><br />
+
+              <strong>Step 5:</strong> Vibrations reach cochlea (fluid-filled
+              spiral) - vibrations create waves in fluid<br /><br />
+
+              <strong>Step 6:</strong> Tiny hair cells in cochlea move with
+              fluid - like seaweed moving in ocean waves<br /><br />
+
+              <strong>Step 7:</strong> Hair cells generate electrical signals -
+              converting mechanical to electrical<br /><br />
+
+              <strong>Step 8:</strong> Auditory nerve carries signals to brain -
+              like electric wire<br /><br />
+
+              <strong>Step 9:</strong> Brain interprets signals - "Ah! That's
+              music!" or "That's a car horn!"
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Protecting Your Ears</h4>
+            <p>
+              <strong>Avoid:</strong><br />
+              • Very loud sounds (can damage eardrum and hair cells)<br />
+              • Listening to music at high volume for long time<br />
+              • Inserting sharp objects in ear<br />
+              • Exposure to sudden very loud noise (crackers, gunshots)<br /><br />
+
+              <strong>Remember:</strong><br />
+              • Hair cells in cochlea, once damaged, CANNOT regenerate<br />
+              • Permanent hearing loss can occur from prolonged loud noise<br />
+              • Use ear protection in noisy environments<br />
+              • Keep volume moderate when using headphones
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">8. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Important Concepts Summary</h4>
+            <ul>
+              <li>
+                <strong>Sound:</strong> Produced by vibrating objects, travels
+                as longitudinal waves
+              </li>
+              <li>
+                <strong>Medium needed:</strong> Sound cannot travel in vacuum
+              </li>
+              <li>
+                <strong>Speed:</strong> Fastest in solids, slowest in gases; in
+                air ≈ 340 m/s at 20°C
+              </li>
+              <li>
+                <strong>Wavelength (λ):</strong> Distance between consecutive
+                compressions or rarefactions
+              </li>
+              <li>
+                <strong>Frequency (ν):</strong> Number of waves per second;
+                unit: Hertz (Hz)
+              </li>
+              <li>
+                <strong>Time period (T):</strong> Time for one wave; T = 1/ν
+              </li>
+              <li>
+                <strong>Amplitude (A):</strong> Maximum displacement; determines
+                loudness
+              </li>
+              <li><strong>Wave equation:</strong> v = ν × λ</li>
+              <li>
+                <strong>Echo:</strong> Reflection of sound; minimum distance 17
+                m for distinct echo
+              </li>
+              <li><strong>Persistence of hearing:</strong> 0.1 second</li>
+              <li>
+                <strong>Audible range:</strong> 20 Hz to 20,000 Hz for humans
+              </li>
+              <li>
+                <strong>Infrasound:</strong> < 20 Hz; Ultrasound: > 20 kHz
+              </li>
+              <li><strong>SONAR:</strong> Uses ultrasound; d = (v × t) / 2</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">9. Practice Questions</h2>
+
+          <div class="example-box">
+            <h4>💡 Question 1: Speed, Frequency, Wavelength</h4>
+            <p>
+              A sound wave has frequency 256 Hz and speed 340 m/s. Calculate its
+              wavelength.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Frequency (ν) = 256 Hz<br />
+              Speed (v) = 340 m/s<br /><br />
+
+              Using v = ν × λ<br />
+              λ = v / ν<br />
+              λ = 340 / 256<br />
+              λ = 1.33 m<br /><br />
+
+              <strong>Answer:</strong> 1.33 m
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 2: Time Period and Frequency</h4>
+            <p>
+              A source produces 1500 waves in 5 seconds. Calculate:<br />
+              (a) Frequency<br />
+              (b) Time period<br /><br />
+
+              <strong>Solution:</strong><br />
+              Number of waves = 1500<br />
+              Time = 5 s<br /><br />
+
+              <strong>(a) Frequency:</strong><br />
+              ν = Number of waves / Time<br />
+              ν = 1500 / 5<br />
+              ν = 300 Hz<br /><br />
+
+              <strong>(b) Time period:</strong><br />
+              T = 1 / ν<br />
+              T = 1 / 300<br />
+              T = 0.00333 s<br />
+              T = 3.33 milliseconds<br /><br />
+
+              <strong>Answer:</strong> (a) 300 Hz, (b) 0.00333 s or 3.33 ms
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 3: Echo Problem</h4>
+            <p>
+              A person standing between two cliffs fires a gun. He hears first
+              echo after 3 seconds and second echo after 5 seconds. If speed of
+              sound is 340 m/s, find distance between the two cliffs.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Speed (v) = 340 m/s<br />
+              Time for first echo (t₁) = 3 s<br />
+              Time for second echo (t₂) = 5 s<br /><br />
+
+              Distance to first cliff = (v × t₁) / 2 = (340 × 3) / 2 = 510 m<br />
+              Distance to second cliff = (v × t₂) / 2 = (340 × 5) / 2 = 850 m<br /><br />
+
+              Distance between cliffs = 510 + 850 = 1360 m = 1.36 km<br /><br />
+
+              <strong>Answer:</strong> 1360 m or 1.36 km
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 4: SONAR Application</h4>
+            <p>
+              A submarine uses SONAR to detect a sunken ship. The ultrasound
+              signal returns after 6 seconds. If speed of sound in seawater is
+              1500 m/s, find the distance of the ship from submarine.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Time (t) = 6 s<br />
+              Speed in water (v) = 1500 m/s<br /><br />
+
+              Distance = (v × t) / 2<br />
+              d = (1500 × 6) / 2<br />
+              d = 9000 / 2<br />
+              d = 4500 m<br />
+              d = 4.5 km<br /><br />
+
+              <strong>Answer:</strong> 4500 m or 4.5 km
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 5: Wavelength at Different Frequencies</h4>
+            <p>
+              Calculate wavelength of sound waves in air of:<br />
+              (a) Lowest audible frequency (20 Hz)<br />
+              (b) Highest audible frequency (20,000 Hz)<br />
+              (Speed of sound in air = 340 m/s)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Speed (v) = 340 m/s<br /><br />
+
+              <strong>(a) At 20 Hz:</strong><br />
+              λ = v / ν = 340 / 20 = 17 m<br /><br />
+
+              <strong>(b) At 20,000 Hz:</strong><br />
+              λ = v / ν = 340 / 20000 = 0.017 m = 1.7 cm<br /><br />
+
+              <strong>Answer:</strong> (a) 17 m, (b) 0.017 m or 1.7 cm<br /><br />
+
+              <strong>Note:</strong> Low frequency = large wavelength; High
+              frequency = small wavelength
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 6: Speed in Different Media</h4>
+            <p>
+              At 20°C, sound travels at 340 m/s in air, 1500 m/s in water, and
+              5000 m/s in steel. A sound wave has frequency 500 Hz. Calculate
+              its wavelength in:<br />
+              (a) Air<br />
+              (b) Water<br />
+              (c) Steel<br /><br />
+
+              <strong>Solution:</strong><br />
+              Frequency (ν) = 500 Hz (same in all media)<br /><br />
+
+              <strong>(a) In air:</strong><br />
+              λ = v / ν = 340 / 500 = 0.68 m = 68 cm<br /><br />
+
+              <strong>(b) In water:</strong><br />
+              λ = v / ν = 1500 / 500 = 3 m<br /><br />
+
+              <strong>(c) In steel:</strong><br />
+              λ = v / ν = 5000 / 500 = 10 m<br /><br />
+
+              <strong>Answer:</strong> (a) 0.68 m, (b) 3 m, (c) 10 m<br /><br />
+
+              <strong>Note:</strong> Same frequency, but wavelength increases
+              with speed!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">10. Problem-Solving Tips</h2>
+
+          <div class="important-note">
+            <h4>⚡ Strategy for Sound Problems</h4>
+            <p>
+              <strong>For Wave Equation (v = ν × λ):</strong><br />
+              • If two values are given, find the third<br />
+              • Remember: speed (m/s), frequency (Hz), wavelength (m)<br />
+              • Check units before calculation<br /><br />
+
+              <strong>For Frequency and Time Period:</strong><br />
+              • They are reciprocals: T = 1/ν and ν = 1/T<br />
+              • If given oscillations and time, find frequency first<br />
+              • Time period is always in seconds<br /><br />
+
+              <strong>For Echo Problems:</strong><br />
+              • Sound travels to surface and back (twice the distance)<br />
+              • Distance = (speed × time) / 2<br />
+              • Minimum distance for echo = 17 m (in air)<br />
+              • Always divide by 2 for one-way distance!<br /><br />
+
+              <strong>For SONAR Problems:</strong><br />
+              • Use d = (v × t) / 2<br />
+              • Speed in water ≈ 1500 m/s<br />
+              • Time is for echo (round trip)<br />
+              • Divide by 2 to get one-way distance<br /><br />
+
+              <strong>For Range of Hearing:</strong><br />
+              • Infrasound: < 20 Hz<br />
+              • Audible: 20 Hz to 20 kHz<br />
+              • Ultrasound: > 20 kHz<br /><br />
+
+              <strong>Common Mistakes to Avoid:</strong><br />
+              • Forgetting to divide by 2 in echo/SONAR problems<br />
+              • Mixing up frequency (Hz) with wavelength (m)<br />
+              • Using wrong speed value (air vs water vs solid)<br />
+              • Not converting units (kHz to Hz, km to m)<br />
+              • Confusing time period with time taken<br />
+              • Not including units in final answer
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 NoteHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

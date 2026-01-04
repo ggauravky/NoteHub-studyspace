@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matter in Our Surroundings - Class 9 Science - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Science</a> /
+        <span>Matter in Our Surroundings</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🧪 Matter in Our Surroundings - Class 9</h1>
+        <p class="page-description">
+          Complete notes with real-life examples and easy explanations
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is Matter?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Matter</strong> is anything that occupies space and has
+              mass. Everything around us that we can see, touch, or feel is made
+              up of matter.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of your school bag - it takes up space in your room and has
+              weight. That's matter! Your books, your lunch box, even the air
+              you breathe - all are matter. The only things that are not matter
+              are light, sound, and feelings.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Characteristics of Matter</h3>
+          <ul>
+            <li>
+              Matter is made up of tiny particles called atoms and molecules
+            </li>
+            <li>
+              These particles are very small and cannot be seen with naked eyes
+            </li>
+            <li>Particles of matter have space between them</li>
+            <li>Particles of matter are constantly moving</li>
+            <li>Particles of matter attract each other</li>
+          </ul>
+
+          <div class="example-box">
+            <h4>💡 Example: Dissolving Sugar in Water</h4>
+            <p>
+              When you add sugar to water and stir it, the sugar disappears!
+              Where did it go? The tiny sugar particles fit into the spaces
+              between water particles. This proves that particles of matter have
+              spaces between them.
+            </p>
+            <p>
+              <strong>Try this at home:</strong> Take a glass of water, add a
+              spoon of sugar, and notice how the water level doesn't rise much.
+              The sugar particles occupy the empty spaces between water
+              particles!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. States of Matter</h2>
+
+          <p>
+            Matter exists in three main states - Solid, Liquid, and Gas. The
+            difference between these states is due to the arrangement and
+            movement of particles.
+          </p>
+
+          <h3 class="sub-heading">2.1 Solids</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Solids?</h4>
+            <p>
+              Solids have a fixed shape and fixed volume. The particles in
+              solids are very tightly packed and can only vibrate in their
+              positions.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine students standing in a morning assembly - everyone in a
+              fixed position, very close together, and can only move a little
+              bit. That's how particles are in solids! Examples: Your desk,
+              pencil, book, stone, ice.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Properties of Solids</h4>
+            <ul>
+              <li>Have definite shape and definite volume</li>
+              <li>Particles are very closely packed</li>
+              <li>Particles can only vibrate at their fixed positions</li>
+              <li>Cannot be compressed (squeezed)</li>
+              <li>Very high density</li>
+              <li>Do not flow</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">2.2 Liquids</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Liquids?</h4>
+            <p>
+              Liquids have fixed volume but no fixed shape. They take the shape
+              of the container they are poured into. Particles in liquids are
+              less tightly packed than solids.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine children in a playground - they are close to each other
+              but can move around freely and slide past one another. That's how
+              particles behave in liquids! Examples: Water, milk, juice, oil.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Properties of Liquids</h4>
+            <ul>
+              <li>Have definite volume but no definite shape</li>
+              <li>Take the shape of the container</li>
+              <li>Particles are less closely packed than solids</li>
+              <li>Particles can move and slide over each other</li>
+              <li>Can flow from higher level to lower level</li>
+              <li>Density is less than solids but more than gases</li>
+              <li>Can be compressed slightly</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">2.3 Gases</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Gases?</h4>
+            <p>
+              Gases have neither fixed shape nor fixed volume. They spread out
+              to fill the entire space available to them. Particles in gases are
+              far apart from each other.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine children running freely in a large ground - they are far
+              apart and move in all directions with high speed. That's how
+              particles behave in gases! Examples: Air, oxygen, carbon dioxide,
+              perfume vapor.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Properties of Gases</h4>
+            <ul>
+              <li>Have neither definite shape nor definite volume</li>
+              <li>Fill the entire space of the container</li>
+              <li>Particles are very far apart from each other</li>
+              <li>Particles move randomly at high speed</li>
+              <li>Can be compressed easily</li>
+              <li>Very low density</li>
+              <li>Can flow in all directions</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Why Can You Smell Perfume Across the Room?</h4>
+            <p>
+              When someone sprays perfume in one corner of a room, you can smell
+              it in another corner within seconds. This is because perfume
+              particles (gas) move very fast and spread throughout the room.
+              This property is called <strong>diffusion</strong>.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Comparison of States of Matter</h2>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Solid</th>
+                <th>Liquid</th>
+                <th>Gas</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Shape</strong></td>
+                <td>Fixed shape</td>
+                <td>No fixed shape</td>
+                <td>No fixed shape</td>
+              </tr>
+              <tr>
+                <td><strong>Volume</strong></td>
+                <td>Fixed volume</td>
+                <td>Fixed volume</td>
+                <td>No fixed volume</td>
+              </tr>
+              <tr>
+                <td><strong>Particle Arrangement</strong></td>
+                <td>Very closely packed</td>
+                <td>Less closely packed</td>
+                <td>Very far apart</td>
+              </tr>
+              <tr>
+                <td><strong>Particle Movement</strong></td>
+                <td>Only vibrate</td>
+                <td>Can slide past each other</td>
+                <td>Move freely and randomly</td>
+              </tr>
+              <tr>
+                <td><strong>Compressibility</strong></td>
+                <td>Cannot be compressed</td>
+                <td>Slightly compressible</td>
+                <td>Highly compressible</td>
+              </tr>
+              <tr>
+                <td><strong>Density</strong></td>
+                <td>Very high</td>
+                <td>Medium</td>
+                <td>Very low</td>
+              </tr>
+              <tr>
+                <td><strong>Flow</strong></td>
+                <td>Cannot flow</td>
+                <td>Can flow</td>
+                <td>Can flow</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">4. Change of State</h2>
+
+          <p>
+            Matter can change from one state to another by changing temperature
+            or pressure. These changes are called interconversion of states of
+            matter.
+          </p>
+
+          <h3 class="sub-heading">4.1 Effect of Temperature</h3>
+
+          <div class="definition-box">
+            <h4>📖 Melting (Solid to Liquid)</h4>
+            <p>
+              When we heat a solid, its particles gain energy and vibrate
+              faster. At a certain temperature called the
+              <strong>melting point</strong>, the solid changes into liquid.
+              Example: Ice melts into water at 0°C.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Freezing (Liquid to Solid)</h4>
+            <p>
+              When we cool a liquid, its particles lose energy and slow down. At
+              a certain temperature called the <strong>freezing point</strong>,
+              the liquid changes into solid. Example: Water freezes into ice at
+              0°C.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Vaporization (Liquid to Gas)</h4>
+            <p>
+              When we heat a liquid, its particles gain energy and move faster.
+              At a certain temperature called the
+              <strong>boiling point</strong>, the liquid changes into gas.
+              Example: Water boils and converts to steam at 100°C.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Condensation (Gas to Liquid)</h4>
+            <p>
+              When we cool a gas, its particles lose energy and slow down. The
+              gas changes back into liquid. Example: Water vapor in air
+              condenses to form water droplets on a cold surface.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Sublimation (Solid to Gas)</h4>
+            <p>
+              Some substances change directly from solid to gas without becoming
+              liquid. This process is called sublimation. Example: Camphor,
+              naphthalene balls, dry ice (solid CO₂).
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Example: The Water Cycle</h4>
+            <p>
+              The water cycle is the best example of interconversion of states!
+              Water in rivers evaporates to form water vapor (liquid to gas),
+              rises up in the sky, cools down to form clouds (gas to liquid),
+              and falls back as rain (liquid). In cold regions, it can fall as
+              snow (solid).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Why Do Naphthalene Balls Disappear?</h4>
+            <p>
+              You might have noticed that naphthalene balls (mothballs) kept in
+              cupboards become smaller and smaller and finally disappear. This
+              happens because naphthalene undergoes sublimation - it changes
+              directly from solid to gas without melting!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Effect of Pressure</h3>
+
+          <div class="important-note">
+            <h4>⚡ Important Concept</h4>
+            <p>
+              By applying pressure and reducing temperature, gases can be
+              liquefied. For example, LPG (Liquefied Petroleum Gas) is stored in
+              cylinders under high pressure as a liquid. When you open the gas
+              stove, the pressure decreases and LPG comes out as gas.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Evaporation</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Evaporation?</h4>
+            <p>
+              Evaporation is the process of changing liquid into vapor at any
+              temperature below its boiling point. It happens at the surface of
+              the liquid.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine wet clothes drying on a clothesline. The water doesn't
+              boil, yet it disappears! This is evaporation. The water particles
+              at the surface gain enough energy from sunlight and air to escape
+              as vapor.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Factors Affecting Evaporation</h3>
+
+          <ul>
+            <li>
+              <strong>Temperature:</strong> Higher the temperature, faster the
+              evaporation. Hot tea cools down faster than cold tea because water
+              evaporates quickly from hot tea.
+            </li>
+            <li>
+              <strong>Surface Area:</strong> Larger the surface area, faster the
+              evaporation. That's why you spread wet clothes instead of keeping
+              them folded - more surface is exposed to air!
+            </li>
+            <li>
+              <strong>Humidity:</strong> Lower the humidity (moisture in air),
+              faster the evaporation. Clothes dry faster on a sunny dry day than
+              on a humid rainy day.
+            </li>
+            <li>
+              <strong>Wind Speed:</strong> Higher the wind speed, faster the
+              evaporation. That's why we blow air on soup to cool it down!
+            </li>
+          </ul>
+
+          <div class="example-box">
+            <h4>💡 Example: Why Do We Feel Cool After Sweating?</h4>
+            <p>
+              When we sweat, the water on our skin evaporates. Evaporation is a
+              cooling process - it takes heat from our body to convert water
+              into vapor. This makes us feel cool!
+            </p>
+            <p>
+              <strong>That's why:</strong> We pour water on ground during
+              summers, we use coolers, and we splash water on our face to feel
+              fresh!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Evaporation vs Boiling</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Evaporation</th>
+                <th>Boiling</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Happens at any temperature</td>
+                <td>Happens at a specific temperature (boiling point)</td>
+              </tr>
+              <tr>
+                <td>Happens only at the surface</td>
+                <td>Happens throughout the liquid</td>
+              </tr>
+              <tr>
+                <td>Slow process</td>
+                <td>Fast process</td>
+              </tr>
+              <tr>
+                <td>Causes cooling</td>
+                <td>Requires continuous heating</td>
+              </tr>
+              <tr>
+                <td>Example: Clothes drying</td>
+                <td>Example: Water boiling in a kettle</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">6. Important Terms to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Key Definitions</h4>
+            <ul>
+              <li>
+                <strong>Melting Point:</strong> The temperature at which a solid
+                changes to liquid (Ice: 0°C)
+              </li>
+              <li>
+                <strong>Boiling Point:</strong> The temperature at which a
+                liquid changes to gas (Water: 100°C)
+              </li>
+              <li>
+                <strong>Freezing Point:</strong> The temperature at which a
+                liquid changes to solid (Water: 0°C)
+              </li>
+              <li>
+                <strong>Diffusion:</strong> The mixing of particles of one
+                substance with another due to their movement
+              </li>
+              <li>
+                <strong>Sublimation:</strong> Direct change from solid to gas
+                without melting
+              </li>
+              <li>
+                <strong>Latent Heat:</strong> The heat energy absorbed or
+                released during change of state without change in temperature
+              </li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Remember These Points</h4>
+            <p>
+              1. Temperature remains constant during change of state (melting,
+              boiling, freezing)<br />
+              2. Evaporation causes cooling<br />
+              3. Particles of matter are always in motion<br />
+              4. Gases can be liquefied by applying pressure and lowering
+              temperature<br />
+              5. Kelvin is the SI unit of temperature: K = °C + 273
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Quick Revision Questions</h4>
+            <p>
+              <strong>Q1.</strong> Why do we feel cold when we apply nail polish
+              remover or perfume on our hand?<br />
+              <strong>Answer:</strong> Nail polish remover evaporates quickly,
+              taking heat from our hand, making it feel cold.
+            </p>
+            <p>
+              <strong>Q2.</strong> Why do gases fill completely the vessel in
+              which they are kept?<br />
+              <strong>Answer:</strong> Because particles of gases have high
+              kinetic energy and weak forces of attraction, they move freely and
+              occupy all available space.
+            </p>
+            <p>
+              <strong>Q3.</strong> Why is ice at 0°C more effective in cooling
+              than water at 0°C?<br />
+              <strong>Answer:</strong> Ice at 0°C absorbs latent heat to melt
+              into water, thus absorbing more heat from the surroundings and
+              providing better cooling.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

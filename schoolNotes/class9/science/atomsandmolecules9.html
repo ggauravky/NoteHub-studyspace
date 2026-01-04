@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atoms and Molecules - Class 9 Science - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Science</a> /
+        <span>Atoms and Molecules</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">⚛️ Atoms and Molecules - Class 9</h1>
+        <p class="page-description">
+          Understanding the building blocks of matter with laws and formulas
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Laws of Chemical Combination</h2>
+
+          <p>
+            Before learning about atoms and molecules, we need to understand
+            some important laws that scientists discovered about how substances
+            combine:
+          </p>
+
+          <h3 class="sub-heading">1.1 Law of Conservation of Mass</h3>
+
+          <div class="definition-box">
+            <h4>📖 Law by Antoine Lavoisier (1789)</h4>
+            <p>
+              <strong
+                >In a chemical reaction, mass is neither created nor
+                destroyed.</strong
+              >
+            </p>
+            <p>This means: Total mass of reactants = Total mass of products</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine you have 10 LEGO bricks. You build a house with them. You
+              still have 10 bricks, just arranged differently! Similarly, in
+              chemical reactions, atoms just rearrange - no atom is lost or
+              gained.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example</h4>
+            <p>
+              Take 2g of hydrogen and 16g of oxygen. When they react to form
+              water:<br />
+              2g Hydrogen + 16g Oxygen = 18g Water<br /><br />
+              The total mass before reaction (18g) equals the total mass after
+              reaction (18g). Nothing is lost!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.2 Law of Constant Proportions</h3>
+
+          <div class="definition-box">
+            <h4>📖 Law by Joseph Proust (1799)</h4>
+            <p>
+              <strong
+                >In a chemical compound, elements are always present in a fixed
+                ratio by mass.</strong
+              >
+            </p>
+            <p>
+              This means: No matter where you get a compound from, it will
+              always have the same composition.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Water</h4>
+            <p>
+              Water (H₂O) always has hydrogen and oxygen in the ratio 1:8 by
+              mass.<br />
+              • Water from river: 1g H + 8g O<br />
+              • Water from ocean: 1g H + 8g O<br />
+              • Water from rain: 1g H + 8g O<br />
+              • Water from laboratory: 1g H + 8g O<br /><br />
+              Always the same ratio! That's why it's called "constant
+              proportions".
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. What is an Atom?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              An <strong>atom</strong> is the smallest particle of an element
+              that can take part in a chemical reaction. It may or may not exist
+              independently.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of atoms as the alphabets of chemistry! Just like words are
+              made from letters (A, B, C...), all matter is made from atoms. And
+              just like combining letters makes words, combining atoms makes
+              molecules!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Important Facts About Atoms</h4>
+            <p>
+              • Atoms are extremely small - about 10⁻¹⁰ meters in size<br />
+              • If we line up 10 million atoms, the line would be only 1 mm
+              long!<br />
+              • Atoms cannot be seen even with powerful microscopes<br />
+              • Atoms of the same element are identical<br />
+              • Atoms cannot be created or destroyed in chemical reactions
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. What is a Molecule?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A <strong>molecule</strong> is the smallest particle of an element
+              or compound that can exist independently and shows all the
+              properties of that substance.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              If atoms are like single LEGO bricks, molecules are like complete
+              LEGO models! Just like you connect bricks to build something
+              useful, atoms join together to form molecules that can exist on
+              their own.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Types of Molecules</h3>
+
+          <div class="important-note">
+            <h4>⚡ Molecules of Elements</h4>
+            <p>
+              Formed by atoms of the same element joining together.<br /><br />
+              <strong>Examples:</strong><br />
+              • Hydrogen molecule (H₂) - 2 hydrogen atoms<br />
+              • Oxygen molecule (O₂) - 2 oxygen atoms<br />
+              • Nitrogen molecule (N₂) - 2 nitrogen atoms<br />
+              • Ozone (O₃) - 3 oxygen atoms<br />
+              • Phosphorus (P₄) - 4 phosphorus atoms<br />
+              • Sulphur (S₈) - 8 sulphur atoms
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Molecules of Compounds</h4>
+            <p>
+              Formed by atoms of different elements joining together.<br /><br />
+              <strong>Examples:</strong><br />
+              • Water (H₂O) - 2 hydrogen + 1 oxygen<br />
+              • Carbon dioxide (CO₂) - 1 carbon + 2 oxygen<br />
+              • Ammonia (NH₃) - 1 nitrogen + 3 hydrogen<br />
+              • Methane (CH₄) - 1 carbon + 4 hydrogen<br />
+              • Glucose (C₆H₁₂O₆) - 6 carbon + 12 hydrogen + 6 oxygen
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Atomicity</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Atomicity?</h4>
+            <p>
+              The number of atoms present in one molecule of an element is
+              called its <strong>atomicity</strong>.
+            </p>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Atomicity</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Monoatomic</strong></td>
+                <td>1</td>
+                <td>Helium (He), Neon (Ne), Argon (Ar) - Noble gases</td>
+              </tr>
+              <tr>
+                <td><strong>Diatomic</strong></td>
+                <td>2</td>
+                <td>
+                  Hydrogen (H₂), Oxygen (O₂), Nitrogen (N₂), Chlorine (Cl₂)
+                </td>
+              </tr>
+              <tr>
+                <td><strong>Triatomic</strong></td>
+                <td>3</td>
+                <td>Ozone (O₃)</td>
+              </tr>
+              <tr>
+                <td><strong>Tetraatomic</strong></td>
+                <td>4</td>
+                <td>Phosphorus (P₄)</td>
+              </tr>
+              <tr>
+                <td><strong>Polyatomic</strong></td>
+                <td>Many</td>
+                <td>Sulphur (S₈)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">4. Chemical Formula</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Chemical Formula?</h4>
+            <p>
+              A <strong>chemical formula</strong> is a symbolic representation
+              of a molecule. It shows which elements are present and how many
+              atoms of each element are in one molecule.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Understanding Chemical Formulas</h4>
+            <p>
+              <strong>H₂O</strong> (Water)<br />
+              • H = Hydrogen<br />
+              • ₂ = 2 atoms of hydrogen<br />
+              • O = Oxygen (no number means 1 atom)<br />
+              So, H₂O means 2 hydrogen atoms + 1 oxygen atom<br /><br />
+
+              <strong>CO₂</strong> (Carbon Dioxide)<br />
+              • C = 1 Carbon atom<br />
+              • O₂ = 2 Oxygen atoms<br /><br />
+
+              <strong>H₂SO₄</strong> (Sulphuric Acid)<br />
+              • H₂ = 2 Hydrogen atoms<br />
+              • S = 1 Sulphur atom<br />
+              • O₄ = 4 Oxygen atoms
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Writing Chemical Formulas</h3>
+
+          <div class="key-points">
+            <h4>🔑 Rules for Writing Formulas</h4>
+            <ul>
+              <li>Write symbols of all elements present</li>
+              <li>Write valency of each element below its symbol</li>
+              <li>Cross-multiply the valencies</li>
+              <li>Write the valencies as subscripts</li>
+              <li>Simplify if needed (divide by common factor)</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Formula of Aluminium Oxide</h4>
+            <p>
+              <strong>Step 1:</strong> Write symbols<br />
+              Al (Aluminium) and O (Oxygen)<br /><br />
+
+              <strong>Step 2:</strong> Write valencies<br />
+              Al has valency 3, O has valency 2<br />
+              Al³⁺ O²⁻<br /><br />
+
+              <strong>Step 3:</strong> Cross-multiply<br />
+              Al gets 2, O gets 3<br /><br />
+
+              <strong>Step 4:</strong> Write as subscripts<br />
+              Al₂O₃<br /><br />
+
+              <strong>Answer:</strong> The formula is Al₂O₃ (reads as Aluminium
+              Two Oxygen Three)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Ions and Ionic Compounds</h2>
+
+          <div class="definition-box">
+            <h4>📖 What are Ions?</h4>
+            <p>
+              An <strong>ion</strong> is an atom or group of atoms that has
+              gained or lost electrons, giving it a positive or negative charge.
+            </p>
+            <p>
+              <strong>Cation:</strong> Positively charged ion (loses electrons).
+              Example: Na⁺, Ca²⁺, Al³⁺<br />
+              <strong>Anion:</strong> Negatively charged ion (gains electrons).
+              Example: Cl⁻, O²⁻, N³⁻
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of ions like magnets! When an atom loses an electron, it
+              becomes positive (like the north pole). When it gains an electron,
+              it becomes negative (like the south pole). Opposite charges
+              attract, so positive and negative ions stick together to form
+              compounds!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 Common Ions You Should Know</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Positive Ions (Cations)</th>
+                <th>Negative Ions (Anions)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sodium (Na⁺)</td>
+                <td>Chloride (Cl⁻)</td>
+              </tr>
+              <tr>
+                <td>Potassium (K⁺)</td>
+                <td>Bromide (Br⁻)</td>
+              </tr>
+              <tr>
+                <td>Silver (Ag⁺)</td>
+                <td>Oxide (O²⁻)</td>
+              </tr>
+              <tr>
+                <td>Calcium (Ca²⁺)</td>
+                <td>Sulphide (S²⁻)</td>
+              </tr>
+              <tr>
+                <td>Magnesium (Mg²⁺)</td>
+                <td>Nitride (N³⁻)</td>
+              </tr>
+              <tr>
+                <td>Aluminium (Al³⁺)</td>
+                <td>Hydroxide (OH⁻)</td>
+              </tr>
+              <tr>
+                <td>Ammonium (NH₄⁺)</td>
+                <td>Nitrate (NO₃⁻)</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>Sulphate (SO₄²⁻)</td>
+              </tr>
+              <tr>
+                <td>-</td>
+                <td>Carbonate (CO₃²⁻)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">6. Atomic Mass and Molecular Mass</h2>
+
+          <h3 class="sub-heading">6.1 Atomic Mass</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Atomic mass</strong> is the average mass of an atom of an
+              element compared to 1/12th mass of a carbon-12 atom. It has no
+              unit (it's a relative mass).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples</h4>
+            <p>
+              • Hydrogen (H) = 1 u<br />
+              • Carbon (C) = 12 u<br />
+              • Nitrogen (N) = 14 u<br />
+              • Oxygen (O) = 16 u<br />
+              • Sodium (Na) = 23 u<br />
+              • Sulphur (S) = 32 u<br />
+              • Chlorine (Cl) = 35.5 u<br /><br />
+              (u = unified mass or atomic mass unit)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Molecular Mass</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Molecular mass</strong> is the sum of atomic masses of all
+              atoms present in one molecule of a substance.
+            </p>
+            <p>
+              Formula: Molecular Mass = Sum of (Number of atoms × Atomic mass)
+              of each element
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Calculate Molecular Mass of Water (H₂O)</h4>
+            <p>
+              H₂O has:<br />
+              • 2 atoms of Hydrogen (H = 1)<br />
+              • 1 atom of Oxygen (O = 16)<br /><br />
+
+              Molecular mass = (2 × 1) + (1 × 16)<br />
+              = 2 + 16<br />
+              = 18 u<br /><br />
+
+              <strong>Answer:</strong> Molecular mass of water = 18 u
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Calculate Molecular Mass of CO₂</h4>
+            <p>
+              CO₂ has:<br />
+              • 1 atom of Carbon (C = 12)<br />
+              • 2 atoms of Oxygen (O = 16)<br /><br />
+
+              Molecular mass = (1 × 12) + (2 × 16)<br />
+              = 12 + 32<br />
+              = 44 u<br /><br />
+
+              <strong>Answer:</strong> Molecular mass of CO₂ = 44 u
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Calculate Formula Unit Mass of NaCl</h4>
+            <p>
+              NaCl has:<br />
+              • 1 atom of Sodium (Na = 23)<br />
+              • 1 atom of Chlorine (Cl = 35.5)<br /><br />
+
+              Formula unit mass = (1 × 23) + (1 × 35.5)<br />
+              = 23 + 35.5<br />
+              = 58.5 u<br /><br />
+
+              <strong>Answer:</strong> Formula unit mass of NaCl = 58.5 u<br />
+              (We say "formula unit mass" for ionic compounds instead of
+              "molecular mass")
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. The Mole Concept</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Mole?</h4>
+            <p>
+              A <strong>mole</strong> is a unit that represents a specific
+              number of particles (atoms, molecules, ions, etc.). One mole
+              contains 6.022 × 10²³ particles.
+            </p>
+            <p>
+              This number is called <strong>Avogadro's Number</strong> or
+              <strong>Avogadro's Constant</strong>.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Just like:<br />
+              • 1 dozen = 12 items<br />
+              • 1 gross = 144 items<br />
+              • 1 pair = 2 items<br /><br />
+
+              Similarly:<br />
+              • 1 mole = 6.022 × 10²³ particles<br /><br />
+
+              We use "mole" because atoms are so tiny that counting them
+              individually is impossible. Mole helps us count atoms in bulk,
+              just like we count eggs in dozens!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why 6.022 × 10²³?</h4>
+            <p>
+              This number was chosen so that the mass of 1 mole of atoms (in
+              grams) equals the atomic mass (in u).<br /><br />
+              For example:<br />
+              • Atomic mass of Carbon = 12 u<br />
+              • Mass of 1 mole of Carbon atoms = 12 grams<br /><br />
+              • Atomic mass of Oxygen = 16 u<br />
+              • Mass of 1 mole of Oxygen atoms = 16 grams
+            </p>
+          </div>
+
+          <h3 class="sub-heading">7.1 Molar Mass</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Molar mass</strong> is the mass of 1 mole of a substance.
+              It is expressed in grams per mole (g/mol).
+            </p>
+            <p>
+              <strong>Important:</strong> Molar mass (in grams) =
+              Atomic/Molecular mass (in u)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Molar Mass</h4>
+            <p>
+              • Molar mass of H₂O = 18 g/mol<br />
+              (1 mole of water weighs 18 grams)<br /><br />
+
+              • Molar mass of CO₂ = 44 g/mol<br />
+              (1 mole of CO₂ weighs 44 grams)<br /><br />
+
+              • Molar mass of NaCl = 58.5 g/mol<br />
+              (1 mole of salt weighs 58.5 grams)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">7.2 Important Formulas</h3>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet - Mole Concept</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Number of Moles (from mass)</h3>
+                <p>Number of moles = Given mass / Molar mass</p>
+                <p class="formula-desc">
+                  Use this when you know the mass and want to find moles
+                </p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Mass (from moles)</h3>
+                <p>Mass = Number of moles × Molar mass</p>
+                <p class="formula-desc">
+                  Use this when you know moles and want to find mass
+                </p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Number of Particles</h3>
+                <p>Number of particles = Moles × 6.022 × 10²³</p>
+                <p class="formula-desc">
+                  Use this to find actual number of atoms/molecules
+                </p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Moles (from particles)</h3>
+                <p>Moles = Number of particles / 6.022 × 10²³</p>
+                <p class="formula-desc">
+                  Use this when you know particle count
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="chapter-heading">8. Solved Problems</h2>
+
+          <div class="example-box">
+            <h4>💡 Problem 1: Calculate number of moles</h4>
+            <p>
+              <strong>Question:</strong> Calculate the number of moles in 36g of
+              water.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Given mass of water = 36g<br />
+              Molar mass of H₂O = 18 g/mol<br /><br />
+
+              Number of moles = Given mass / Molar mass<br />
+              = 36 / 18<br />
+              = 2 moles<br /><br />
+
+              <strong>Answer:</strong> 36g of water contains 2 moles
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Problem 2: Calculate mass</h4>
+            <p>
+              <strong>Question:</strong> Calculate the mass of 0.5 mole of
+              CO₂.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Number of moles = 0.5<br />
+              Molar mass of CO₂ = 44 g/mol<br /><br />
+
+              Mass = Number of moles × Molar mass<br />
+              = 0.5 × 44<br />
+              = 22 grams<br /><br />
+
+              <strong>Answer:</strong> 0.5 mole of CO₂ weighs 22 grams
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Problem 3: Calculate number of molecules</h4>
+            <p>
+              <strong>Question:</strong> How many molecules are present in 18g
+              of water?<br /><br />
+
+              <strong>Solution:</strong><br />
+              Step 1: Find number of moles<br />
+              Given mass = 18g<br />
+              Molar mass of H₂O = 18 g/mol<br />
+              Number of moles = 18/18 = 1 mole<br /><br />
+
+              Step 2: Find number of molecules<br />
+              1 mole contains 6.022 × 10²³ molecules<br /><br />
+
+              <strong>Answer:</strong> 18g of water contains 6.022 × 10²³
+              molecules
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Problem 4: Calculate mass of one atom</h4>
+            <p>
+              <strong>Question:</strong> Calculate the mass of one atom of
+              carbon.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Molar mass of Carbon = 12 g/mol<br />
+              This means 1 mole (6.022 × 10²³ atoms) weighs 12 grams<br /><br />
+
+              Mass of 1 atom = 12 / (6.022 × 10²³)<br />
+              = 1.99 × 10⁻²³ grams<br /><br />
+
+              <strong>Answer:</strong> Mass of one carbon atom = 1.99 × 10⁻²³ g
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">9. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>Atom is the smallest particle, molecule is made of atoms</li>
+              <li>
+                Law of Conservation of Mass: Mass remains constant in reactions
+              </li>
+              <li>
+                Law of Constant Proportions: Compounds have fixed composition
+              </li>
+              <li>
+                Chemical formula shows types and number of atoms in a molecule
+              </li>
+              <li>Valency is the combining capacity of an element</li>
+              <li>1 mole = 6.022 × 10²³ particles (Avogadro's Number)</li>
+              <li>Molar mass in grams = Atomic/Molecular mass in u</li>
+              <li>Number of moles = Given mass / Molar mass</li>
+              <li>Molecular mass = Sum of atomic masses of all atoms</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Common Mistakes to Avoid</h4>
+            <p>
+              ❌ Don't confuse atom with molecule<br />
+              ✅ Atom is single, molecule is combination<br /><br />
+
+              ❌ Don't forget to multiply by number of atoms<br />
+              ✅ In H₂O, hydrogen contributes 2×1 = 2 to molecular mass<br /><br />
+
+              ❌ Don't mix up molar mass units<br />
+              ✅ Always use g/mol for molar mass, u for atomic mass<br /><br />
+
+              ❌ Don't forget Avogadro's number<br />
+              ✅ 1 mole always = 6.022 × 10²³ particles
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

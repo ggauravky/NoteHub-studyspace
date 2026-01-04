@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Fundamental Unit of Life - Class 9 Biology - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Biology</a> /
+        <span>The Fundamental Unit of Life</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🔬 The Fundamental Unit of Life - Class 9</h1>
+        <p class="page-description">
+          Understanding the cell - The building block of all living things
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is a Cell?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A <strong>cell</strong> is the smallest structural and functional
+              unit of life. All living organisms are made up of cells.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine a building made of bricks. Just like bricks are the
+              smallest building blocks of a house, cells are the smallest
+              building blocks of our body! Just as many bricks together make a
+              building, many cells together make our body.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Discovery of Cell</h4>
+            <p>
+              <strong>Robert Hooke</strong> discovered the cell in 1665. He
+              observed a thin slice of cork under a simple microscope and saw
+              small box-like structures. He called them "cells" because they
+              reminded him of the small rooms (cells) where monks lived.
+            </p>
+            <p>
+              <strong>Fun fact:</strong> The cells Robert Hooke saw were
+              actually dead cells. He only saw the cell walls, not the living
+              parts!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Cell Theory</h3>
+
+          <div class="definition-box">
+            <h4>📖 The Cell Theory</h4>
+            <p>
+              Proposed by <strong>Schleiden</strong> (1838) and
+              <strong>Schwann</strong> (1839), later modified by
+              <strong>Virchow</strong> (1855).
+            </p>
+            <p>
+              <strong>Three main points:</strong><br />
+              1. All living organisms are made up of one or more cells<br />
+              2. Cell is the basic unit of life<br />
+              3. All cells arise from pre-existing cells
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Types of Organisms Based on Cells</h2>
+
+          <h3 class="sub-heading">2.1 Unicellular Organisms</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Unicellular Organisms?</h4>
+            <p>
+              Organisms made up of a single cell are called
+              <strong>unicellular organisms</strong>. The single cell performs
+              all the life processes.
+            </p>
+            <p>
+              <strong>Examples:</strong> Amoeba, Paramecium, Bacteria, Yeast,
+              Euglena
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of a one-man army! Just like one person doing all tasks -
+              cooking, cleaning, working - a single cell in unicellular
+              organisms does everything: eating, breathing, reproduction,
+              movement!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Multicellular Organisms</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Multicellular Organisms?</h4>
+            <p>
+              Organisms made up of many cells are called
+              <strong>multicellular organisms</strong>. Different cells perform
+              different functions.
+            </p>
+            <p>
+              <strong>Examples:</strong> Humans, Animals, Plants, Fungi (like
+              mushrooms)
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine a school with many people - teachers teach, cooks prepare
+              food, guards provide security. Each person has a specific job.
+              Similarly, in our body, different cells do different jobs: muscle
+              cells help us move, nerve cells carry messages, blood cells
+              transport oxygen!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Shape and Size of Cells</h2>
+
+          <div class="important-note">
+            <h4>⚡ Cell Size</h4>
+            <p>
+              Cells are very tiny and can only be seen under a microscope. Most
+              cells are between 1-100 micrometers (μm) in size.
+            </p>
+            <p>
+              <strong>Note:</strong> 1 micrometer = 1/1000 of a millimeter =
+              0.001 mm<br />
+              The smallest cell: Mycoplasma (0.3 μm)<br />
+              The largest cell: Ostrich egg (single cell!)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Different Cell Shapes</h4>
+            <p>
+              Cells come in different shapes based on their function:<br />
+              • <strong>Round/Spherical:</strong> Red Blood Cells (RBCs)<br />
+              • <strong>Long and branched:</strong> Nerve cells (to carry
+              messages over long distances)<br />
+              • <strong>Elongated:</strong> Muscle cells (for contraction)<br />
+              • <strong>Irregular:</strong> White Blood Cells (to squeeze
+              through tissues)<br />
+              • <strong>Rectangular:</strong> Plant cells (for structural
+              support)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Structure of a Cell</h2>
+
+          <p>
+            A cell has three main parts: Cell Membrane, Cytoplasm, and Nucleus
+            (in eukaryotic cells).
+          </p>
+
+          <h3 class="sub-heading">4.1 Cell Membrane (Plasma Membrane)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Cell Membrane?</h4>
+            <p>
+              The <strong>cell membrane</strong> is a thin, flexible outer
+              covering of the cell that separates the cell from its
+              surroundings.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              The cell membrane is like the boundary wall of your house! It
+              decides who can enter and who cannot. It allows useful things
+              (like oxygen and food) to enter and lets waste materials go out.
+              This is called <strong>selective permeability</strong>.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Functions of Cell Membrane</h4>
+            <ul>
+              <li>Protects the cell from surroundings</li>
+              <li>
+                Controls entry and exit of substances (selective permeability)
+              </li>
+              <li>Allows only certain substances to pass through</li>
+              <li>Provides shape to the cell</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Diffusion and Osmosis</h4>
+            <p>
+              <strong>Diffusion:</strong> Movement of substances from high
+              concentration to low concentration. Example: Perfume spreading in
+              a room.<br /><br />
+              <strong>Osmosis:</strong> Movement of water from low concentration
+              of solute to high concentration of solute through a semi-permeable
+              membrane. Example: Raisins swelling in water.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Cell Wall (Only in Plant Cells)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Cell Wall?</h4>
+            <p>
+              The <strong>cell wall</strong> is a rigid outer covering present
+              only in plant cells. It is made of cellulose (a complex
+              carbohydrate).
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              If cell membrane is like a curtain (flexible), the cell wall is
+              like a brick wall (rigid and strong)! Plant cells need this extra
+              protection because they don't move and need to stand upright.
+              Animal cells don't have cell walls because they need to move and
+              be flexible.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Functions of Cell Wall</h4>
+            <ul>
+              <li>Provides shape and rigidity to plant cells</li>
+              <li>Protects the cell from mechanical damage</li>
+              <li>Allows materials to pass through (fully permeable)</li>
+              <li>Prevents bursting of cell due to excess water</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">4.3 Nucleus</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Nucleus?</h4>
+            <p>
+              The <strong>nucleus</strong> is the control center of the cell. It
+              is a spherical structure present in the center of the cell,
+              surrounded by a nuclear membrane.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              The nucleus is like the principal's office in a school! Just like
+              the principal controls all school activities, the nucleus controls
+              all cell activities. It's the "brain" of the cell!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Components of Nucleus</h4>
+            <p>
+              <strong>1. Nuclear Membrane:</strong> Double-layered membrane with
+              pores that controls exchange of materials between nucleus and
+              cytoplasm.<br /><br />
+              <strong>2. Nucleoplasm:</strong> Jelly-like substance inside the
+              nucleus.<br /><br />
+              <strong>3. Chromatin:</strong> Thread-like structures made of DNA
+              and proteins. During cell division, chromatin condenses to form
+              chromosomes.<br /><br />
+              <strong>4. Nucleolus:</strong> Small, spherical body inside
+              nucleus that helps make ribosomes.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Functions of Nucleus</h4>
+            <ul>
+              <li>Controls all cell activities (like a control room)</li>
+              <li>Contains genetic information (DNA) passed from parents</li>
+              <li>Controls cell division and reproduction</li>
+              <li>Contains chromosomes that carry hereditary information</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Chromosomes and Genes</h4>
+            <p>
+              <strong>Chromosomes:</strong> Rod-shaped structures made of DNA.
+              They carry genes from parents to children. Humans have 46
+              chromosomes (23 pairs).<br /><br />
+              <strong>Genes:</strong> Segments of DNA that carry information for
+              a particular trait. For example, genes decide your eye color, hair
+              color, height, etc.<br /><br />
+              Think of chromosomes as books and genes as chapters in those books
+              containing specific information!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.4 Cytoplasm</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Cytoplasm?</h4>
+            <p>
+              <strong>Cytoplasm</strong> is the jelly-like substance between the
+              cell membrane and nucleus. It contains many cell organelles
+              floating in it.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine cytoplasm as a swimming pool filled with water (cytoplasm)
+              and various pool toys and floats (cell organelles) floating in it.
+              All the activities happen in this pool!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Cell Organelles</h2>
+
+          <p>
+            Cell organelles are small structures inside the cell that perform
+            specific functions. They are like tiny organs of the cell!
+          </p>
+
+          <h3 class="sub-heading">5.1 Endoplasmic Reticulum (ER)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is ER?</h4>
+            <p>
+              The <strong>Endoplasmic Reticulum</strong> is a network of
+              tube-like structures spreading throughout the cytoplasm. It
+              connects the cell membrane to the nucleus.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of ER as a highway system in a city! Just like highways
+              transport goods from one place to another, ER transports materials
+              within the cell.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of ER</h4>
+            <p>
+              <strong>1. Rough ER (RER):</strong> Has ribosomes attached on its
+              surface, looks rough. Makes proteins.<br /><br />
+              <strong>2. Smooth ER (SER):</strong> No ribosomes, looks smooth.
+              Makes lipids (fats) and detoxifies harmful substances.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Golgi Apparatus (Golgi Body)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Golgi Apparatus?</h4>
+            <p>
+              The <strong>Golgi Apparatus</strong> consists of a stack of flat,
+              membrane-bound sacs. It looks like a stack of pancakes!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Golgi Apparatus is like a post office! It receives packages
+              (proteins from ER), modifies them, packs them properly, labels
+              them, and sends them to their correct destinations inside or
+              outside the cell.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Functions of Golgi Apparatus</h4>
+            <ul>
+              <li>Modifies and packages proteins</li>
+              <li>Stores and transports materials</li>
+              <li>Forms lysosomes</li>
+              <li>Secretes materials outside the cell</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">5.3 Lysosomes</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Lysosomes?</h4>
+            <p>
+              <strong>Lysosomes</strong> are small, spherical sacs containing
+              digestive enzymes. They are also called the "suicide bags" of the
+              cell.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Lysosomes are like the garbage disposal system or recycling unit
+              of the cell! They break down waste materials, old cell parts, and
+              unwanted substances. They're also like the cleanup crew!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why "Suicide Bags"?</h4>
+            <p>
+              When a cell is damaged or old, lysosomes burst and release their
+              enzymes. These enzymes digest the cell's own components, leading
+              to cell death. Hence, they're called "suicide bags". This is
+              actually helpful as it removes damaged cells!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.4 Mitochondria</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Mitochondria?</h4>
+            <p>
+              <strong>Mitochondria</strong> (singular: mitochondrion) are
+              rod-shaped or cylindrical organelles with a double membrane. They
+              are called the "powerhouse of the cell".
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Mitochondria are like power plants or charging stations! Just as a
+              power plant generates electricity for a city, mitochondria produce
+              energy (ATP) for the cell to do all its work.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why "Powerhouse of the Cell"?</h4>
+            <p>
+              Mitochondria produce energy in the form of ATP (Adenosine
+              Triphosphate) through a process called cellular respiration. ATP
+              is the energy currency of the cell - it's used for all cellular
+              activities!<br /><br />
+              <strong>Equation:</strong> Glucose + Oxygen → Carbon dioxide +
+              Water + Energy (ATP)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Special Features of Mitochondria</h4>
+            <ul>
+              <li>Has its own DNA and ribosomes</li>
+              <li>Can make some of its own proteins</li>
+              <li>Divides on its own (not dependent on cell division)</li>
+              <li>
+                More mitochondria in active cells (muscle cells, liver cells)
+              </li>
+              <li>Inherited only from mother (maternal inheritance)</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">5.5 Plastids (Only in Plant Cells)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Plastids?</h4>
+            <p>
+              <strong>Plastids</strong> are colored or colorless organelles
+              found only in plant cells and some protists. They are absent in
+              animal cells.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Plastids</h4>
+            <p>
+              <strong>1. Chloroplasts:</strong> Green colored, contain
+              chlorophyll, perform photosynthesis (make food for plants).<br /><br />
+              <strong>2. Chromoplasts:</strong> Colored plastids (yellow,
+              orange, red). Give color to flowers and fruits.<br /><br />
+              <strong>3. Leucoplasts:</strong> Colorless plastids. Store food in
+              the form of starch, oils, or proteins.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              <strong>Chloroplasts</strong> are like solar panels! Just as solar
+              panels capture sunlight and convert it to electricity,
+              chloroplasts capture sunlight and convert it to food (glucose)
+              through photosynthesis. That's why they're called the "kitchen of
+              the cell"!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Plants are Green?</h4>
+            <p>
+              Plants are green because of chloroplasts containing chlorophyll
+              (green pigment). Chlorophyll absorbs red and blue light but
+              reflects green light, making leaves appear green!<br /><br />
+              <strong>Fun fact:</strong> Like mitochondria, chloroplasts also
+              have their own DNA and ribosomes!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.6 Vacuoles</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Vacuoles?</h4>
+            <p>
+              <strong>Vacuoles</strong> are fluid-filled sacs surrounded by a
+              membrane. They store various substances.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Difference in Plant and Animal Cells</h4>
+            <p>
+              <strong>In Plant Cells:</strong> One large central vacuole
+              occupying 50-90% of cell volume. Stores water, minerals, and waste
+              products. Helps maintain cell rigidity.<br /><br />
+              <strong>In Animal Cells:</strong> Many small vacuoles. Used for
+              temporary storage.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Vacuoles in plant cells are like a big water tank that stores
+              water and also acts as a storage room for various things. In
+              animal cells, they're like small pockets or bags used for
+              temporary storage.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do Plants Wilt?</h4>
+            <p>
+              When plants don't get enough water, their vacuoles shrink. This
+              makes the cells lose their rigidity, and the plant wilts (droops
+              down). When you water the plant, vacuoles fill up again, cells
+              become rigid, and the plant stands upright!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Prokaryotic vs Eukaryotic Cells</h2>
+
+          <h3 class="sub-heading">6.1 Prokaryotic Cells</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Prokaryotic Cells?</h4>
+            <p>
+              <strong>Prokaryotic cells</strong> are primitive cells that do not
+              have a well-defined nucleus or membrane-bound organelles.
+            </p>
+            <p>
+              <strong>Examples:</strong> Bacteria, Blue-green algae
+              (Cyanobacteria)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Eukaryotic Cells</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Eukaryotic Cells?</h4>
+            <p>
+              <strong>Eukaryotic cells</strong> are advanced cells with a
+              well-defined nucleus and membrane-bound organelles.
+            </p>
+            <p><strong>Examples:</strong> Plants, Animals, Fungi, Protists</p>
+          </div>
+
+          <h3 class="sub-heading">6.3 Comparison Table</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Prokaryotic Cell</th>
+                <th>Eukaryotic Cell</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Nucleus</strong></td>
+                <td>No well-defined nucleus (nucleoid region)</td>
+                <td>Well-defined nucleus with nuclear membrane</td>
+              </tr>
+              <tr>
+                <td><strong>Nuclear Membrane</strong></td>
+                <td>Absent</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td><strong>Organelles</strong></td>
+                <td>No membrane-bound organelles</td>
+                <td>Membrane-bound organelles present</td>
+              </tr>
+              <tr>
+                <td><strong>Size</strong></td>
+                <td>Smaller (1-10 μm)</td>
+                <td>Larger (10-100 μm)</td>
+              </tr>
+              <tr>
+                <td><strong>Chromosome</strong></td>
+                <td>Single, circular chromosome</td>
+                <td>Multiple, linear chromosomes</td>
+              </tr>
+              <tr>
+                <td><strong>Ribosomes</strong></td>
+                <td>Smaller (70S)</td>
+                <td>Larger (80S)</td>
+              </tr>
+              <tr>
+                <td><strong>Cell Division</strong></td>
+                <td>Binary fission</td>
+                <td>Mitosis and Meiosis</td>
+              </tr>
+              <tr>
+                <td><strong>Examples</strong></td>
+                <td>Bacteria, Blue-green algae</td>
+                <td>Plants, Animals, Fungi</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">7. Plant Cell vs Animal Cell</h2>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Plant Cell</th>
+                <th>Animal Cell</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cell Wall</strong></td>
+                <td>Present (made of cellulose)</td>
+                <td>Absent</td>
+              </tr>
+              <tr>
+                <td><strong>Cell Membrane</strong></td>
+                <td>Present (inside cell wall)</td>
+                <td>Present (outermost layer)</td>
+              </tr>
+              <tr>
+                <td><strong>Plastids</strong></td>
+                <td>Present (chloroplasts, etc.)</td>
+                <td>Absent</td>
+              </tr>
+              <tr>
+                <td><strong>Vacuoles</strong></td>
+                <td>One large central vacuole</td>
+                <td>Many small vacuoles</td>
+              </tr>
+              <tr>
+                <td><strong>Centrosome</strong></td>
+                <td>Absent (except in lower plants)</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td><strong>Shape</strong></td>
+                <td>Fixed (rectangular/square)</td>
+                <td>Irregular shape</td>
+              </tr>
+              <tr>
+                <td><strong>Nucleus</strong></td>
+                <td>Present (may be at periphery)</td>
+                <td>Present (usually at center)</td>
+              </tr>
+              <tr>
+                <td><strong>Storage</strong></td>
+                <td>Store as starch</td>
+                <td>Store as glycogen</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">8. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>Cell is the basic structural and functional unit of life</li>
+              <li>Robert Hooke discovered cell in 1665</li>
+              <li>
+                Cell theory: All organisms are made of cells, cell is basic
+                unit, cells arise from pre-existing cells
+              </li>
+              <li>
+                Cell membrane controls entry/exit (selective permeability)
+              </li>
+              <li>
+                Cell wall is present only in plant cells (made of cellulose)
+              </li>
+              <li>Nucleus is the control center containing DNA</li>
+              <li>Mitochondria = Powerhouse of cell (produces energy)</li>
+              <li>Chloroplasts = Kitchen of cell (makes food in plants)</li>
+              <li>Lysosomes = Suicide bags (contain digestive enzymes)</li>
+              <li>
+                Prokaryotic cells lack well-defined nucleus, Eukaryotic cells
+                have it
+              </li>
+              <li>Plant cells have cell wall, plastids, and large vacuole</li>
+              <li>Animal cells lack cell wall and plastids</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Quick Questions for Practice</h4>
+            <p>
+              <strong>Q1.</strong> Why is cell called the structural and
+              functional unit of life?<br />
+              <strong>Answer:</strong> Because all living organisms are made of
+              cells (structural unit) and all life processes occur in cells
+              (functional unit).
+            </p>
+            <p>
+              <strong>Q2.</strong> Why do plant cells have cell walls but animal
+              cells don't?<br />
+              <strong>Answer:</strong> Plant cells need cell wall for rigidity
+              to stand upright and bear weight. Animal cells need flexibility
+              for movement, so they don't have cell walls.
+            </p>
+            <p>
+              <strong>Q3.</strong> What would happen if the cell has no
+              mitochondria?<br />
+              <strong>Answer:</strong> The cell would not get energy to perform
+              its functions, and it would die.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

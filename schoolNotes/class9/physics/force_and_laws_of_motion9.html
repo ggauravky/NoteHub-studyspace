@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Force and Laws of Motion - Class 9 Physics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-box {
+        background: #fce4ec;
+        border-left: 4px solid #e91e63;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .formula-box h4 {
+        color: #c2185b;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .formula-box p {
+        color: #555;
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/physics9.html">Physics</a> /
+        <span>Force and Laws of Motion</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">⚡ Force and Laws of Motion - Class 9</h1>
+        <p class="page-description">
+          Understanding force, Newton's laws, momentum, and conservation
+          principles
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is Force?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Force</strong> is a push or pull that can change or tend
+              to change the state of rest or uniform motion of an object. Force
+              is a vector quantity (has both magnitude and direction).
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Force is like the "effort" you make to change something! When you
+              push a door open, you apply force. When you pull a drawer, you
+              apply force. When you kick a football, you apply force. Force is
+              what makes things start moving, stop moving, or change direction!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Force</h4>
+            <ul>
+              <li>Force is a vector quantity (has magnitude and direction)</li>
+              <li>SI unit: Newton (N)</li>
+              <li>
+                1 Newton = Force required to give 1 kg mass an acceleration of 1
+                m/s²
+              </li>
+              <li>Force cannot be seen, only its effects can be observed</li>
+              <li>Multiple forces can act on an object simultaneously</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Effects of Force</h4>
+            <p>
+              Force can produce following effects:<br /><br />
+
+              <strong>1. Change in state of motion:</strong><br />
+              • Can make a stationary object move (pushing a cart)<br />
+              • Can stop a moving object (catching a ball)<br />
+              • Can change speed of a moving object (accelerating a car)<br /><br />
+
+              <strong>2. Change in direction:</strong><br />
+              • Can change the direction of a moving object (hitting a ball with
+              bat)<br /><br />
+
+              <strong>3. Change in shape or size:</strong><br />
+              • Can deform objects (squeezing a sponge, stretching a rubber
+              band)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Examples of Force</h4>
+            <p>
+              • Kicking a football → Force changes state from rest to motion<br />
+              • Catching a ball → Force stops the moving ball<br />
+              • Hitting a tennis ball → Force changes direction<br />
+              • Pressing a spring → Force changes shape<br />
+              • Opening a door → Force causes rotation<br />
+              • Lifting a bag → Force opposes gravity
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Types of Forces</h3>
+
+          <div class="important-note">
+            <h4>⚡ 1. Contact Forces</h4>
+            <p>
+              Forces that act only when objects are in physical contact.<br /><br />
+
+              <strong>Examples:</strong><br />
+              • <strong>Muscular Force:</strong> Force applied by muscles
+              (pushing, pulling, lifting)<br />
+              • <strong>Friction:</strong> Force that opposes motion between
+              surfaces in contact<br />
+              • <strong>Normal Force:</strong> Force perpendicular to surface
+              (book on table)<br />
+              • <strong>Tension:</strong> Force transmitted through rope,
+              string, or cable<br />
+              • <strong>Spring Force:</strong> Force exerted by compressed or
+              stretched spring
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 2. Non-Contact Forces (Action at a Distance)</h4>
+            <p>
+              Forces that act without physical contact.<br /><br />
+
+              <strong>Examples:</strong><br />
+              • <strong>Gravitational Force:</strong> Attraction between any two
+              masses (Earth attracts objects)<br />
+              • <strong>Magnetic Force:</strong> Attraction or repulsion between
+              magnets<br />
+              • <strong>Electrostatic Force:</strong> Attraction or repulsion
+              between charged objects
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.2 Balanced and Unbalanced Forces</h3>
+
+          <div class="definition-box">
+            <h4>📖 Balanced Forces</h4>
+            <p>
+              When two or more forces acting on an object cancel each other out,
+              resulting in zero net force. The object remains in its state of
+              rest or uniform motion.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Balanced Forces</h4>
+            <ul>
+              <li>Net force = 0</li>
+              <li>No change in state of motion</li>
+              <li>Stationary object remains stationary</li>
+              <li>Moving object continues with same velocity</li>
+              <li>No acceleration produced</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Balanced Forces</h4>
+            <p>
+              • A book lying on a table (weight balanced by normal force)<br />
+              • Tug of war with equal teams (rope doesn't move)<br />
+              • A car moving at constant speed (driving force equals
+              friction)<br />
+              • A person standing still (weight balanced by ground reaction)
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Unbalanced Forces</h4>
+            <p>
+              When forces acting on an object do not cancel out, resulting in a
+              net force. The object's state of motion changes (acceleration
+              occurs).
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Unbalanced Forces</h4>
+            <ul>
+              <li>Net force ≠ 0</li>
+              <li>Change in state of motion occurs</li>
+              <li>Acceleration is produced</li>
+              <li>Can change speed, direction, or both</li>
+              <li>Cause of all motion changes</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Unbalanced Forces</h4>
+            <p>
+              • Pushing a stationary cart (cart starts moving)<br />
+              • Applying brakes to a car (car slows down)<br />
+              • Falling apple (gravity not balanced by any upward force)<br />
+              • Tug of war with unequal teams (rope moves toward stronger team)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Newton's First Law of Motion</h2>
+
+          <div class="definition-box">
+            <h4>📖 Law of Inertia</h4>
+            <p>
+              <strong>Newton's First Law:</strong> An object at rest remains at
+              rest, and an object in motion continues in motion with the same
+              speed and in the same direction unless acted upon by an unbalanced
+              external force.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Objects are "lazy"! They don't like to change what they're doing.
+              A resting object wants to keep resting. A moving object wants to
+              keep moving in the same way. They only change when forced to
+              change!<br /><br />
+
+              It's like you relaxing on a couch - you don't want to get up
+              unless someone forces you to (like your mom calling for dinner)!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Inertia</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Inertia?</h4>
+            <p>
+              <strong>Inertia</strong> is the natural tendency of an object to
+              resist any change in its state of rest or uniform motion. It is
+              the property of matter to remain in its existing state.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Inertia</h4>
+            <p>
+              <strong>1. Inertia of Rest:</strong> Tendency to remain at rest<br />
+              Example: When a bus suddenly starts, passengers jerk backward<br /><br />
+
+              <strong>2. Inertia of Motion:</strong> Tendency to remain in
+              motion<br />
+              Example: When a bus suddenly stops, passengers jerk forward<br /><br />
+
+              <strong>3. Inertia of Direction:</strong> Tendency to maintain
+              direction of motion<br />
+              Example: When a bus takes a turn, passengers lean outward
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Facts About Inertia</h4>
+            <ul>
+              <li>Inertia depends on mass of object</li>
+              <li>Greater mass = Greater inertia (harder to change motion)</li>
+              <li>Lighter mass = Less inertia (easier to change motion)</li>
+              <li>Inertia has no units (it's just a property of mass)</li>
+              <li>Mass is a measure of inertia</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Examples of Inertia</h4>
+            <p>
+              <strong>Inertia of Rest:</strong><br />
+              • Shaking a tree to make fruits fall (fruits at rest want to stay
+              at rest)<br />
+              • Beating a carpet to remove dust (dust wants to stay at rest)<br />
+              • Pulling a tablecloth quickly from under dishes (dishes stay in
+              place)<br /><br />
+
+              <strong>Inertia of Motion:</strong><br />
+              • Athlete cannot stop immediately after finishing race<br />
+              • We fall forward when we trip (body wants to keep moving)<br />
+              • Seat belts in cars (prevent forward motion during sudden
+              stop)<br /><br />
+
+              <strong>Inertia of Direction:</strong><br />
+              • Mud flying off bicycle tire (mud wants to move in straight
+              line)<br />
+              • Centrifuge separating cream from milk (heavier particles move
+              outward)
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why is it Harder to Push a Truck than a Bicycle?</h4>
+            <p>
+              A truck has much more mass than a bicycle, so it has much more
+              inertia. Greater inertia means it resists changes in motion more
+              strongly. That's why you need more force to start moving a truck
+              (or to stop it once it's moving)!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Newton's Second Law of Motion</h2>
+
+          <div class="definition-box">
+            <h4>📖 Law of Acceleration</h4>
+            <p>
+              <strong>Newton's Second Law:</strong> The rate of change of
+              momentum of an object is directly proportional to the applied
+              unbalanced force and takes place in the direction of the force.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Mathematical Form</h4>
+            <p>
+              F = ma<br /><br />
+
+              Where:<br />
+              F = Force (Newton, N)<br />
+              m = Mass (kilogram, kg)<br />
+              a = Acceleration (m/s²)<br /><br />
+
+              Or: Force = Mass × Acceleration<br /><br />
+
+              <strong>1 Newton (N):</strong> Force that produces an acceleration
+              of 1 m/s² in a mass of 1 kg<br />
+              1 N = 1 kg × 1 m/s² = 1 kg⋅m/s²
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding F = ma</h4>
+            <ul>
+              <li>
+                Force is directly proportional to acceleration (more force =
+                more acceleration)
+              </li>
+              <li>
+                Force is directly proportional to mass (heavier object needs
+                more force)
+              </li>
+              <li>
+                Acceleration is inversely proportional to mass (heavier object
+                accelerates less)
+              </li>
+              <li>
+                Direction of acceleration is same as direction of applied force
+              </li>
+              <li>This law gives us a way to measure force quantitatively</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem 1</h4>
+            <p>
+              A force of 20 N is applied to an object of mass 4 kg. Find the
+              acceleration produced.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Given: F = 20 N, m = 4 kg<br />
+              Using F = ma<br />
+              20 = 4 × a<br />
+              a = 20/4 = 5 m/s²<br /><br />
+
+              The object accelerates at 5 m/s².
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem 2</h4>
+            <p>
+              A cricket ball of mass 150 g moving at 12 m/s is brought to rest
+              by a player in 0.1 seconds. Find the force applied.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 150 g = 0.15 kg<br />
+              Initial velocity (u) = 12 m/s<br />
+              Final velocity (v) = 0 m/s<br />
+              Time (t) = 0.1 s<br /><br />
+
+              First find acceleration:<br />
+              a = (v - u)/t = (0 - 12)/0.1 = -120 m/s²<br />
+              (Negative sign indicates deceleration)<br /><br />
+
+              Now find force:<br />
+              F = ma = 0.15 × (-120) = -18 N<br /><br />
+
+              Force applied is 18 N in opposite direction of motion.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Everyday Understanding</h4>
+            <p>
+              Think of pushing a shopping cart:<br /><br />
+
+              • Empty cart (small mass) → Easy to push → Large acceleration with
+              small force<br />
+              • Full cart (large mass) → Hard to push → Small acceleration with
+              same force<br /><br />
+
+              To get the same acceleration for a full cart, you need to push
+              much harder (apply more force)!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Momentum</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Momentum</strong> is the quantity of motion possessed by a
+              moving object. It is the product of mass and velocity. Momentum is
+              a vector quantity.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Momentum (p) = Mass × Velocity<br />
+              p = m × v<br /><br />
+
+              Where:<br />
+              p = Momentum (kg⋅m/s)<br />
+              m = Mass (kg)<br />
+              v = Velocity (m/s)<br /><br />
+
+              SI unit: kilogram meter per second (kg⋅m/s) or Newton⋅second (N⋅s)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Points About Momentum</h4>
+            <ul>
+              <li>
+                Momentum is a vector quantity (has direction same as velocity)
+              </li>
+              <li>Greater mass or greater velocity means greater momentum</li>
+              <li>Object at rest has zero momentum (v = 0)</li>
+              <li>Momentum depends on both mass and velocity</li>
+              <li>
+                Two objects can have same momentum with different masses and
+                velocities
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Calculating Momentum</h4>
+            <p>
+              A car of mass 1000 kg is moving at 20 m/s. Calculate its
+              momentum.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 1000 kg<br />
+              Velocity (v) = 20 m/s<br />
+              Momentum (p) = m × v<br />
+              p = 1000 × 20<br />
+              p = 20,000 kg⋅m/s<br /><br />
+
+              The car has momentum of 20,000 kg⋅m/s in the direction of motion.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Understanding Momentum</h4>
+            <p>
+              Momentum is like the "oomph" or "impact force" of a moving
+              object!<br /><br />
+
+              • A heavy truck moving slowly has large momentum (large mass)<br />
+              • A bullet moving very fast has large momentum (large velocity)<br />
+              • Both are hard to stop!<br /><br />
+
+              Catching a tennis ball is easy, but catching a cricket ball moving
+              at same speed is harder because cricket ball has more mass, hence
+              more momentum!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Rate of Change of Momentum</h3>
+
+          <div class="important-note">
+            <h4>⚡ Newton's Second Law in Terms of Momentum</h4>
+            <p>
+              Force = Rate of change of momentum<br /><br />
+
+              F = (Final momentum - Initial momentum) / Time<br />
+              F = (mv - mu) / t<br />
+              F = m(v - u) / t<br />
+              F = ma<br /><br />
+
+              This shows that Newton's Second Law can be stated as: Force equals
+              rate of change of momentum.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do We Bend Knees While Landing?</h4>
+            <p>
+              When jumping from a height, our momentum must become zero when we
+              land.<br /><br />
+
+              Change in momentum is fixed: Δp = mv - 0 = mv<br /><br />
+
+              Force F = Δp / t<br /><br />
+
+              By bending knees, we increase the time (t) of landing.<br />
+              Since F = Δp / t, increasing t decreases F.<br /><br />
+
+              Less force means less impact, less chance of injury! This is why
+              we should bend our knees when landing from a jump.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do Athletes Roll After Landing?</h4>
+            <p>
+              Same principle! Rolling increases the time of impact, which
+              decreases the force experienced. This prevents injuries during
+              high jumps or pole vaults.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Newton's Third Law of Motion</h2>
+
+          <div class="definition-box">
+            <h4>📖 Law of Action and Reaction</h4>
+            <p>
+              <strong>Newton's Third Law:</strong> For every action, there is an
+              equal and opposite reaction. Forces always occur in pairs - action
+              and reaction forces.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Action-Reaction Pairs</h4>
+            <ul>
+              <li>Action and reaction are equal in magnitude</li>
+              <li>Action and reaction are opposite in direction</li>
+              <li>
+                Action and reaction act on different objects (never on same
+                object)
+              </li>
+              <li>Action and reaction occur simultaneously</li>
+              <li>Action and reaction are of same type of force</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Forces are like conversations - there's always a two-way exchange!
+              When you push someone, they automatically push back on you (even
+              if they don't mean to). You can't have a one-sided push - physics
+              doesn't allow it!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Examples</h4>
+            <p>
+              <strong>1. Walking:</strong><br />
+              • Action: You push ground backward with your foot<br />
+              • Reaction: Ground pushes you forward<br />
+              • Result: You move forward!<br /><br />
+
+              <strong>2. Swimming:</strong><br />
+              • Action: You push water backward with hands<br />
+              • Reaction: Water pushes you forward<br />
+              • Result: You swim forward!<br /><br />
+
+              <strong>3. Rocket Propulsion:</strong><br />
+              • Action: Rocket pushes hot gases downward<br />
+              • Reaction: Gases push rocket upward<br />
+              • Result: Rocket lifts off!<br /><br />
+
+              <strong>4. Gun Recoil:</strong><br />
+              • Action: Gun pushes bullet forward<br />
+              • Reaction: Bullet pushes gun backward<br />
+              • Result: Gun recoils backward!<br /><br />
+
+              <strong>5. Rowing a Boat:</strong><br />
+              • Action: Oar pushes water backward<br />
+              • Reaction: Water pushes boat forward<br />
+              • Result: Boat moves forward!<br /><br />
+
+              <strong>6. Jumping from Boat:</strong><br />
+              • Action: You push boat backward<br />
+              • Reaction: Boat pushes you forward<br />
+              • Result: You jump forward, boat moves backward!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why Don't We Feel Earth Move When We Walk?</h4>
+            <p>
+              According to Newton's third law, when you push Earth backward,
+              Earth pushes you forward with equal force. But why doesn't Earth
+              move?<br /><br />
+
+              Actually, it does! But Earth has HUGE mass compared to you.<br /><br />
+
+              Using F = ma:<br />
+              • Same force acts on you and Earth<br />
+              • Your mass is small → You get large acceleration → You move
+              noticeably<br />
+              • Earth's mass is enormous → Earth gets tiny acceleration →
+              Movement is undetectable<br /><br />
+
+              The acceleration of Earth is so small that we cannot observe it!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Conservation of Momentum</h2>
+
+          <div class="definition-box">
+            <h4>📖 Law of Conservation of Momentum</h4>
+            <p>
+              <strong>Law of Conservation of Momentum:</strong> In an isolated
+              system (no external forces), the total momentum before any
+              interaction equals the total momentum after the interaction.
+              Momentum is conserved.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Mathematical Statement</h4>
+            <p>
+              Total momentum before collision = Total momentum after
+              collision<br /><br />
+
+              m₁u₁ + m₂u₂ = m₁v₁ + m₂v₂<br /><br />
+
+              Where:<br />
+              m₁, m₂ = masses of two objects<br />
+              u₁, u₂ = initial velocities<br />
+              v₁, v₂ = final velocities
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Momentum is like money in a closed economy! Money can be
+              transferred between people, but the total amount of money stays
+              the same. Similarly, momentum can be transferred between objects
+              during collision, but total momentum remains constant!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Points</h4>
+            <ul>
+              <li>Applies only to isolated systems (no external forces)</li>
+              <li>Total momentum is constant, not individual momentums</li>
+              <li>Momentum can be transferred from one object to another</li>
+              <li>Works for all types of collisions</li>
+              <li>Based on Newton's third law of motion</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">
+            6.1 Derivation of Conservation of Momentum
+          </h3>
+
+          <div class="important-note">
+            <h4>⚡ Proof Using Newton's Third Law</h4>
+            <p>
+              Consider two objects A and B colliding:<br /><br />
+
+              <strong>Before collision:</strong><br />
+              • Object A: mass = m₁, velocity = u₁<br />
+              • Object B: mass = m₂, velocity = u₂<br /><br />
+
+              <strong>After collision:</strong><br />
+              • Object A: velocity = v₁<br />
+              • Object B: velocity = v₂<br /><br />
+
+              During collision, let F₁ be force on A by B, and F₂ be force on B
+              by A.<br /><br />
+
+              By Newton's third law: F₁ = -F₂<br /><br />
+
+              For object A: F₁ = m₁(v₁ - u₁)/t<br />
+              For object B: F₂ = m₂(v₂ - u₂)/t<br /><br />
+
+              Since F₁ = -F₂:<br />
+              m₁(v₁ - u₁)/t = -m₂(v₂ - u₂)/t<br />
+              m₁(v₁ - u₁) = -m₂(v₂ - u₂)<br />
+              m₁v₁ - m₁u₁ = -m₂v₂ + m₂u₂<br />
+              m₁v₁ + m₂v₂ = m₁u₁ + m₂u₂<br /><br />
+
+              <strong
+                >This proves: Total momentum after = Total momentum
+                before</strong
+              >
+            </p>
+          </div>
+
+          <h3 class="sub-heading">
+            6.2 Applications of Conservation of Momentum
+          </h3>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Two Objects Moving Toward Each Other</h4>
+            <p>
+              A 5 kg object moving at 4 m/s collides with a 3 kg object moving
+              at 2 m/s in opposite direction. After collision, they stick
+              together. Find their common velocity.<br /><br />
+
+              <strong>Solution:</strong><br />
+              m₁ = 5 kg, u₁ = 4 m/s (let's say positive direction)<br />
+              m₂ = 3 kg, u₂ = -2 m/s (opposite direction, so negative)<br />
+              After collision: common velocity = v<br /><br />
+
+              Using conservation of momentum:<br />
+              m₁u₁ + m₂u₂ = (m₁ + m₂)v<br />
+              5(4) + 3(-2) = (5 + 3)v<br />
+              20 - 6 = 8v<br />
+              14 = 8v<br />
+              v = 1.75 m/s<br /><br />
+
+              They move together at 1.75 m/s in the direction of the 5 kg
+              object.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Gun and Bullet</h4>
+            <p>
+              A gun of mass 4 kg fires a bullet of mass 50 g at 400 m/s. Find
+              the recoil velocity of gun.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Gun mass (M) = 4 kg<br />
+              Bullet mass (m) = 50 g = 0.05 kg<br />
+              Bullet velocity (v) = 400 m/s<br />
+              Recoil velocity of gun = V<br /><br />
+
+              Initially both are at rest, so initial momentum = 0<br /><br />
+
+              Using conservation of momentum:<br />
+              Initial momentum = Final momentum<br />
+              0 = mv + MV<br />
+              0 = 0.05(400) + 4(V)<br />
+              0 = 20 + 4V<br />
+              4V = -20<br />
+              V = -5 m/s<br /><br />
+
+              Gun recoils backward at 5 m/s (negative sign shows opposite
+              direction).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Application: Rocket Propulsion</h4>
+            <p>
+              Rockets work on conservation of momentum!<br /><br />
+
+              • Initially, rocket + fuel system is at rest (total momentum =
+              0)<br />
+              • Fuel burns and hot gases are expelled backward with high
+              velocity<br />
+              • To conserve momentum (keep total = 0), rocket must move
+              forward<br />
+              • Mass of gases × velocity backward = Mass of rocket × velocity
+              forward<br /><br />
+
+              This is why rockets can work in space where there's no air to push
+              against!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Recoil of Gun - Understanding</h4>
+            <p>
+              Why does a gun kick backward when fired?<br /><br />
+
+              Before firing: Total momentum = 0 (both gun and bullet at rest)<br />
+              After firing: Bullet goes forward (gains positive momentum)<br /><br />
+
+              To keep total momentum = 0, gun must go backward (gain negative
+              momentum)!<br /><br />
+
+              Since bullet has small mass but high velocity, gun has large mass
+              but small velocity. But their momentums are equal and opposite!<br /><br />
+
+              <strong>Safety tip:</strong> Hold gun firmly against shoulder to
+              reduce recoil impact!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>Force = Push or pull that changes state of motion</li>
+              <li>SI unit of force = Newton (N)</li>
+              <li>Balanced forces: Net force = 0, no change in motion</li>
+              <li>Unbalanced forces: Net force ≠ 0, acceleration occurs</li>
+              <li>
+                Newton's 1st Law: Object resists change in state (Inertia)
+              </li>
+              <li>Inertia depends on mass (more mass = more inertia)</li>
+              <li>Newton's 2nd Law: F = ma (Force = Mass × Acceleration)</li>
+              <li>
+                1 Newton = Force that gives 1 kg mass an acceleration of 1 m/s²
+              </li>
+              <li>Momentum (p) = Mass × Velocity = m × v</li>
+              <li>Unit of momentum = kg⋅m/s</li>
+              <li>
+                Newton's 3rd Law: Action and reaction are equal and opposite
+              </li>
+              <li>Action and reaction act on different objects</li>
+              <li>
+                Conservation of Momentum: Total momentum before = Total momentum
+                after
+              </li>
+              <li>Works only for isolated systems (no external forces)</li>
+              <li>
+                Greater force → Greater acceleration (if mass is constant)
+              </li>
+              <li>Greater mass → Less acceleration (if force is constant)</li>
+              <li>Increase time of impact to reduce force (F = Δp/t)</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Memory Tricks</h4>
+            <p>
+              <strong>Newton's Laws Summary:</strong><br /><br />
+
+              <strong>1st Law:</strong> "Objects are lazy - they don't like to
+              change!"<br />
+              (Inertia - resistance to change)<br /><br />
+
+              <strong>2nd Law:</strong> "Push harder or use lighter object to
+              move faster!"<br />
+              (F = ma - more force or less mass gives more acceleration)<br /><br />
+
+              <strong>3rd Law:</strong> "Every push has a push-back!"<br />
+              (Action = Reaction, but on different objects)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">8. Practice Questions</h2>
+
+          <div class="example-box">
+            <h4>💡 Question 1</h4>
+            <p>
+              <strong>Q:</strong> Which would require a greater force -
+              accelerating a 2 kg mass at 5 m/s² or a 4 kg mass at 2 m/s²?<br /><br />
+
+              <strong>Solution:</strong><br />
+              For 2 kg mass: F₁ = ma = 2 × 5 = 10 N<br />
+              For 4 kg mass: F₂ = ma = 4 × 2 = 8 N<br /><br />
+
+              <strong>Answer:</strong> Accelerating 2 kg mass at 5 m/s² requires
+              greater force (10 N vs 8 N).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 2</h4>
+            <p>
+              <strong>Q:</strong> A car of mass 1500 kg changes its velocity
+              from 36 km/h to 72 km/h in 10 seconds. Calculate the force
+              applied.<br /><br />
+
+              <strong>Solution:</strong><br />
+              m = 1500 kg<br />
+              u = 36 km/h = 36 × (5/18) = 10 m/s<br />
+              v = 72 km/h = 72 × (5/18) = 20 m/s<br />
+              t = 10 s<br /><br />
+
+              Acceleration: a = (v - u)/t = (20 - 10)/10 = 1 m/s²<br />
+              Force: F = ma = 1500 × 1 = 1500 N<br /><br />
+
+              <strong>Answer:</strong> Force applied is 1500 N.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 3</h4>
+            <p>
+              <strong>Q:</strong> Why are passengers thrown forward when a bus
+              suddenly stops?<br /><br />
+
+              <strong>Answer:</strong> When bus is moving, passengers are also
+              moving with the bus. When bus stops suddenly, lower part of
+              passenger's body (in contact with seat) stops with the bus due to
+              friction. But upper part continues to move forward due to inertia
+              of motion. This causes passengers to jerk forward. This is inertia
+              of motion.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 4</h4>
+            <p>
+              <strong>Q:</strong> Calculate momentum of a 10 kg object moving at
+              12 m/s.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass (m) = 10 kg<br />
+              Velocity (v) = 12 m/s<br />
+              Momentum (p) = m × v = 10 × 12 = 120 kg⋅m/s<br /><br />
+
+              <strong>Answer:</strong> Momentum is 120 kg⋅m/s.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 5</h4>
+            <p>
+              <strong>Q:</strong> A 50 kg boy and a 40 kg girl are standing on a
+              frictionless frozen lake. The boy pushes the girl, giving her
+              velocity of 1 m/s. What is the boy's velocity?<br /><br />
+
+              <strong>Solution:</strong><br />
+              Initial momentum = 0 (both at rest)<br />
+              Boy's mass (m₁) = 50 kg<br />
+              Girl's mass (m₂) = 40 kg<br />
+              Girl's velocity (v₂) = 1 m/s<br />
+              Boy's velocity = v₁<br /><br />
+
+              Using conservation of momentum:<br />
+              0 = m₁v₁ + m₂v₂<br />
+              0 = 50(v₁) + 40(1)<br />
+              50v₁ = -40<br />
+              v₁ = -0.8 m/s<br /><br />
+
+              <strong>Answer:</strong> Boy moves at 0.8 m/s in opposite
+              direction (negative sign indicates opposite direction).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 6</h4>
+            <p>
+              <strong>Q:</strong> Explain why it is difficult to walk on sand or
+              ice.<br /><br />
+
+              <strong>Answer:</strong> Walking depends on friction between foot
+              and ground. When we walk:<br />
+              • Action: We push ground backward<br />
+              • Reaction: Ground pushes us forward (this requires friction)<br /><br />
+
+              On sand or ice, friction is very less. Ground cannot provide
+              enough reaction force. So we slip instead of moving forward. This
+              makes walking difficult.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Tips for Solving Problems</h4>
+            <p>
+              <strong>For F = ma problems:</strong><br />
+              1. Convert all units to SI units (kg, m/s, m/s²)<br />
+              2. Convert km/h to m/s by multiplying with 5/18<br />
+              3. First find acceleration using: a = (v - u)/t<br />
+              4. Then find force using: F = ma<br /><br />
+
+              <strong>For momentum problems:</strong><br />
+              1. Calculate initial momentum: p₁ = m₁u₁ + m₂u₂<br />
+              2. Calculate final momentum: p₂ = m₁v₁ + m₂v₂<br />
+              3. Use: p₁ = p₂ (conservation)<br />
+              4. Watch out for direction (opposite = negative)<br /><br />
+
+              <strong>Remember:</strong> Always write units in your answer!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

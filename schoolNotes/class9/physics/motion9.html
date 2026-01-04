@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Motion - Class 9 Physics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-box {
+        background: #fce4ec;
+        border-left: 4px solid #e91e63;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .formula-box h4 {
+        color: #c2185b;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .formula-box p {
+        color: #555;
+        font-family: 'Courier New', monospace;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/physics9.html">Physics</a> /
+        <span>Motion</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🚀 Motion - Class 9 Physics</h1>
+        <p class="page-description">
+          Understanding motion, speed, velocity, acceleration and equations of motion
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is Motion?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Motion</strong> is the change in position of an object with respect to time and its surroundings. An object is said to be in motion if it changes its position with time.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine you're sitting in a train. Are you moving or stationary? It depends! If you compare yourself to the train seat, you're not moving. But if you compare yourself to trees outside, you're moving fast! Motion is always relative - it depends on your reference point (frame of reference).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Key Concepts</h4>
+            <p>
+              <strong>Rest:</strong> An object is at rest if it does not change its position with time.<br />
+              <strong>Motion:</strong> An object is in motion if it changes its position with time.<br />
+              <strong>Frame of Reference:</strong> A set of coordinates (or surroundings) with respect to which motion is described.<br /><br />
+              
+              Everything is relative! An object can be at rest with respect to one frame and in motion with respect to another.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Example</h4>
+            <p>
+              A passenger sitting in a moving bus:<br />
+              • Is at rest with respect to other passengers (same frame)<br />
+              • Is in motion with respect to trees on roadside (different frame)<br />
+              • Is in motion with respect to the ground<br /><br />
+              
+              So motion and rest are relative terms!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Types of Motion</h2>
+
+          <div class="important-note">
+            <h4>⚡ 1. Rectilinear Motion (Linear Motion)</h4>
+            <p>
+              Motion along a straight line.<br />
+              <strong>Examples:</strong> A car moving on a straight road, a ball falling vertically downward, an athlete running on a straight track.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 2. Circular Motion</h4>
+            <p>
+              Motion along a circular path.<br />
+              <strong>Examples:</strong> Earth revolving around Sun, a stone tied to string and whirled in a circle, motion of fan blades.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 3. Periodic Motion</h4>
+            <p>
+              Motion that repeats itself after regular intervals of time.<br />
+              <strong>Examples:</strong> Motion of pendulum, motion of Earth around Sun (365 days), motion of hands of a clock.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 4. Oscillatory Motion</h4>
+            <p>
+              Motion in which an object moves to and fro about a mean position.<br />
+              <strong>Examples:</strong> Motion of pendulum, motion of a swing, vibration of guitar strings.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Distance and Displacement</h2>
+
+          <h3 class="sub-heading">3.1 Distance</h3>
+
+          <div class="definition-box">
+            <h4>📖 Distance</h4>
+            <p>
+              <strong>Distance</strong> is the total path length covered by an object during its motion. It is a scalar quantity (has only magnitude, no direction).
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Distance</h4>
+            <ul>
+              <li>Scalar quantity (only magnitude)</li>
+              <li>Always positive, can never be zero or negative</li>
+              <li>Depends on the actual path taken</li>
+              <li>SI unit: meter (m)</li>
+              <li>Distance covered cannot decrease with time</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">3.2 Displacement</h3>
+
+          <div class="definition-box">
+            <h4>📖 Displacement</h4>
+            <p>
+              <strong>Displacement</strong> is the shortest distance between initial and final positions of an object. It is a vector quantity (has both magnitude and direction).
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Displacement</h4>
+            <ul>
+              <li>Vector quantity (magnitude + direction)</li>
+              <li>Can be positive, negative, or zero</li>
+              <li>Independent of path taken (only depends on initial and final positions)</li>
+              <li>SI unit: meter (m)</li>
+              <li>Displacement can decrease with time</li>
+            </ul>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Distance</th>
+                <th>Displacement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Type</strong></td>
+                <td>Scalar (magnitude only)</td>
+                <td>Vector (magnitude + direction)</td>
+              </tr>
+              <tr>
+                <td><strong>Definition</strong></td>
+                <td>Total path length covered</td>
+                <td>Shortest distance from start to end</td>
+              </tr>
+              <tr>
+                <td><strong>Value</strong></td>
+                <td>Always positive</td>
+                <td>Can be positive, negative, or zero</td>
+              </tr>
+              <tr>
+                <td><strong>Path Dependence</strong></td>
+                <td>Depends on actual path</td>
+                <td>Independent of path</td>
+              </tr>
+              <tr>
+                <td><strong>Magnitude Comparison</strong></td>
+                <td>Distance ≥ Displacement</td>
+                <td>Displacement ≤ Distance</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-box">
+            <h4>💡 Example: Understand the Difference</h4>
+            <p>
+              A person walks 4 m East, then 3 m North:<br /><br />
+              
+              <strong>Distance:</strong> Total path = 4 m + 3 m = 7 m<br /><br />
+              
+              <strong>Displacement:</strong> Shortest distance from start to end<br />
+              Using Pythagoras theorem: √(4² + 3²) = √(16 + 9) = √25 = 5 m<br />
+              Direction: Northeast (at an angle)<br /><br />
+              
+              Notice: Distance (7 m) > Displacement (5 m)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Special Case: When Distance = Displacement?</h4>
+            <p>
+              When an object moves along a straight line in one direction only, distance equals displacement.<br /><br />
+              
+              Example: A car moves 100 m straight east.<br />
+              Distance = 100 m<br />
+              Displacement = 100 m east<br /><br />
+              
+              But if the car returns to starting point:<br />
+              Distance = 200 m (100 m + 100 m)<br />
+              Displacement = 0 m (back at starting point!)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Speed and Velocity</h2>
+
+          <h3 class="sub-heading">4.1 Speed</h3>
+
+          <div class="definition-box">
+            <h4>📖 Speed</h4>
+            <p>
+              <strong>Speed</strong> is the distance traveled per unit time. It tells us how fast an object is moving. Speed is a scalar quantity.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Speed = Distance / Time<br />
+              v = s / t<br /><br />
+              
+              SI unit: meter per second (m/s)<br />
+              Other units: km/h, cm/s
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Types of Speed</h4>
+            <ul>
+              <li><strong>Uniform Speed:</strong> Object covers equal distances in equal intervals of time</li>
+              <li><strong>Non-uniform Speed:</strong> Object covers unequal distances in equal intervals of time</li>
+              <li><strong>Average Speed:</strong> Total distance / Total time</li>
+              <li><strong>Instantaneous Speed:</strong> Speed at a particular instant of time</li>
+            </ul>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Average Speed</h4>
+            <p>
+              Average Speed = Total Distance Traveled / Total Time Taken<br /><br />
+              
+              If an object travels distances s₁, s₂, s₃... in times t₁, t₂, t₃...<br />
+              Average Speed = (s₁ + s₂ + s₃...) / (t₁ + t₂ + t₃...)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Calculating Speed</h4>
+            <p>
+              A car travels 150 km in 3 hours. Find its speed.<br /><br />
+              
+              <strong>Solution:</strong><br />
+              Distance = 150 km<br />
+              Time = 3 hours<br />
+              Speed = Distance / Time = 150 / 3 = 50 km/h<br /><br />
+              
+              The car travels at 50 km per hour.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Velocity</h3>
+
+          <div class="definition-box">
+            <h4>📖 Velocity</h4>
+            <p>
+              <strong>Velocity</strong> is the displacement per unit time. It tells us how fast an object is moving in a particular direction. Velocity is a vector quantity.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Velocity = Displacement / Time<br />
+              v = s / t<br /><br />
+              
+              SI unit: meter per second (m/s)<br />
+              Direction must be specified!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Types of Velocity</h4>
+            <ul>
+              <li><strong>Uniform Velocity:</strong> Object moves with equal displacement in equal time intervals in same direction</li>
+              <li><strong>Non-uniform Velocity:</strong> Velocity changes with time (either magnitude or direction or both)</li>
+              <li><strong>Average Velocity:</strong> Total displacement / Total time</li>
+              <li><strong>Instantaneous Velocity:</strong> Velocity at a particular instant</li>
+            </ul>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Average Velocity</h4>
+            <p>
+              Average Velocity = Total Displacement / Total Time Taken<br />
+              v_avg = (Final Position - Initial Position) / Total Time
+            </p>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Speed</th>
+                <th>Velocity</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Type</strong></td>
+                <td>Scalar quantity</td>
+                <td>Vector quantity</td>
+              </tr>
+              <tr>
+                <td><strong>Definition</strong></td>
+                <td>Distance per unit time</td>
+                <td>Displacement per unit time</td>
+              </tr>
+              <tr>
+                <td><strong>Direction</strong></td>
+                <td>No direction specified</td>
+                <td>Direction must be specified</td>
+              </tr>
+              <tr>
+                <td><strong>Value</strong></td>
+                <td>Always positive</td>
+                <td>Can be positive or negative</td>
+              </tr>
+              <tr>
+                <td><strong>Zero Condition</strong></td>
+                <td>Only when object is at rest</td>
+                <td>Can be zero even when object is moving (if it returns to start)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-box">
+            <h4>💡 Example: Speed vs Velocity</h4>
+            <p>
+              An athlete runs around a circular track of 400 m and completes one round in 50 seconds.<br /><br />
+              
+              <strong>Speed:</strong><br />
+              Distance = 400 m (full circle)<br />
+              Time = 50 s<br />
+              Speed = 400/50 = 8 m/s<br /><br />
+              
+              <strong>Velocity:</strong><br />
+              Displacement = 0 m (back at starting point)<br />
+              Time = 50 s<br />
+              Velocity = 0/50 = 0 m/s<br /><br />
+              
+              The athlete has speed but zero velocity!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Acceleration</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Acceleration</strong> is the rate of change of velocity. It measures how quickly velocity is changing with time. Acceleration is a vector quantity.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Acceleration = Change in Velocity / Time Taken<br />
+              a = (v - u) / t<br /><br />
+              
+              Where:<br />
+              u = initial velocity<br />
+              v = final velocity<br />
+              t = time taken<br /><br />
+              
+              SI unit: meter per second squared (m/s²)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Acceleration</h4>
+            <p>
+              <strong>1. Positive Acceleration:</strong> When velocity increases with time (speeding up)<br />
+              Example: A car starting from rest<br /><br />
+              
+              <strong>2. Negative Acceleration (Retardation/Deceleration):</strong> When velocity decreases with time (slowing down)<br />
+              Example: A car applying brakes<br /><br />
+              
+              <strong>3. Zero Acceleration:</strong> When velocity remains constant (uniform velocity)<br />
+              Example: A car moving at constant speed
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Points About Acceleration</h4>
+            <ul>
+              <li>Acceleration is a vector quantity (has direction)</li>
+              <li>Can be positive, negative, or zero</li>
+              <li>Occurs when speed changes, or direction changes, or both change</li>
+              <li>Even at constant speed, if direction changes, there is acceleration (circular motion)</li>
+              <li>Uniform acceleration: Equal changes in velocity in equal time intervals</li>
+              <li>Non-uniform acceleration: Unequal changes in velocity in equal time intervals</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Calculating Acceleration</h4>
+            <p>
+              A car accelerates from 10 m/s to 30 m/s in 4 seconds. Find acceleration.<br /><br />
+              
+              <strong>Solution:</strong><br />
+              Initial velocity (u) = 10 m/s<br />
+              Final velocity (v) = 30 m/s<br />
+              Time (t) = 4 s<br /><br />
+              
+              Acceleration (a) = (v - u) / t<br />
+              a = (30 - 10) / 4<br />
+              a = 20 / 4<br />
+              a = 5 m/s²<br /><br />
+              
+              The car accelerates at 5 m/s² (velocity increases by 5 m/s every second).
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Understanding Acceleration</h4>
+            <p>
+              Imagine you're driving a car:<br /><br />
+              
+              • When you press the <strong>accelerator</strong> (gas pedal), you speed up → <strong>Positive acceleration</strong><br />
+              • When you press the <strong>brake</strong>, you slow down → <strong>Negative acceleration (retardation)</strong><br />
+              • When you maintain <strong>constant speed</strong> → <strong>Zero acceleration</strong><br />
+              • When you take a <strong>turn</strong> at constant speed → Still accelerating! (direction changes)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Graphical Representation of Motion</h2>
+
+          <h3 class="sub-heading">6.1 Distance-Time Graph</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is a Distance-Time Graph?</h4>
+            <p>
+              A graph showing how distance changes with time. Time is taken on X-axis and distance on Y-axis.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Interpreting Distance-Time Graphs</h4>
+            <p>
+              <strong>1. Straight horizontal line:</strong> Object at rest (no change in distance)<br /><br />
+              
+              <strong>2. Straight sloping line:</strong> Uniform speed<br />
+              • Steeper slope = Higher speed<br />
+              • Gentle slope = Lower speed<br /><br />
+              
+              <strong>3. Curved line:</strong> Non-uniform speed (acceleration)<br />
+              • Curve getting steeper = Increasing speed<br />
+              • Curve getting gentler = Decreasing speed<br /><br />
+              
+              <strong>Slope of distance-time graph = Speed</strong>
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Finding Speed from Graph</h4>
+            <p>
+              Speed = Slope of distance-time graph<br />
+              Speed = (Change in distance) / (Change in time)<br />
+              Speed = (y₂ - y₁) / (x₂ - x₁)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Velocity-Time Graph</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is a Velocity-Time Graph?</h4>
+            <p>
+              A graph showing how velocity changes with time. Time is taken on X-axis and velocity on Y-axis.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Interpreting Velocity-Time Graphs</h4>
+            <p>
+              <strong>1. Straight horizontal line:</strong> Uniform velocity (zero acceleration)<br /><br />
+              
+              <strong>2. Straight sloping line:</strong> Uniform acceleration<br />
+              • Upward slope = Positive acceleration (speeding up)<br />
+              • Downward slope = Negative acceleration (slowing down)<br />
+              • Steeper slope = Greater acceleration<br /><br />
+              
+              <strong>3. Curved line:</strong> Non-uniform acceleration<br /><br />
+              
+              <strong>Slope of velocity-time graph = Acceleration</strong><br />
+              <strong>Area under velocity-time graph = Displacement</strong>
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Finding from Velocity-Time Graph</h4>
+            <p>
+              <strong>Acceleration:</strong><br />
+              Acceleration = Slope of v-t graph<br />
+              a = (v₂ - v₁) / (t₂ - t₁)<br /><br />
+              
+              <strong>Displacement:</strong><br />
+              Displacement = Area under v-t graph
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Key

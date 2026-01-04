@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Is Matter Around Us Pure - Class 9 Science - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Science</a> /
+        <span>Is Matter Around Us Pure</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🔬 Is Matter Around Us Pure? - Class 9</h1>
+        <p class="page-description">
+          Understanding mixtures, solutions, and separation techniques
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Pure Substances vs Mixtures</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Pure Substance?</h4>
+            <p>
+              A <strong>pure substance</strong> is made up of only one type of
+              particle. It has a fixed composition and fixed properties.
+              Examples: Pure gold, pure water, common salt (NaCl), sugar.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine a box containing only red balls - all identical. That's a
+              pure substance! Now imagine a box with red, blue, and green balls
+              mixed together - that's a mixture! In real life, pure substances
+              are rare. Most things around us are mixtures.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 What is a Mixture?</h4>
+            <p>
+              A <strong>mixture</strong> is formed by mixing two or more
+              substances in any proportion. It does not have fixed properties.
+              Examples: Air, salt solution, soil, milk.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Types of Pure Substances</h3>
+
+          <p>Pure substances are of two types:</p>
+
+          <div class="important-note">
+            <h4>⚡ Elements</h4>
+            <p>
+              An <strong>element</strong> is the simplest form of matter that
+              cannot be broken down into simpler substances by chemical methods.
+              Examples: Gold (Au), Iron (Fe), Oxygen (O₂), Hydrogen (H₂).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Compounds</h4>
+            <p>
+              A <strong>compound</strong> is formed by the chemical combination
+              of two or more elements in a fixed ratio. It can be broken down
+              into elements by chemical methods. Examples: Water (H₂O), Carbon
+              dioxide (CO₂), Common salt (NaCl), Sugar (C₁₂H₂₂O₁₁).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Water - A Compound</h4>
+            <p>
+              Water is a compound made of hydrogen and oxygen in a fixed ratio
+              (2:1). No matter where you get water from - river, ocean, or rain
+              - it always has the same composition: 2 hydrogen atoms + 1 oxygen
+              atom = H₂O.
+            </p>
+            <p>
+              <strong>Fun fact:</strong> Pure water is colorless, odorless, and
+              tasteless. If your water has taste or smell, it contains some
+              impurities!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Types of Mixtures</h2>
+
+          <p>Mixtures are of two types based on their composition:</p>
+
+          <h3 class="sub-heading">2.1 Homogeneous Mixtures</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A <strong>homogeneous mixture</strong> has uniform composition
+              throughout. You cannot see the different components with naked
+              eyes. Also called <strong>solutions</strong>.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of sugar dissolved in water - it looks completely uniform.
+              You can't see where sugar is and where water is. Or think of air -
+              you can't see oxygen, nitrogen, or other gases separately. That's
+              a homogeneous mixture!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Homogeneous Mixtures</h4>
+            <p>
+              • Salt solution (salt dissolved in water)<br />
+              • Sugar solution<br />
+              • Air (mixture of gases)<br />
+              • Vinegar (acetic acid in water)<br />
+              • Brass (copper + zinc)<br />
+              • Steel (iron + carbon)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Heterogeneous Mixtures</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A <strong>heterogeneous mixture</strong> has non-uniform
+              composition. You can see the different components clearly or
+              distinguish them easily.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of your lunch plate with rice, dal, and vegetables - you can
+              clearly see and separate each item. Or think of a fruit salad -
+              you can pick out each piece of fruit. That's a heterogeneous
+              mixture!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Heterogeneous Mixtures</h4>
+            <p>
+              • Sand and water<br />
+              • Oil and water<br />
+              • Soil (sand, clay, organic matter)<br />
+              • Fruit salad<br />
+              • Concrete (cement, sand, gravel)<br />
+              • Muddy water
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">
+            3. Solutions - A Special Type of Mixture
+          </h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Solution?</h4>
+            <p>
+              A <strong>solution</strong> is a homogeneous mixture of two or
+              more substances. It consists of:
+            </p>
+            <p>
+              • <strong>Solute:</strong> The substance that is dissolved
+              (present in smaller amount)<br />
+              • <strong>Solvent:</strong> The substance that dissolves the
+              solute (present in larger amount)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Lemonade</h4>
+            <p>
+              When you make lemonade, you add lemon juice and sugar to water.
+              Here:<br />
+              • <strong>Solutes:</strong> Lemon juice and sugar (they get
+              dissolved)<br />
+              • <strong>Solvent:</strong> Water (it does the dissolving)<br />
+              • <strong>Solution:</strong> Lemonade (the final uniform mixture)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Types of Solutions</h3>
+
+          <p>
+            Solutions can be solid, liquid, or gas depending on the state of
+            solvent:
+          </p>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Type</th>
+                <th>Solute</th>
+                <th>Solvent</th>
+                <th>Example</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Solid Solution</td>
+                <td>Solid</td>
+                <td>Solid</td>
+                <td>Brass (zinc in copper), Steel</td>
+              </tr>
+              <tr>
+                <td>Liquid Solution</td>
+                <td>Solid/Liquid/Gas</td>
+                <td>Liquid</td>
+                <td>Salt in water, Alcohol in water, CO₂ in water</td>
+              </tr>
+              <tr>
+                <td>Gaseous Solution</td>
+                <td>Gas</td>
+                <td>Gas</td>
+                <td>Air (oxygen in nitrogen)</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-heading">3.2 Concentration of Solution</h3>
+
+          <div class="definition-box">
+            <h4>📖 Concentration</h4>
+            <p>
+              The amount of solute present in a given amount of solution is
+              called <strong>concentration</strong>.
+            </p>
+            <p>
+              <strong>Dilute Solution:</strong> Contains small amount of solute
+              in a large amount of solvent<br />
+              <strong>Concentrated Solution:</strong> Contains large amount of
+              solute in a small amount of solvent
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine making tea. If you add 1 teaspoon of sugar, it's a dilute
+              solution (less sweet). If you add 5 teaspoons of sugar, it's a
+              concentrated solution (very sweet)!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ How to Calculate Concentration</h4>
+            <p>
+              <strong>Mass by Mass Percentage:</strong><br />
+              Concentration = (Mass of solute / Mass of solution) × 100<br /><br />
+              <strong>Mass by Volume Percentage:</strong><br />
+              Concentration = (Mass of solute / Volume of solution) × 100<br /><br />
+              <strong>Volume by Volume Percentage:</strong><br />
+              Concentration = (Volume of solute / Volume of solution) × 100
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Calculate Concentration</h4>
+            <p>
+              <strong>Question:</strong> 20g of salt is dissolved in 100g of
+              water. Find the concentration of solution.<br /><br />
+              <strong>Solution:</strong><br />
+              Mass of solute (salt) = 20g<br />
+              Mass of solvent (water) = 100g<br />
+              Mass of solution = 20 + 100 = 120g<br /><br />
+              Concentration = (20/120) × 100 = 16.67%<br /><br />
+              <strong>Answer:</strong> The concentration is 16.67%
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.3 Saturated vs Unsaturated Solutions</h3>
+
+          <div class="definition-box">
+            <h4>📖 Saturated Solution</h4>
+            <p>
+              A solution in which no more solute can be dissolved at a given
+              temperature is called a <strong>saturated solution</strong>.
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Unsaturated Solution</h4>
+            <p>
+              A solution in which more solute can be dissolved at a given
+              temperature is called an <strong>unsaturated solution</strong>.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Example</h4>
+            <p>
+              Take a glass of water at room temperature. Start adding salt and
+              stirring. Initially, the salt dissolves (unsaturated). Keep adding
+              more salt. After some time, the salt stops dissolving and settles
+              at the bottom (saturated). No matter how much you stir, it won't
+              dissolve more!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Suspensions and Colloids</h2>
+
+          <h3 class="sub-heading">4.1 Suspensions</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is a Suspension?</h4>
+            <p>
+              A <strong>suspension</strong> is a heterogeneous mixture in which
+              solid particles do not dissolve but remain suspended in the
+              liquid. The particles are large enough to be seen with naked eyes.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Properties of Suspensions</h4>
+            <ul>
+              <li>Particles are visible to naked eyes</li>
+              <li>Particles settle down when left undisturbed</li>
+              <li>Particles can be separated by filtration</li>
+              <li>They are heterogeneous in nature</li>
+              <li>They scatter a beam of light (Tyndall effect)</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Suspensions</h4>
+            <p>
+              • Chalk powder in water<br />
+              • Muddy water<br />
+              • Sand in water<br />
+              • Paints<br />
+              • Dust in air
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Colloids</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is a Colloid?</h4>
+            <p>
+              A <strong>colloid</strong> is a mixture in which particles are
+              bigger than solution but smaller than suspension. The particles
+              are not visible to naked eyes but can scatter light.
+            </p>
+            <p>
+              It consists of:<br />
+              • <strong>Dispersed Phase:</strong> The substance that is
+              distributed (like solute)<br />
+              • <strong>Dispersion Medium:</strong> The substance in which it is
+              distributed (like solvent)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Properties of Colloids</h4>
+            <ul>
+              <li>Particles are not visible to naked eyes</li>
+              <li>Particles do not settle down</li>
+              <li>Particles cannot be separated by filtration</li>
+              <li>They are heterogeneous in nature</li>
+              <li>They show Tyndall effect (scatter light)</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Colloids</h4>
+            <p>
+              • Milk (fat droplets in water)<br />
+              • Blood (cells in plasma)<br />
+              • Fog (water droplets in air)<br />
+              • Smoke (solid particles in air)<br />
+              • Butter (water droplets in fat)<br />
+              • Jelly (solid in liquid)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Tyndall Effect</h4>
+            <p>
+              The scattering of light by colloidal particles is called
+              <strong>Tyndall effect</strong>. This is why you can see the path
+              of a beam of light in a dusty room or in fog. The dust or fog
+              particles scatter the light, making the beam visible!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Example: Tyndall Effect</h4>
+            <p>
+              Have you noticed sunlight coming through trees in a forest? You
+              can see the beams of light because dust and tiny water droplets in
+              air scatter the light. This is Tyndall effect! The same thing
+              happens when you see car headlights in fog.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.3 Comparison Table</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Solution</th>
+                <th>Colloid</th>
+                <th>Suspension</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Particle Size</strong></td>
+                <td>Less than 1 nm</td>
+                <td>1-100 nm</td>
+                <td>More than 100 nm</td>
+              </tr>
+              <tr>
+                <td><strong>Visibility</strong></td>
+                <td>Not visible</td>
+                <td>Not visible</td>
+                <td>Visible</td>
+              </tr>
+              <tr>
+                <td><strong>Settling</strong></td>
+                <td>Do not settle</td>
+                <td>Do not settle</td>
+                <td>Settle down</td>
+              </tr>
+              <tr>
+                <td><strong>Filtration</strong></td>
+                <td>Cannot separate</td>
+                <td>Cannot separate</td>
+                <td>Can separate</td>
+              </tr>
+              <tr>
+                <td><strong>Tyndall Effect</strong></td>
+                <td>Do not show</td>
+                <td>Show</td>
+                <td>Show</td>
+              </tr>
+              <tr>
+                <td><strong>Nature</strong></td>
+                <td>Homogeneous</td>
+                <td>Heterogeneous</td>
+                <td>Heterogeneous</td>
+              </tr>
+              <tr>
+                <td><strong>Example</strong></td>
+                <td>Salt solution</td>
+                <td>Milk</td>
+                <td>Muddy water</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">5. Separating Mixtures</h2>
+
+          <p>
+            Different methods are used to separate mixtures based on the
+            properties of their components:
+          </p>
+
+          <h3 class="sub-heading">5.1 Evaporation</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate a solid dissolved in a liquid. The solution is
+              heated so that the liquid evaporates, leaving behind the solid.
+            </p>
+            <p>
+              <strong>Use:</strong> Obtaining salt from sea water, recovering
+              sugar from sugar solution.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Centrifugation</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate suspended particles by spinning the mixture at
+              high speed. The heavier particles settle at the bottom.
+            </p>
+            <p>
+              <strong>Use:</strong> Separating cream from milk, blood
+              components, muddy water.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Remember the spin dryer in washing machines? When it spins very
+              fast, water is thrown out and clothes become dry. Centrifugation
+              works on the same principle!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.3 Separating Funnel</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate two immiscible liquids (liquids that do not mix).
+              The mixture is kept in a separating funnel. The denser liquid
+              settles at the bottom and can be separated.
+            </p>
+            <p>
+              <strong>Use:</strong> Separating oil and water, separating
+              kerosene and water.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.4 Sublimation</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate a sublimable solid from a non-sublimable solid.
+              When heated, the sublimable solid directly changes to gas, which
+              can be collected separately.
+            </p>
+            <p>
+              <strong>Use:</strong> Separating camphor from salt, ammonium
+              chloride from sand.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.5 Chromatography</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate colors or pigments from a mixture. Different
+              components move at different speeds on a medium (like paper), thus
+              getting separated.
+            </p>
+            <p>
+              <strong>Use:</strong> Separating colors in dyes or ink, separating
+              pigments in plants.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Try This Simple Experiment!</h4>
+            <p>
+              Take a black marker and make a dot on a filter paper. Dip the
+              paper in water (keeping the dot above water level). You'll see the
+              black ink separating into different colors as water rises! This is
+              chromatography.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.6 Distillation</h3>
+
+          <div class="definition-box">
+            <h4>📖 Method</h4>
+            <p>
+              Used to separate a liquid from a solution or to separate two
+              miscible liquids with different boiling points. The mixture is
+              heated, the liquid with lower boiling point evaporates first, and
+              then it is condensed back to liquid.
+            </p>
+            <p>
+              <strong>Use:</strong> Obtaining pure water from salt solution,
+              separating acetone and water.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Fractional Distillation</h4>
+            <p>
+              When two liquids have boiling points close to each other,
+              fractional distillation is used. It uses a fractionating column
+              for better separation.
+            </p>
+            <p>
+              <strong>Use:</strong> Separating crude oil into petrol, diesel,
+              kerosene, etc. Separating different gases from liquid air.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Physical and Chemical Changes</h2>
+
+          <h3 class="sub-heading">6.1 Physical Change</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A change in which no new substance is formed. Only physical
+              properties like shape, size, or state change. The change is
+              usually reversible.
+            </p>
+            <p>
+              <strong>Examples:</strong> Melting of ice, dissolving sugar in
+              water, breaking glass, folding paper.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Chemical Change</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A change in which a new substance with different properties is
+              formed. The change is usually irreversible.
+            </p>
+            <p>
+              <strong>Examples:</strong> Burning of paper, rusting of iron,
+              cooking food, digestion of food.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Boiling an Egg</h4>
+            <p>
+              When you boil an egg, the liquid inside becomes solid. You cannot
+              reverse it back to liquid form. New substances are formed with
+              different properties. This is a <strong>chemical change</strong>.
+            </p>
+            <p>
+              But when you boil water and it becomes steam, you can cool the
+              steam to get water back. No new substance is formed. This is a
+              <strong>physical change</strong>.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. Quick Revision Points</h2>
+
+          <div class="key-points">
+            <h4>🔑 Remember These</h4>
+            <ul>
+              <li>Most matter around us is NOT pure - it exists as mixtures</li>
+              <li>Solutions are homogeneous, suspensions are heterogeneous</li>
+              <li>Colloids show Tyndall effect, solutions don't</li>
+              <li>
+                Saturated solution cannot dissolve more solute at that
+                temperature
+              </li>
+              <li>
+                Solubility increases with temperature (for most solids in water)
+              </li>
+              <li>
+                Concentration tells us how much solute is present in solution
+              </li>
+              <li>
+                Choose separation method based on properties of components
+              </li>
+              <li>In a solution, water is called universal solvent</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Quick Questions to Test Yourself</h4>
+            <p>
+              <strong>Q1.</strong> Why is air a mixture and not a compound?<br />
+              <strong>Answer:</strong> Air has variable composition (oxygen,
+              nitrogen, CO₂, etc. in varying amounts). Compounds have fixed
+              composition. Air can be separated by physical means (fractional
+              distillation). Hence, it's a mixture.
+            </p>
+            <p>
+              <strong>Q2.</strong> Why do we see the path of light in a cinema
+              hall?<br />
+              <strong>Answer:</strong> Dust particles in air act as colloid and
+              scatter light, making the light beam visible. This is Tyndall
+              effect.
+            </p>
+            <p>
+              <strong>Q3.</strong> Why can't we separate salt from its solution
+              by filtration?<br />
+              <strong>Answer:</strong> Salt dissolves completely in water
+              forming a solution. The particle size is very small (less than 1
+              nm). These particles pass through the filter paper. We need
+              evaporation to separate salt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
