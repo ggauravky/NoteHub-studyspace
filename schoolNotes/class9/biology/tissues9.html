@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tissues - Class 9 Biology - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Biology</a> /
+        <span>Tissues</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🧬 Tissues - Class 9</h1>
+        <p class="page-description">
+          Understanding how similar cells work together as a team
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is a Tissue?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              A <strong>tissue</strong> is a group of similar cells that work
+              together to perform a specific function.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine a cricket team! Just like 11 players work together to win
+              a match, many similar cells work together as a tissue to do a
+              particular job. For example, muscle cells group together to form
+              muscle tissue that helps you move!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Division of Labor</h4>
+            <p>
+              In multicellular organisms, different tissues perform different
+              functions. This is called <strong>division of labor</strong>. It
+              makes the organism more efficient - just like in a factory where
+              different workers do different jobs!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Plant Tissues</h2>
+
+          <p>
+            Plant tissues are divided into two main types: Meristematic Tissue
+            and Permanent Tissue.
+          </p>
+
+          <h3 class="sub-heading">2.1 Meristematic Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Meristematic Tissue?</h4>
+            <p>
+              <strong>Meristematic tissue</strong> consists of cells that can
+              divide and form new cells. These are found in the growing regions
+              of plants.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of meristematic cells as "baby cells" or "growth cells"!
+              They're like kids who keep growing. These cells are found where
+              the plant is growing - tips of roots and shoots. That's why plants
+              grow taller from top and roots grow deeper!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Meristematic Tissue</h4>
+            <ul>
+              <li>Cells are small and compact</li>
+              <li>Cells have thin cell walls</li>
+              <li>Cells have large nucleus</li>
+              <li>No intercellular spaces (tightly packed)</li>
+              <li>Cells divide continuously</li>
+              <li>No vacuoles (or very small)</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Meristematic Tissue (Based on Location)</h4>
+            <p>
+              <strong>1. Apical Meristem:</strong> Found at tips of roots and
+              shoots. Helps in increasing length (height of plant).<br /><br />
+              <strong>2. Lateral Meristem:</strong> Found on sides of stem and
+              roots. Helps in increasing thickness (girth of plant).<br /><br />
+              <strong>3. Intercalary Meristem:</strong> Found between mature
+              tissues, like at base of leaves. Helps in growth of leaves and
+              internodes.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Permanent Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Permanent Tissue?</h4>
+            <p>
+              <strong>Permanent tissue</strong> consists of cells that have
+              stopped dividing. They have attained a definite shape, size, and
+              function. They are formed from meristematic tissue.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              If meristematic cells are like kids who keep growing, permanent
+              tissue cells are like adults who have stopped growing and now do
+              specific jobs! Once they mature, they specialize in particular
+              tasks.
+            </p>
+          </div>
+
+          <p>
+            Permanent tissues are of two types: Simple Permanent Tissue and
+            Complex Permanent Tissue.
+          </p>
+
+          <h3 class="sub-heading">2.2.1 Simple Permanent Tissue</h3>
+
+          <p>Made up of only one type of cells.</p>
+
+          <div class="important-note">
+            <h4>⚡ Types of Simple Permanent Tissue</h4>
+            <p>
+              <strong>1. Parenchyma:</strong><br />
+              • Most common plant tissue<br />
+              • Cells are living, thin-walled, and loosely packed<br />
+              • Have large intercellular spaces<br />
+              • Store food, provide support<br />
+              • In leaves, they contain chloroplasts and perform photosynthesis
+              (called chlorenchyma)<br />
+              • In aquatic plants, they have air cavities for floating (called
+              aerenchyma)<br /><br />
+
+              <strong>2. Collenchyma:</strong><br />
+              • Cells are living with thickened corners<br />
+              • Provide mechanical support and flexibility<br />
+              • Found in leaf stalks, below the epidermis<br />
+              • Allow bending without breaking (like a rubber band)<br /><br />
+
+              <strong>3. Sclerenchyma:</strong><br />
+              • Cells are dead with very thick walls (due to lignin)<br />
+              • Provide strength and hardness<br />
+              • Found in stems, around vascular bundles, in seed coats, nut
+              shells<br />
+              • Make plant parts hard and stiff
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Coconut Shell</h4>
+            <p>
+              The hard coconut shell is made of sclerenchyma tissue! That's why
+              it's so hard and tough. Similarly, the gritty texture you feel
+              when eating pears is due to sclerenchyma cells called stone cells!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2.2 Complex Permanent Tissue</h3>
+
+          <p>Made up of more than one type of cells working together.</p>
+
+          <div class="important-note">
+            <h4>⚡ Types of Complex Permanent Tissue</h4>
+            <p>
+              <strong>1. Xylem:</strong><br />
+              • Conducts water and minerals from roots to other parts<br />
+              • Made of 4 types of cells: Tracheids, Vessels, Xylem parenchyma,
+              Xylem fibers<br />
+              • Tracheids and vessels are tubular and dead<br />
+              • Water moves upward through these tubes<br />
+              • Also provides mechanical support<br /><br />
+
+              <strong>2. Phloem:</strong><br />
+              • Transports food (prepared in leaves) to all parts of plant<br />
+              • Made of 4 types of cells: Sieve tubes, Companion cells, Phloem
+              parenchyma, Phloem fibers<br />
+              • Sieve tubes are living (no nucleus) with perforated walls<br />
+              • Companion cells help sieve tubes<br />
+              • Food can move both upward and downward
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of xylem and phloem as the plant's plumbing system!<br />
+              • <strong>Xylem</strong> is like water pipes bringing water from
+              underground tank (roots) to all floors (parts)<br />
+              • <strong>Phloem</strong> is like delivery trucks transporting
+              food from kitchen (leaves) to all rooms (parts)<br /><br />
+              Together, they're called vascular tissue - the plant's transport
+              system!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.3 Protective Tissues in Plants</h3>
+
+          <div class="important-note">
+            <h4>⚡ Epidermis</h4>
+            <p>
+              • Single layer of cells covering the entire plant body<br />
+              • Protects plant from water loss, injury, infection<br />
+              • In leaves, has small pores called <strong>stomata</strong> for
+              gas exchange<br />
+              • Stomata have guard cells that open and close the pore<br />
+              • In desert plants, epidermis is thick with waxy coating (cuticle)
+              to prevent water loss<br />
+              • May have hair-like structures (trichomes)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Cork</h4>
+            <p>
+              • In older plants, outer layer of epidermis is replaced by cork<br />
+              • Made of dead cells without intercellular spaces<br />
+              • Cell walls are thick due to deposition of suberin (waxy
+              substance)<br />
+              • Protects plant from mechanical injury, water loss, temperature
+              changes<br />
+              • Does not allow gas exchange, so has lenticels (small pores)<br />
+              • Example: Cork of bottle comes from bark of cork oak tree!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do Leaves Have Stomata?</h4>
+            <p>
+              Stomata are like tiny doors on leaves! They open during day to let
+              CO₂ in for photosynthesis and let O₂ out. They also help in
+              releasing excess water (transpiration). At night, they close to
+              prevent water loss. Smart, isn't it?
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Animal Tissues</h2>
+
+          <p>
+            Animal tissues are classified into four main types based on their
+            function: Epithelial Tissue, Connective Tissue, Muscular Tissue, and
+            Nervous Tissue.
+          </p>
+
+          <h3 class="sub-heading">3.1 Epithelial Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Epithelial Tissue?</h4>
+            <p>
+              <strong>Epithelial tissue</strong> forms the protective covering
+              of the body and lines internal organs and cavities.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Epithelial tissue is like the wallpaper or tiles in your house! It
+              covers all surfaces - outer (skin) and inner (lining of stomach,
+              intestines, blood vessels). It's the protective covering!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics</h4>
+            <ul>
+              <li>Cells are tightly packed with little intercellular spaces</li>
+              <li>Forms a continuous sheet</li>
+              <li>Lies on a basement membrane</li>
+              <li>Does not have blood vessels (avascular)</li>
+              <li>Can regenerate quickly if damaged</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Epithelial Tissue (Based on Structure)</h4>
+            <p>
+              <strong>1. Simple Epithelium:</strong> Single layer of cells<br />
+              • <strong>Squamous (flat):</strong> Found in blood vessels,
+              alveoli (air sacs in lungs). Allows easy diffusion.<br />
+              • <strong>Cuboidal (cube-shaped):</strong> Found in kidney
+              tubules, glands. Provides mechanical support.<br />
+              • <strong>Columnar (column-shaped):</strong> Found in intestine,
+              stomach lining. Helps in absorption and secretion.<br />
+              • <strong>Ciliated (with hair-like cilia):</strong> Found in
+              respiratory tract. Cilia move to push out dust and mucus.<br /><br />
+
+              <strong>2. Stratified Epithelium:</strong> Multiple layers of
+              cells<br />
+              • Found in skin, mouth, esophagus<br />
+              • Provides protection against wear and tear<br />
+              • Upper layers keep replacing as they wear out<br /><br />
+
+              <strong>3. Glandular Epithelium:</strong><br />
+              • Specialized for secretion<br />
+              • Forms glands that secrete substances (sweat, saliva, hormones,
+              digestive juices)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Why Skin Heals Quickly</h4>
+            <p>
+              When you get a small cut, your skin heals within days. This is
+              because epithelial cells of skin divide rapidly to replace damaged
+              cells. That's why epithelial tissue is great at repair!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Connective Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Connective Tissue?</h4>
+            <p>
+              <strong>Connective tissue</strong> connects, supports, and binds
+              different tissues and organs in the body.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Connective tissue is like the packaging material, glue, and
+              structural framework that holds everything together! It connects
+              different parts, provides support, and fills spaces - like foam
+              packaging protects items in a box.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics</h4>
+            <ul>
+              <li>
+                Cells are loosely packed in a matrix (jelly-like substance)
+              </li>
+              <li>Have intercellular spaces filled with matrix</li>
+              <li>Have good blood supply (except cartilage)</li>
+              <li>
+                Perform various functions: support, protection, transport,
+                storage
+              </li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Connective Tissue</h4>
+            <p>
+              <strong>1. Areolar Tissue:</strong><br />
+              • Found between skin and muscles, around blood vessels and
+              nerves<br />
+              • Fills spaces, provides support<br />
+              • Helps in tissue repair<br /><br />
+
+              <strong>2. Adipose Tissue:</strong><br />
+              • Stores fat below the skin and around organs<br />
+              • Acts as insulator (keeps body warm)<br />
+              • Acts as shock absorber<br />
+              • Provides energy reserve<br /><br />
+
+              <strong>3. Dense Connective Tissue:</strong><br />
+              • Forms tendons (connect muscles to bones) and ligaments (connect
+              bones to bones)<br />
+              • Very strong and has great tensile strength<br /><br />
+
+              <strong>4. Cartilage:</strong><br />
+              • Solid but flexible<br />
+              • Found in nose, ear, joints between bones<br />
+              • Provides support and reduces friction<br />
+              • No blood vessels<br /><br />
+
+              <strong>5. Bone:</strong><br />
+              • Hardest connective tissue (due to calcium and phosphorus
+              salts)<br />
+              • Forms skeleton<br />
+              • Provides shape, support, protection<br />
+              • Bone marrow produces blood cells<br /><br />
+
+              <strong>6. Blood:</strong><br />
+              • Liquid connective tissue<br />
+              • Plasma (liquid matrix) contains blood cells<br />
+              • Red Blood Cells (RBCs) carry oxygen<br />
+              • White Blood Cells (WBCs) fight infections<br />
+              • Platelets help in blood clotting<br />
+              • Transports nutrients, hormones, waste
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Why Blood is Connective Tissue</h4>
+            <p>
+              You might wonder - blood is liquid, how is it connective tissue?
+              Blood connects all parts of body by transporting materials! It
+              carries oxygen from lungs to cells, food from intestine to cells,
+              and waste from cells to kidneys. It's the body's transport system!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.3 Muscular Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Muscular Tissue?</h4>
+            <p>
+              <strong>Muscular tissue</strong> consists of elongated cells
+              called muscle fibers that can contract and relax, producing
+              movement.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Muscle cells are like rubber bands that can stretch and shrink!
+              When they contract (shorten), they pull bones or organs, causing
+              movement. Your every movement - walking, eating, even blinking -
+              involves muscles!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Types of Muscular Tissue</h4>
+            <p>
+              <strong
+                >1. Skeletal Muscle (Striated Muscle / Voluntary
+                Muscle):</strong
+              ><br />
+              • Attached to bones<br />
+              • Long, cylindrical, multinucleated cells<br />
+              • Have light and dark bands (striations) - look striped<br />
+              • Under voluntary control (you can control them)<br />
+              • Examples: Muscles of arms, legs, back<br />
+              • Get tired quickly<br /><br />
+
+              <strong
+                >2. Smooth Muscle (Unstriated Muscle / Involuntary
+                Muscle):</strong
+              ><br />
+              • Found in walls of internal organs<br />
+              • Spindle-shaped, uninucleated cells<br />
+              • No striations (smooth appearance)<br />
+              • Not under voluntary control (work automatically)<br />
+              • Examples: Muscles in stomach, intestine, blood vessels<br />
+              • Don't tire easily<br /><br />
+
+              <strong>3. Cardiac Muscle (Heart Muscle):</strong><br />
+              • Found only in heart<br />
+              • Cylindrical, branched, uninucleated cells<br />
+              • Have faint striations<br />
+              • Involuntary but rhythmic<br />
+              • Never tire - work throughout life!<br />
+              • Cells are interconnected for coordinated contraction
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Voluntary vs Involuntary</h4>
+            <p>
+              <strong>Voluntary muscles:</strong> You can control them. Try
+              moving your hand - you decide when to move it. These are skeletal
+              muscles.<br /><br />
+              <strong>Involuntary muscles:</strong> You cannot control them.
+              Your heart keeps beating, stomach keeps digesting food even when
+              you're sleeping! These are smooth and cardiac muscles.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.4 Nervous Tissue</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Nervous Tissue?</h4>
+            <p>
+              <strong>Nervous tissue</strong> is specialized for receiving
+              stimuli and conducting electrical impulses (messages) throughout
+              the body.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Nervous tissue is like the internet or telephone network of your
+              body! It receives information (you touch hot pan), processes it in
+              brain, and sends response (pull hand back) - all in milliseconds!
+              It's the body's communication system.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Structure of Nervous Tissue</h4>
+            <p>
+              <strong>Neuron (Nerve Cell):</strong> The basic unit of nervous
+              tissue<br /><br />
+
+              <strong>Parts of a Neuron:</strong><br />
+              1. <strong>Cell Body:</strong> Contains nucleus and cytoplasm<br />
+              2. <strong>Dendrites:</strong> Short, branched projections that
+              receive messages from other neurons<br />
+              3. <strong>Axon:</strong> Long projection that carries messages
+              away from cell body to other neurons or muscles<br />
+              4. <strong>Nerve Ending:</strong> Terminal branches of axon that
+              pass message to next neuron<br /><br />
+
+              The junction between two neurons is called a
+              <strong>synapse</strong>.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Functions of Nervous Tissue</h4>
+            <ul>
+              <li>
+                Receives stimuli from environment (touch, sound, light, etc.)
+              </li>
+              <li>Processes information in brain and spinal cord</li>
+              <li>Sends commands to muscles and glands</li>
+              <li>Coordinates all body activities</li>
+              <li>Enables thinking, memory, emotions</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Reflex Action</h4>
+            <p>
+              When you accidentally touch something hot:<br />
+              1. Sensory neurons in skin detect heat (stimulus)<br />
+              2. Message travels through neurons to spinal cord<br />
+              3. Spinal cord immediately sends signal back<br />
+              4. Motor neurons carry signal to muscles<br />
+              5. Muscles contract and pull hand away<br /><br />
+              This happens so fast that you pull your hand before you even feel
+              pain! This quick automatic response is called reflex action.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Comparison Tables</h2>
+
+          <h3 class="sub-heading">4.1 Plant Tissues vs Animal Tissues</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Plant Tissues</th>
+                <th>Animal Tissues</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Growth</strong></td>
+                <td>Localized (at specific points - meristems)</td>
+                <td>Throughout the body</td>
+              </tr>
+              <tr>
+                <td><strong>Cell Wall</strong></td>
+                <td>Present</td>
+                <td>Absent</td>
+              </tr>
+              <tr>
+                <td><strong>Intercellular Spaces</strong></td>
+                <td>Generally present</td>
+                <td>Generally absent (except loose connective tissue)</td>
+              </tr>
+              <tr>
+                <td><strong>Dead Tissue</strong></td>
+                <td>Many tissues are dead (sclerenchyma, xylem vessels)</td>
+                <td>Most tissues are living</td>
+              </tr>
+              <tr>
+                <td><strong>Movement</strong></td>
+                <td>No movement, so need more supportive tissues</td>
+                <td>Can move, have specialized tissues for movement</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-heading">4.2 Types of Muscular Tissue</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Skeletal</th>
+                <th>Smooth</th>
+                <th>Cardiac</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Location</strong></td>
+                <td>Attached to bones</td>
+                <td>Internal organs</td>
+                <td>Heart</td>
+              </tr>
+              <tr>
+                <td><strong>Striations</strong></td>
+                <td>Present</td>
+                <td>Absent</td>
+                <td>Faint</td>
+              </tr>
+              <tr>
+                <td><strong>Control</strong></td>
+                <td>Voluntary</td>
+                <td>Involuntary</td>
+                <td>Involuntary</td>
+              </tr>
+              <tr>
+                <td><strong>Cell Shape</strong></td>
+                <td>Long, cylindrical</td>
+                <td>Spindle-shaped</td>
+                <td>Cylindrical, branched</td>
+              </tr>
+              <tr>
+                <td><strong>Nuclei</strong></td>
+                <td>Many (multinucleated)</td>
+                <td>One (uninucleated)</td>
+                <td>One (uninucleated)</td>
+              </tr>
+              <tr>
+                <td><strong>Fatigue</strong></td>
+                <td>Tire quickly</td>
+                <td>Don't tire easily</td>
+                <td>Never tire</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">5. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>Tissue = Group of similar cells doing same function</li>
+              <li>Meristematic tissue = Growing tissue, found at tips</li>
+              <li>Permanent tissue = Mature tissue that stopped dividing</li>
+              <li>Parenchyma = Storage tissue (living, thin-walled)</li>
+              <li>
+                Collenchyma = Provides flexibility (living, thick corners)
+              </li>
+              <li>Sclerenchyma = Provides strength (dead, very thick walls)</li>
+              <li>Xylem = Transports water upward</li>
+              <li>Phloem = Transports food in all directions</li>
+              <li>Epidermis = Protective covering (has stomata in leaves)</li>
+              <li>Epithelial tissue = Covering and lining tissue</li>
+              <li>Connective tissue = Connects and supports body parts</li>
+              <li>Blood = Liquid connective tissue (transports materials)</li>
+              <li>Muscular tissue = Brings about movement</li>
+              <li>Skeletal muscle = Voluntary, striated, attached to bones</li>
+              <li>Smooth muscle = Involuntary, non-striated, in organs</li>
+              <li>Cardiac muscle = Involuntary, in heart, never tires</li>
+              <li>Nervous tissue = Communication system, made of neurons</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Practice Questions</h4>
+            <p>
+              <strong>Q1.</strong> Why do plants have more dead tissue compared
+              to animals?<br />
+              <strong>Answer:</strong> Plants don't move, so they need more
+              supportive and protective tissues. Dead tissues like sclerenchyma
+              and xylem vessels provide this support. Animals move, so they need
+              living, flexible tissues.
+            </p>
+            <p>
+              <strong>Q2.</strong> Name the tissue present in the brain.<br />
+              <strong>Answer:</strong> Nervous tissue (made of neurons).
+            </p>
+            <p>
+              <strong>Q3.</strong> Why are xylem and phloem called complex
+              tissues?<br />
+              <strong>Answer:</strong> Because they are made up of more than one
+              type of cells working together.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

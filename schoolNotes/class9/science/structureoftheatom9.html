@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structure of the Atom - Class 9 Science - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Science</a> /
+        <span>Structure of the Atom</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">⚛️ Structure of the Atom - Class 9</h1>
+        <p class="page-description">
+          Journey inside the atom - Discovery, models, and subatomic particles
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Discovery of the Atom</h2>
+
+          <p>
+            The word "atom" comes from the Greek word "atomos" meaning
+            "indivisible". For a long time, people thought atoms were the
+            smallest particles that couldn't be divided. But scientists
+            discovered that atoms are actually made up of even smaller
+            particles!
+          </p>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine you thought a cherry was the smallest fruit. But then you
+              discovered it has a seed inside, and the seed has smaller parts!
+              Similarly, scientists discovered that atoms have even smaller
+              parts inside them called subatomic particles.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Subatomic Particles</h2>
+
+          <p>
+            Scientists discovered that atoms are made up of three main
+            particles:
+          </p>
+
+          <h3 class="sub-heading">2.1 Electrons (e⁻)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Discovered by: J.J. Thomson (1897)</h4>
+            <p>
+              <strong>Electrons</strong> are negatively charged particles that
+              move around the nucleus of an atom.
+            </p>
+            <p>
+              • Charge: -1 (negative)<br />
+              • Mass: Negligible (1/1840 of proton)<br />
+              • Symbol: e⁻<br />
+              • Location: Outside nucleus, in energy shells
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Discovery of Electrons - Cathode Ray Experiment</h4>
+            <p>
+              J.J. Thomson used a special tube called cathode ray tube. When he
+              passed electricity through it in vacuum, he saw rays coming from
+              the negative end (cathode) to positive end (anode). These rays
+              were made of tiny negatively charged particles - the electrons!
+            </p>
+            <p>
+              <strong>Key observation:</strong> These particles were same from
+              any gas or metal used, showing that electrons are present in all
+              atoms!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Protons (p⁺)</h3>
+
+          <div class="definition-box">
+            <h4>
+              📖 Discovered by: E. Goldstein (1886) and later studied by
+              Rutherford
+            </h4>
+            <p>
+              <strong>Protons</strong> are positively charged particles found in
+              the nucleus of an atom.
+            </p>
+            <p>
+              • Charge: +1 (positive)<br />
+              • Mass: 1 atomic mass unit (u)<br />
+              • Symbol: p⁺<br />
+              • Location: Inside nucleus
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Discovery of Protons - Canal Rays</h4>
+            <p>
+              Goldstein discovered canal rays (also called anode rays) using a
+              perforated cathode. These rays moved towards the negative plate,
+              showing they were positively charged. Later it was understood that
+              these were protons!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.3 Neutrons (n)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Discovered by: James Chadwick (1932)</h4>
+            <p>
+              <strong>Neutrons</strong> are neutral particles (no charge) found
+              in the nucleus of an atom.
+            </p>
+            <p>
+              • Charge: 0 (neutral/no charge)<br />
+              • Mass: 1 atomic mass unit (u), slightly more than proton<br />
+              • Symbol: n<br />
+              • Location: Inside nucleus
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Think of an atom like a solar system:<br />
+              • <strong>Nucleus</strong> (center) = Sun → Contains protons and
+              neutrons<br />
+              • <strong>Electrons</strong> = Planets → Revolve around the
+              nucleus in orbits<br />
+              • <strong>Protons</strong> = Positive friends in the center<br />
+              • <strong>Neutrons</strong> = Neutral peacekeepers in the
+              center<br />
+              • <strong>Electrons</strong> = Negative particles moving outside
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.4 Comparison of Subatomic Particles</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Particle</th>
+                <th>Symbol</th>
+                <th>Charge</th>
+                <th>Mass (u)</th>
+                <th>Location</th>
+                <th>Discovered by</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Electron</strong></td>
+                <td>e⁻</td>
+                <td>-1</td>
+                <td>~0 (1/1840)</td>
+                <td>Outside nucleus</td>
+                <td>J.J. Thomson</td>
+              </tr>
+              <tr>
+                <td><strong>Proton</strong></td>
+                <td>p⁺</td>
+                <td>+1</td>
+                <td>1</td>
+                <td>Inside nucleus</td>
+                <td>E. Goldstein</td>
+              </tr>
+              <tr>
+                <td><strong>Neutron</strong></td>
+                <td>n</td>
+                <td>0</td>
+                <td>1</td>
+                <td>Inside nucleus</td>
+                <td>James Chadwick</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">3. Atomic Models - Evolution of Ideas</h2>
+
+          <p>
+            As scientists learned more about atoms, they developed different
+            models to explain their structure. Let's see how these models
+            evolved:
+          </p>
+
+          <h3 class="sub-heading">3.1 Thomson's Atomic Model (1904)</h3>
+
+          <div class="definition-box">
+            <h4>📖 The Plum Pudding Model</h4>
+            <p>
+              <strong>J.J. Thomson</strong> proposed that an atom is like a
+              sphere of positive charge with electrons embedded in it like plums
+              in a pudding or seeds in a watermelon.
+            </p>
+            <p>
+              <strong>Main ideas:</strong><br />
+              • Atom is a positive sphere<br />
+              • Electrons are scattered inside like plums in pudding<br />
+              • Overall atom is neutral (positive = negative charges)
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Easy to Remember</h4>
+            <p>
+              Imagine a watermelon! The red part is positive charge, and the
+              black seeds scattered inside are electrons. This was Thomson's
+              idea - also called the "Plum Pudding Model" or "Watermelon Model".
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Limitations</h4>
+            <p>
+              This model couldn't explain certain experiments, especially
+              Rutherford's alpha particle scattering experiment. So scientists
+              had to think of a better model!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Rutherford's Atomic Model (1911)</h3>
+
+          <div class="definition-box">
+            <h4>📖 The Nuclear Model / Planetary Model</h4>
+            <p>
+              <strong>Ernest Rutherford</strong> performed the famous Gold Foil
+              Experiment and proposed a new model.
+            </p>
+            <p>
+              <strong>Main ideas:</strong><br />
+              • Most of the atom is empty space<br />
+              • All positive charge and mass is concentrated in a tiny center
+              called the <strong>nucleus</strong><br />
+              • Electrons revolve around the nucleus in circular paths<br />
+              • Atom looks like a miniature solar system
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 The Famous Gold Foil Experiment</h4>
+            <p>
+              <strong>What Rutherford did:</strong><br />
+              He bombarded a very thin gold foil with fast-moving alpha
+              particles (positively charged particles).<br /><br />
+
+              <strong>What he expected:</strong><br />
+              According to Thomson's model, all particles should pass through
+              the foil easily or be slightly deflected.<br /><br />
+
+              <strong>What actually happened:</strong><br />
+              • Most alpha particles passed straight through (atom is mostly
+              empty!)<br />
+              • Some particles deflected at small angles (positive charge
+              repelled them)<br />
+              • Very few particles bounced back (hit something very dense and
+              positive)<br /><br />
+
+              <strong>Conclusion:</strong><br />
+              There must be a tiny, dense, positively charged center (nucleus)
+              with lots of empty space around it!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>
+              Imagine throwing marbles at a football field. Most marbles will
+              pass through the field (empty space), but if there's a small rock
+              in the center, some marbles will hit it and bounce back. That rock
+              is like the nucleus!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Limitations of Rutherford's Model</h4>
+            <p>
+              • According to physics, a charged particle moving in a circle
+              should lose energy and spiral into the nucleus. But electrons
+              don't fall into the nucleus! Why?<br />
+              • This model couldn't explain the stability of atoms<br />
+              • Couldn't explain how atoms emit light
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.3 Bohr's Atomic Model (1913)</h3>
+
+          <div class="definition-box">
+            <h4>📖 The Shell Model</h4>
+            <p>
+              <strong>Niels Bohr</strong> improved Rutherford's model by
+              explaining why electrons don't fall into the nucleus.
+            </p>
+            <p>
+              <strong>Main ideas:</strong><br />
+              • Electrons revolve around nucleus in fixed circular paths called
+              <strong>orbits</strong> or <strong>shells</strong><br />
+              • Each shell has a fixed energy level (K, L, M, N...)<br />
+              • Electrons in a shell do NOT lose energy<br />
+              • Electrons can jump from one shell to another by gaining or
+              losing energy<br />
+              • When electrons jump, they emit or absorb light
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine a multi-storey parking lot! Cars (electrons) can park only
+              on fixed floors (shells), not between floors. They need energy to
+              go to a higher floor, and release energy when coming down.
+              Similarly, electrons stay in fixed shells!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Bohr's Postulates (Simple Version)</h4>
+            <ul>
+              <li>Electrons move in fixed circular orbits called shells</li>
+              <li>
+                Each shell has a fixed energy - K has lowest, then L, M, N...
+              </li>
+              <li>
+                Electrons in a shell don't radiate energy (don't lose energy)
+              </li>
+              <li>
+                Electrons can jump between shells by absorbing or emitting
+                energy
+              </li>
+              <li>
+                Energy is emitted as light when electron jumps to lower shell
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">
+            4. Distribution of Electrons in Shells
+          </h2>
+
+          <div class="definition-box">
+            <h4>📖 Electronic Configuration</h4>
+            <p>
+              The arrangement of electrons in different shells around the
+              nucleus is called <strong>electronic configuration</strong> or
+              <strong>electron distribution</strong>.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.1 Rules for Electron Distribution</h3>
+
+          <div class="important-note">
+            <h4>⚡ Rule 1: Maximum Capacity of Shells</h4>
+            <p>
+              The maximum number of electrons that can be accommodated in a
+              shell is given by the formula: <strong>2n²</strong> (where n is
+              the shell number)
+            </p>
+            <p>
+              • K shell (n=1): 2 × 1² = 2 electrons maximum<br />
+              • L shell (n=2): 2 × 2² = 8 electrons maximum<br />
+              • M shell (n=3): 2 × 3² = 18 electrons maximum<br />
+              • N shell (n=4): 2 × 4² = 32 electrons maximum
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Rule 2: Outermost Shell Rule</h4>
+            <p>
+              The outermost shell of an atom cannot have more than
+              <strong>8 electrons</strong>, even if it can theoretically hold
+              more according to the 2n² formula.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Rule 3: Filling Order</h4>
+            <p>
+              Shells are filled in order - starting from the innermost shell
+              (K). A new shell starts filling only when the previous shell is
+              completely filled or has 8 electrons (for outer shells).
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Sodium (Atomic Number = 11)</h4>
+            <p>
+              Sodium has 11 electrons to distribute.<br /><br />
+
+              <strong>Distribution:</strong><br />
+              • K shell: 2 electrons (full)<br />
+              • L shell: 8 electrons (full)<br />
+              • M shell: 1 electron (outermost)<br /><br />
+
+              <strong>Electronic Configuration: 2, 8, 1</strong><br /><br />
+
+              Sodium has 1 electron in its outermost shell, so it easily loses
+              this electron and becomes Na⁺ ion.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Chlorine (Atomic Number = 17)</h4>
+            <p>
+              Chlorine has 17 electrons to distribute.<br /><br />
+
+              <strong>Distribution:</strong><br />
+              • K shell: 2 electrons (full)<br />
+              • L shell: 8 electrons (full)<br />
+              • M shell: 7 electrons (outermost)<br /><br />
+
+              <strong>Electronic Configuration: 2, 8, 7</strong><br /><br />
+
+              Chlorine has 7 electrons in its outermost shell. It needs 1 more
+              electron to complete 8, so it easily gains 1 electron and becomes
+              Cl⁻ ion.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Calcium (Atomic Number = 20)</h4>
+            <p>
+              Calcium has 20 electrons to distribute.<br /><br />
+
+              <strong>Distribution:</strong><br />
+              • K shell: 2 electrons (full)<br />
+              • L shell: 8 electrons (full)<br />
+              • M shell: 8 electrons (can hold 18, but outermost can't exceed
+              8)<br />
+              • N shell: 2 electrons (outermost)<br /><br />
+
+              <strong>Electronic Configuration: 2, 8, 8, 2</strong>
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Important Terms</h2>
+
+          <h3 class="sub-heading">5.1 Atomic Number (Z)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              The total number of protons in the nucleus of an atom is called
+              <strong>Atomic Number</strong>. It is denoted by
+              <strong>Z</strong>.
+            </p>
+            <p>
+              <strong>Important:</strong> Atomic number = Number of protons =
+              Number of electrons (in neutral atom)
+            </p>
+            <p>
+              <strong>Example:</strong><br />
+              • Hydrogen: Z = 1 (1 proton, 1 electron)<br />
+              • Carbon: Z = 6 (6 protons, 6 electrons)<br />
+              • Oxygen: Z = 8 (8 protons, 8 electrons)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.2 Mass Number (A)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              The sum of protons and neutrons in the nucleus of an atom is
+              called <strong>Mass Number</strong>. It is denoted by
+              <strong>A</strong>.
+            </p>
+            <p>
+              <strong>Formula:</strong> Mass Number (A) = Number of Protons +
+              Number of Neutrons<br />
+              OR: A = Z + n<br />
+              OR: Number of Neutrons = A - Z
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Carbon-12</h4>
+            <p>
+              Carbon has:<br />
+              • Atomic number (Z) = 6 → means 6 protons<br />
+              • Mass number (A) = 12 → means total 12 particles in nucleus<br /><br />
+
+              Number of neutrons = A - Z = 12 - 6 = 6 neutrons<br /><br />
+
+              So, Carbon-12 has: 6 protons + 6 neutrons + 6 electrons
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Representation of an Atom</h4>
+            <p>
+              An atom is represented as: ᴬ𝐙X<br /><br />
+              Where:<br />
+              • X = Symbol of element<br />
+              • Z = Atomic number (bottom left)<br />
+              • A = Mass number (top left)<br /><br />
+
+              <strong>Examples:</strong><br />
+              • ¹²₆C → Carbon with mass 12, atomic number 6<br />
+              • ²³₁₁Na → Sodium with mass 23, atomic number 11<br />
+              • ³⁵₁₇Cl → Chlorine with mass 35, atomic number 17
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.3 Valency</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              The combining capacity of an atom is called
+              <strong>valency</strong>. It is determined by the number of
+              electrons in the outermost shell.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ How to Calculate Valency</h4>
+            <p>
+              <strong>If outermost shell has:</strong><br />
+              • 1, 2, or 3 electrons → Valency = Number of electrons<br />
+              • 5, 6, or 7 electrons → Valency = 8 - Number of electrons<br />
+              • 4 electrons → Valency can be 4 (either way)<br />
+              • 8 electrons → Valency = 0 (complete octet, stable)<br /><br />
+
+              <strong>Examples:</strong><br />
+              • Sodium (2, 8, 1) → 1 electron in outer shell → Valency = 1<br />
+              • Magnesium (2, 8, 2) → 2 electrons → Valency = 2<br />
+              • Oxygen (2, 6) → 6 electrons → Valency = 8-6 = 2<br />
+              • Chlorine (2, 8, 7) → 7 electrons → Valency = 8-7 = 1<br />
+              • Carbon (2, 4) → 4 electrons → Valency = 4<br />
+              • Neon (2, 8) → 8 electrons → Valency = 0 (inert)
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Understanding Valency</h4>
+            <p>
+              Think of valency as "number of hands" an atom has to hold other
+              atoms! If sodium has valency 1, it can hold 1 other atom. If
+              oxygen has valency 2, it can hold 2 atoms. That's why water is H₂O
+              - oxygen (valency 2) holds 2 hydrogen atoms (each valency 1)!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.4 Valence Electrons</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              The electrons present in the outermost shell of an atom are called
+              <strong>valence electrons</strong>. These electrons determine the
+              chemical properties of the element.
+            </p>
+            <p>
+              <strong>Examples:</strong><br />
+              • Sodium (2, 8, 1) → 1 valence electron<br />
+              • Oxygen (2, 6) → 6 valence electrons<br />
+              • Chlorine (2, 8, 7) → 7 valence electrons
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Isotopes, Isobars, and Isotones</h2>
+
+          <h3 class="sub-heading">6.1 Isotopes</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              Atoms of the same element having the same atomic number but
+              different mass numbers are called <strong>isotopes</strong>.
+            </p>
+            <p>
+              This means: Same number of protons, different number of neutrons
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Isotopes</h4>
+            <p>
+              <strong>1. Hydrogen Isotopes:</strong><br />
+              • Protium: ¹₁H (1 proton, 0 neutrons)<br />
+              • Deuterium: ²₁H (1 proton, 1 neutron)<br />
+              • Tritium: ³₁H (1 proton, 2 neutrons)<br /><br />
+
+              <strong>2. Carbon Isotopes:</strong><br />
+              • Carbon-12: ¹²₆C (6 protons, 6 neutrons)<br />
+              • Carbon-14: ¹⁴₆C (6 protons, 8 neutrons)<br /><br />
+
+              <strong>3. Chlorine Isotopes:</strong><br />
+              • Chlorine-35: ³⁵₁₇Cl (17 protons, 18 neutrons)<br />
+              • Chlorine-37: ³⁷₁₇Cl (17 protons, 20 neutrons)
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Isotopes are like twins wearing different weight backpacks!
+              They're the same person (same element) but carrying different
+              loads (different neutrons). So they have different total weight
+              (mass number) but same identity (atomic number).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Properties of Isotopes</h4>
+            <p>
+              • Have same atomic number (same protons)<br />
+              • Have different mass numbers (different neutrons)<br />
+              • Have same chemical properties (same electrons)<br />
+              • Have different physical properties (different masses)<br />
+              • Occupy same position in periodic table
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Isobars</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              Atoms of different elements having different atomic numbers but
+              the same mass number are called <strong>isobars</strong>.
+            </p>
+            <p>
+              This means: Different elements, but same total nuclear particles
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Isobars</h4>
+            <p>
+              • Calcium: ⁴⁰₂₀Ca (20 protons + 20 neutrons = 40)<br />
+              • Argon: ⁴⁰₁₈Ar (18 protons + 22 neutrons = 40)<br /><br />
+
+              Both have mass number 40 but different atomic numbers!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.3 Isotones</h3>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              Atoms of different elements having different atomic numbers and
+              different mass numbers but the same number of neutrons are called
+              <strong>isotones</strong>.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Examples of Isotones</h4>
+            <p>
+              • Carbon-14: ¹⁴₆C (6 protons + 8 neutrons)<br />
+              • Nitrogen-15: ¹⁵₇N (7 protons + 8 neutrons)<br /><br />
+
+              Both have 8 neutrons!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.4 Quick Comparison</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Property</th>
+                <th>Isotopes</th>
+                <th>Isobars</th>
+                <th>Isotones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Elements</strong></td>
+                <td>Same element</td>
+                <td>Different elements</td>
+                <td>Different elements</td>
+              </tr>
+              <tr>
+                <td><strong>Atomic Number (Z)</strong></td>
+                <td>Same</td>
+                <td>Different</td>
+                <td>Different</td>
+              </tr>
+              <tr>
+                <td><strong>Mass Number (A)</strong></td>
+                <td>Different</td>
+                <td>Same</td>
+                <td>Different</td>
+              </tr>
+              <tr>
+                <td><strong>Number of Neutrons</strong></td>
+                <td>Different</td>
+                <td>Different</td>
+                <td>Same</td>
+              </tr>
+              <tr>
+                <td><strong>Example</strong></td>
+                <td>¹²₆C and ¹⁴₆C</td>
+                <td>⁴⁰₁₈Ar and ⁴⁰₂₀Ca</td>
+                <td>¹⁴₆C and ¹⁵₇N</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">7. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>
+                Atoms are made of 3 subatomic particles: electrons, protons,
+                neutrons
+              </li>
+              <li>
+                Nucleus contains protons (positive) and neutrons (neutral)
+              </li>
+              <li>
+                Electrons (negative) revolve around nucleus in fixed shells
+              </li>
+              <li>
+                Atomic number (Z) = Number of protons = Number of electrons
+              </li>
+              <li>Mass number (A) = Protons + Neutrons</li>
+              <li>Maximum electrons in a shell = 2n²</li>
+              <li>Outermost shell can have maximum 8 electrons</li>
+              <li>Valency is determined by outermost shell electrons</li>
+              <li>
+                Isotopes: Same Z, different A (same element, different mass)
+              </li>
+              <li>
+                Isobars: Different Z, same A (different elements, same mass)
+              </li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Models at a Glance</h4>
+            <p>
+              <strong>Thomson Model:</strong> Plum pudding (positive sphere with
+              electrons embedded)<br />
+              <strong>Rutherford Model:</strong> Nuclear model (dense nucleus
+              with electrons revolving)<br />
+              <strong>Bohr Model:</strong> Shell model (electrons in fixed
+              energy levels)<br /><br />
+              Each model improved our understanding of atomic structure!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Practice Questions</h4>
+            <p>
+              <strong>Q1.</strong> If an atom has 12 protons and 12 neutrons,
+              find its atomic number, mass number, and electronic
+              configuration.<br />
+              <strong>Answer:</strong> Z=12, A=24, Electronic config: 2,8,2
+              (Magnesium)
+            </p>
+            <p>
+              <strong>Q2.</strong> Why do isotopes have similar chemical
+              properties?<br />
+              <strong>Answer:</strong> Because they have the same number of
+              electrons (same atomic number), and chemical properties depend on
+              electrons, especially valence electrons.
+            </p>
+            <p>
+              <strong>Q3.</strong> Which shell is closest to the nucleus?<br />
+              <strong>Answer:</strong> K shell (n=1) is closest to the nucleus.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

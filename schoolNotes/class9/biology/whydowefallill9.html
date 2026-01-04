@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Why Do We Fall Ill - Class 9 Biology - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/science9.html">Biology</a> /
+        <span>Why Do We Fall Ill</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🏥 Why Do We Fall Ill - Class 9</h1>
+        <p class="page-description">
+          Understanding health, diseases, and how to stay healthy
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. What is Health?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition (WHO)</h4>
+            <p>
+              <strong>Health</strong> is a state of complete physical, mental,
+              and social well-being, and not merely the absence of disease.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Health is like a well-functioning car. It's not just about the
+              engine working (no disease), but also having good tires (physical
+              fitness), a comfortable interior (mental well-being), and being
+              able to travel with friends (social well-being). All parts working
+              together make a truly "healthy" car!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Three Dimensions of Health</h4>
+            <p>
+              <strong>1. Physical Health:</strong> Body functioning properly, no
+              diseases, good fitness<br />
+              <strong>2. Mental Health:</strong> Mind is at peace, no stress or
+              anxiety, good emotional state<br />
+              <strong>3. Social Health:</strong> Good relationships, harmony
+              with society, financial stability<br /><br />
+
+              All three are equally important! A person is truly healthy only
+              when all three are good.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Example</h4>
+            <p>
+              Imagine a student who:<br />
+              • Has no physical illness (physically healthy) ✓<br />
+              • But is always stressed about exams (mentally unhealthy) ✗<br />
+              • And has fights with friends (socially unhealthy) ✗<br /><br />
+
+              This student is NOT truly healthy, even though there's no physical
+              disease! Health means all three aspects should be good.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. What is Disease?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>
+              <strong>Disease</strong> is a condition that impairs the normal
+              functioning of body organs and systems. It makes us feel sick and
+              unable to perform daily activities properly.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Signs of Disease</h4>
+            <ul>
+              <li>Symptoms: What patient feels (headache, pain, weakness)</li>
+              <li>Signs: What doctor observes (fever, swelling, rashes)</li>
+              <li>Unable to do normal activities</li>
+              <li>Body not functioning properly</li>
+              <li>Feeling unwell or uncomfortable</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">2.1 Acute vs Chronic Diseases</h3>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Acute Diseases</th>
+                <th>Chronic Diseases</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>Short duration (few days to weeks)</td>
+                <td>Long duration (months to years)</td>
+              </tr>
+              <tr>
+                <td><strong>Onset</strong></td>
+                <td>Sudden onset</td>
+                <td>Gradual onset</td>
+              </tr>
+              <tr>
+                <td><strong>Effect on Body</strong></td>
+                <td>Sudden severe effect</td>
+                <td>Slow, prolonged effect</td>
+              </tr>
+              <tr>
+                <td><strong>Recovery</strong></td>
+                <td>Quick recovery</td>
+                <td>Takes long time, sometimes no complete cure</td>
+              </tr>
+              <tr>
+                <td><strong>Examples</strong></td>
+                <td>Cold, cough, fever, diarrhea</td>
+                <td>Diabetes, tuberculosis, asthma, cancer</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              <strong>Acute disease</strong> is like a sudden storm - comes
+              quickly, causes havoc, and goes away soon.<br /><br />
+              <strong>Chronic disease</strong> is like climate change - develops
+              slowly, lasts long, and has long-term effects.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Types of Diseases</h2>
+
+          <div class="important-note">
+            <h4>⚡ Two Main Categories</h4>
+            <p>
+              Based on causative factors, diseases are of two types:<br />
+              <strong>1. Infectious Diseases</strong> (Communicable)<br />
+              <strong>2. Non-infectious Diseases</strong> (Non-communicable)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Infectious Diseases</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Infectious Diseases?</h4>
+            <p>
+              Diseases caused by <strong>microorganisms</strong> (germs) that
+              can spread from one person to another. These microorganisms are
+              called <strong>pathogens</strong>.
+            </p>
+            <p>
+              <strong>Pathogens</strong> = Disease-causing microorganisms
+              (bacteria, viruses, fungi, protozoa, worms)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Infectious Diseases</h4>
+            <ul>
+              <li>Caused by microorganisms (pathogens)</li>
+              <li>Can spread from person to person (communicable)</li>
+              <li>Spread through air, water, food, contact, vectors</li>
+              <li>Can cause epidemics if spread rapidly</li>
+              <li>Examples: Flu, tuberculosis, malaria, cholera, COVID-19</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">3.1.1 Types of Pathogens</h3>
+
+          <div class="important-note">
+            <h4>⚡ 1. Bacteria</h4>
+            <p>
+              • Single-celled microorganisms<br />
+              • Can be killed by antibiotics<br />
+              • <strong>Diseases:</strong> Tuberculosis (TB), Typhoid, Cholera,
+              Pneumonia<br />
+              • <strong>Spread:</strong> Air, water, food, contact
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Tuberculosis (TB)</h4>
+            <p>
+              • Caused by bacteria <em>Mycobacterium tuberculosis</em><br />
+              • Affects lungs mainly<br />
+              • Spreads through air (coughing, sneezing)<br />
+              • Symptoms: Continuous cough, chest pain, blood in sputum, weight
+              loss<br />
+              • Treatment: Antibiotics for 6-9 months<br />
+              • Prevention: BCG vaccine
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 2. Viruses</h4>
+            <p>
+              • Much smaller than bacteria<br />
+              • Cannot be killed by antibiotics<br />
+              • <strong>Diseases:</strong> Common cold, flu, COVID-19, dengue,
+              AIDS, polio<br />
+              • <strong>Spread:</strong> Air, water, vectors, bodily fluids
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Common Cold</h4>
+            <p>
+              • Caused by viruses (rhinoviruses)<br />
+              • Affects nose and respiratory tract<br />
+              • Spreads through air (sneezing, coughing)<br />
+              • Symptoms: Runny nose, sneezing, sore throat, cough<br />
+              • No specific medicine - body fights it naturally<br />
+              • Rest and fluids help recovery
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 3. Protozoa</h4>
+            <p>
+              • Single-celled animals<br />
+              • Often spread by vectors or contaminated water<br />
+              • <strong>Diseases:</strong> Malaria, Amoebiasis (dysentery),
+              Sleeping sickness<br />
+              • <strong>Spread:</strong> Mosquitoes, contaminated water, flies
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Malaria</h4>
+            <p>
+              • Caused by protozoan <em>Plasmodium</em><br />
+              • Spread by female <em>Anopheles</em> mosquito<br />
+              • Affects liver and red blood cells<br />
+              • Symptoms: Recurring fever with chills, sweating, headache<br />
+              • Treatment: Antimalarial drugs<br />
+              • Prevention: Mosquito nets, preventing mosquito breeding
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 4. Fungi</h4>
+            <p>
+              • Cause mostly skin infections<br />
+              • Grow in warm, moist areas<br />
+              • <strong>Diseases:</strong> Ringworm, Athlete's foot<br />
+              • <strong>Spread:</strong> Contact with infected person or
+              surfaces
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 5. Worms (Helminths)</h4>
+            <p>
+              • Parasitic worms living inside body<br />
+              • <strong>Diseases:</strong> Roundworm, Tapeworm, Pinworm
+              infections<br />
+              • <strong>Spread:</strong> Contaminated food, water, soil
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.1.2 Modes of Disease Transmission</h3>
+
+          <div class="important-note">
+            <h4>⚡ 1. Through Air (Airborne)</h4>
+            <p>
+              • Pathogens spread through droplets in air<br />
+              • When infected person coughs, sneezes, or talks<br />
+              • <strong>Diseases:</strong> Common cold, flu, tuberculosis,
+              COVID-19<br />
+              • <strong>Prevention:</strong> Cover mouth when coughing, wear
+              mask, good ventilation
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 2. Through Water (Waterborne)</h4>
+            <p>
+              • Pathogens present in contaminated water<br />
+              • Drinking or using polluted water<br />
+              • <strong>Diseases:</strong> Cholera, typhoid, hepatitis A,
+              amoebiasis<br />
+              • <strong>Prevention:</strong> Drink clean/boiled water, proper
+              sanitation
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 3. Through Food (Foodborne)</h4>
+            <p>
+              • Pathogens present in contaminated food<br />
+              • Eating spoiled or contaminated food<br />
+              • <strong>Diseases:</strong> Food poisoning, typhoid, hepatitis
+              A<br />
+              • <strong>Prevention:</strong> Wash hands before eating, eat
+              freshly cooked food
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 4. Through Direct Contact</h4>
+            <p>
+              • Touching infected person or contaminated surfaces<br />
+              • Sharing personal items<br />
+              • <strong>Diseases:</strong> Skin infections (ringworm), COVID-19,
+              AIDS<br />
+              • <strong>Prevention:</strong> Maintain hygiene, don't share
+              personal items
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 5. Through Vectors</h4>
+            <p>
+              • Organisms that carry pathogens from one host to another<br />
+              • <strong>Common vectors:</strong> Mosquitoes, flies, rats,
+              dogs<br />
+              • <strong>Diseases:</strong> Malaria, dengue (mosquitoes), plague
+              (rats), rabies (dogs)<br />
+              • <strong>Prevention:</strong> Keep surroundings clean, use
+              mosquito nets, control vector population
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of Vectors Like This</h4>
+            <p>
+              Vectors are like delivery people! They pick up disease germs from
+              one person/place and deliver them to another person. Mosquitoes
+              are the most common "disease delivery agents"!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Non-Infectious Diseases</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Non-Infectious Diseases?</h4>
+            <p>
+              Diseases that are NOT caused by pathogens and do NOT spread from
+              person to person. They are caused by factors like lifestyle,
+              genetics, environment, or deficiencies.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Non-Infectious Diseases</h4>
+            <ul>
+              <li>Not caused by microorganisms</li>
+              <li>Cannot spread from person to person (non-communicable)</li>
+              <li>Often chronic (long-lasting)</li>
+              <li>Caused by lifestyle, genetics, environment, deficiencies</li>
+              <li>
+                Examples: Diabetes, cancer, heart disease, asthma, obesity
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">3.2.1 Causes of Non-Infectious Diseases</h3>
+
+          <div class="important-note">
+            <h4>⚡ 1. Genetic Disorders</h4>
+            <p>
+              • Present from birth due to defects in genes<br />
+              • Inherited from parents<br />
+              • <strong>Examples:</strong> Color blindness, hemophilia, sickle
+              cell anemia
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 2. Deficiency Diseases</h4>
+            <p>
+              • Caused by lack of essential nutrients<br />
+              • Due to poor diet or malnutrition<br />
+              • <strong>Examples:</strong><br />
+              &nbsp;&nbsp;- Vitamin A deficiency → Night blindness<br />
+              &nbsp;&nbsp;- Vitamin C deficiency → Scurvy<br />
+              &nbsp;&nbsp;- Vitamin D deficiency → Rickets<br />
+              &nbsp;&nbsp;- Iron deficiency → Anemia<br />
+              &nbsp;&nbsp;- Iodine deficiency → Goiter
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 3. Lifestyle Diseases</h4>
+            <p>
+              • Caused by unhealthy lifestyle habits<br />
+              • <strong>Risk factors:</strong> Smoking, alcohol, junk food, no
+              exercise, stress<br />
+              • <strong>Examples:</strong> Diabetes, heart disease, obesity,
+              high blood pressure
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Diabetes</h4>
+            <p>
+              • Body cannot properly use glucose (sugar)<br />
+              • Either pancreas doesn't make insulin, or body can't use it
+              properly<br />
+              • Causes: Obesity, family history, unhealthy diet, lack of
+              exercise<br />
+              • Symptoms: Frequent urination, increased thirst, tiredness, slow
+              healing<br />
+              • Prevention: Healthy diet, regular exercise, maintain healthy
+              weight
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 4. Degenerative Diseases</h4>
+            <p>
+              • Organs deteriorate over time<br />
+              • Usually occur with aging<br />
+              • <strong>Examples:</strong> Alzheimer's disease, Parkinson's
+              disease, osteoporosis
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ 5. Cancer</h4>
+            <p>
+              • Uncontrolled growth of abnormal cells<br />
+              • Can occur in any part of body<br />
+              • Causes: Smoking, tobacco, radiation, genetic factors, certain
+              infections<br />
+              • <strong>Types:</strong> Blood cancer (leukemia), lung cancer,
+              breast cancer, etc.
+            </p>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Infectious Diseases</th>
+                <th>Non-Infectious Diseases</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Cause</strong></td>
+                <td>Microorganisms (pathogens)</td>
+                <td>Lifestyle, genetics, deficiencies</td>
+              </tr>
+              <tr>
+                <td><strong>Spread</strong></td>
+                <td>Can spread from person to person</td>
+                <td>Cannot spread from person to person</td>
+              </tr>
+              <tr>
+                <td><strong>Duration</strong></td>
+                <td>Usually acute (short duration)</td>
+                <td>Usually chronic (long duration)</td>
+              </tr>
+              <tr>
+                <td><strong>Prevention</strong></td>
+                <td>Hygiene, vaccines, avoiding contact</td>
+                <td>Healthy lifestyle, balanced diet</td>
+              </tr>
+              <tr>
+                <td><strong>Examples</strong></td>
+                <td>Malaria, TB, cholera, flu</td>
+                <td>Diabetes, cancer, heart disease</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">4. Immune System - Body's Defense</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Immune System?</h4>
+            <p>
+              The <strong>immune system</strong> is our body's defense system
+              that fights against disease-causing germs and protects us from
+              infections.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Immune system is like an army protecting a country! White blood
+              cells are soldiers that fight enemy invaders (germs). Some
+              soldiers remember enemies (memory cells) so they can fight faster
+              if the same enemy attacks again!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 How Immune System Works</h4>
+            <ul>
+              <li>White blood cells (WBCs) are the main soldiers</li>
+              <li>They identify and destroy pathogens</li>
+              <li>
+                Antibodies are special proteins that attack specific germs
+              </li>
+              <li>Memory cells remember past infections</li>
+              <li>
+                This is why we don't get same disease repeatedly (immunity)
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">4.1 Barriers Against Infections</h3>
+
+          <div class="important-note">
+            <h4>⚡ First Line of Defense (Physical Barriers)</h4>
+            <p>
+              <strong>1. Skin:</strong> Acts as a protective wall, prevents
+              entry of germs<br />
+              <strong>2. Mucus in nose:</strong> Traps germs and dust
+              particles<br />
+              <strong>3. Tears:</strong> Wash away germs from eyes<br />
+              <strong>4. Stomach acid:</strong> Kills germs that enter with
+              food<br />
+              <strong>5. Saliva:</strong> Contains chemicals that kill germs
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Second Line of Defense (Immune Response)</h4>
+            <p>
+              If germs cross physical barriers:<br />
+              • <strong>White blood cells</strong> attack and destroy them<br />
+              • <strong>Antibodies</strong> are produced to fight specific
+              germs<br />
+              • Body shows <strong>inflammation</strong> (redness, swelling,
+              heat) at infection site<br />
+              • <strong>Fever</strong> develops - body's way of fighting
+              infection (high temperature kills germs)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do We Get Fever?</h4>
+            <p>
+              Fever is not the disease - it's body's defense mechanism!<br /><br />
+
+              When germs enter body:<br />
+              • Immune system detects them<br />
+              • Raises body temperature (fever)<br />
+              • High temperature makes environment uncomfortable for germs<br />
+              • Helps immune cells work better<br />
+              • Kills or weakens many germs<br /><br />
+
+              So fever is actually helping you fight the disease! (But very high
+              fever needs treatment)
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Prevention of Diseases</h2>
+
+          <div class="important-note">
+            <h4>⚡ Prevention is Better Than Cure!</h4>
+            <p>
+              It's much better to prevent diseases than to treat them after
+              getting sick. Prevention is cheaper, easier, and keeps us healthy!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.1 General Prevention Methods</h3>
+
+          <div class="key-points">
+            <h4>🔑 For Infectious Diseases</h4>
+            <ul>
+              <li>Maintain personal hygiene (wash hands regularly)</li>
+              <li>Drink clean/boiled water</li>
+              <li>Eat freshly cooked food, wash fruits/vegetables</li>
+              <li>Keep surroundings clean</li>
+              <li>Cover nose and mouth when sneezing/coughing</li>
+              <li>Use mosquito nets and repellents</li>
+              <li>Get vaccinated</li>
+              <li>Avoid crowded places during epidemics</li>
+              <li>Don't share personal items</li>
+              <li>Proper disposal of waste</li>
+            </ul>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 For Non-Infectious Diseases</h4>
+            <ul>
+              <li>Eat balanced, nutritious diet</li>
+              <li>Exercise regularly</li>
+              <li>Maintain healthy body weight</li>
+              <li>Avoid smoking and alcohol</li>
+              <li>Reduce stress through yoga/meditation</li>
+              <li>Get regular health checkups</li>
+              <li>Get adequate sleep (7-8 hours)</li>
+              <li>Limit junk food and sugary drinks</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">5.2 Vaccination (Immunization)</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Vaccination?</h4>
+            <p>
+              <strong>Vaccination</strong> is giving a vaccine (dead or weakened
+              germs) to a person to develop immunity against a disease. The body
+              learns to fight that disease without actually getting sick.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Vaccination is like a fire drill in school! You practice fighting
+              fire (disease) without actual fire (real disease). When real fire
+              (disease) comes, you know exactly how to fight it!<br /><br />
+
+              Vaccine shows your immune system a "wanted poster" of the criminal
+              (germ). Your immune army creates special soldiers (antibodies) to
+              catch that criminal. If the real criminal attacks later, your army
+              recognizes and defeats it immediately!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 How Vaccines Work</h4>
+            <ul>
+              <li>Vaccine contains dead or weakened germs</li>
+              <li>Body's immune system recognizes them as enemies</li>
+              <li>Produces antibodies to fight them</li>
+              <li>Memory cells remember the germ</li>
+              <li>If real germ attacks, body fights it quickly</li>
+              <li>Person becomes immune without getting sick!</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Common Vaccines</h4>
+            <p>
+              • <strong>BCG:</strong> Tuberculosis<br />
+              • <strong>DPT:</strong> Diphtheria, Pertussis (whooping cough),
+              Tetanus<br />
+              • <strong>MMR:</strong> Measles, Mumps, Rubella<br />
+              • <strong>Polio vaccine:</strong> Poliomyelitis<br />
+              • <strong>Hepatitis B:</strong> Hepatitis B<br />
+              • <strong>COVID-19:</strong> Coronavirus disease<br />
+              • <strong>HPV:</strong> Human Papillomavirus (prevents cervical
+              cancer)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.3 Public Health Measures</h3>
+
+          <div class="key-points">
+            <h4>🔑 Community Actions</h4>
+            <ul>
+              <li>Clean drinking water supply</li>
+              <li>Proper sewage disposal</li>
+              <li>Waste management</li>
+              <li>Vector control programs (mosquito control)</li>
+              <li>Food safety standards</li>
+              <li>Health education programs</li>
+              <li>Vaccination campaigns</li>
+              <li>Air pollution control</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">6. Treatment of Diseases</h2>
+
+          <div class="important-note">
+            <h4>⚡ Two Approaches</h4>
+            <p>
+              <strong>1. Reduce symptoms:</strong> Make patient feel better
+              (fever medicines, pain killers)<br />
+              <strong>2. Kill the cause:</strong> Remove the disease cause
+              (antibiotics for bacteria, antivirals for some viruses)
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.1 Antibiotics</h3>
+
+          <div class="definition-box">
+            <h4>📖 What are Antibiotics?</h4>
+            <p>
+              <strong>Antibiotics</strong> are medicines that kill or stop the
+              growth of bacteria. They work only against bacterial infections,
+              NOT viral infections.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Important Points About Antibiotics</h4>
+            <p>
+              ✓ Work only against bacteria (NOT viruses!)<br />
+              ✓ Must complete full course as prescribed<br />
+              ✓ Don't take antibiotics for common cold (it's viral!)<br />
+              ✓ Don't share or reuse old antibiotics<br />
+              ✓ Overuse creates antibiotic-resistant bacteria<br />
+              ✓ Always take as per doctor's prescription
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why Antibiotics Don't Work on Viruses?</h4>
+            <p>
+              Bacteria and viruses are very different:<br />
+              • Bacteria have cell wall - antibiotics attack this wall<br />
+              • Viruses have no cell wall, they hide inside our cells<br />
+              • Antibiotics cannot enter our cells to kill viruses<br />
+              • Our immune system must fight viruses<br />
+              • Some antiviral medicines help immune system
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Quick Revision</h4>
+            <ul>
+              <li>Health = Physical + Mental + Social well-being</li>
+              <li>Disease = Condition that impairs normal body function</li>
+              <li>Acute diseases: Short duration, quick recovery</li>
+              <li>Chronic diseases: Long duration, slow recovery</li>
+              <li>
+                Infectious diseases: Caused by pathogens, spread from person to
+                person
+              </li>
+              <li>
+                Non-infectious diseases: Not caused by germs, don't spread
+              </li>
+              <li>Pathogens: Bacteria, viruses, protozoa, fungi, worms</li>
+              <li>Transmission: Air, water, food, contact, vectors</li>
+              <li>Immune system: Body's defense against diseases</li>
+              <li>White blood cells fight infections</li>
+              <li>Fever is body's way of fighting infection</li>
+              <li>Prevention is better than cure</li>
+              <li>Hygiene, clean water, balanced diet prevent diseases</li>
+              <li>Vaccination creates immunity without disease</li>
+              <li>Antibiotics work only on bacteria, not viruses</li>
+              <li>Lifestyle diseases: caused by unhealthy habits</li>
+              <li>Balanced diet and exercise prevent many diseases</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Practice Questions</h4>
+            <p>
+              <strong>Q1.</strong> Why is antibiotics not effective against
+              common cold?<br />
+              <strong>Answer:</strong> Because common cold is caused by viruses,
+              and antibiotics work only against bacteria, not viruses.
+            </p>
+            <p>
+              <strong>Q2.</strong> How does vaccination provide immunity?<br />
+              <strong>Answer:</strong> Vaccine contains dead/weakened germs.
+              Body produces antibodies against them and memory cells remember
+              the germ. If real germ attacks later, body fights it quickly,
+              preventing disease.
+            </p>
+            <p>
+              <strong>Q3.</strong> Distinguish between acute and chronic
+              diseases.<br />
+              <strong>Answer:</strong> Acute diseases last for short time and
+              recover quickly (cold, fever). Chronic diseases last long and take
+              long to recover (diabetes, tuberculosis).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Remember This Story!</h4>
+            <p>
+              Your body is like a fortress with multiple security systems:<br />
+              • <strong>Walls (Skin):</strong> First barrier<br />
+              • <strong>Guards (WBCs):</strong> Patrol and fight invaders<br />
+              • <strong>Intelligence (Antibodies):</strong> Identify and
+              remember enemies<br />
+              • <strong>Alarm (Fever/Inflammation):</strong> Alert system when
+              invaded<br />
+              • <strong>Training (Vaccination):</strong> Prepare guards for
+              future attacks<br /><br />
+
+              Keep your fortress strong with good food, exercise, and hygiene!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gravitation - Class 9 Physics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .formula-box {
+        background: #fce4ec;
+        border-left: 4px solid #e91e63;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .formula-box h4 {
+        color: #c2185b;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .formula-box p {
+        color: #555;
+        font-family: "Courier New", monospace;
+        font-size: 1.1rem;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/physics9.html">Physics</a> /
+        <span>Gravitation</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🌍 Gravitation - Class 9 Physics</h1>
+        <p class="page-description">
+          Understanding gravity, universal law of gravitation, and motion of
+          objects
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to Gravitation</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Gravitation?</h4>
+            <p>
+              <strong>Gravitation</strong> is the force of attraction between
+              any two objects in the universe. Every object attracts every other
+              object with a force called gravitational force.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine every object in the universe has invisible rubber bands
+              connecting it to every other object, always pulling them together!
+              The bigger the objects and the closer they are, the stronger the
+              pull. This invisible pull is gravity - it's everywhere, always
+              working, holding the universe together!
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Key Facts About Gravitation</h4>
+            <ul>
+              <li>
+                Gravitation is a universal force - exists between all objects
+              </li>
+              <li>It is always attractive (never repulsive)</li>
+              <li>Acts over very large distances</li>
+              <li>Does not require any medium (works in vacuum)</li>
+              <li>Weakest of all fundamental forces in nature</li>
+              <li>Cannot be shielded or blocked</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Gravity vs Gravitation</h4>
+            <p>
+              <strong>Gravitation:</strong> Universal force of attraction
+              between any two objects in the universe<br /><br />
+
+              <strong>Gravity:</strong> Specifically the force of attraction
+              exerted by Earth (or any planet/celestial body) on objects near
+              its surface<br /><br />
+
+              In simple words: Gravity is Earth's gravitation!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Universal Law of Gravitation</h2>
+
+          <div class="definition-box">
+            <h4>📖 Newton's Universal Law of Gravitation</h4>
+            <p>
+              Every object in the universe attracts every other object with a
+              force that is directly proportional to the product of their masses
+              and inversely proportional to the square of the distance between
+              their centers.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Mathematical Formula</h4>
+            <p>
+              F = G × (m₁ × m₂) / r²<br /><br />
+
+              Where:<br />
+              F = Gravitational force between two objects (Newton, N)<br />
+              G = Universal gravitational constant = 6.67 × 10⁻¹¹ N⋅m²/kg²<br />
+              m₁ = Mass of first object (kg)<br />
+              m₂ = Mass of second object (kg)<br />
+              r = Distance between centers of the two objects (m)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding the Law</h4>
+            <ul>
+              <li>
+                Force is directly proportional to mass: Double the mass, double
+                the force
+              </li>
+              <li>
+                Force is inversely proportional to square of distance: Double
+                the distance, force becomes 1/4th
+              </li>
+              <li>
+                G is a universal constant - same everywhere in the universe
+              </li>
+              <li>
+                Very small value of G shows gravity is weak compared to other
+                forces
+              </li>
+              <li>Force acts along the line joining centers of two objects</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem</h4>
+            <p>
+              Two objects of masses 100 kg and 200 kg are separated by 2 m.
+              Calculate the gravitational force between them.<br />
+              (G = 6.67 × 10⁻¹¹ N⋅m²/kg²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              m₁ = 100 kg<br />
+              m₂ = 200 kg<br />
+              r = 2 m<br />
+              G = 6.67 × 10⁻¹¹ N⋅m²/kg²<br /><br />
+
+              F = G × (m₁ × m₂) / r²<br />
+              F = (6.67 × 10⁻¹¹) × (100 × 200) / (2)²<br />
+              F = (6.67 × 10⁻¹¹) × 20000 / 4<br />
+              F = (6.67 × 10⁻¹¹) × 5000<br />
+              F = 3.335 × 10⁻⁷ N<br /><br />
+
+              The gravitational force is very small (0.0000003335 N) - that's
+              why we don't feel attraction between everyday objects!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Don't We Feel Attracted to Other People?</h4>
+            <p>
+              We ARE attracted to each other gravitationally, but the force is
+              extremely tiny! The universal gravitational constant G is so small
+              (0.0000000000667) that the gravitational force between everyday
+              objects is negligible.<br /><br />
+
+              We only notice gravity when at least one object is VERY massive
+              (like Earth, Moon, or Sun). That's why we feel pulled toward Earth
+              but not toward a building or car!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">
+            2.1 Importance of Universal Law of Gravitation
+          </h3>
+
+          <div class="key-points">
+            <h4>🔑 Applications and Importance</h4>
+            <ul>
+              <li>Explains why objects fall toward Earth</li>
+              <li>
+                Explains motion of Moon around Earth and planets around Sun
+              </li>
+              <li>
+                Helps calculate masses of Earth, Sun, and other celestial bodies
+              </li>
+              <li>Used to discover new planets and stars</li>
+              <li>Essential for satellite and space mission calculations</li>
+              <li>Explains tides in oceans (caused by Moon's gravity)</li>
+              <li>
+                Helps understand galaxy formation and structure of universe
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Free Fall</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Free Fall?</h4>
+            <p>
+              <strong>Free fall</strong> is the motion of an object under the
+              influence of gravity alone, without any other force acting on it
+              (no air resistance, no applied force).
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Free Fall</h4>
+            <ul>
+              <li>Only force acting is gravity</li>
+              <li>
+                All objects fall with same acceleration (in absence of air
+                resistance)
+              </li>
+              <li>Acceleration is independent of mass</li>
+              <li>Direction is always toward center of Earth</li>
+              <li>In real situations, air resistance affects fall</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Galileo's Famous Experiment</h4>
+            <p>
+              Galileo dropped a heavy iron ball and a light wooden ball from the
+              Leaning Tower of Pisa. People expected the heavy ball to hit
+              ground first, but both hit at the SAME time!<br /><br />
+
+              This proved that all objects fall with the same acceleration,
+              regardless of their mass. The acceleration depends only on the
+              gravitational pull of Earth, not on the object's mass!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Observation</h4>
+            <p>
+              Why does a feather fall slower than a stone?<br /><br />
+
+              It's not because of mass! It's because of air resistance. The
+              feather has a large surface area relative to its mass, so air
+              pushes against it more.<br /><br />
+
+              In vacuum (no air), a feather and a stone dropped together would
+              hit the ground at exactly the same time! This was famously
+              demonstrated by astronauts on the Moon.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Acceleration Due to Gravity (g)</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is 'g'?</h4>
+            <p>
+              <strong>Acceleration due to gravity (g)</strong> is the
+              acceleration produced in an object when it falls freely under the
+              influence of Earth's gravity alone.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Value of g</h4>
+            <p>
+              g = 9.8 m/s² (approximately 10 m/s²)<br /><br />
+
+              This means:<br />
+              • Velocity of freely falling object increases by 9.8 m/s every
+              second<br />
+              • After 1 second: velocity = 9.8 m/s<br />
+              • After 2 seconds: velocity = 19.6 m/s<br />
+              • After 3 seconds: velocity = 29.4 m/s<br />
+              And so on...
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Facts About g</h4>
+            <ul>
+              <li>Value of g is approximately 9.8 m/s² near Earth's surface</li>
+              <li>g is same for all objects regardless of their mass</li>
+              <li>g decreases with height above Earth's surface</li>
+              <li>g decreases with depth below Earth's surface</li>
+              <li>g is maximum at poles (9.83 m/s²)</li>
+              <li>g is minimum at equator (9.78 m/s²)</li>
+              <li>Direction of g is always toward center of Earth</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">4.1 Deriving Value of g</h3>
+
+          <div class="formula-box">
+            <h4>📐 Relation Between g and G</h4>
+            <p>
+              From Newton's Law of Gravitation:<br />
+              F = G × (M × m) / R²<br /><br />
+
+              From Newton's Second Law:<br />
+              F = m × g<br /><br />
+
+              Equating both:<br />
+              m × g = G × (M × m) / R²<br />
+              g = G × M / R²<br /><br />
+
+              Where:<br />
+              g = Acceleration due to gravity<br />
+              G = Universal gravitational constant<br />
+              M = Mass of Earth (6 × 10²⁴ kg)<br />
+              R = Radius of Earth (6.4 × 10⁶ m)
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Key Insight</h4>
+            <p>
+              Notice that 'm' (mass of object) cancels out in the equation!<br /><br />
+
+              This mathematically proves that acceleration due to gravity is
+              INDEPENDENT of the mass of the falling object. Whether you drop a
+              pebble or a boulder, both accelerate at 9.8 m/s²!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Equations of Motion Under Gravity</h3>
+
+          <div class="formula-box">
+            <h4>📐 Three Equations (Replace 'a' with 'g')</h4>
+            <p>
+              For objects moving under gravity, we use equations of motion with
+              a = g:<br /><br />
+
+              <strong>1. v = u + gt</strong><br />
+              (Final velocity = Initial velocity + g × time)<br /><br />
+
+              <strong>2. s = ut + ½gt²</strong><br />
+              (Height = Initial velocity × time + ½ × g × time²)<br /><br />
+
+              <strong>3. v² = u² + 2gs</strong><br />
+              (Final velocity² = Initial velocity² + 2 × g × height)<br /><br />
+
+              <strong>Important:</strong><br />
+              • For upward motion: Use g = -9.8 m/s² (negative, opposes
+              motion)<br />
+              • For downward motion: Use g = +9.8 m/s² (positive, aids motion)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Object Dropped from Height</h4>
+            <p>
+              A stone is dropped from a height of 80 m. Find:<br />
+              (a) Time taken to reach ground<br />
+              (b) Final velocity when it hits ground<br />
+              (Take g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Initial velocity (u) = 0 (dropped, not thrown)<br />
+              Height (s) = 80 m<br />
+              g = 10 m/s²<br /><br />
+
+              <strong>(a) Finding time:</strong><br />
+              Using s = ut + ½gt²<br />
+              80 = 0 × t + ½ × 10 × t²<br />
+              80 = 5t²<br />
+              t² = 16<br />
+              t = 4 seconds<br /><br />
+
+              <strong>(b) Finding final velocity:</strong><br />
+              Using v = u + gt<br />
+              v = 0 + 10 × 4<br />
+              v = 40 m/s<br /><br />
+
+              Or using v² = u² + 2gs<br />
+              v² = 0 + 2 × 10 × 80<br />
+              v² = 1600<br />
+              v = 40 m/s
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Object Thrown Upward</h4>
+            <p>
+              A ball is thrown vertically upward with velocity 30 m/s. Find:<br />
+              (a) Maximum height reached<br />
+              (b) Time to reach maximum height<br />
+              (c) Total time to return to ground<br />
+              (Take g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Initial velocity (u) = 30 m/s (upward)<br />
+              g = -10 m/s² (negative because upward motion)<br />
+              At maximum height, final velocity (v) = 0<br /><br />
+
+              <strong>(a) Maximum height:</strong><br />
+              Using v² = u² + 2gs<br />
+              0 = (30)² + 2 × (-10) × s<br />
+              0 = 900 - 20s<br />
+              20s = 900<br />
+              s = 45 m<br /><br />
+
+              <strong>(b) Time to reach maximum height:</strong><br />
+              Using v = u + gt<br />
+              0 = 30 + (-10) × t<br />
+              10t = 30<br />
+              t = 3 seconds<br /><br />
+
+              <strong>(c) Total time:</strong><br />
+              Time to go up = Time to come down = 3 seconds<br />
+              Total time = 3 + 3 = 6 seconds
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Mass and Weight</h2>
+
+          <h3 class="sub-heading">5.1 Mass</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Mass?</h4>
+            <p>
+              <strong>Mass</strong> is the quantity of matter contained in an
+              object. It is a measure of inertia of the object.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Mass</h4>
+            <ul>
+              <li>Scalar quantity (only magnitude, no direction)</li>
+              <li>SI unit: kilogram (kg)</li>
+              <li>Measured using physical balance</li>
+              <li>Remains constant everywhere (on Earth, Moon, or in space)</li>
+              <li>Never zero (except for hypothetical massless particles)</li>
+              <li>Depends only on amount of matter</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">5.2 Weight</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Weight?</h4>
+            <p>
+              <strong>Weight</strong> is the force with which Earth (or any
+              celestial body) attracts an object toward its center. Weight =
+              Mass × Acceleration due to gravity.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula for Weight</h4>
+            <p>
+              Weight (W) = Mass (m) × Acceleration due to gravity (g)<br />
+              W = m × g<br /><br />
+
+              On Earth: W = m × 9.8<br />
+              On Moon: W = m × 1.6 (Moon's gravity is about 1/6th of Earth's)<br /><br />
+
+              SI unit: Newton (N)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Characteristics of Weight</h4>
+            <ul>
+              <li>Vector quantity (has magnitude and direction)</li>
+              <li>SI unit: Newton (N)</li>
+              <li>Measured using spring balance</li>
+              <li>
+                Changes with location (different on Earth, Moon, other planets)
+              </li>
+              <li>Can be zero (in space, far from all massive objects)</li>
+              <li>Direction is always toward center of attracting body</li>
+              <li>Depends on both mass and gravity</li>
+            </ul>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Feature</th>
+                <th>Mass</th>
+                <th>Weight</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Definition</strong></td>
+                <td>Amount of matter in object</td>
+                <td>Force of gravity on object</td>
+              </tr>
+              <tr>
+                <td><strong>Type</strong></td>
+                <td>Scalar quantity</td>
+                <td>Vector quantity</td>
+              </tr>
+              <tr>
+                <td><strong>SI Unit</strong></td>
+                <td>Kilogram (kg)</td>
+                <td>Newton (N)</td>
+              </tr>
+              <tr>
+                <td><strong>Measuring Device</strong></td>
+                <td>Physical balance</td>
+                <td>Spring balance</td>
+              </tr>
+              <tr>
+                <td><strong>Variation</strong></td>
+                <td>Constant everywhere</td>
+                <td>Changes with location</td>
+              </tr>
+              <tr>
+                <td><strong>Can be Zero?</strong></td>
+                <td>No (never zero)</td>
+                <td>Yes (in space)</td>
+              </tr>
+              <tr>
+                <td><strong>Formula</strong></td>
+                <td>-</td>
+                <td>W = m × g</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="example-box">
+            <h4>💡 Example: Mass and Weight on Different Places</h4>
+            <p>
+              A person has mass of 60 kg. Calculate weight on:<br />
+              (a) Earth (g = 9.8 m/s²)<br />
+              (b) Moon (g = 1.6 m/s²)<br />
+              (c) Jupiter (g = 25 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass = 60 kg (same everywhere)<br /><br />
+
+              <strong>(a) Weight on Earth:</strong><br />
+              W = m × g = 60 × 9.8 = 588 N<br /><br />
+
+              <strong>(b) Weight on Moon:</strong><br />
+              W = m × g = 60 × 1.6 = 96 N<br /><br />
+
+              <strong>(c) Weight on Jupiter:</strong><br />
+              W = m × g = 60 × 25 = 1500 N<br /><br />
+
+              Notice: Mass stays 60 kg everywhere, but weight changes
+              dramatically!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like This</h4>
+            <p>
+              Imagine your body is like a box full of marbles (that's your mass
+              - the marbles never change). Now imagine Earth is like a giant
+              magnet pulling on your box.<br /><br />
+
+              On Earth, the magnet pulls hard, so the box feels heavy (588
+              N).<br />
+              On Moon, it's a weaker magnet, so same box feels lighter (96
+              N).<br />
+              On Jupiter, it's a super-strong magnet, so the box feels super
+              heavy (1500 N)!<br /><br />
+
+              The marbles inside (mass) never changed - only the pull (weight)
+              changed!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Why Do We Say "My Weight is 60 kg"?</h4>
+            <p>
+              In everyday life, we incorrectly say "my weight is 60 kg" - but
+              technically, 60 kg is MASS, not weight!<br /><br />
+
+              Correct way: "My mass is 60 kg, and my weight on Earth is 588
+              N."<br /><br />
+
+              We use mass because it's constant everywhere, while weight
+              changes. When you step on a weighing scale, it actually measures
+              weight (force) but shows it as mass (in kg) by dividing by 9.8.
+              This works fine on Earth but would give wrong readings on Moon or
+              other planets!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">5.3 Weightlessness</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Weightlessness?</h4>
+            <p>
+              <strong>Weightlessness</strong> is the condition in which an
+              object appears to have no weight or feels no gravitational force.
+              This happens when an object is in free fall or there is no
+              reaction force acting on it.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 When Do We Experience Weightlessness?</h4>
+            <ul>
+              <li>In a freely falling elevator</li>
+              <li>In a spacecraft orbiting Earth</li>
+              <li>In an airplane during parabolic flight</li>
+              <li>At the highest point when jumping</li>
+              <li>During free fall from any height</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Do Astronauts Float in Space?</h4>
+            <p>
+              Many people think astronauts float because there's no gravity in
+              space - WRONG! There IS gravity in space (Earth's gravity is still
+              strong at the space station's altitude).<br /><br />
+
+              Astronauts float because they are in continuous free fall! The
+              spacecraft is falling toward Earth, and astronauts inside are also
+              falling at the same rate. Since everything falls together, there's
+              no reaction force, creating the sensation of weightlessness.<br /><br />
+
+              Think of it like this: Imagine you're in an elevator, and the
+              cable breaks. As the elevator falls, you would float inside it
+              because both you and the elevator are falling together at the same
+              speed! That's exactly what's happening in the space station - it's
+              constantly "falling" around Earth (that's what an orbit is).
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Important Clarification</h4>
+            <p>
+              Weightlessness doesn't mean gravity is absent! It means there's no
+              reaction force (normal force) acting on the body. The
+              gravitational force is still there, but since everything is in
+              free fall, we don't "feel" it.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Thrust and Pressure</h2>
+
+          <h3 class="sub-heading">6.1 Thrust</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Thrust?</h4>
+            <p>
+              <strong>Thrust</strong> is the total force acting perpendicular to
+              a surface. When an object rests on a surface, it exerts a force
+              perpendicular to that surface - this force is called thrust.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Thrust = Force perpendicular to surface = Weight (in many
+              cases)<br />
+              Thrust = m × g<br /><br />
+
+              SI unit: Newton (N)<br />
+              Direction: Perpendicular to the surface
+            </p>
+          </div>
+
+          <h3 class="sub-heading">6.2 Pressure</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Pressure?</h4>
+            <p>
+              <strong>Pressure</strong> is the thrust (force) acting per unit
+              area. It tells us how concentrated the force is.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Pressure (P) = Thrust (F) / Area (A)<br />
+              P = F / A<br /><br />
+
+              SI unit: Pascal (Pa) or Newton per square meter (N/m²)<br />
+              1 Pascal = 1 N/m²<br /><br />
+
+              Larger unit: 1 atmosphere = 101,325 Pa ≈ 10⁵ Pa
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Pressure</h4>
+            <ul>
+              <li>Same force applied over smaller area = higher pressure</li>
+              <li>Same force applied over larger area = lower pressure</li>
+              <li>Pressure is a scalar quantity</li>
+              <li>Liquids and gases exert pressure in all directions</li>
+              <li>Pressure in liquids increases with depth</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem</h4>
+            <p>
+              A box weighing 500 N rests on a table. The area of contact is 0.5
+              m². Calculate the pressure exerted by the box on the table.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Thrust (Force) = 500 N<br />
+              Area = 0.5 m²<br /><br />
+
+              Pressure = Thrust / Area<br />
+              P = 500 / 0.5<br />
+              P = 1000 Pa or 1000 N/m²<br /><br />
+
+              The box exerts a pressure of 1000 Pascal on the table.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Do Sharp Things Cut Easily?</h4>
+            <p>
+              A sharp knife has a very small edge area. When you apply force,
+              all that force is concentrated on a tiny area, creating HUGE
+              pressure! That's why it cuts through things easily.<br /><br />
+
+              Same principle:<br />
+              • Nails have pointed ends - small area, high pressure, easy to
+              pierce<br />
+              • Needles are sharp - concentrate force on tiny point<br />
+              • Your feet hurt when you step on a pebble - the pebble's small
+              contact area creates high pressure on your foot<br /><br />
+
+              On the other hand, a blunt knife has larger contact area, so same
+              force creates less pressure - that's why it doesn't cut well!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Real-Life Applications</h4>
+            <p>
+              <strong>1. Why Do Tractors Have Wide Tires?</strong><br />
+              Wide tires have larger contact area, so pressure on ground is
+              less. This prevents them from sinking into soft soil.<br /><br />
+
+              <strong>2. Why Do Skiers Wear Broad Skis?</strong><br />
+              Broad skis spread weight over larger area, reducing pressure on
+              snow. This prevents skiers from sinking into snow.<br /><br />
+
+              <strong>3. Why Do We Carry Heavy Bags with Wide Straps?</strong
+              ><br />
+              Wide straps spread the weight over larger area of shoulder,
+              reducing pressure and making it more comfortable.<br /><br />
+
+              <strong
+                >4. Why Are Railway Tracks Laid on Large-Sized Wooden or Iron
+                Sleepers?</strong
+              ><br />
+              Sleepers spread the weight of train over large area, reducing
+              pressure on ground and preventing tracks from sinking.<br /><br />
+
+              <strong>5. Why Do Cutting Tools Have Sharp Edges?</strong><br />
+              Sharp edges have very small area, so even moderate force creates
+              very high pressure, making cutting easy.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">7. Buoyancy and Archimedes' Principle</h2>
+
+          <h3 class="sub-heading">7.1 Buoyancy</h3>
+
+          <div class="definition-box">
+            <h4>📖 What is Buoyancy?</h4>
+            <p>
+              <strong>Buoyancy</strong> (or buoyant force) is the upward force
+              exerted by a fluid (liquid or gas) on an object immersed in it.
+              This is why objects feel lighter when submerged in water.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Facts About Buoyant Force</h4>
+            <ul>
+              <li>Acts in upward direction (opposite to weight)</li>
+              <li>Exists in all fluids (liquids and gases)</li>
+              <li>Greater in denser fluids</li>
+              <li>Depends on volume of object immersed</li>
+              <li>Does NOT depend on mass of object</li>
+              <li>Reason why things float or feel lighter in water</li>
+            </ul>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Do You Feel Lighter in Water?</h4>
+            <p>
+              When you enter a swimming pool, you feel lighter because water
+              pushes you upward! This upward push is the buoyant force.<br /><br />
+
+              Imagine water molecules as tiny hands pushing against every part
+              of your body that's underwater. The push from below is stronger
+              than the push from above (because pressure increases with depth),
+              creating a net upward force. That's buoyancy!<br /><br />
+
+              This is why it's easier to lift someone in water than on land. The
+              water is helping you by pushing them upward!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">7.2 Archimedes' Principle</h3>
+
+          <div class="definition-box">
+            <h4>📖 Archimedes' Principle</h4>
+            <p>
+              When an object is immersed wholly or partially in a fluid, it
+              experiences an upward force (buoyant force) equal to the weight of
+              the fluid displaced by it.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Mathematical Form</h4>
+            <p>
+              Buoyant Force = Weight of fluid displaced<br />
+              F<sub>buoyant</sub> = V × ρ<sub>fluid</sub> × g<br /><br />
+
+              Where:<br />
+              V = Volume of object immersed (or volume of fluid displaced)<br />
+              ρ<sub>fluid</sub> = Density of fluid<br />
+              g = Acceleration due to gravity<br /><br />
+
+              Alternative form:<br />
+              F<sub>buoyant</sub> = m<sub>displaced fluid</sub> × g
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Archimedes' Principle</h4>
+            <ul>
+              <li>
+                Buoyant force equals weight of displaced fluid (not weight of
+                object!)
+              </li>
+              <li>Greater the volume immersed, greater the buoyant force</li>
+              <li>Denser the fluid, greater the buoyant force</li>
+              <li>Explains why objects float, sink, or stay suspended</li>
+              <li>Works in both liquids and gases</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem</h4>
+            <p>
+              A metal cube of side 5 cm is completely immersed in water.
+              Calculate the buoyant force acting on it.<br />
+              (Density of water = 1000 kg/m³, g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Side of cube = 5 cm = 0.05 m<br />
+              Volume of cube = (0.05)³ = 0.000125 m³<br />
+              Density of water = 1000 kg/m³<br />
+              g = 10 m/s²<br /><br />
+
+              Buoyant force = V × ρ × g<br />
+              F<sub>buoyant</sub> = 0.000125 × 1000 × 10<br />
+              F<sub>buoyant</sub> = 1.25 N<br /><br />
+
+              The buoyant force is 1.25 N acting upward on the cube.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 The Story of Archimedes</h4>
+            <p>
+              Legend says King Hiero of Syracuse asked Archimedes to check if
+              his crown was pure gold or mixed with silver. Archimedes was
+              puzzled - how to find this without melting the crown?<br /><br />
+
+              One day, while taking a bath, he noticed water overflowing when he
+              got in. He realized that his body displaced water equal to his
+              volume! Excited, he shouted "Eureka!" (I found it!) and ran out
+              (reportedly naked!) to solve the problem.<br /><br />
+
+              He compared the crown with pure gold of equal weight. Both
+              displaced different amounts of water, proving the crown was
+              impure! This discovery led to Archimedes' Principle - one of the
+              most important principles in physics!
+            </p>
+          </div>
+
+          <h3 class="sub-heading">7.3 Floating and Sinking</h3>
+
+          <div class="important-note">
+            <h4>⚡ Conditions for Floating and Sinking</h4>
+            <p>
+              <strong>Object Floats when:</strong><br />
+              Buoyant force ≥ Weight of object<br />
+              Or: Density of object < Density of fluid<br /><br />
+
+              <strong>Object Sinks when:</strong><br />
+              Buoyant force < Weight of object<br />
+              Or: Density of object > Density of fluid<br /><br />
+
+              <strong>Object Remains Suspended when:</strong><br />
+              Buoyant force = Weight of object<br />
+              Or: Density of object = Density of fluid
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Understanding Floating and Sinking</h4>
+            <ul>
+              <li>Wood floats because its density is less than water</li>
+              <li>Iron sinks because its density is more than water</li>
+              <li>
+                Ships made of steel float because they displace large volume of
+                water
+              </li>
+              <li>
+                Submarines control buoyancy by taking in or releasing water
+              </li>
+              <li>
+                Ice floats on water because ice is less dense than liquid water
+              </li>
+              <li>
+                Dead body initially sinks but later floats due to gases produced
+                by decomposition
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Do Ships Float?</h4>
+            <p>
+              A ship is made of steel, which is denser than water. So why
+              doesn't it sink?<br /><br />
+
+              <strong>Answer:</strong><br />
+              The ship is hollow inside, filled with air! When you consider the
+              entire volume of the ship (steel + air space), the average density
+              is LESS than water.<br /><br />
+
+              The hollow shape displaces a huge volume of water, creating enough
+              buoyant force to support the ship's weight. That's why ships float
+              even though they're made of steel!<br /><br />
+
+              If you make a solid steel ball of the same mass, it would sink
+              because it displaces much less water.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Why Does Ice Float on Water?</h4>
+            <p>
+              Water has a unique property: it expands when it freezes! This
+              means ice is LESS dense than liquid water (density of ice ≈ 920
+              kg/m³, density of water = 1000 kg/m³).<br /><br />
+
+              Since ice is less dense, it floats on water. This is unusual - for
+              most substances, the solid form is denser and sinks in its liquid
+              form.<br /><br />
+
+              <strong>Why is this important?</strong><br />
+              When lakes and ponds freeze, ice forms on top while water remains
+              liquid below. This allows fish and aquatic life to survive in the
+              liquid water underneath during winter!
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think About This</h4>
+            <p>
+              Imagine objects in water are playing tug-of-war:<br /><br />
+
+              <strong>Team Gravity:</strong> Pulls object downward with force =
+              weight<br />
+              <strong>Team Buoyancy:</strong> Pushes object upward with force =
+              weight of displaced water<br /><br />
+
+              • If Team Gravity wins → Object sinks (stone, iron)<br />
+              • If Team Buoyancy wins → Object floats (wood, plastic bottle)<br />
+              • If it's a tie → Object stays suspended (fish, submarine with
+              right ballast)<br /><br />
+
+              Fish are masters at controlling this! They have an air bladder
+              that they can inflate or deflate to adjust buoyancy and stay at
+              any depth they want.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">
+            8. Relative Density (Specific Gravity)
+          </h2>
+
+          <div class="definition-box">
+            <h4>📖 What is Relative Density?</h4>
+            <p>
+              <strong>Relative density</strong> (or specific gravity) of a
+              substance is the ratio of the density of the substance to the
+              density of water at 4°C.
+            </p>
+          </div>
+
+          <div class="formula-box">
+            <h4>📐 Formula</h4>
+            <p>
+              Relative Density = Density of substance / Density of water<br /><br />
+
+              RD = ρ<sub>substance</sub> / ρ<sub>water</sub><br /><br />
+
+              Since density of water = 1000 kg/m³ or 1 g/cm³<br /><br />
+
+              RD = ρ<sub>substance</sub> / 1000 (if ρ in kg/m³)<br />
+              RD = ρ<sub>substance</sub> / 1 (if ρ in g/cm³)<br /><br />
+
+              <strong>Note:</strong> Relative density has no unit (it's a ratio)
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Facts About Relative Density</h4>
+            <ul>
+              <li>It's a ratio, so it has no unit</li>
+              <li>Also called Specific Gravity</li>
+              <li>If RD < 1, substance floats on water</li>
+              <li>If RD > 1, substance sinks in water</li>
+              <li>If RD = 1, substance has same density as water</li>
+              <li>Easier to compare densities using relative density</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example Problem</h4>
+            <p>
+              The density of iron is 7800 kg/m³. Calculate its relative
+              density.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Density of iron = 7800 kg/m³<br />
+              Density of water = 1000 kg/m³<br /><br />
+
+              Relative Density = Density of iron / Density of water<br />
+              RD = 7800 / 1000<br />
+              RD = 7.8<br /><br />
+
+              This means iron is 7.8 times denser than water. Since RD > 1, iron
+              sinks in water.
+            </p>
+          </div>
+
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th>Substance</th>
+                <th>Density (kg/m³)</th>
+                <th>Relative Density</th>
+                <th>Floats or Sinks?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cork</td>
+                <td>250</td>
+                <td>0.25</td>
+                <td>Floats</td>
+              </tr>
+              <tr>
+                <td>Wood (Pine)</td>
+                <td>500</td>
+                <td>0.5</td>
+                <td>Floats</td>
+              </tr>
+              <tr>
+                <td>Ice</td>
+                <td>920</td>
+                <td>0.92</td>
+                <td>Floats</td>
+              </tr>
+              <tr>
+                <td>Water</td>
+                <td>1000</td>
+                <td>1.0</td>
+                <td>Reference</td>
+              </tr>
+              <tr>
+                <td>Aluminum</td>
+                <td>2700</td>
+                <td>2.7</td>
+                <td>Sinks</td>
+              </tr>
+              <tr>
+                <td>Iron</td>
+                <td>7800</td>
+                <td>7.8</td>
+                <td>Sinks</td>
+              </tr>
+              <tr>
+                <td>Gold</td>
+                <td>19300</td>
+                <td>19.3</td>
+                <td>Sinks</td>
+              </tr>
+              <tr>
+                <td>Mercury</td>
+                <td>13600</td>
+                <td>13.6</td>
+                <td>Sinks</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="important-note">
+            <h4>⚡ Interesting Fact About Mercury</h4>
+            <p>
+              Mercury is a liquid metal with very high density (13.6 times
+              denser than water). It's so dense that even iron will FLOAT on
+              mercury!<br /><br />
+
+              Since iron's density (7800 kg/m³) is less than mercury's density
+              (13600 kg/m³), iron floats on mercury. You can literally float an
+              iron ball on liquid mercury!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">9. Key Points to Remember</h2>
+
+          <div class="key-points">
+            <h4>🔑 Important Concepts Summary</h4>
+            <ul>
+              <li>
+                <strong>Gravitation:</strong> Universal attractive force between
+                all objects
+              </li>
+              <li>
+                <strong>Universal Law:</strong> F = G(m₁m₂)/r², where G = 6.67 ×
+                10⁻¹¹ N⋅m²/kg²
+              </li>
+              <li>
+                <strong>Gravity:</strong> Earth's gravitation; acceleration due
+                to gravity g = 9.8 m/s²
+              </li>
+              <li>
+                <strong>Free Fall:</strong> Motion under gravity alone; all
+                objects fall with same acceleration
+              </li>
+              <li>
+                <strong>Mass:</strong> Amount of matter; constant everywhere;
+                measured in kg
+              </li>
+              <li>
+                <strong>Weight:</strong> Force of gravity; W = mg; varies with
+                location; measured in N
+              </li>
+              <li><strong>Thrust:</strong> Force perpendicular to surface</li>
+              <li>
+                <strong>Pressure:</strong> P = F/A; thrust per unit area;
+                measured in Pascal (N/m²)
+              </li>
+              <li>
+                <strong>Buoyancy:</strong> Upward force by fluid on immersed
+                object
+              </li>
+              <li>
+                <strong>Archimedes' Principle:</strong> Buoyant force = Weight
+                of fluid displaced
+              </li>
+              <li>
+                <strong>Floating:</strong> Occurs when density of object <
+                density of fluid
+              </li>
+              <li>
+                <strong>Sinking:</strong> Occurs when density of object >
+                density of fluid
+              </li>
+              <li>
+                <strong>Relative Density:</strong> Ratio of density of substance
+                to density of water; no unit
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">10. Practice Questions</h2>
+
+          <div class="example-box">
+            <h4>💡 Question 1: Gravitational Force Calculation</h4>
+            <p>
+              Two objects of mass 50 kg each are separated by 1 m. Calculate the
+              gravitational force between them.<br />
+              (G = 6.67 × 10⁻¹¹ N⋅m²/kg²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              m₁ = 50 kg<br />
+              m₂ = 50 kg<br />
+              r = 1 m<br />
+              G = 6.67 × 10⁻¹¹ N⋅m²/kg²<br /><br />
+
+              F = G(m₁m₂)/r²<br />
+              F = (6.67 × 10⁻¹¹) × (50 × 50) / (1)²<br />
+              F = (6.67 × 10⁻¹¹) × 2500<br />
+              F = 16.675 × 10⁻⁸ N<br />
+              F = 1.67 × 10⁻⁷ N<br /><br />
+
+              <strong>Answer:</strong> 1.67 × 10⁻⁷ N (very small force!)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 2: Free Fall Motion</h4>
+            <p>
+              A ball is dropped from a building of height 45 m. Calculate:<br />
+              (a) Time taken to reach ground<br />
+              (b) Velocity when it hits the ground<br />
+              (Take g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Initial velocity (u) = 0 (dropped)<br />
+              Height (s) = 45 m<br />
+              g = 10 m/s²<br /><br />
+
+              <strong>(a) Time:</strong><br />
+              Using s = ut + ½gt²<br />
+              45 = 0 + ½ × 10 × t²<br />
+              45 = 5t²<br />
+              t² = 9<br />
+              t = 3 seconds<br /><br />
+
+              <strong>(b) Final velocity:</strong><br />
+              Using v = u + gt<br />
+              v = 0 + 10 × 3<br />
+              v = 30 m/s<br /><br />
+
+              <strong>Answers:</strong> (a) 3 seconds, (b) 30 m/s
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 3: Weight on Different Planets</h4>
+            <p>
+              An astronaut has mass 75 kg. Calculate weight on:<br />
+              (a) Earth (g = 10 m/s²)<br />
+              (b) Moon (g = 1.6 m/s²)<br />
+              (c) Mars (g = 3.7 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Mass = 75 kg (same everywhere)<br /><br />
+
+              <strong>(a) Weight on Earth:</strong><br />
+              W = mg = 75 × 10 = 750 N<br /><br />
+
+              <strong>(b) Weight on Moon:</strong><br />
+              W = mg = 75 × 1.6 = 120 N<br /><br />
+
+              <strong>(c) Weight on Mars:</strong><br />
+              W = mg = 75 × 3.7 = 277.5 N<br /><br />
+
+              <strong>Answers:</strong> (a) 750 N, (b) 120 N, (c) 277.5 N
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 4: Pressure Calculation</h4>
+            <p>
+              A rectangular block of dimensions 4 m × 2 m × 1 m and weight 1600
+              N is placed on ground. Calculate the minimum and maximum pressure
+              it can exert.<br /><br />
+
+              <strong>Solution:</strong><br />
+              Weight (Thrust) = 1600 N<br /><br />
+
+              Possible contact areas:<br />
+              • 4 m × 2 m = 8 m²<br />
+              • 4 m × 1 m = 4 m²<br />
+              • 2 m × 1 m = 2 m²<br /><br />
+
+              <strong>Minimum pressure (largest area):</strong><br />
+              P = F/A = 1600/8 = 200 Pa<br /><br />
+
+              <strong>Maximum pressure (smallest area):</strong><br />
+              P = F/A = 1600/2 = 800 Pa<br /><br />
+
+              <strong>Answers:</strong> Minimum = 200 Pa, Maximum = 800 Pa
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 5: Buoyancy Problem</h4>
+            <p>
+              A wooden block of volume 0.002 m³ is completely immersed in water.
+              Calculate the buoyant force acting on it.<br />
+              (Density of water = 1000 kg/m³, g = 10 m/s²)<br /><br />
+
+              <strong>Solution:</strong><br />
+              Volume immersed (V) = 0.002 m³<br />
+              Density of water (ρ) = 1000 kg/m³<br />
+              g = 10 m/s²<br /><br />
+
+              Buoyant force = V × ρ × g<br />
+              F = 0.002 × 1000 × 10<br />
+              F = 20 N<br /><br />
+
+              <strong>Answer:</strong> 20 N (upward)
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Question 6: Relative Density</h4>
+            <p>
+              A substance has density 2600 kg/m³. Calculate its relative
+              density. Will it float or sink in water?<br /><br />
+
+              <strong>Solution:</strong><br />
+              Density of substance = 2600 kg/m³<br />
+              Density of water = 1000 kg/m³<br /><br />
+
+              Relative Density = Density of substance / Density of water<br />
+              RD = 2600 / 1000<br />
+              RD = 2.6<br /><br />
+
+              Since RD > 1, the substance is denser than water and will SINK.<br /><br />
+
+              <strong>Answer:</strong> Relative Density = 2.6, Will sink in
+              water
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">11. Tips for Problem Solving</h2>
+
+          <div class="important-note">
+            <h4>⚡ Problem-Solving Strategy</h4>
+            <p>
+              <strong>For Force and Motion Problems:</strong><br />
+              • Always write given data first<br />
+              • Identify whether motion is upward or downward<br />
+              • For upward motion: use g = -9.8 m/s²<br />
+              • For downward motion: use g = +9.8 m/s²<br />
+              • Choose appropriate equation of motion<br /><br />
+
+              <strong>For Weight Problems:</strong><br />
+              • Remember: W = mg<br />
+              • Mass remains constant, weight changes with g<br />
+              • Always write units (kg for mass, N for weight)<br /><br />
+
+              <strong>For Pressure Problems:</strong><br />
+              • Identify thrust (usually weight)<br />
+              • Find area of contact<br />
+              • Use P = F/A<br />
+              • For minimum pressure: use maximum area<br />
+              • For maximum pressure: use minimum area<br /><br />
+
+              <strong>For Buoyancy Problems:</strong><br />
+              • Find volume of object immersed<br />
+              • Identify density of fluid<br />
+              • Use Buoyant force = V × ρ × g<br />
+              • Compare with weight to determine floating/sinking<br /><br />
+
+              <strong>Common Mistakes to Avoid:</strong><br />
+              • Confusing mass (kg) with weight (N)<br />
+              • Using wrong sign for g in upward motion<br />
+              • Forgetting to convert units (cm to m, etc.)<br />
+              • Not writing units in final answer<br />
+              • Mixing up pressure and thrust
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2024 NoteHub. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
