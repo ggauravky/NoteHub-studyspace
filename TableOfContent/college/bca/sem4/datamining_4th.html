@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Data Mining and Data Warehousing | BCA Semester 4 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/college/bca/sem4/sem4_bca.html">Semester 4</a> /
+            <span>Data Mining and Data Warehousing</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Data Mining and Data Warehousing</h1>
+            <p class="page-description">
+                Complete Unit-wise notes following BCA Semester 4 syllabus
+            </p>
+
+            <div class="topics-list">
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 1: Introduction to Data Mining and Data Warehousing
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore the fundamentals of data mining and data warehousing, understand the knowledge
+                            discovery process, multi-dimensional data models, and learn about data warehouse
+                            architecture and design principles.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Overview of Data Mining and Knowledge Discovery Process</li>
+                            <li>Role and Importance of Data Warehouses</li>
+                            <li>Key Concepts and Components of Data Mining</li>
+                            <li>Key Concepts and Components of Data Warehousing</li>
+                            <li>Multi-Dimensional Data Model – Introduction</li>
+                            <li>Elements of Multi-Dimensional Data Model</li>
+                            <li>Steps in Dimensional Modeling</li>
+                            <li>Multi-Dimensional Schema – Star Schema, Snowflake Schema</li>
+                            <li>Data Warehouse Architecture</li>
+                            <li>The 3-Tier Data Warehouse Architecture</li>
+                            <li>The Bus Architecture</li>
+                            <li>ETL (Extract, Transform, Load) Process</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 2: Data Preprocessing and Frequent Pattern Mining
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Master data preprocessing techniques including cleaning, integration, and transformation,
+                            understand data warehouse modeling with OLAP operations, and learn frequent pattern
+                            mining algorithms like Apriori and FP-Growth.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Data Preprocessing – Overview and Importance</li>
+                            <li>Data Cleaning – Handling Missing Values and Noise</li>
+                            <li>Data Integration and Schema Integration</li>
+                            <li>Data Reduction Techniques</li>
+                            <li>Data Transformation and Discretization</li>
+                            <li>Data Warehouse Modeling – Data Cube</li>
+                            <li>Typical OLAP Operations – Roll-up, Drill-down, Slice, Dice, Pivot</li>
+                            <li>Role of Concept Hierarchies</li>
+                            <li>OLAP Server Architectures – ROLAP, MOLAP, HOLAP</li>
+                            <li>Mining Frequent Patterns – Basic Concepts</li>
+                            <li>Frequent Itemset Mining – The Apriori Algorithm</li>
+                            <li>Generating Association Rules from Frequent Itemsets</li>
+                            <li>FP-Growth Algorithm</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 3: Classification Techniques in Data Mining
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Learn classification methods including decision tree induction, Bayesian classification,
+                            rule-based classification, and understand model evaluation techniques for assessing
+                            classifier performance.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Classification – General Approach to Solving Classification Problems</li>
+                            <li>Classification by Decision Tree Induction</li>
+                            <li>Attribute Selection Measures – Information Gain, Gini Index, Gain Ratio</li>
+                            <li>Tree Pruning Techniques</li>
+                            <li>Bayesian Classification</li>
+                            <li>Bayes' Theorem and Naive Bayes Classifier</li>
+                            <li>Bayesian Belief Networks</li>
+                            <li>Rule-Based Classification</li>
+                            <li>Sequential Covering Algorithm</li>
+                            <li>Model Evaluation and Selection</li>
+                            <li>Holdout Method and Cross-Validation</li>
+                            <li>Confusion Matrix and Accuracy Metrics</li>
+                            <li>Precision, Recall, and F1-Score</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 4: Cluster Analysis and Data Mining Ethics
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore cluster analysis methods including partitioning, hierarchical, density-based,
+                            and grid-based clustering algorithms, and understand ethical considerations and
+                            privacy-preserving techniques in data mining.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Cluster Analysis – Introduction and Applications</li>
+                            <li>Types of Clustering Methods</li>
+                            <li>Partitioning Methods – K-Means Clustering Algorithm</li>
+                            <li>K-Medoids Clustering (PAM Algorithm)</li>
+                            <li>Hierarchical Methods – Agglomerative and Divisive</li>
+                            <li>BIRCH (Balanced Iterative Reducing and Clustering using Hierarchies)</li>
+                            <li>Density-Based Methods – DBSCAN Algorithm</li>
+                            <li>DBSCAN Parameters – Eps and MinPts</li>
+                            <li>Grid-Based Methods – STING (Statistical Information Grid)</li>
+                            <li>CLIQUE Algorithm</li>
+                            <li>Cluster Validation and Evaluation</li>
+                            <li>Data Mining Ethics and Privacy</li>
+                            <li>Ethical Considerations in Data Mining</li>
+                            <li>Privacy-Preserving Data Mining Techniques</li>
+                            <li>Data Anonymization and k-Anonymity</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

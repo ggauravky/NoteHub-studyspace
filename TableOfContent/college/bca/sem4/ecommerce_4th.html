@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Commerce | BCA Semester 4 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/college/bca/sem4/sem4_bca.html">Semester 4</a> /
+            <span>E-Commerce</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">E-Commerce</h1>
+            <p class="page-description">
+                Complete Unit-wise notes following BCA Semester 4 syllabus
+            </p>
+
+            <div class="topics-list">
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 1: Introduction to E-Commerce and Business Models
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore the fundamentals of Electronic Commerce, understand the differences between
+                            traditional and electronic commerce, and learn about various E-Commerce business models
+                            and their applications in the digital marketplace.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Electronic Commerce (E-Commerce)</li>
+                            <li>Traditional Commerce vs E-Commerce – Key Differences</li>
+                            <li>Advantages and Disadvantages of E-Commerce</li>
+                            <li>Impact of E-Commerce on Business and Society</li>
+                            <li>Classification of E-Commerce (B2B, B2C, C2C, C2B)</li>
+                            <li>Applications of E-Commerce in Various Industries</li>
+                            <li>Limitations and Challenges of E-Commerce</li>
+                            <li>Emerging Trends in E-Commerce</li>
+                            <li>Electronic Commerce Business Models</li>
+                            <li>Native Content-Based Model</li>
+                            <li>Transplanted Content Model</li>
+                            <li>Native Transaction Model</li>
+                            <li>Transplanted Transaction Models</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 2: E-Commerce Framework and Business Security
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Understand the architectural framework of E-Commerce systems, learn about network
+                            infrastructure, security measures, firewalls, and the importance of protecting
+                            information in online business environments.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Architectural Framework of Electronic Commerce</li>
+                            <li>Network Infrastructure for E-Commerce</li>
+                            <li>Information Distribution Technology</li>
+                            <li>Networked Multimedia Content Publishing Technology</li>
+                            <li>Security and Encryption in E-Commerce</li>
+                            <li>Payment Services Infrastructure</li>
+                            <li>Business Service Infrastructure</li>
+                            <li>Public Policy and Legal Infrastructure</li>
+                            <li>Vulnerability of Information on Internet</li>
+                            <li>Security Policy, Procedures, and Best Practices</li>
+                            <li>Site Security and Web Server Protection</li>
+                            <li>Protecting the Network from Threats</li>
+                            <li>Firewalls – Types and Implementation</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 3: Network Security, Payment Systems, and Legal Issues
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Master transaction security concepts, cryptography, digital signatures, electronic
+                            payment systems, and understand legal and ethical issues including cyber threats,
+                            privacy concerns, and information security in India.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Transaction Security in E-Commerce</li>
+                            <li>Cryptology – Encryption and Decryption</li>
+                            <li>Digital Signatures and Authentication</li>
+                            <li>Electronic Mail Security</li>
+                            <li>Security Protocols for Web Commerce (SSL/TLS, HTTPS)</li>
+                            <li>Electronic Payment Systems</li>
+                            <li>Introduction to Online Payment Systems</li>
+                            <li>Pre-Paid Electronic Payment Systems</li>
+                            <li>Postpaid Payment Systems</li>
+                            <li>E-Security and Information System Security</li>
+                            <li>Security on the Internet</li>
+                            <li>E-Business Risk Management Issues</li>
+                            <li>Information Security Environment in India</li>
+                            <li>Legal and Ethical Issues in E-Commerce</li>
+                            <li>Cyber Stalking – Privacy Risks in the Internet Age</li>
+                            <li>Phishing Attacks and Prevention</li>
+                            <li>Application Fraud and Skimming</li>
+                            <li>Copyright Issues and Internet Gambling</li>
+                            <li>Threats to Children Online</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 4: Mobile Commerce and E-Commerce Case Studies
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Learn about Mobile Commerce (M-Commerce), its applications, benefits, challenges,
+                            and payment systems, and explore real-world case studies of E-Commerce success
+                            stories in India including Flipkart's journey.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Introduction to Mobile Commerce (M-Commerce)</li>
+                            <li>Mobile Commerce Applications and Use Cases</li>
+                            <li>Benefits of Mobile Commerce</li>
+                            <li>Impediments and Challenges in Mobile Commerce</li>
+                            <li>Mobile Commerce Payment Systems</li>
+                            <li>Mobile Wallets and Digital Payment Apps</li>
+                            <li>Mobile Banking and Financial Services</li>
+                            <li>Location-Based Services in M-Commerce</li>
+                            <li>Mobile Shopping and Retail Applications</li>
+                            <li>M-Commerce Security Concerns</li>
+                            <li>Case Study: Future of E-Commerce in India</li>
+                            <li>Case Study: Flipkart – Journey of an E-Commerce Start-Up</li>
+                            <li>Success Factors of Indian E-Commerce Platforms</li>
+                            <li>Emerging Technologies in Mobile Commerce</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

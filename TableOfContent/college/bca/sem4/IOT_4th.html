@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internet of Things (IoT) | BCA Semester 4 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/college/bca/sem4/sem4_bca.html">Semester 4</a> /
+            <span>Internet of Things (IoT)</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Internet of Things (IoT)</h1>
+            <p class="page-description">
+                Complete Unit-wise notes following BCA Semester 4 syllabus
+            </p>
+
+            <div class="topics-list">
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 1: Introduction to Internet of Things
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore the foundational concepts of IoT, its evolution, architecture,
+                            and understand how connected devices and sensors are transforming the digital world.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Definition and Meaning of Internet of Things (IoT)</li>
+                            <li>Evolution and History of IoT</li>
+                            <li>IoT Architecture and Components</li>
+                            <li>IoT Ecosystem and Network Topology</li>
+                            <li>Characteristics and Features of IoT Systems</li>
+                            <li>Applications of IoT in Various Domains</li>
+                            <li>IoT vs M2M (Machine to Machine) Communication</li>
+                            <li>Sensors and Actuators in IoT</li>
+                            <li>IoT Connectivity and Communication Protocols</li>
+                            <li>Challenges and Issues in IoT Implementation</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 2: IoT Architecture and Communication Protocols
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Learn about the layered architecture of IoT systems, various communication
+                            protocols, networking technologies, and data management in IoT environments.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>IoT Reference Architecture and Layers</li>
+                            <li>Perception Layer, Network Layer, and Application Layer</li>
+                            <li>Communication Protocols – HTTP, MQTT, CoAP, AMQP</li>
+                            <li>IoT Network Technologies – Wi-Fi, Bluetooth, Zigbee, LoRaWAN</li>
+                            <li>Wireless Sensor Networks (WSN)</li>
+                            <li>RFID (Radio Frequency Identification)</li>
+                            <li>NFC (Near Field Communication)</li>
+                            <li>6LoWPAN (IPv6 over Low-Power Wireless Personal Area Networks)</li>
+                            <li>IoT Data Management and Storage</li>
+                            <li>Cloud Computing in IoT</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 3: IoT Platforms and Development
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Discover popular IoT platforms, hardware components like Arduino and Raspberry Pi,
+                            programming for IoT devices, and hands-on development of IoT applications.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>IoT Platforms – AWS IoT, Azure IoT, Google Cloud IoT</li>
+                            <li>Arduino Platform – Architecture and Programming</li>
+                            <li>Raspberry Pi – Setup and Configuration</li>
+                            <li>Sensors Integration – Temperature, Humidity, Motion, Light</li>
+                            <li>Actuators and Controlling Devices</li>
+                            <li>IoT Development Boards – NodeMCU, ESP8266, ESP32</li>
+                            <li>Programming Languages for IoT – Python, C/C++, JavaScript</li>
+                            <li>IoT Application Development Life Cycle</li>
+                            <li>Data Collection and Processing in IoT</li>
+                            <li>Real-Time Monitoring and Control Systems</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 4: IoT Security and Advanced Applications
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Understand IoT security challenges, encryption techniques, authentication mechanisms,
+                            and explore advanced IoT applications in smart cities, healthcare, and industry.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>IoT Security Challenges and Threats</li>
+                            <li>Authentication and Authorization in IoT</li>
+                            <li>Encryption Techniques – Symmetric and Asymmetric</li>
+                            <li>Secure Communication Protocols – TLS/SSL, DTLS</li>
+                            <li>Privacy Concerns in IoT Systems</li>
+                            <li>Blockchain in IoT Security</li>
+                            <li>Smart Home and Home Automation</li>
+                            <li>Smart Cities – Traffic Management, Waste Management</li>
+                            <li>Industrial IoT (IIoT) – Industry 4.0</li>
+                            <li>Healthcare IoT – Wearable Devices, Remote Monitoring</li>
+                            <li>Agriculture IoT – Smart Farming</li>
+                            <li>Future Trends and Emerging Technologies in IoT</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
