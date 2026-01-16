@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Design and Analysis of Algorithms | BCA Semester 4 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+<style>
+    .subject-section {
+        margin-bottom: 4rem;
+    }
+
+    .subject-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2rem 0 1.5rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+    }
+
+    .topic-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+    }
+
+    .topic-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    .topic-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+    }
+
+    .topic-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .topic-content>p {
+        background: #fff9e6;
+        padding: 15px 20px;
+        border-radius: 8px;
+        border-left: 4px solid #ffc107;
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .topic-content p strong {
+        color: #667eea;
+        font-size: 1.05rem;
+        display: block;
+        margin-bottom: 8px;
+    }
+</style>
+
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html">School</a></li>
+                    <li><a href="/college.html" class="active">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/college.html">College</a> /
+            <a href="/bca.html">BCA</a> /
+            <a href="/subjects/college/bca/sem4/sem4_bca.html">Semester 4</a> /
+            <span>Design and Analysis of Algorithms</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">Design and Analysis of Algorithms</h1>
+            <p class="page-description">
+                Complete Unit-wise notes following BCA Semester 4 syllabus
+            </p>
+
+            <div class="topics-list">
+                <!-- Module 1 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 1: Basic Concepts of Algorithms and Complexity Analysis
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Master the fundamental concepts of algorithms, understand their characteristics,
+                            learn to analyze time and space complexity, and explore basic sorting algorithms
+                            with asymptotic notations.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Definition and Characteristics of Algorithm</li>
+                            <li>Properties of a Good Algorithm</li>
+                            <li>Pseudo Code and Flowcharts</li>
+                            <li>Time Complexity of Basic Control Structures</li>
+                            <li>Space Complexity Analysis</li>
+                            <li>Best Case, Worst Case, and Average Case Analysis</li>
+                            <li>Insertion Sort – Algorithm and Time Complexity</li>
+                            <li>Selection Sort – Algorithm and Time Complexity</li>
+                            <li>Heap Sort – Algorithm and Time Complexity</li>
+                            <li>Bubble Sort – Algorithm and Time Complexity</li>
+                            <li>Asymptotic Notations – Big O, Omega, and Theta</li>
+                            <li>Growth of Functions</li>
+                            <li>Comparing Algorithm Efficiency</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 2 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 2: Divide and Conquer & Greedy Method
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Learn the Divide and Conquer paradigm with algorithms like Binary Search, Merge Sort,
+                            and Quick Sort, and explore the Greedy Method approach to solve optimization problems
+                            efficiently.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Divide and Conquer – General Method and Strategy</li>
+                            <li>Binary Search Algorithm</li>
+                            <li>Finding Maximum and Minimum Elements</li>
+                            <li>Merge Sort – Algorithm and Analysis</li>
+                            <li>Quick Sort – Algorithm and Analysis</li>
+                            <li>Strassen's Matrix Multiplication</li>
+                            <li>Greedy Method – General Approach</li>
+                            <li>Knapsack Problem (Fractional Knapsack)</li>
+                            <li>Travelling Salesman Problem</li>
+                            <li>Job Sequencing with Deadlines</li>
+                            <li>Optimal Storage on Tapes</li>
+                            <li>Huffman Codes and Data Compression</li>
+                            <li>Activity Selection Problem</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 3 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 3: Dynamic Programming and Backtracking
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Understand Dynamic Programming for solving overlapping subproblems and optimal
+                            substructure problems, and learn Backtracking technique for constraint satisfaction
+                            problems.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Dynamic Programming – General Method and Principles</li>
+                            <li>Assembly Line Scheduling Problem</li>
+                            <li>Matrix Chain Multiplication</li>
+                            <li>Longest Common Subsequence (LCS)</li>
+                            <li>Optimal Substructure Property</li>
+                            <li>Overlapping Subproblems</li>
+                            <li>Memoization vs Tabulation</li>
+                            <li>Backtracking – General Method</li>
+                            <li>N Queens Problem</li>
+                            <li>Sum of Subsets Problem</li>
+                            <li>Hamiltonian Circuit Problem</li>
+                            <li>State Space Tree</li>
+                            <li>Bounding Functions in Backtracking</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+
+                <!-- Module 4 -->
+                <details class="topic-item">
+                    <summary>
+                        Unit 4: Branch & Bound and Graph Algorithms
+                    </summary>
+                    <div class="topic-content">
+                        <p>
+                            Explore Branch and Bound technique for optimization problems and master fundamental
+                            graph algorithms including shortest path, minimum spanning tree, and multistage graphs.
+                        </p>
+
+                        <p><strong>Key Topics:</strong></p>
+                        <ul>
+                            <li>Branch and Bound – Introduction and Strategy</li>
+                            <li>Live Node, Dead Node, and E-Node</li>
+                            <li>Bounding Functions</li>
+                            <li>0/1 Knapsack Problem using Branch & Bound</li>
+                            <li>Assignment Problem</li>
+                            <li>Elementary Graph Algorithms</li>
+                            <li>Graph Representation – Adjacency Matrix and List</li>
+                            <li>Breadth-First Search (BFS)</li>
+                            <li>Depth-First Search (DFS)</li>
+                            <li>Multistage Graphs</li>
+                            <li>Minimum Spanning Trees – Kruskal's Algorithm</li>
+                            <li>Minimum Spanning Trees – Prim's Algorithm</li>
+                            <li>Single Source Shortest Path – Dijkstra's Algorithm</li>
+                            <li>Single Source Shortest Path – Bellman-Ford Algorithm</li>
+                            <li>All Pairs Shortest Path – Floyd-Warshall Algorithm</li>
+                        </ul>
+
+                        <a href="#" class="btn-secondary">View Complete Notes</a>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
