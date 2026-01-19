@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reach for the Top - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>Reach for the Top</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🏔️ Reach for the Top - Class 9</h1>
+        <p class="page-description">
+          Part I: Santosh Yadav - The only woman to scale Mt. Everest twice.<br />
+          Part II: Maria Sharapova - The journey from Siberia to World No. 1 in
+          Tennis.
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">Part I: Santosh Yadav</h2>
+          
+          
+
+          <div class="definition-box">
+            <h4>📖 Overview</h4>
+            <p>
+              This biography portrays the strong willpower and determination of
+              <strong>Santosh Yadav</strong>. Born in a society where the birth
+              of a son was a blessing and a daughter was not welcomed, she
+              defied traditional norms to chart her own path and become the only
+              woman in the world to scale <strong>Mount Everest twice</strong>.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Defying Traditions</h3>
+
+          <div class="important-note">
+            <h4>⚡ A Rebel from Birth</h4>
+            <p>
+              • <strong>Name:</strong> Her name 'Santosh' means contentment, but
+              she was never content with a traditional place in society.<br />
+              • <strong>Clothing:</strong> While other girls wore Indian suits,
+              she preferred <strong>shorts</strong>.<br />
+              • <strong>Marriage:</strong> In her village (Joniyawas, Haryana),
+              girls were married off at 16. Santosh refused and threatened she
+              would never marry if she didn't get a proper education.<br />
+              • <strong>Education:</strong> She left home for Delhi. When her
+              parents refused to pay fees, she politely informed them she would
+              work part-time. They eventually agreed to pay.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">1.2 The Path to Mountaineering</h3>
+
+          <div class="analogy-box">
+            <h4>🌟 The Aravalli Inspiration</h4>
+            <p>
+              While studying at Maharani College, Jaipur, her room faced the
+              <strong>Aravalli Hills</strong>. She used to watch villagers going
+              up and vanishing. Curiosity led her to check it out herself. She
+              found mountaineers who encouraged her to join them. This was the
+              turning point.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Key Achievements</h4>
+            <ul>
+              <li>
+                <strong>Training:</strong> Joined Nehru Institute of
+                Mountaineering, Uttarkashi. Her grades were excellent.
+              </li>
+              <li>
+                <strong>1992 (First Ascent):</strong> At barely 20 years old,
+                she scaled Mt. Everest, becoming the youngest woman to do so.
+              </li>
+              <li>
+                <strong>1993 (Second Ascent):</strong> Within 12 months, she
+                scaled it again as a member of an Indo-Nepalese Women's
+                Expedition.
+              </li>
+              <li>
+                <strong>Humanitarian:</strong> During the 1992 mission, she
+                saved the life of a fellow climber, Mohan Singh, by sharing her
+                oxygen with him.
+              </li>
+              <li>
+                <strong>Environmentalist:</strong> She brought down
+                <strong>500 kilograms</strong> of garbage from the Himalayas.
+              </li>
+            </ul>
+          </div>
+
+          <hr
+            style="
+              margin: 3rem 0;
+              border: 0;
+              height: 2px;
+              background: linear-gradient(to right, #667eea, #764ba2);
+            "
+          />
+
+          <h2 class="chapter-heading">Part II: Maria Sharapova</h2>
+          
+          
+
+          <div class="definition-box">
+            <h4>📖 Overview</h4>
+            <p>
+              This part highlights the sacrifices and mental toughness of
+              <strong>Maria Sharapova</strong>. A Russian girl who reached the
+              summit of women's tennis, becoming World No. 1 in 2005. Her story
+              teaches that success comes at a price.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.1 The Great Sacrifice</h3>
+
+          <div class="important-note">
+            <h4>⚡ Separation from Mother</h4>
+            <p>
+              At the tender age of <strong>nine</strong>, Maria was packed off
+              from Siberia (Russia) to Florida (USA) for tennis training. Her
+              father, Yuri, went with her, but her mother, Yelena, could not go due
+              to visa restrictions. This <strong>two-year separation</strong>
+              from her mother was a heart-wrenching sacrifice for a young child.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Mental Toughness</h3>
+
+          <div class="example-box">
+            <h4>🎾 Overcoming Bullying</h4>
+            <p>
+              In the hostel, Maria was younger than the other trainees. The
+              seniors would return at 11 PM and wake her up, ordering her to
+              tidy up the room and clean it. Instead of getting depressed, Maria
+              became more determined and mentally tough.
+            </p>
+            <p>
+              <em>"I learnt how to take care of myself. I never thought of
+              quitting because I knew what I wanted."</em>
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Success and Identity</h4>
+            <ul>
+              <li>
+                <strong>Wimbledon 2004:</strong> She won the women's singles
+                crown.
+              </li>
+              <li>
+                <strong>World No. 1:</strong> Reached the top spot on 22 August
+                2005.
+              </li>
+              <li>
+                <strong>Identity:</strong> Though she lives in the USA and has
+                an American accent, she proudly displays her Russian
+                nationality. She says, "My blood is totally Russian."
+              </li>
+              <li>
+                <strong>Philosophy:</strong> She treats tennis as a business and
+                a sport. Money is a motivation, but the dream of being Number 1
+                is the biggest driving force.
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Comparison: Santosh vs Maria</h2>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Santosh Yadav</th>
+                  <th>Maria Sharapova</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Origin</strong></td>
+                  <td>Rural Haryana, India</td>
+                  <td>Siberia, Russia</td>
+                </tr>
+                <tr>
+                  <td><strong>Field</strong></td>
+                  <td>Mountaineering</td>
+                  <td>Tennis</td>
+                </tr>
+                <tr>
+                  <td><strong>Challenge</strong></td>
+                  <td>Defied traditional gender norms.</td>
+                  <td>Endured separation from mother & bullying.</td>
+                </tr>
+                <tr>
+                  <td><strong>Achievement</strong></td>
+                  <td>Only woman to scale Everest twice.</td>
+                  <td>World No. 1 in Women's Tennis.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="chapter-heading">4. Important Questions & Answers</h2>
+
+          <div class="example-box">
+            <h4>
+              💡 Q1: Why was the 'holy man' surprised when he visited Santosh's
+              mother?
+            </h4>
+            <p>
+              <strong>Answer:</strong> The holy man assumed the mother wanted a
+              son (as was customary). He was surprised when Santosh's grandmother
+              told him they did not want a son; they wanted a daughter.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q2: How did Santosh save her fellow climbers?
+            </h4>
+            <p>
+              <strong>Answer:</strong> During the 1992 Everest mission, she
+              provided special care to a climber at the South Col (who sadly
+              died). However, she managed to save another climber,
+              <strong>Mohan Singh</strong>, by sharing her own oxygen with him.
+              Without her help, he would have died.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q3: What is Maria Sharapova's mantra for success?
+            </h4>
+            <p>
+              <strong>Answer:</strong> Maria is very competitive, hard-working,
+              and mentally tough. She considers the sacrifices she made worth
+              it. She says, "I work hard at what I do." She views tennis as a
+              business and a sport, with money as a motivation but being No. 1
+              as the ultimate goal.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
