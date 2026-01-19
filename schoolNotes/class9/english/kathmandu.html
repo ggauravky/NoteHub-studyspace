@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kathmandu - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      /* Reusing formula-sheet for Vocabulary/Key Themes */
+      .formula-sheet {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 3rem 2rem;
+        border-radius: 16px;
+        margin-top: 3rem;
+        box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+      }
+      .formula-sheet h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        font-weight: 700;
+      }
+      .formula-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+      .formula-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .formula-card h3 {
+        color: #667eea;
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .formula-card p {
+        color: #555;
+        margin-bottom: 0.8rem;
+        font-family: "Poppins", sans-serif; /* Changed from monospace for English */
+        font-size: 0.95rem;
+        background: #f8f9ff;
+        padding: 0.5rem;
+        border-radius: 6px;
+      }
+      .formula-card .formula-desc {
+        font-family: "Poppins", sans-serif;
+        font-size: 0.85rem;
+        color: #666;
+        background: transparent;
+        padding: 0;
+        font-style: italic;
+      }
+      .key-points {
+        background: #f3e5f5; /* Changed slightly to match generic key points */
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+        .formula-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html" class="active">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>Kathmandu</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🏯 Kathmandu - Class 9 English</h1>
+        <p class="page-description">
+          Detailed summary, analysis, and vocabulary from Vikram Seth's travelogue "Heaven Lake"
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction</h2>
+
+          <div class="definition-box">
+            <h4>📖 About the Author & Source</h4>
+            <p>
+              <strong>Author:</strong> Vikram Seth<br />
+              <strong>Source:</strong> Excerpt from his travelogue <em>"Heaven Lake"</em> (1983).
+            </p>
+            <p>
+              This chapter describes the author's journey from China to India, specifically focusing on his time in <strong>Kathmandu</strong>, the capital of Nepal. It highlights the sharp contrast between two major temples—Pashupatinath and Baudhnath—and provides a vivid sensory description of the city's atmosphere.
+            </p>
+          </div>
+          
+          
+
+          <h2 class="chapter-heading">2. The Two Temples: A Study in Contrast</h2>
+          <p>
+            Vikram Seth visits two famous temples in Kathmandu. He draws a striking comparison between the atmosphere inside and around these holy places.
+          </p>
+
+          <h3 class="sub-heading">2.1 Pashupatinath Temple (Hindu)</h3>
+
+          <div class="important-note">
+            <h4>⚡ Atmosphere: "Febrile Confusion"</h4>
+            <p>
+              The author describes the atmosphere at Pashupatinath as chaotic and noisy.
+            </p>
+            <p>
+              • <strong>Restrictions:</strong> A sign proclaims "Entrance for Hindus Only".<br />
+              • <strong>Chaos:</strong> Priests, hawkers, devotees, tourists, cows, monkeys, and pigeons roam everywhere.<br />
+              • <strong>Rituals:</strong> People struggle to get the priest's attention; a princess appears and people bow; a corpse is being cremated on the banks of the Bagmati river.<br />
+              • <strong>Pollution:</strong> Washerwomen are washing clothes and children are bathing in the holy river.
+            </p>
+          </div>
+          
+          
+
+          <h3 class="sub-heading">2.2 Baudhnath Stupa (Buddhist)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Atmosphere: "Haven of Quietness"</h4>
+            <p>
+              In sharp contrast, the Baudhnath Stupa is described as a place of immense stillness and peace.
+            </p>
+            <p>
+              • <strong>Structure:</strong> A massive white dome with an "immense white dome" surrounded by a road.<br />
+              • <strong>Serenity:</strong> There are no crowds, no noise, and a sense of stillness prevails.<br />
+              • <strong>Shops:</strong> Small shops owned by Tibetan immigrants surround it, selling felt bags, silver jewelry, and antiques.<br />
+              • <strong>Absence:</strong> There is no chaotic crowd like at the Hindu temple.
+            </p>
+          </div>
+
+           
+
+          <h3 class="sub-heading">2.3 Comparison Summary</h3>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Pashupatinath (Hindu)</th>
+                  <th>Baudhnath (Buddhist)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Atmosphere</strong></td>
+                  <td>Febrile confusion (Chaos, Noise)</td>
+                  <td>Haven of quietness (Stillness, Peace)</td>
+                </tr>
+                <tr>
+                  <td><strong>Crowd</strong></td>
+                  <td>Priests, hawkers, monkeys, pushing crowds</td>
+                  <td>No crowds, calm environment</td>
+                </tr>
+                <tr>
+                  <td><strong>Activity</strong></td>
+                  <td>Worship, cremation, bathing, fighting monkeys</td>
+                  <td>Meditation, quiet business (Tibetan shops)</td>
+                </tr>
+                <tr>
+                  <td><strong>Key Phrase</strong></td>
+                  <td>"Atmosphere of febrile confusion"</td>
+                  <td>"Ring of silence"</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2 class="chapter-heading">3. The Streets of Kathmandu</h2>
+
+          <p>
+            Vikram Seth gives a sensory description of the busy streets of Kathmandu. It is not just a religious place but a vibrant commercial hub.
+          </p>
+
+          <div class="key-points">
+            <h4>🔑 Sensory Details</h4>
+            <ul>
+              <li><strong>Sights:</strong> Fruit sellers, flute sellers, shops selling western cosmetics, film rolls, chocolate, copper utensils, and Nepalese antiques.</li>
+              <li><strong>Sounds:</strong> Car horns, bicycle bells, lowing cows, vendors shouting their wares, radios playing film songs.</li>
+              <li><strong>Smells/Taste:</strong> He enjoys a marzipan bar, a corn-on-the-cob roasted over charcoal (rubbed with salt, chili, and lemon), and reads a "Love Story" comic and a Reader's Digest.</li>
+            </ul>
+          </div>
+          
+          
+
+          <div class="example-box">
+            <h4>💡 The Author's Indulgence</h4>
+            <p>
+              Unlike a serious pilgrim, the author indulges in simple pleasures. He eats corn, drinks Coca-Cola (a "nauseating orange drink"), and buys reading material. This makes the travelogue feel personal and realistic.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. The Flute Seller</h2>
+          <p>
+            Before leaving, the author notices a flute seller standing in a corner of the square near his hotel. This figure leaves a deep impact on him.
+          </p>
+
+          <div class="definition-box">
+            <h4>📖 Description of the Seller</h4>
+            <p>
+              • He holds a pole with about fifty flutes (bansuris and cross-flutes) sticking out like quills of a porcupine.<br />
+              • Unlike other hawkers who shout to sell, he plays the flute <strong>slowly, meditatively, and without excessive display</strong>.<br />
+              • Occasionally, he makes a sale, but in a very off-handed way, as if it were incidental to his playing.
+            </p>
+          </div>
+          
+          
+
+          <div class="analogy-box">
+            <h4>🌟 The Universal Power of the Flute</h4>
+            <p>
+              Vikram Seth compares the music of the flute to the <strong>"commonality of all mankind."</strong><br /><br />
+              
+              • He notes that while different cultures have different flutes (Japanese Shakuhachi, Deep Bansuri of Hindustani music, recorders of South America), the appeal of the flute is universal.<br />
+              • The flute requires breath (living breath) to produce sound. It is the closest instrument to the human voice.<br />
+              • He realizes that previously he would have returned home thinking only of the details of his journey, but now, this simple music affects him deeply.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Vocabulary & Themes</h2>
+
+          <div class="formula-sheet">
+            <h2>📚 Vocabulary Vault</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Febrile Confusion</h3>
+                <p>Nervous excitement or chaotic activity</p>
+                <p class="formula-desc">Used to describe Pashupatinath</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Haven</h3>
+                <p>A place of safety or refuge</p>
+                <p class="formula-desc">Used to describe Baudhnath</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Proclaim</h3>
+                <p>To announce officially or publicly</p>
+                <p class="formula-desc">The sign at the temple entrance</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Cacophony</h3>
+                <p>A harsh, discordant mixture of sounds</p>
+                <p class="formula-desc">The noise of the Kathmandu streets</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Off-handed</h3>
+                <p>Casual; done without much thought</p>
+                <p class="formula-desc">The flute seller's way of selling</p>
+              </div>
+
+              <div class="formula-card">
+                <h3>Fingering</h3>
+                <p>Way of placing fingers on an instrument</p>
+                <p class="formula-desc">Technique of playing the flute</p>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="chapter-heading">6. Practice Questions</h2>
+
+          <div class="example-box">
+            <h4>💡 Short Answer Type</h4>
+            <p>
+              <strong>Q:</strong> How does the author describe Kathmandu's busiest streets?<br />
+              <strong>A:</strong> The author describes them as narrow and busy, filled with religious shrines, hawkers, street vendors, and stray cows. It is a noisy place with radios playing, car horns honking, and vendors shouting.
+            </p>
+            <br>
+            <p>
+              <strong>Q:</strong> Why does the author call Baudhnath Stupa a "haven of quietness"?<br />
+              <strong>A:</strong> Unlike the chaotic Pashupatinath temple, the Baudhnath Stupa has no crowds. It is surrounded by a ring road and quiet Tibetan shops. The immense white dome creates a sense of stillness and peace.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>💡 Long Answer / Value Based</h4>
+            <p>
+              <strong>Q: "To hear any flute is to be drawn into the commonality of all mankind." Explain.</strong><br /><br />
+              
+              <strong>Answer:</strong> The author believes that the flute is unique because it produces sound through human breath, making it an extension of the living being. Every culture in the world has its own version of the flute (bamboo, reed, etc.) and specific musical scales. Despite these differences, the mournful and melodious sound of the flute appeals to everyone universally. It connects the author to the shared human experience, making him feel a sense of nostalgia and belonging even in a foreign land.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Key Takeaways</h4>
+            <ul>
+              <li>The chapter illustrates the <strong>diversity of Kathmandu</strong> through religion (Hindu vs Buddhist).</li>
+              <li>It emphasizes the <strong>art of observation</strong> in travel writing.</li>
+              <li>It highlights the power of <strong>music (the flute)</strong> to bridge cultural gaps and evoke deep emotions.</li>
+              <li>It contrasts the <strong>chaos of urban life</strong> with moments of <strong>spiritual stillness</strong>.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

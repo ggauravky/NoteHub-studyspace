@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Bond of Love - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>The Bond of Love</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🐻 The Bond of Love - Class 9</h1>
+        <p class="page-description">
+          A touching story by Kenneth Anderson about the deep friendship between
+          a human family and a rescued sloth bear named Bruno.
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction</h2>
+
+          <div class="definition-box">
+            <h4>📖 Overview</h4>
+            <p>
+              <strong>"The Bond of Love"</strong> highlights the emotional bond
+              between the author's wife and her pet bear, <strong>Bruno</strong>
+              (later named Baba). The story proves that wild animals also have
+              feelings, memory, and the capacity to love and be loved. It challenges
+              the notion that dangerous beasts cannot be tamed by affection.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. The Rescue</h2>
+
+          <div class="important-note">
+            <h4>⚡ How they found Bruno</h4>
+            <p>
+              Two years prior, the author and his companions were passing through
+              sugarcane fields near Mysore. People were driving away wild pigs.
+              Suddenly, a sloth bear appeared and was unfortunately shot by one
+              of the author's companions. They found a <strong>baby bear cub</strong>
+              riding on the mother's back. The author managed to catch it and
+              presented it to his wife in Bangalore.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Life at Home</h4>
+            <ul>
+              <li>
+                <strong>Naming:</strong> The wife was delighted and named him
+                'Bruno'.
+              </li>
+              <li>
+                <strong>Diet:</strong> Initially fed milk from a bottle, Bruno soon
+                started eating everything: porridge, vegetables, fruits, nuts,
+                meat, eggs, chocolates, and even drinking tea, coffee, and beer!
+              </li>
+              <li>
+                <strong>Companions:</strong> He became friendly with the
+                Alsatian dogs and the children of the tenants.
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Accidents and Incidents</h2>
+
+          <div class="example-box">
+            <h4>⚠️ Incident 1: Barium Carbonate</h4>
+            <p>
+              The author had put down <strong>Barium Carbonate</strong> (a poison)
+              in the library to kill rats. Bruno entered and ate some of it.
+              <br /><br />
+              <strong>Effect:</strong> Paralysis set in; he could not stand on his
+              feet. He was rushed to a vet.<br />
+              <strong>Cure:</strong> The vet injected 10 cc of antidote followed
+              by another 10 cc. Bruno recovered completely and began eating
+              again.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>⚠️ Incident 2: Engine Oil</h4>
+            <p>
+              Bruno drank a gallon of <strong>old engine oil</strong> which the
+              author had drained from his Studebaker car and kept to use against
+              termites. Surprisingly, it had <strong>no ill effects</strong> on
+              him whatsoever!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Separation and Reunion</h2>
+
+          <h3 class="sub-heading">4.1 The Separation</h3>
+          <p>
+            As Bruno grew, he became equal in height to the Alsatians and was
+            very mischievous. He had to be chained for safety. The family
+            decided to send him to the <strong>Mysore Zoo</strong>. The author's wife was inconsolable, weeping and refusing to eat.
+          </p>
+
+          <h3 class="sub-heading">4.2 The Visit (3 Months Later)</h3>
+          
+          
+
+          <div class="analogy-box">
+            <h4>🌟 Memory of Love</h4>
+            <p>
+              Friends told the wife that the bear would not recognize her.
+              However, the moment she reached the cage, Bruno recognized her
+              from yards away and howled with happiness. She ran to him, petted
+              him through the bars, and he stood on his head in delight.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">4.3 The Return</h3>
+          <p>
+            Seeing their bond, the <strong>Zoo Superintendent</strong> was kind
+            enough to release Bruno back to them. He provided a cage for
+            transport.
+          </p>
+
+          <div class="key-points">
+            <h4>🔑 The Island Home</h4>
+            <p>
+              At home, a special <strong>island</strong> was made for Bruno
+              (now called Baba):
+            </p>
+            <ul>
+              <li>20 feet long and 15 feet wide.</li>
+              <li>Surrounded by a dry pit (moat) 6 feet wide and 7 feet deep.</li>
+              <li>A wooden box with straw was provided for him to sleep in.</li>
+              <li>His toys (a gnarly stump and a bamboo stick) were returned to him.</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">5. Important Questions & Answers</h2>
+
+          <div class="example-box">
+            <h4>
+              💡 Q1: "Love is mutual." Illustrate with reference to the story.
+            </h4>
+            <p>
+              <strong>Answer:</strong> The story clearly shows love is mutual.
+              The author's wife loved Bruno deeply, treating him like a child. In
+              return, Bruno, though a wild animal, reciprocated this love. He
+              was miserable at the zoo without her, fretting and refusing food.
+              When she visited, his joy knew no bounds, proving his love was
+              just as strong as hers.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q2: Why was Bruno sent to the zoo?
+            </h4>
+            <p>
+              <strong>Answer:</strong> Bruno had grown very large in size. He
+              could be dangerous to the children of the tenants. He had to be
+              kept chained most of the time. Therefore, it was decided that he
+              should be sent to the zoo for everyone's safety.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q3: How did the author's wife reach the island?
+            </h4>
+            <p>
+              <strong>Answer:</strong> The author tied a rope to the overhanging
+              branch of a mango tree with a loop at its end. Putting one foot in
+              the loop, she kicked off with the other to bridge the six-foot gap
+              of the moat to reach the island.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Extract Based Question</h4>
+            <p>
+              <em>"We all missed him greatly: but in a sense we were relieved."</em><br /><br />
+              <strong>a) Who does 'we' refer to?</strong><br />
+              'We' refers to the author, his family, and friends.<br /><br />
+              <strong>b) Who did they miss?</strong><br />
+              They missed Bruno (the bear).<br /><br />
+              <strong>c) Why were they relieved?</strong><br />
+              They were relieved because keeping a fully grown bear at home was becoming dangerous and difficult to manage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

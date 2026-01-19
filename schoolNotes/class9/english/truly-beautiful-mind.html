@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Truly Beautiful Mind - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>A Truly Beautiful Mind</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🧠 A Truly Beautiful Mind - Class 9</h1>
+        <p class="page-description">
+          A biographical sketch of Albert Einstein highlighting his scientific
+          genius and his humanitarian heart.
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction</h2>
+
+          <div class="definition-box">
+            <h4>📖 Why "Beautiful Mind"?</h4>
+            <p>
+              The title <strong>"A Truly Beautiful Mind"</strong> may seem
+              unusual for a scientist. We usually associate "beautiful" with
+              art or people. However, this story highlights that Einstein wasn't
+              just a genius in physics; he was a humanitarian who advocated for
+              <strong>world peace</strong> and <strong>non-violence</strong>.
+              His concern for mankind makes his mind truly beautiful.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Early Life & Childhood</h2>
+
+          <div class="important-note">
+            <h4>⚡ An Unusual Child</h4>
+            <p>
+              • <strong>Birth:</strong> March 14, 1879, in Ulm, Germany.<br />
+              • <strong>Physical Appearance:</strong> His head seemed much too
+              large. His mother thought he was a "freak."<br />
+              • <strong>Late Talker:</strong> He didn't speak until he was two
+              and a half years old. When he did, he repeated everything twice.<br />
+              • <strong>"Brother Boring":</strong> He didn't know what to do
+              with other children, so his playmates called him Brother Boring.
+              He played by himself with mechanical toys.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 The Headmaster's Prediction</h4>
+            <p>
+              A headmaster once told Einstein's father that it didn't matter
+              what profession Albert chose because <em>"he will never make a
+              success at anything."</em> History proved this prediction horribly
+              wrong!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">3. Education & Student Life</h2>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Schooling in Munich</th>
+                  <th>Schooling in Switzerland</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Strict discipline and regimentation.</td>
+                  <td>More liberal and free atmosphere.</td>
+                </tr>
+                <tr>
+                  <td>Einstein felt stifled and suffocated.</td>
+                  <td>
+                    Einstein felt comfortable and interested in learning.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Left the school at age 15.</td>
+                  <td>Completed his graduation here.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Interests Beyond Science</h4>
+            <ul>
+              <li>
+                <strong>Music:</strong> His mother wanted him to learn the
+                violin. He became a gifted amateur violinist and maintained this
+                skill throughout his life.
+              </li>
+              <li>
+                <strong>Romance:</strong> At the University in Zurich, he met
+                <strong>Mileva Maric</strong>, a Serbian student. He found her
+                to be a "clever creature" and an ally against the "philistines"
+                (people who didn't appreciate art or literature).
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">4. Scientific Achievements</h2>
+
+          <div class="analogy-box">
+            <h4>🌟 The "Patent Office" Years</h4>
+            <p>
+              In 1902, Einstein got a job as a technical expert in the patent
+              office in Bern. While he was supposed to be assessing other
+              people's inventions, he was secretly developing his own ideas. He
+              jokingly called his desk drawer the <strong>"Bureau of
+              Theoretical Physics."</strong>
+            </p>
+          </div>
+
+          <div class="definition-box">
+            <h4>🚀 The Year 1905: Annus Mirabilis</h4>
+            <p>
+              Einstein published his <strong>Special Theory of
+              Relativity</strong>. <br /><br />
+              <strong>Key Formula:</strong> E = mc² <br />
+              (Energy = Mass × Speed of Light squared)<br /><br />
+              
+              <br/>
+              This showed that mass and energy are interchangeable.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ General Theory of Relativity (1915)</h4>
+            <p>
+              This theory provided a new interpretation of gravity. In 1919, a
+              solar eclipse proved his theory correct. The newspapers called it
+              a <strong>"Scientific Revolution."</strong> He received the
+              <strong>Nobel Prize for Physics</strong> in 1921.
+            </p>
+            
+          </div>
+
+          <h2 class="chapter-heading">5. Einstein as a World Citizen</h2>
+
+          <div class="key-points">
+            <h4>🔑 The Atomic Bomb</h4>
+            <ul>
+              <li>
+                <strong>The Threat:</strong> When the Nazis came to power in
+                Germany (1933), Einstein emigrated to the USA. Scientists feared
+                the Nazis would build an atomic bomb.
+              </li>
+              <li>
+                <strong>The Letter:</strong> At the urging of a colleague,
+                Einstein wrote a letter to the American President, <strong>Franklin D.
+                Roosevelt</strong>, on August 2, 1939, warning him about the
+                destruction such a bomb could cause.
+              </li>
+              <li>
+                <strong>The Regret:</strong> The Americans secretly developed
+                the bomb and dropped it on Hiroshima and Nagasaki. Einstein was
+                "deeply shaken" by the extent of the destruction.
+              </li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Work for Peace</h4>
+            <p>
+              After the war, Einstein wrote a public missive to the United
+              Nations proposing the formation of a <strong>world
+              government</strong>. Unlike his letter to Roosevelt, this made no
+              impact. However, over the next decade, he became more involved in
+              politics, campaigning for an end to the arms buildup and using his
+              popularity to campaign for <strong>peace and democracy</strong>.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">6. Important Questions & Answers</h2>
+
+          <div class="example-box">
+            <h4>
+              💡 Q1: Why did Einstein leave the school in Munich for good?
+            </h4>
+            <p>
+              <strong>Answer:</strong> Einstein hated the regimentation (strict
+              discipline) of the school in Munich. He felt stifled and often
+              clashed with his teachers. He wanted a more liberal environment to
+              study, so he left the school.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Q2: Why did Einstein call his desk drawer at the patent office the "Bureau of Theoretical Physics"?</h4>
+            <p>
+              <strong>Answer:</strong> While his job was to assess the inventions of others, Einstein was secretly working on his own ideas and theories of physics. He kept his papers in his desk drawer, jokingly referring to it as the "Bureau of Theoretical Physics."
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q3: How was Einstein reacted to the bombing of Hiroshima and
+              Nagasaki?
+            </h4>
+            <p>
+              <strong>Answer:</strong> He was deeply shaken by the extent of the
+              destruction. He wrote a public missive to the United Nations
+              proposing a world government to prevent such wars in the future.
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Extract Based Question</h4>
+            <p>
+              <em>"He also felt a special interest in a fellow student, Mileva
+              Maric, whom he found to be a 'clever creature'."</em><br /><br />
+              <strong>a) Why did Mileva come to Switzerland?</strong><br />
+              Because the University in Zurich was one of the few in Europe
+              where women could get degrees.<br /><br />
+              <strong>b) Why did Einstein like her?</strong><br />
+              He saw in her an "ally" against the "philistines"—the people in
+              his family and at the university with whom he was constantly at
+              odds.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

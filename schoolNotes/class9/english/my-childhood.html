@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Childhood - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>My Childhood</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🚀 My Childhood - Class 9</h1>
+        <p class="page-description">
+          An extract from 'Wings of Fire' recounting the early life of Dr.
+          A.P.J. Abdul Kalam in Rameswaram.
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction</h2>
+
+          <div class="definition-box">
+            <h4>📖 Overview</h4>
+            <p>
+              This chapter gives us a glimpse into the childhood of
+              <strong>Dr. A.P.J. Abdul Kalam</strong> (former President of
+              India). Set in the island town of <strong>Rameswaram</strong>, it
+              highlights the influence of his parents, his friends, and his
+              teachers in shaping his character. It explores themes of communal
+              harmony, breaking social barriers, and the importance of
+              upbringing.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Character Sketches</h2>
+
+          <div class="important-note">
+            <h4>⚡ Abdul Kalam's Parents</h4>
+            <p>
+              <strong>Jainulabdeen (Father):</strong> Although he had little
+              formal education or wealth, he possessed great innate wisdom and
+              generosity of spirit. He was austere but provided all
+              necessities.<br /><br />
+              <strong>Ashiamma (Mother):</strong> A kind and hospitable lady.
+              She fed more outsiders every day than all the members of her own
+              family put together.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Kalam's Childhood Friends</h4>
+            <p>
+              Kalam had three close friends, all from orthodox Hindu Brahmin
+              families. Their friendship proves that religion does not create
+              barriers.
+            </p>
+            <ul>
+              <li>
+                <strong>Ramanadha Sastry:</strong> Son of the high priest of
+                Rameswaram temple. Later, he took over the priesthood from his
+                father.
+              </li>
+              <li>
+                <strong>Aravindan:</strong> Went into the business of arranging
+                transport for visiting pilgrims.
+              </li>
+              <li>
+                <strong>Sivaprakasan:</strong> Became a catering contractor for
+                the Southern Railways.
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Key Incidents</h2>
+
+          <h3 class="sub-heading">3.1 Earning First Wages</h3>
+
+          <div class="example-box">
+            <h4>📰 World War II Impact</h4>
+            <p>
+              During World War II (1939), there was a demand for tamarind seeds.
+              Kalam collected and sold them, earning 1 anna per day. Later, the
+              train halt at Rameswaram was suspended, and newspapers had to be
+              bundled and thrown from the moving train. Kalam helped his cousin
+              <strong>Samsuddin</strong> catch these bundles, earning his
+              first wages. He felt a surge of pride in earning his own money.
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Breaking Social Barriers</h3>
+
+          <div class="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>The New Teacher (Negative)</th>
+                  <th>Sivasubramania Iyer (Positive)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Could not stomach a Muslim boy sitting with a Hindu priest's son.</td>
+                  <td>An orthodox Brahmin who rebelled against social segregation.</td>
+                </tr>
+                <tr>
+                  <td>Sent Kalam to the back bench, creating a sense of inferiority.</td>
+                  <td>Invited Kalam to his home for a meal to break religious barriers.</td>
+                </tr>
+                <tr>
+                  <td>Was reprimanded by Lakshmana Sastry for spreading poison.</td>
+                  <td>Served Kalam with his own hands when his wife refused to do so.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ The Science Teacher's Lesson</h4>
+            <p>
+              When <strong>Sivasubramania Iyer</strong> invited Kalam for dinner,
+              his orthodox wife refused to serve a Muslim in her ritually pure
+              kitchen. The teacher didn't get angry; he served Kalam himself and
+              sat beside him to eat. Observing this, his wife's attitude
+              changed. The next time Kalam visited, she took him inside the
+              kitchen and served him herself.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">4. Leaving Rameswaram</h2>
+
+          <div class="analogy-box">
+            <h4>🌟 The Seagull Quote</h4>
+            <p>
+              When Kalam asked permission to leave Rameswaram to study in
+              Ramanathapuram, his father agreed. He quoted Khalil Gibran to
+              console Kalam's hesitant mother:<br /><br />
+              <em>"Your children are not your children. They are the sons and
+              daughters of Life's longing for itself... You may give them your
+              love but not your thoughts. For they have their own
+              thoughts."</em><br /><br />
+              <strong>Meaning:</strong> Parents must let children fly free like
+              seagulls to explore the world and find their own path.
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">5. Important Questions & Answers</h2>
+
+          <div class="example-box">
+            <h4>
+              💡 Q1: How did Lakshmana Sastry react to the new teacher's
+              behavior?
+            </h4>
+            <p>
+              <strong>Answer:</strong> Lakshmana Sastry summoned the teacher and
+              told him strictly not to spread the poison of social inequality
+              and communal intolerance in the minds of innocent children. He
+              told the teacher to either apologize or quit the school.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q2: "Once you decide to change the system, such problems have
+              to be confronted." Who said this and why?
+            </h4>
+            <p>
+              <strong>Answer:</strong> Sivasubramania Iyer (the science
+              teacher) said this to Kalam. He meant that fighting against deep-rooted
+              social norms (like caste segregation) is difficult and one faces
+              resistance, but one must remain firm to bring about change.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q3: What characteristics does Kalam say he inherited from his
+              parents?
+            </h4>
+            <p>
+              <strong>Answer:</strong> From his father, he inherited
+              <strong>honesty and self-discipline</strong>. From his mother, he
+              inherited <strong>faith in goodness and deep kindness</strong>.
+            </p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Themes to Remember</h4>
+            <ul>
+              <li>
+                <strong>Communal Harmony:</strong> Rameswaram was a place where
+                Hindus and Muslims lived together peacefully.
+              </li>
+              <li>
+                <strong>Power of Education:</strong> Teachers play a crucial
+                role in either building bridges or walls between children.
+              </li>
+              <li>
+                <strong>Parental Support:</strong> Kalam's parents were his
+                pillars, providing him with values and the freedom to pursue his
+                dreams.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

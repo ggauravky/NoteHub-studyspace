@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Snake and the Mirror - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box p {
+        color: #666;
+        margin-bottom: 0.5rem;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note p {
+        color: #555;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .definition-box p {
+        color: #555;
+      }
+      .analogy-box {
+        background: #fff3e0;
+        border-left: 4px solid #ff9800;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .analogy-box h4 {
+        color: #e65100;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .analogy-box p {
+        color: #666;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul {
+        margin-left: 1rem;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.5rem 0 0.5rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 1.5rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .comparison-table th {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 600;
+      }
+      .comparison-table td {
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        color: #555;
+      }
+      .comparison-table tr:hover {
+        background: #f8f9ff;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub 📚</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>The Snake and the Mirror</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">🐍 The Snake and the Mirror - Class 9</h1>
+        <p class="page-description">
+          A humorous narrative about a doctor, his vanity, and a terrifying
+          encounter with a cobra.
+        </p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Introduction to the Story</h2>
+
+          <div class="definition-box">
+            <h4>📖 Overview</h4>
+            <p>
+              <strong>"The Snake and the Mirror"</strong> is a story within a
+              story. It is narrated by a <strong>Homeopathic Doctor</strong> to
+              a group of people. He recounts a frightening yet funny incident
+              from his bachelor days when a cobra fell on him, but his life was
+              saved because the snake became fascinated by its own reflection in
+              a mirror.
+            </p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 The Central Theme</h4>
+            <p>
+              The story explores the theme of <strong>Vanity</strong> versus
+              <strong>Reality</strong>. The doctor is initially obsessed with
+              his looks (vanity), but the sudden arrival of death (the snake)
+              makes him realize his helplessness and foolishness (reality). It
+              humorously suggests that even animals might be capable of vanity!
+            </p>
+          </div>
+
+          <h2 class="chapter-heading">2. Setting the Scene</h2>
+
+          <div class="important-note">
+            <h4>⚡ The Doctor's Room</h4>
+            <p>
+              The doctor lived in a small, rented room which was not
+              electrified. It was an outer room with one wall facing the open
+              yard.
+            </p>
+            
+            <ul>
+              <li><strong>Roof:</strong> Tiled, supported by long gables.</li>
+              <li><strong>Ceiling:</strong> There was no ceiling.</li>
+              <li>
+                <strong>Wildlife:</strong> It was infested with rats that ran to
+                and fro on the beam.
+              </li>
+              <li>
+                <strong>Belongings:</strong> A black coat, white shirt, some
+                dhotis, a vest, and about sixty rupees in a suitcase.
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">3. Key Incidents</h2>
+
+          <h3 class="sub-heading">3.1 The "Earth-Shaking" Decisions</h3>
+
+          <div class="key-points">
+            <h4>🔑 In Front of the Mirror</h4>
+            <p>
+              It was a hot summer night. The doctor could not sleep, so he sat
+              in front of a large mirror. Admiring his beauty, he made two
+              "important" decisions:
+            </p>
+            <ul>
+              <li>
+                To <strong>shave daily</strong> and grow a thin moustache to
+                look more handsome.
+              </li>
+              <li>
+                To always keep an <strong>attractive smile</strong> on his face
+                because he was a bachelor and a doctor.
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="sub-heading">3.2 The Terrifying Encounter</h3>
+
+          <div class="example-box">
+            <h4>🐍 The Snake's Arrival</h4>
+            <p>
+              Suddenly, there was a dull thud. As the doctor turned, a fat snake
+              wriggled over the back of the chair and landed on his shoulder. Before
+              he could react, the snake coiled around his left arm above the
+              elbow. Its hood was spread out, hardly three or four inches from
+              his face.
+            </p>
+          </div>
+          
+          
+
+          <div class="analogy-box">
+            <h4>🌟 Turned to Stone</h4>
+            <p>
+              The doctor sat there like a <strong>"stone image in the flesh."</strong>
+              He realized the irony: moments ago he was proud of his looks, but
+              now facing death, he remembered he didn't even have any medicine
+              for snakebite in the room. He felt like a "poor, foolish, and
+              stupid doctor."
+            </p>
+          </div>
+
+          <h3 class="sub-heading">3.3 The Escape</h3>
+
+          <div class="key-points">
+            <h4>🔑 Saved by the Mirror</h4>
+            <ul>
+              <li>
+                The snake turned its head and saw its reflection in the mirror.
+              </li>
+              <li>
+                Fascinated by its own beauty, it uncoiled from the doctor's arm
+                and moved onto the table to get a closer look.
+              </li>
+              <li>
+                Taking this opportunity, the doctor quietly got up, ran out of
+                the room, and didn't stop until he reached a friend's house.
+              </li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">4. Important Questions & Answers</h2>
+
+          <div class="example-box">
+            <h4>
+              💡 Q1: What kind of woman did the doctor want to marry and why?
+            </h4>
+            <p>
+              <strong>Answer:</strong> He wanted to marry a woman doctor who had
+              plenty of money and a good medical practice. He also wanted her to
+              be <strong>fat</strong> so that if he made a silly mistake and had
+              to run, she would not be able to catch him!
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q2: "I was but a poor, foolish and stupid doctor." When does
+              he say this?
+            </h4>
+            <p>
+              <strong>Answer:</strong> He thinks this when the snake is coiled
+              around his arm. Facing death, he realizes his vanity was baseless.
+              He remembers he doesn't even have medicines for snakebite in his
+              room, which humbles him.
+            </p>
+          </div>
+
+          <div class="example-box">
+            <h4>
+              💡 Q3: What did the doctor find when he returned to his room the
+              next morning?
+            </h4>
+            <p>
+              <strong>Answer:</strong> He found that a thief had removed almost
+              everything, except for his <strong>dirty vest</strong>. The thief
+              had a sense of cleanliness and left the dirty vest behind as a
+              final insult!
+            </p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Extract Based Question</h4>
+            <p>
+              <em>"Was it admiring its own beauty? Was it trying to make an
+              important decision about growing a moustache...?"</em><br /><br />
+              <strong>a) Who is thinking these lines?</strong><br />
+              The doctor is thinking this about the snake.<br /><br />
+              <strong>b) Why is he thinking this?</strong><br />
+              Because the snake was looking intently into the mirror, just as
+              the doctor had done earlier. It highlights the humorous parallel
+              between the doctor's vanity and the snake's behavior.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
