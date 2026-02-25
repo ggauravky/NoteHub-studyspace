@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammar Topics - Class 9 English - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "\2713";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.4rem 0 0.4rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/english9.html">English</a> /
+        <span>Grammar Topics</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">Grammar Topics - Class 9</h1>
+        <p class="page-description">Essential grammar topics for Class 9 English covering all major concepts.</p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Chapter Overview</h2>
+          <div class="definition-box">
+            <h4>Summary</h4>
+            <p>This chapter covers <strong>Grammar Topics</strong>. Essential grammar topics for Class 9 English covering all major concepts.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Key Topics</h2>
+          <ul>
+            <li>Tenses - Present, Past, Future (Simple, Continuous, Perfect)</li>
+            <li>Active and Passive Voice</li>
+            <li>Direct and Indirect Speech (Reported Speech)</li>
+            <li>Modals - can, could, may, might, shall, should, will, would, must</li>
+            <li>Subject-Verb Agreement</li>
+            <li>Determiners - Articles, Quantifiers, Possessives</li>
+            <li>Clauses - Main and Subordinate Clauses</li>
+            <li>Conjunctions - Coordinating and Subordinating</li>
+            <li>Prepositions - Time, Place, Direction</li>
+            <li>Sentence Types - Simple, Compound, Complex</li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Detailed Explanations</h2>
+          <h3 class="sub-heading">Tenses - Present, Past, Future (Simple, Continuous, Perfect)</h3>
+          <p>Tenses - Present, Past, Future (Simple, Continuous, Perfect) is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of tenses - Present, Past, Future (Simple, Continuous, Perfect).</li>
+            <li>Learn one or two practical or textbook examples of tenses - Present, Past, Future (Simple, Continuous, Perfect).</li>
+            <li>Revise key terms related to tenses - Present, Past, Future (Simple, Continuous, Perfect) for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Active and Passive Voice</h3>
+          <p>Active and Passive Voice is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of active and Passive Voice.</li>
+            <li>Learn one or two practical or textbook examples of active and Passive Voice.</li>
+            <li>Revise key terms related to active and Passive Voice for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Direct and Indirect Speech (Reported Speech)</h3>
+          <p>Direct and Indirect Speech (Reported Speech) is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of direct and Indirect Speech (Reported Speech).</li>
+            <li>Learn one or two practical or textbook examples of direct and Indirect Speech (Reported Speech).</li>
+            <li>Revise key terms related to direct and Indirect Speech (Reported Speech) for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Modals - can, could, may, might, shall, should, will, would, must</h3>
+          <p>Modals - can, could, may, might, shall, should, will, would, must is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of modals - can, could, may, might, shall, should, will, would, must.</li>
+            <li>Learn one or two practical or textbook examples of modals - can, could, may, might, shall, should, will, would, must.</li>
+            <li>Revise key terms related to modals - can, could, may, might, shall, should, will, would, must for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Subject-Verb Agreement</h3>
+          <p>Subject-Verb Agreement is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of subject-Verb Agreement.</li>
+            <li>Learn one or two practical or textbook examples of subject-Verb Agreement.</li>
+            <li>Revise key terms related to subject-Verb Agreement for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Determiners - Articles, Quantifiers, Possessives</h3>
+          <p>Determiners - Articles, Quantifiers, Possessives is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of determiners - Articles, Quantifiers, Possessives.</li>
+            <li>Learn one or two practical or textbook examples of determiners - Articles, Quantifiers, Possessives.</li>
+            <li>Revise key terms related to determiners - Articles, Quantifiers, Possessives for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Clauses - Main and Subordinate Clauses</h3>
+          <p>Clauses - Main and Subordinate Clauses is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of clauses - Main and Subordinate Clauses.</li>
+            <li>Learn one or two practical or textbook examples of clauses - Main and Subordinate Clauses.</li>
+            <li>Revise key terms related to clauses - Main and Subordinate Clauses for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Conjunctions - Coordinating and Subordinating</h3>
+          <p>Conjunctions - Coordinating and Subordinating is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of conjunctions - Coordinating and Subordinating.</li>
+            <li>Learn one or two practical or textbook examples of conjunctions - Coordinating and Subordinating.</li>
+            <li>Revise key terms related to conjunctions - Coordinating and Subordinating for short-answer questions.</li>
+          </ul>
+
+          <h2 class="chapter-heading">4. Quick Revision Notes</h2>
+          <div class="important-note">
+            <h4>Remember</h4>
+            <p>Read definitions carefully, revise chapter keywords, and practice writing short and long answers from each key topic.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>High-Value Exam Points</h4>
+            <ul>
+              <li>Write the meaning of key terms in simple language.</li>
+              <li>Use examples from textbook content wherever possible.</li>
+              <li>Link each answer with the chapter theme and core idea.</li>
+              <li>Practice one-page revision before tests.</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">5. Practice Questions</h2>
+          <div class="example-box">
+            <h4>Try These Questions</h4>
+            <ul>
+            <li>Q1. Explain Tenses - Present, Past, Future (Simple, Continuous, Perfect) with one suitable example.</li>
+            <li>Q2. Explain Active and Passive Voice with one suitable example.</li>
+            <li>Q3. Explain Direct and Indirect Speech (Reported Speech) with one suitable example.</li>
+            <li>Q4. Explain Modals - can, could, may, might, shall, should, will, would, must with one suitable example.</li>
+            <li>Q5. Explain Subject-Verb Agreement with one suitable example.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">Copyright 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">^</button>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
