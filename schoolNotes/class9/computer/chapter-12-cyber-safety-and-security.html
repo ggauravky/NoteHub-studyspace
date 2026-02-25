@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyber Safety and Security - Class 9 Computer Applications - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .notes-section {
+        padding: 3rem 0;
+      }
+      .notes-content {
+        max-width: 900px;
+        margin: 0 auto;
+        background: var(--color-white);
+        padding: 3rem;
+        border-radius: 16px;
+        box-shadow: var(--shadow-md);
+      }
+      .chapter-heading {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #667eea;
+        margin: 2.5rem 0 1rem;
+        padding: 1rem;
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+        border-left: 5px solid #667eea;
+        border-radius: 8px;
+      }
+      .sub-heading {
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #764ba2;
+        margin: 2rem 0 1rem;
+        padding-left: 1rem;
+        border-left: 4px solid #4facfe;
+      }
+      .notes-content p {
+        margin-bottom: 1rem;
+        line-height: 1.8;
+        color: #555;
+        text-align: justify;
+      }
+      .notes-content ul {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .notes-content ul li {
+        position: relative;
+        padding: 12px 16px 12px 45px;
+        margin-bottom: 10px;
+        background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+        border-left: 4px solid #4facfe;
+        border-radius: 8px;
+        color: #555;
+        font-size: 0.95rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+      .notes-content ul li:hover {
+        background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+        border-left-color: #667eea;
+        transform: translateX(5px);
+        box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+      }
+      .notes-content ul li::before {
+        content: "\2713";
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        font-weight: bold;
+      }
+      .definition-box {
+        background: #e3f2fd;
+        border-left: 4px solid #2196f3;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .definition-box h4 {
+        color: #1565c0;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .important-note {
+        background: #e8f5e9;
+        border-left: 4px solid #4caf50;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .important-note h4 {
+        color: #2e7d32;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .example-box {
+        background: #fff9e6;
+        border-left: 4px solid #ffc107;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .example-box h4 {
+        color: #ff9800;
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        font-weight: 600;
+      }
+      .key-points {
+        background: #f3e5f5;
+        border-left: 4px solid #9c27b0;
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin: 1.5rem 0;
+      }
+      .key-points h4 {
+        color: #6a1b9a;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+      .key-points ul li {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0.4rem 0 0.4rem 1.5rem;
+      }
+      .key-points ul li::before {
+        left: 0;
+      }
+      @media (max-width: 768px) {
+        .notes-content {
+          padding: 1.5rem;
+        }
+        .chapter-heading {
+          font-size: 1.5rem;
+        }
+        .sub-heading {
+          font-size: 1.15rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo">
+            <a href="/index.html">NoteHub</a>
+          </div>
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/school.html">School</a></li>
+            <li><a href="/college.html">College</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="/index.html">Home</a> / <a href="/school.html">School</a> /
+        <a href="/class9.html">Class 9</a> /
+        <a href="/subjects/school/class_9/computer9.html">Computer Applications</a> /
+        <span>Cyber Safety and Security</span>
+      </div>
+    </div>
+
+    <section class="notes-section">
+      <div class="container">
+        <h1 class="page-title">Cyber Safety and Security - Class 9</h1>
+        <p class="page-description">Learn about online safety, cyber threats, and security measures.</p>
+
+        <div class="notes-content">
+          <h2 class="chapter-heading">1. Chapter Overview</h2>
+          <div class="definition-box">
+            <h4>Summary</h4>
+            <p>This chapter covers <strong>Cyber Safety and Security</strong>. Learn about online safety, cyber threats, and security measures.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Key Topics</h2>
+          <ul>
+            <li>Cyber Safety and Ethics</li>
+            <li>Password Security and Best Practices</li>
+            <li>Viruses, Worms, and Trojans</li>
+            <li>Malware and Ransomware</li>
+            <li>Phishing and Social Engineering</li>
+            <li>Antivirus Software</li>
+            <li>Firewall Protection</li>
+            <li>Safe Browsing Practices</li>
+            <li>Privacy and Data Protection</li>
+            <li>Cyber Bullying and Online Harassment</li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Detailed Explanations</h2>
+          <h3 class="sub-heading">Cyber Safety and Ethics</h3>
+          <p>Cyber Safety and Ethics is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of cyber Safety and Ethics.</li>
+            <li>Learn one or two practical or textbook examples of cyber Safety and Ethics.</li>
+            <li>Revise key terms related to cyber Safety and Ethics for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Password Security and Best Practices</h3>
+          <p>Password Security and Best Practices is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of password Security and Best Practices.</li>
+            <li>Learn one or two practical or textbook examples of password Security and Best Practices.</li>
+            <li>Revise key terms related to password Security and Best Practices for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Viruses, Worms, and Trojans</h3>
+          <p>Viruses, Worms, and Trojans is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of viruses, Worms, and Trojans.</li>
+            <li>Learn one or two practical or textbook examples of viruses, Worms, and Trojans.</li>
+            <li>Revise key terms related to viruses, Worms, and Trojans for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Malware and Ransomware</h3>
+          <p>Malware and Ransomware is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of malware and Ransomware.</li>
+            <li>Learn one or two practical or textbook examples of malware and Ransomware.</li>
+            <li>Revise key terms related to malware and Ransomware for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Phishing and Social Engineering</h3>
+          <p>Phishing and Social Engineering is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of phishing and Social Engineering.</li>
+            <li>Learn one or two practical or textbook examples of phishing and Social Engineering.</li>
+            <li>Revise key terms related to phishing and Social Engineering for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Antivirus Software</h3>
+          <p>Antivirus Software is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of antivirus Software.</li>
+            <li>Learn one or two practical or textbook examples of antivirus Software.</li>
+            <li>Revise key terms related to antivirus Software for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Firewall Protection</h3>
+          <p>Firewall Protection is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of firewall Protection.</li>
+            <li>Learn one or two practical or textbook examples of firewall Protection.</li>
+            <li>Revise key terms related to firewall Protection for short-answer questions.</li>
+          </ul>
+
+          <h3 class="sub-heading">Safe Browsing Practices</h3>
+          <p>Safe Browsing Practices is a core part of this chapter. Focus on the definition, main points, and textbook examples so your answers are clear and complete in exams.</p>
+          <ul>
+            <li>Understand the basic concept of safe Browsing Practices.</li>
+            <li>Learn one or two practical or textbook examples of safe Browsing Practices.</li>
+            <li>Revise key terms related to safe Browsing Practices for short-answer questions.</li>
+          </ul>
+
+          <h2 class="chapter-heading">4. Quick Revision Notes</h2>
+          <div class="important-note">
+            <h4>Remember</h4>
+            <p>Read definitions carefully, revise chapter keywords, and practice writing short and long answers from each key topic.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>High-Value Exam Points</h4>
+            <ul>
+              <li>Write the meaning of key terms in simple language.</li>
+              <li>Use examples from textbook content wherever possible.</li>
+              <li>Link each answer with the chapter theme and core idea.</li>
+              <li>Practice one-page revision before tests.</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">5. Practice Questions</h2>
+          <div class="example-box">
+            <h4>Try These Questions</h4>
+            <ul>
+            <li>Q1. Explain Cyber Safety and Ethics with one suitable example.</li>
+            <li>Q2. Explain Password Security and Best Practices with one suitable example.</li>
+            <li>Q3. Explain Viruses, Worms, and Trojans with one suitable example.</li>
+            <li>Q4. Explain Malware and Ransomware with one suitable example.</li>
+            <li>Q5. Explain Phishing and Social Engineering with one suitable example.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-credit">Made with by Gaurav, Nikhil & Devansh</p>
+        <p class="footer-copyright">Copyright 2025 NoteHub StudySpace</p>
+      </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">^</button>
+
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>
