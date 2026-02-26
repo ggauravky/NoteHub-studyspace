@@ -3,52 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class 10 Mathematics - NoteHub</title>
+    <title>Class 10 Maths Notes - NoteHub</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <style>
-        .subject-section { margin-bottom: 4rem; }
-        .subject-heading {
-            font-size: 2rem; font-weight: 700; color: #667eea;
-            margin: 2rem 0 1.5rem; padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea; border-radius: 8px;
-        }
-        .topic-content ul { list-style: none; padding: 0; margin: 1.5rem 0; }
-        .topic-content ul li {
-            position: relative; padding: 12px 16px 12px 45px;
-            margin-bottom: 10px;
-            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
-            border-left: 4px solid #4facfe; border-radius: 8px;
-            color: #555; font-size: 0.95rem; transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .topic-content ul li:hover {
-            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
-            border-left-color: #667eea;
-            transform: translateX(5px);
-            box-shadow: 0 4px 10px rgba(102,126,234,0.15);
-        }
-        .topic-content ul li::before {
-            content: "✓"; position: absolute;
-            left: 15px; top: 50%; transform: translateY(-50%);
-            width: 22px; height: 22px; background: linear-gradient(135deg,#667eea,#764ba2);
-            color: white; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center;
-            font-size: 12px; font-weight: bold;
-        }
-        .topic-content p strong { color:#667eea; font-size:1.05rem; display:block; margin-bottom:8px; }
-        .topic-content > p {
-            background: #fff9e6; padding: 15px 20px; border-radius: 8px;
-            border-left: 4px solid #ffc107; margin-bottom: 1.5rem;
-            line-height: 1.8; color:#555;
-        }
-    </style>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link href="httpshttps://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <!-- Header -->
+    <!-- Header Navigation -->
     <header class="header">
         <div class="container">
             <nav class="navbar">
@@ -63,7 +24,11 @@
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/contact.html">Contact</a></li>
                 </ul>
-                <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
@@ -71,252 +36,137 @@
     <!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
-            <a href="/index.html">Home</a> / 
-            <a href="/school.html">School</a> / 
-            <a href="/class10.html">Class 10</a> / 
-            <span>Mathematics</span>
+            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <span>Mathematics</span>
         </div>
     </div>
 
-    <!-- Content -->
+    <!-- Topics Section -->
     <section class="content-section">
         <div class="container">
             <h1 class="page-title">Class 10 Mathematics</h1>
-            <p class="page-description">Complete NCERT-based notes for Class 10 Maths – Chapterwise Table of Contents</p>
+            <p class="page-description">Select a chapter to view the notes</p>
 
-            <!-- Chapter List -->
-            <div class="subject-section">
-                <h2 class="subject-heading">📘 Class 10 Maths – Chapters</h2>
+            <div class="topics-list">
+                <details class="topic-item">
+                    <summary>Chapter 1: Real Numbers</summary>
+                    <div class="topic-content">
+                        <p>Euclid's division lemma, Fundamental Theorem of Arithmetic, revisiting irrational numbers, and decimal expansions of rational numbers.</p>
+                        <a href="/schoolNotes/class10/maths/real-numbers.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                <div class="topics-list">
+                <details class="topic-item">
+                    <summary>Chapter 2: Polynomials</summary>
+                    <div class="topic-content">
+                        <p>Geometrical meaning of the zeroes of a polynomial, relationship between zeroes and coefficients, and division algorithm for polynomials.</p>
+                        <a href="/schoolNotes/class10/maths/polynomials.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 1 -->
-                    <details class="topic-item">
-                        <summary>Chapter 1: Real Numbers</summary>
-                        <div class="topic-content">
-                            <p><strong>Includes Euclid's Division Lemma & Fundamental Theorem of Arithmetic.</strong></p>
-                            <ul>
-                                <li>Euclid's Division Lemma</li>
-                                <li>HCF & LCM through Prime Factorization</li>
-                                <li>Rational & Irrational Numbers</li>
-                                <li>Decimal Expansions</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 3: Pair of Linear Equations in Two Variables</summary>
+                    <div class="topic-content">
+                        <p>Graphical method of solution, algebraic methods of solution (substitution, elimination, cross-multiplication), and equations reducible to a pair of linear equations.</p>
+                        <a href="/schoolNotes/class10/maths/pair-of-linear-equations.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 2 -->
-                    <details class="topic-item">
-                        <summary>Chapter 2: Polynomials</summary>
-                        <div class="topic-content">
-                            <p><strong>Polynomial identities and zeroes of polynomial functions.</strong></p>
-                            <ul>
-                                <li>Zeroes of a Polynomial</li>
-                                <li>Relationship between Zeroes & Coefficients</li>
-                                <li>Geometrical Meaning of Zeroes</li>
-                                <li>Division Algorithm</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 4: Quadratic Equations</summary>
+                    <div class="topic-content">
+                        <p>Standard form of a quadratic equation, solution by factorization, solution by completing the square, and nature of roots.</p>
+                        <a href="/schoolNotes/class10/maths/quadratic-equations.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 3 -->
-                    <details class="topic-item">
-                        <summary>Chapter 3: Pair of Linear Equations in Two Variables</summary>
-                        <div class="topic-content">
-                            <p><strong>Solving equations using graphical & algebraic methods.</strong></p>
-                            <ul>
-                                <li>Graphical Method</li>
-                                <li>Substitution Method</li>
-                                <li>Elimination Method</li>
-                                <li>Cross-Multiplication</li>
-                                <li>Equation Consistency</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 5: Arithmetic Progressions</summary>
+                    <div class="topic-content">
+                        <p>Introduction to Arithmetic Progressions, nth term of an AP, and sum of first n terms of an AP.</p>
+                        <a href="/schoolNotes/class10/maths/arithmetic-progressions.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
+                
+                <details class="topic-item">
+                    <summary>Chapter 6: Triangles</summary>
+                    <div class="topic-content">
+                        <p>Similar figures, similarity of triangles, criteria for similarity, areas of similar triangles, and Pythagoras theorem.</p>
+                        <a href="/schoolNotes/class10/maths/triangles.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 4 -->
-                    <details class="topic-item">
-                        <summary>Chapter 4: Quadratic Equations</summary>
-                        <div class="topic-content">
-                            <p><strong>Roots of quadratic equations using formula & factorization.</strong></p>
-                            <ul>
-                                <li>Standard Form</li>
-                                <li>Factorization</li>
-                                <li>Quadratic Formula</li>
-                                <li>Nature of Roots</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 7: Coordinate Geometry</summary>
+                    <div class="topic-content">
+                        <p>Distance formula, section formula, and area of a triangle.</p>
+                        <a href="/schoolNotes/class10/maths/coordinate-geometry.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 5 -->
-                    <details class="topic-item">
-                        <summary>Chapter 5: Arithmetic Progressions</summary>
-                        <div class="topic-content">
-                            <p><strong>Study sequences & series with constant difference.</strong></p>
-                            <ul>
-                                <li>Introduction to AP</li>
-                                <li>nth Term</li>
-                                <li>Sum of First n Terms</li>
-                                <li>Applications in Real Life</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 8: Introduction to Trigonometry</summary>
+                    <div class="topic-content">
+                        <p>Trigonometric ratios, trigonometric ratios of some specific angles, trigonometric identities, and trigonometric ratios of complementary angles.</p>
+                        <a href="/schoolNotes/class10/maths/introduction-to-trigonometry.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 6 -->
-                    <details class="topic-item">
-                        <summary>Chapter 6: Triangles</summary>
-                        <div class="topic-content">
-                            <p><strong>Similarity of triangles and related theorems.</strong></p>
-                            <ul>
-                                <li>Basic Proportionality Theorem</li>
-                                <li>Criteria of Triangle Similarity</li>
-                                <li>Areas of Similar Triangles</li>
-                                <li>Pythagoras Theorem</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 9: Some Applications of Trigonometry</summary>
+                    <div class="topic-content">
+                        <p>Heights and distances, angles of elevation and depression.</p>
+                        <a href="/schoolNotes/class10/maths/applications-of-trigonometry.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 7 -->
-                    <details class="topic-item">
-                        <summary>Chapter 7: Coordinate Geometry</summary>
-                        <div class="topic-content">
-                            <p><strong>Distance, Section Formula & Area of Triangle.</strong></p>
-                            <ul>
-                                <li>Distance Formula</li>
-                                <li>Section Formula</li>
-                                <li>Midpoint Formula</li>
-                                <li>Area of Triangle</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 10: Circles</summary>
+                    <div class="topic-content">
+                        <p>Tangent to a circle, and number of tangents from a point on a circle.</p>
+                        <a href="/schoolNotes/class10/maths/circles.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 8 -->
-                    <details class="topic-item">
-                        <summary>Chapter 8: Introduction to Trigonometry</summary>
-                        <div class="topic-content">
-                            <p><strong>Trigonometric ratios & identities.</strong></p>
-                            <ul>
-                                <li>Trigonometric Ratios</li>
-                                <li>Trigonometric Identities</li>
-                                <li>Table of Standard Angles</li>
-                                <li>Simple Problems</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 11: Constructions</summary>
+                    <div class="topic-content">
+                        <p>Division of a line segment, and construction of tangents to a circle.</p>
+                        <a href="/schoolNotes/class10/maths/constructions.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 9 -->
-                    <details class="topic-item">
-                        <summary>Chapter 9: Applications of Trigonometry</summary>
-                        <div class="topic-content">
-                            <p><strong>Heights & Distances.</strong></p>
-                            <ul>
-                                <li>Angle of Elevation</li>
-                                <li>Angle of Depression</li>
-                                <li>Real-life Applications</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 12: Areas Related to Circles</summary>
+                    <div class="topic-content">
+                        <p>Perimeter and area of a circle, areas of sector and segment of a circle, and areas of combinations of plane figures.</p>
+                        <a href="/schoolNotes/class10/maths/areas-related-to-circles.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 10 -->
-                    <details class="topic-item">
-                        <summary>Chapter 10: Circles</summary>
-                        <div class="topic-content">
-                            <p><strong>Tangents and chord theorems.</strong></p>
-                            <ul>
-                                <li>Basics of Circle</li>
-                                <li>Tangent Properties</li>
-                                <li>Lengths of Tangents</li>
-                                <li>Theorem Related to Tangent</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 13: Surface Areas and Volumes</summary>
+                    <div class="topic-content">
+                        <p>Surface area of a combination of solids, volume of a combination of solids, conversion of solid from one shape to another, and frustum of a cone.</p>
+                        <a href="/schoolNotes/class10/maths/surface-areas-and-volumes.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 11 -->
-                    <details class="topic-item">
-                        <summary>Chapter 11: Constructions</summary>
-                        <div class="topic-content">
-                            <p><strong>Geometric constructions with ruler & compass.</strong></p>
-                            <ul>
-                                <li>Division of Line Segment</li>
-                                <li>Tangents to a Circle</li>
-                                <li>Similar Triangle Construction</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
+                <details class="topic-item">
+                    <summary>Chapter 14: Statistics</summary>
+                    <div class="topic-content">
+                        <p>Mean of grouped data, mode of grouped data, median of grouped data, and graphical representation of cumulative frequency distribution.</p>
+                        <a href="/schoolNotes/class10/maths/statistics.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
 
-                    <!-- Chapter 12 -->
-                    <details class="topic-item">
-                        <summary>Chapter 12: Areas Related to Circles</summary>
-                        <div class="topic-content">
-                            <p><strong>Sector, segment, and ring-shaped areas.</strong></p>
-                            <ul>
-                                <li>Circumference of Circle</li>
-                                <li>Area of Circle</li>
-                                <li>Sector & Segment</li>
-                                <li>Combinations of Plane Figures</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
-
-                    <!-- Chapter 13 -->
-                    <details class="topic-item">
-                        <summary>Chapter 13: Surface Areas & Volumes</summary>
-                        <div class="topic-content">
-                            <p><strong>3D shapes & real-life applications.</strong></p>
-                            <ul>
-                                <li>Cuboid & Cube</li>
-                                <li>Cylinder</li>
-                                <li>Cone</li>
-                                <li>Sphere</li>
-                                <li>Frustum</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
-
-                    <!-- Chapter 14 -->
-                    <details class="topic-item">
-                        <summary>Chapter 14: Statistics</summary>
-                        <div class="topic-content">
-                            <p><strong>Representation of data.</strong></p>
-                            <ul>
-                                <li>Mean</li>
-                                <li>Median</li>
-                                <li>Mode</li>
-                                <li>Cumulative Frequency</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
-
-                    <!-- Chapter 15 -->
-                    <details class="topic-item">
-                        <summary>Chapter 15: Probability</summary>
-                        <div class="topic-content">
-                            <p><strong>Basic probability & examples.</strong></p>
-                            <ul>
-                                <li>Classical Probability</li>
-                                <li>Simple Experiments</li>
-                                <li>Real-life Problems</li>
-                            </ul>
-                            <a href="#" class="btn-secondary">View Complete Notes</a>
-                        </div>
-                    </details>
-
-                </div>
+                <details class="topic-item">
+                    <summary>Chapter 15: Probability</summary>
+                    <div class="topic-content">
+                        <p>A theoretical approach to probability.</p>
+                        <a href="/schoolNotes/class10/maths/probability.html" class="btn-secondary">Read Notes</a>
+                    </div>
+                </details>
             </div>
-
         </div>
     </section>
 
@@ -328,7 +178,10 @@
         </div>
     </footer>
 
+    <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
 </body>
 </html>
