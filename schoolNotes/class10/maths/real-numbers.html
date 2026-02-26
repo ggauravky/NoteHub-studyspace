@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Numbers - Class 10 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .notes-section {
+            padding: 3rem 0;
+        }
+        .notes-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--color-white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        .chapter-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 2.5rem 0 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+        .sub-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #764ba2;
+            margin: 2rem 0 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid #4facfe;
+        }
+        .notes-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        .notes-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .notes-content ul li {
+            position: relative;
+            padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            line-height: 1.6;
+        }
+        .notes-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+        }
+        .notes-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .example-box {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .example-box h4 {
+            color: #ff9800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        .example-box p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html" class="active">School</a></li>
+                    <li><a href="/college.html">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Real Numbers</span>
+        </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+        <div class="container">
+            <h1 class="page-title">📐 Real Numbers - Class 10</h1>
+            <p class="page-description">
+                Complete notes with examples and important points.
+            </p>
+
+            <div class="notes-content">
+                <!-- Introduction -->
+                <h2 class="chapter-heading">1. Euclid's Division Lemma</h2>
+                <p>
+                    Euclid's Division Lemma states that for any two positive integers 'a' and 'b', there exist unique integers 'q' and 'r' such that a = bq + r, where 0 ≤ r < b. This lemma is used to find the HCF of two positive integers.
+                </p>
+
+                <div class="example-box">
+                    <h4>📝 Example: Find the HCF of 135 and 225 using Euclid's division lemma.</h4>
+                    <p>
+                        <strong>Step 1:</strong> Since 225 > 135, we apply the division lemma to 225 and 135 to get 225 = 135 × 1 + 90.
+                    </p>
+                    <p>
+                        <strong>Step 2:</strong> Since the remainder 90 ≠ 0, we apply the division lemma to 135 and 90 to get 135 = 90 × 1 + 45.
+                    </p>
+                    <p>
+                        <strong>Step 3:</strong> We consider the new divisor 90 and new remainder 45, and apply the division lemma to get 90 = 2 × 45 + 0.
+                    </p>
+                    <p>
+                        Since the remainder is zero, the process stops. The divisor at this stage is 45. Therefore, the HCF of 135 and 225 is 45.
+                    </p>
+                </div>
+
+                <h2 class="chapter-heading">2. The Fundamental Theorem of Arithmetic</h2>
+                <p>
+                    Every composite number can be expressed (factorised) as a product of primes, and this factorisation is unique, apart from the order in which the prime factors occur.
+                </p>
+
+                <div class="example-box">
+                    <h4>📝 Example: Express 140 as a product of its prime factors.</h4>
+                    <p>
+                        140 = 2 × 70 = 2 × 2 × 35 = 2 × 2 × 5 × 7 = 2² × 5 × 7.
+                    </p>
+                </div>
+
+                <h2 class="chapter-heading">3. Revisiting Irrational Numbers</h2>
+                <p>
+                    An irrational number is a number that cannot be expressed as a fraction p/q for any integers p and q, where q ≠ 0. In this section, we prove the irrationality of numbers like √2, √3, √5.
+                </p>
+
+                <div class="example-box">
+                    <h4>📝 Example: Prove that √2 is irrational.</h4>
+                    <p>
+                        <strong>Proof:</strong> Let us assume, to the contrary, that √2 is rational. So, we can find integers r and s (≠ 0) such that √2 = r/s. Suppose r and s have a common factor other than 1. Then, we divide by the common factor to get √2 = a/b, where a and b are coprime. So, b√2 = a. Squaring on both sides, we get 2b² = a². Therefore, 2 divides a². This implies that 2 divides a. So, we can write a = 2c for some integer c. Substituting for a, we get 2b² = (2c)² = 4c², which means b² = 2c². This means that 2 divides b², and so 2 divides b. Therefore, a and b have at least 2 as a common factor. But this contradicts the fact that a and b have no common factors other than 1. This contradiction has arisen because of our incorrect assumption that √2 is rational. So, we conclude that √2 is irrational.
+                    </p>
+                </div>
+
+                <h2 class="chapter-heading">4. Revisiting Rational Numbers and Their Decimal Expansions</h2>
+                <p>
+                    Let x be a rational number whose decimal expansion terminates. Then x can be expressed in the form p/q, where p and q are coprime, and the prime factorisation of q is of the form 2ⁿ5ᵐ, where n, m are non-negative integers.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>

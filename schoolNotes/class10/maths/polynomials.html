@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomials - Class 10 Mathematics - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .notes-section {
+            padding: 3rem 0;
+        }
+        .notes-content {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--color-white);
+            padding: 3rem;
+            border-radius: 16px;
+            box-shadow: var(--shadow-md);
+        }
+        .chapter-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+            margin: 2.5rem 0 1rem;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
+            border-left: 5px solid #667eea;
+            border-radius: 8px;
+        }
+        .sub-heading {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #764ba2;
+            margin: 2rem 0 1rem;
+            padding-left: 1rem;
+            border-left: 4px solid #4facfe;
+        }
+        .notes-content p {
+            margin-bottom: 1rem;
+            line-height: 1.8;
+            color: #555;
+            text-align: justify;
+        }
+        .notes-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .notes-content ul li {
+            position: relative;
+            padding: 12px 16px 12px 45px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-left: 4px solid #4facfe;
+            border-radius: 8px;
+            color: #555;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            line-height: 1.6;
+        }
+        .notes-content ul li:hover {
+            background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%);
+            border-left-color: #667eea;
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+        }
+        .notes-content ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .example-box {
+            background: #fff9e6;
+            border-left: 4px solid #ffc107;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        .example-box h4 {
+            color: #ff9800;
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+        .example-box p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    <span class="logo-text">NoteHub</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/school.html" class="active">School</a></li>
+                    <li><a href="/college.html">College</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Polynomials</span>
+        </div>
+    </div>
+
+    <!-- Notes Section -->
+    <section class="notes-section">
+        <div class="container">
+            <h1 class="page-title">📐 Polynomials - Class 10</h1>
+            <p class="page-description">
+                Complete notes with examples and important points.
+            </p>
+
+            <div class="notes-content">
+                <!-- Introduction -->
+                <h2 class="chapter-heading">1. Geometrical Meaning of the Zeroes of a Polynomial</h2>
+                <p>
+                    The zeroes of a polynomial p(x) are the x-coordinates of the points where the graph of y = p(x) intersects the x-axis.
+                </p>
+                <ul>
+                    <li>A linear polynomial has exactly one zero.</li>
+                    <li>A quadratic polynomial has at most two zeroes.</li>
+                    <li>A cubic polynomial has at most three zeroes.</li>
+                </ul>
+
+                <h2 class="chapter-heading">2. Relationship between Zeroes and Coefficients of a Polynomial</h2>
+                <p>
+                    For a quadratic polynomial ax² + bx + c, if α and β are the zeroes, then:
+                </p>
+                <ul>
+                    <li>Sum of zeroes (α + β) = -b/a</li>
+                    <li>Product of zeroes (αβ) = c/a</li>
+                </ul>
+                <p>
+                    For a cubic polynomial ax³ + bx² + cx + d, if α, β and γ are the zeroes, then:
+                </p>
+                <ul>
+                    <li>Sum of zeroes (α + β + γ) = -b/a</li>
+                    <li>Sum of the products of the zeroes taken two at a time (αβ + βγ + γα) = c/a</li>
+                    <li>Product of zeroes (αβγ) = -d/a</li>
+                </ul>
+
+                <h2 class="chapter-heading">3. Division Algorithm for Polynomials</h2>
+                <p>
+                    If p(x) and g(x) are any two polynomials with g(x) ≠ 0, then we can find polynomials q(x) and r(x) such that p(x) = g(x) × q(x) + r(x), where r(x) = 0 or degree of r(x) < degree of g(x).
+                </p>
+                <div class="example-box">
+                    <h4>📝 Example: Divide 3x³ + x² + 2x + 5 by 1 + 2x + x².</h4>
+                    <p>
+                        We have p(x) = 3x³ + x² + 2x + 5 and g(x) = x² + 2x + 1.
+                    </p>
+                    <p>
+                        By long division, we get the quotient q(x) = 3x - 5 and remainder r(x) = 9x + 10.
+                    </p>
+                    <p>
+                        So, 3x³ + x² + 2x + 5 = (x² + 2x + 1)(3x - 5) + (9x + 10).
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
+            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">↑</button>
+
+    <!-- JavaScript -->
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
