@@ -3,87 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pair of Linear Equations in Two Variables - Class 10 Mathematics - NoteHub</title>
+    <title>Pair of Linear Equations - Class 10 Maths - NoteHub</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}.formula-card .fd{font-family:'Poppins',sans-serif;font-size:.85rem;color:#666;background:transparent;padding:0}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.sub-heading{font-size:1.2rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">📚</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Pair of Linear Equations in Two Variables</span>
-        </div>
-    </div>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Pair of Linear Equations</span></div></div>
 
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">📐 Pair of Linear Equations in Two Variables - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">📐 Pair of Linear Equations in Two Variables — Class 10</h1>
+        <p class="page-description">Graphical & algebraic methods, consistency conditions, and word problems</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction</h2>
+          <p>A <strong>linear equation in two variables</strong> is of the form <strong>ax + by + c = 0</strong>, where a, b, c are real numbers and a, b ≠ 0 both. A <strong>pair of linear equations</strong> is a system of two such equations that must be satisfied simultaneously.</p>
+
+          <div class="definition-box">
+            <h4>📖 General Form</h4>
+            <p>a₁x + b₁y + c₁ = 0 &nbsp;...(i)</p>
+            <p>a₂x + b₂y + c₂ = 0 &nbsp;...(ii)</p>
+            <p>Where a₁, a₂, b₁, b₂, c₁, c₂ are real numbers; a₁² + b₁² ≠ 0 and a₂² + b₂² ≠ 0</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Connection</h4>
+            <p>You buy 2 pens and 3 notebooks for ₹25, and 4 pens and 1 notebook for ₹30. To find price of each, you set up two equations — exactly a pair of linear equations! The price that satisfies both conditions is your solution.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Graphical Representation</h2>
+          <p>Every linear equation in two variables represents a <strong>straight line</strong>. A pair of equations gives two straight lines, and their geometric relationship determines the type of solution.</p>
+
+          <table class="comparison-table">
+            <thead><tr><th>Lines</th><th>Solutions</th><th>Type</th><th>Condition</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Intersecting</strong></td><td>Unique solution</td><td>Consistent</td><td>a₁/a₂ ≠ b₁/b₂</td></tr>
+              <tr><td><strong>Coincident (same)</strong></td><td>Infinitely many</td><td>Consistent (Dependent)</td><td>a₁/a₂ = b₁/b₂ = c₁/c₂</td></tr>
+              <tr><td><strong>Parallel</strong></td><td>No solution</td><td>Inconsistent</td><td>a₁/a₂ = b₁/b₂ ≠ c₁/c₂</td></tr>
+            </tbody>
+          </table>
+
+          <div class="example-box">
+            <h4>💡 Example: Check Consistency — 2x + 3y = 8 &amp; 4x + 6y = 7</h4>
+            <p>a₁/a₂ = 2/4 = 1/2 &nbsp;|&nbsp; b₁/b₂ = 3/6 = 1/2 &nbsp;|&nbsp; c₁/c₂ = 8/7</p>
+            <p>Since a₁/a₂ = b₁/b₂ ≠ c₁/c₂ → Lines are <strong>parallel</strong> → <strong>No solution (Inconsistent)</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">3. Substitution Method</h2>
+          <div class="definition-box">
+            <h4>📖 Steps</h4>
+            <p><strong>Step 1:</strong> Express one variable in terms of the other from one equation.</p>
+            <p><strong>Step 2:</strong> Substitute in the second equation → solve for one variable.</p>
+            <p><strong>Step 3:</strong> Substitute back to find the other variable.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Solve x + y = 5 and 2x – 3y = 4</h4>
+            <p>From (i): x = 5 – y</p>
+            <p>Substituting in (ii): 2(5 – y) – 3y = 4 → 10 – 5y = 4 → y = 6/5</p>
+            <p>x = 5 – 6/5 = 19/5</p>
+            <p><strong>Answer: x = 19/5, y = 6/5</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Elimination Method</h2>
+          <div class="definition-box">
+            <h4>📖 Steps</h4>
+            <p><strong>Step 1:</strong> Multiply equations by constants to make coefficients of one variable equal.</p>
+            <p><strong>Step 2:</strong> Add or subtract to eliminate that variable.</p>
+            <p><strong>Step 3:</strong> Solve, then substitute back.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Solve 3x + 4y = 10 and 2x – 2y = 2</h4>
+            <p>Multiply (ii) by 2: 4x – 4y = 4</p>
+            <p>Add with (i): 7x = 14 → <strong>x = 2</strong></p>
+            <p>Substitute: 2(2) – 2y = 2 → <strong>y = 1</strong></p>
+            <p><strong>Answer: x = 2, y = 1</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">5. Cross-Multiplication Method</h2>
+          <div class="definition-box">
+            <h4>📖 Formula</h4>
+            <p>For a₁x + b₁y + c₁ = 0 and a₂x + b₂y + c₂ = 0:</p>
+            <p><strong>x/(b₁c₂ – b₂c₁) = y/(c₁a₂ – c₂a₁) = 1/(a₁b₂ – a₂b₁)</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Solve 2x + y – 5 = 0 and 3x + 2y – 8 = 0</h4>
+            <p>a₁=2, b₁=1, c₁=–5 &nbsp;|&nbsp; a₂=3, b₂=2, c₂=–8</p>
+            <p>x = [(1)(–8)–(2)(–5)] / [(2)(2)–(3)(1)] = (–8+10)/(4–3) = <strong>2</strong></p>
+            <p>y = [(–5)(3)–(–8)(2)] / (1) = (–15+16)/1 = <strong>1</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">6. Equations Reducible to Linear Form</h2>
+          <p>Some non-linear equations can be reduced to linear form by substitution. Replace 1/x with p and 1/y with q (or similar).</p>
+
+          <div class="example-box">
+            <h4>💡 Example: Solve 2/x + 3/y = 13 and 5/x – 4/y = –2</h4>
+            <p>Let p = 1/x, q = 1/y → 2p + 3q = 13 and 5p – 4q = –2</p>
+            <p>Elimination: Multiply (i)×4 and (ii)×3 → 8p + 12q = 52 and 15p – 12q = –6</p>
+            <p>Adding: 23p = 46 → p = 2 → x = 1/2</p>
+            <p>From (i): 4 + 3q = 13 → q = 3 → y = 1/3</p>
+            <p><strong>Answer: x = 1/2, y = 1/3</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">7. Word Problem Strategy</h2>
+          <div class="important-note">
+            <h4>⚡ 5-Step Approach</h4>
+            <p><strong>1.</strong> Read carefully and identify the unknowns.</p>
+            <p><strong>2.</strong> Assign variables: Let x = ___ and y = ___</p>
+            <p><strong>3.</strong> Form two equations from the given conditions.</p>
+            <p><strong>4.</strong> Solve using any method (substitution/elimination/cross-multiplication).</p>
+            <p><strong>5.</strong> Verify answers and write conclusion.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Boat &amp; Stream Problem</h4>
+            <p>A boat goes 30 km upstream and 44 km downstream in 10 hours. In 13 hours, it goes 40 km upstream and 55 km downstream. Find speed of boat and stream.</p>
+            <p>Let boat speed = x, stream speed = y → Upstream = (x–y), Downstream = (x+y)</p>
+            <p>30/(x–y) + 44/(x+y) = 10 and 40/(x–y) + 55/(x+y) = 13</p>
+            <p>Let u = 1/(x–y), v = 1/(x+y):</p>
+            <p>30u + 44v = 10 and 40u + 55v = 13 → Solving: u = 1/5, v = 1/11</p>
+            <p>x – y = 5 and x + y = 11 → <strong>x = 8 km/h, y = 3 km/h</strong></p>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>General Form</h3>
+                <p>a₁x + b₁y + c₁ = 0</p>
+                <p>a₂x + b₂y + c₂ = 0</p>
+              </div>
+              <div class="formula-card">
+                <h3>Consistency</h3>
+                <p>Unique: a₁/a₂ ≠ b₁/b₂</p>
+                <p>Infinite: a₁/a₂ = b₁/b₂ = c₁/c₂</p>
+                <p>None: a₁/a₂ = b₁/b₂ ≠ c₁/c₂</p>
+              </div>
+              <div class="formula-card">
+                <h3>Cross-Multiplication</h3>
+                <p>x/(b₁c₂–b₂c₁) = y/(c₁a₂–c₂a₁) = 1/(a₁b₂–a₂b₁)</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
     <button id="backToTop" class="back-to-top">↑</button>
-
-    <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

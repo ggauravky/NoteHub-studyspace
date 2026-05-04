@@ -7,83 +7,161 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Circles</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Circles</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Circles - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">⭕ Circles — Class 10</h1>
+        <p class="page-description">Tangents, number of tangents from a point, and theorems with proofs</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction — Tangent to a Circle</h2>
+
+          <div class="definition-box">
+            <h4>📖 Key Definitions</h4>
+            <p><strong>Secant:</strong> A line that intersects a circle at two points.</p>
+            <p><strong>Tangent:</strong> A line that touches a circle at exactly one point. This point is called the <strong>point of tangency</strong> or <strong>point of contact</strong>.</p>
+            <p><strong>Common tangent:</strong> A line that is tangent to two circles simultaneously.</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Understanding</h4>
+            <p>A wheel on a road — the road is tangent to the wheel. The wheel touches the road at exactly one point (the contact point) at any given moment. Similarly, a tangent line touches a circle at just one point!</p>
+          </div>
+
+          <table class="comparison-table">
+            <thead><tr><th>Type of Tangents</th><th>Description</th><th>Number</th></tr></thead>
+            <tbody>
+              <tr><td><strong>External Common</strong></td><td>Don't pass between circles</td><td>2 (for external circles)</td></tr>
+              <tr><td><strong>Internal Common</strong></td><td>Pass between two circles</td><td>2 (for external circles)</td></tr>
+              <tr><td><strong>From External Point</strong></td><td>Both touching same circle</td><td>2</td></tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">2. Theorem 1 — Tangent ⊥ Radius</h2>
+
+          <div class="important-note">
+            <h4>⚡ Theorem Statement</h4>
+            <p>The tangent at any point of a circle is perpendicular to the radius through the point of contact.</p>
+            <p><strong>If OP is radius and PQ is tangent at P, then OP ⊥ PQ (∠OPQ = 90°)</strong></p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Proof (by contradiction)</h4>
+            <p><strong>Given:</strong> Circle with centre O, tangent PQ at point P.</p>
+            <p><strong>To prove:</strong> OP ⊥ PQ</p>
+            <p><strong>Proof:</strong> Assume OP is not perpendicular to PQ. Then there exists a point R on PQ such that OR ⊥ PQ (drop a perpendicular). In right triangle ORP: OR &lt; OP (hypotenuse &gt; perpendicular). But OR &lt; OP means R is inside the circle. Since PQ is tangent, it should touch at only one point P. But if R is inside the circle, line PQ would intersect the circle at two points — contradiction! Hence OP ⊥ PQ. ∎</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Number of Tangents From a Point</h2>
+
+          <table class="comparison-table">
+            <thead><tr><th>Position of Point</th><th>Number of Tangents</th><th>Reason</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Inside the circle</strong></td><td>0</td><td>No line from inside can touch without crossing</td></tr>
+              <tr><td><strong>On the circle</strong></td><td>1</td><td>Only one tangent at that point</td></tr>
+              <tr><td><strong>Outside the circle</strong></td><td>2</td><td>Two tangents can be drawn</td></tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">4. Theorem 2 — Equal Tangents from External Point</h2>
+
+          <div class="important-note">
+            <h4>⚡ Theorem Statement</h4>
+            <p>The lengths of two tangents drawn from an external point to a circle are equal.</p>
+            <p><strong>If PA and PB are tangents from external point P to circle with centre O, then PA = PB</strong></p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Proof</h4>
+            <p><strong>Given:</strong> PA and PB are tangents from P. O is centre. OA and OB are radii.</p>
+            <p><strong>To prove:</strong> PA = PB</p>
+            <p><strong>Proof:</strong></p>
+            <p>In △OAP and △OBP:</p>
+            <p>OA = OB (radii of same circle)</p>
+            <p>OP = OP (common side)</p>
+            <p>∠OAP = ∠OBP = 90° (radius ⊥ tangent, Theorem 1)</p>
+            <p>By RHS congruence: △OAP ≅ △OBP</p>
+            <p>Therefore PA = PB (CPCT) ∎</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Additional Results from Theorem 2</h4>
+            <ul>
+              <li>OP bisects angle APB (∠APO = ∠BPO)</li>
+              <li>OP bisects angle AOB (∠AOP = ∠BOP)</li>
+              <li>OP is the perpendicular bisector of AB</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Find length of tangent</h4>
+            <p><strong>Q:</strong> A tangent PQ is drawn from external point P to a circle with centre O, radius 5 cm. If OP = 13 cm, find length of PQ.</p>
+            <p>Since OQ ⊥ PQ: OQ² + PQ² = OP² (Pythagoras)</p>
+            <p>5² + PQ² = 13² → 25 + PQ² = 169 → PQ² = 144 → <strong>PQ = 12 cm</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Perimeter of quadrilateral</h4>
+            <p><strong>Q:</strong> A circle touches all four sides of quadrilateral ABCD. Prove that AB + CD = BC + DA.</p>
+            <p>Let P, Q, R, S be points of contact on AB, BC, CD, DA respectively.</p>
+            <p>Since tangents from external point are equal:</p>
+            <p>From A: AP = AS &nbsp;|&nbsp; From B: BP = BQ &nbsp;|&nbsp; From C: CQ = CR &nbsp;|&nbsp; From D: DR = DS</p>
+            <p>AB + CD = (AP + PB) + (CR + RD) = (AS + BQ) + (CQ + DS)</p>
+            <p>= (AS + DS) + (BQ + CQ) = DA + BC = BC + DA ✓</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Angle at centre</h4>
+            <p><strong>Q:</strong> From a point P, two tangents PA and PB are drawn to a circle with centre O, radius 3 cm. If PA = 4 cm, find ∠APB.</p>
+            <p>OP = √(OA² + PA²) = √(9 + 16) = 5 cm</p>
+            <p>In △OAP: tanα = OA/PA = 3/4, where α = ∠APO</p>
+            <p>α = tan⁻¹(3/4) ≈ 36.87°</p>
+            <p>∠APB = 2α ≈ 73.74°</p>
+            <p>Alternatively: sin∠APO = OA/OP = 3/5 → ∠APO = 37° → ∠APB ≈ 74°</p>
+          </div>
+
+          <h2 class="chapter-heading">5. Summary of Key Points</h2>
+          <ul>
+            <li>Tangent meets circle at exactly one point.</li>
+            <li>Tangent is perpendicular to radius at point of contact.</li>
+            <li>From an external point, two tangents of equal length can be drawn.</li>
+            <li>No tangent can be drawn from a point inside the circle.</li>
+            <li>OAP is always a right angle (radius to tangent point).</li>
+          </ul>
+
+          <div class="formula-sheet">
+            <h2>📋 Key Results — Circles</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Radius ⊥ Tangent</h3>
+                <p>∠OPQ = 90°</p>
+                <p>(O = centre, P = contact point)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Equal Tangents</h3>
+                <p>PA = PB</p>
+                <p>(P = external point)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Length of Tangent</h3>
+                <p>PT = √(OP² – r²)</p>
+                <p>(r = radius, OP = dist from centre)</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

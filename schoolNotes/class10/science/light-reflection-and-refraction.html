@@ -3,87 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Reflection And Refraction - Class 10 Science - NoteHub</title>
+    <title>Light - Reflection and Refraction - Class 10 Science - NoteHub</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:.8rem;text-align:left;font-weight:600}.comparison-table td{padding:.8rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Light — Reflection &amp; Refraction</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Light Reflection And Refraction</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Light Reflection And Refraction - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">💡 Light — Reflection and Refraction — Class 10</h1>
+        <p class="page-description">Laws of reflection, spherical mirrors, refraction, Snell's law, lenses, and sign convention</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Reflection of Light</h2>
+
+          <div class="definition-box">
+            <h4>📖 Laws of Reflection</h4>
+            <p><strong>Law 1:</strong> The angle of incidence (∠i) equals the angle of reflection (∠r).</p>
+            <p><strong>Law 2:</strong> The incident ray, reflected ray, and the normal at the point of incidence all lie in the same plane.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Spherical Mirrors</h2>
+
+          <div class="definition-box">
+            <h4>📖 Key Terms</h4>
+            <p><strong>Concave mirror:</strong> Reflecting surface is on the inner (hollow) side. Converging mirror.</p>
+            <p><strong>Convex mirror:</strong> Reflecting surface is on the outer (bulging) side. Diverging mirror.</p>
+            <p><strong>Centre of curvature (C):</strong> Centre of the sphere of which mirror is a part.</p>
+            <p><strong>Principal focus (F):</strong> Point where parallel rays converge after reflection (concave) or appear to diverge from (convex).</p>
+            <p><strong>Focal length (f):</strong> Distance from mirror to focus. f = R/2 (where R = radius of curvature)</p>
+            <p><strong>Principal axis:</strong> Line joining the pole to the centre of curvature.</p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Image Formation by Concave Mirror</h3>
+          <table class="comparison-table">
+            <thead><tr><th>Object Position</th><th>Image Position</th><th>Nature of Image</th></tr></thead>
+            <tbody>
+              <tr><td>At infinity</td><td>At F</td><td>Real, inverted, highly diminished (point)</td></tr>
+              <tr><td>Beyond C</td><td>Between F and C</td><td>Real, inverted, diminished</td></tr>
+              <tr><td>At C</td><td>At C</td><td>Real, inverted, same size</td></tr>
+              <tr><td>Between C and F</td><td>Beyond C</td><td>Real, inverted, magnified</td></tr>
+              <tr><td>At F</td><td>At infinity</td><td>Real, inverted, highly magnified</td></tr>
+              <tr><td>Between F and pole</td><td>Behind mirror</td><td>Virtual, erect, magnified</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-heading">2.2 Image Formation by Convex Mirror</h3>
+          <div class="important-note">
+            <h4>⚡ Convex Mirror</h4>
+            <p>Always forms a virtual, erect, and diminished image behind the mirror, regardless of object position.</p>
+            <p>Used as: Rear-view mirrors in vehicles (gives wider field of view), security mirrors in shops.</p>
+          </div>
+
+          <h3 class="sub-heading">2.3 Mirror Formula and Magnification</h3>
+          <div class="definition-box">
+            <h4>📖 Sign Convention (New Cartesian)</h4>
+            <p>• All distances measured from pole (P) along principal axis</p>
+            <p>• Distances in direction of incident light (+ve direction = left to right)</p>
+            <p>• Object is always on left → object distance (u) is always negative</p>
+            <p>• Real image: v is negative (same side as object) &nbsp;|&nbsp; Virtual image: v is positive (behind mirror)</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Formulas</h4>
+            <p><strong>Mirror Formula: 1/v + 1/u = 1/f</strong></p>
+            <p><strong>Magnification: m = –v/u = h'/h</strong></p>
+            <p>m &gt; 0: virtual, erect image &nbsp;|&nbsp; m &lt; 0: real, inverted image</p>
+            <p>|m| &gt; 1: magnified &nbsp;|&nbsp; |m| &lt; 1: diminished &nbsp;|&nbsp; |m| = 1: same size</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Mirror Problem</h4>
+            <p><strong>Q:</strong> An object is placed 10 cm in front of a concave mirror with focal length 15 cm. Find image position.</p>
+            <p>u = –10 cm (object on left), f = –15 cm (concave mirror)</p>
+            <p>1/v = 1/f – 1/u = 1/(–15) – 1/(–10) = –1/15 + 1/10</p>
+            <p>= (–2 + 3)/30 = 1/30 → v = +30 cm</p>
+            <p><strong>Image is 30 cm behind mirror — virtual, erect, magnified</strong></p>
+            <p>m = –v/u = –(30)/(–10) = +3 (magnified 3×, erect)</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Refraction of Light</h2>
+
+          <div class="definition-box">
+            <h4>📖 Refraction</h4>
+            <p><strong>Refraction</strong> is the bending of light when it passes from one medium to another (different optical densities).</p>
+            <p>Cause: Change in speed of light in different media</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Snell's Law (Laws of Refraction)</h4>
+            <p><strong>Law 1:</strong> The incident ray, refracted ray, and normal at the point of incidence are all in the same plane.</p>
+            <p><strong>Law 2 (Snell's Law):</strong> n₁ sin i = n₂ sin r</p>
+            <p>Or: sin i / sin r = n₂/n₁ = constant (for given pair of media)</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Refractive Index</h4>
+            <p><strong>n = speed of light in vacuum (c) / speed of light in medium (v)</strong></p>
+            <p>n = c/v &nbsp;&nbsp; (n is always ≥ 1)</p>
+            <p>Higher n = optically denser = light bends more toward normal</p>
+            <p>n for water ≈ 1.33 &nbsp;|&nbsp; n for glass ≈ 1.5 &nbsp;|&nbsp; n for diamond = 2.42</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Spherical Lenses</h2>
+
+          <h3 class="sub-heading">4.1 Convex and Concave Lenses</h3>
+          <div class="definition-box">
+            <h4>📖 Types of Lenses</h4>
+            <p><strong>Convex lens (converging):</strong> Thicker at centre, converges light. f is positive.</p>
+            <p><strong>Concave lens (diverging):</strong> Thinner at centre, diverges light. f is negative.</p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Image Formation by Convex Lens</h3>
+          <table class="comparison-table">
+            <thead><tr><th>Object Position</th><th>Image Position</th><th>Nature</th></tr></thead>
+            <tbody>
+              <tr><td>At infinity</td><td>At F₂</td><td>Real, inverted, point-sized</td></tr>
+              <tr><td>Beyond 2F₁</td><td>Between F₂ and 2F₂</td><td>Real, inverted, diminished</td></tr>
+              <tr><td>At 2F₁</td><td>At 2F₂</td><td>Real, inverted, same size</td></tr>
+              <tr><td>Between F₁ and 2F₁</td><td>Beyond 2F₂</td><td>Real, inverted, magnified</td></tr>
+              <tr><td>At F₁</td><td>At infinity</td><td>Real, inverted, highly magnified</td></tr>
+              <tr><td>Between F₁ and lens</td><td>Same side as object</td><td>Virtual, erect, magnified</td></tr>
+            </tbody>
+          </table>
+
+          <div class="definition-box">
+            <h4>📖 Lens Formula and Power</h4>
+            <p><strong>Lens Formula: 1/v – 1/u = 1/f</strong></p>
+            <p><strong>Magnification: m = v/u</strong></p>
+            <p><strong>Power of lens: P = 1/f (in metres)</strong></p>
+            <p>Unit of power: Dioptre (D) &nbsp;|&nbsp; Convex lens: P positive &nbsp;|&nbsp; Concave: P negative</p>
+            <p>Combined lenses: P = P₁ + P₂ + P₃ ...</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Lens Problem</h4>
+            <p><strong>Q:</strong> An object is placed 15 cm from a convex lens of focal length 10 cm. Find image position and nature.</p>
+            <p>u = –15 cm, f = +10 cm</p>
+            <p>1/v = 1/f + 1/u = 1/10 + 1/(–15) = 1/10 – 1/15 = (3–2)/30 = 1/30</p>
+            <p>v = +30 cm (positive: real image, opposite side)</p>
+            <p>m = v/u = 30/(–15) = –2 (inverted, magnified 2×)</p>
+            <p><strong>Image: Real, inverted, magnified, 30 cm on other side of lens</strong></p>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet — Light</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Mirror</h3>
+                <p>1/v + 1/u = 1/f</p>
+                <p>f = R/2</p>
+                <p>m = –v/u</p>
+              </div>
+              <div class="formula-card">
+                <h3>Refraction (Snell's Law)</h3>
+                <p>n₁ sin i = n₂ sin r</p>
+                <p>n = c/v</p>
+              </div>
+              <div class="formula-card">
+                <h3>Lens</h3>
+                <p>1/v – 1/u = 1/f</p>
+                <p>m = v/u</p>
+                <p>P = 1/f (D)</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

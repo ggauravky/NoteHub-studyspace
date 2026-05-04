@@ -7,83 +7,127 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{border-left-color:#667eea;transform:translateX(5px)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Our Environment</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Our Environment</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Our Environment - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">🌍 Our Environment — Class 10</h1>
+        <p class="page-description">Ecosystem, food chains, ozone layer depletion, waste management, biodegradability</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Ecosystem</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is an Ecosystem?</h4>
+            <p>An <strong>ecosystem</strong> is all the living organisms (biotic) in an area together with the non-living (abiotic) environment — interacting as a unit.</p>
+            <p>Types: Forest, Pond, Grassland, Desert, Coral reef, Aquarium (artificial)</p>
+            <p><strong>Biotic components:</strong> Producers, consumers, decomposers</p>
+            <p><strong>Abiotic components:</strong> Sunlight, air, water, soil, temperature, minerals</p>
+          </div>
+
+          <h3 class="sub-heading">1.1 Components of an Ecosystem</h3>
+          <ul>
+            <li><strong>Producers (Autotrophs):</strong> Plants, algae, phytoplankton — make food by photosynthesis</li>
+            <li><strong>Primary consumers (Herbivores):</strong> Eat plants (deer, rabbit, grasshoppers, caterpillars)</li>
+            <li><strong>Secondary consumers (Carnivores):</strong> Eat herbivores (frogs, snakes, small fish)</li>
+            <li><strong>Tertiary consumers:</strong> Eat secondary consumers (eagles, lions)</li>
+            <li><strong>Decomposers:</strong> Bacteria and fungi — break down dead organic matter; return nutrients to soil</li>
+          </ul>
+
+          <h2 class="chapter-heading">2. Food Chains and Food Webs</h2>
+
+          <div class="definition-box">
+            <h4>📖 Food Chain</h4>
+            <p>A <strong>food chain</strong> shows the transfer of food energy from one organism to another.</p>
+            <p>Example: Grass → Grasshopper → Frog → Snake → Eagle</p>
+            <p>Arrows show direction of energy flow (from food to feeder).</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Food Web</h4>
+            <p>Multiple interconnected food chains form a <strong>food web</strong>. More realistic than a single food chain.</p>
+            <p>Biodiversity of food web → stability of ecosystem (if one species disappears, others compensate)</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Energy Flow — 10% Law</h2>
+
+          <div class="important-note">
+            <h4>⚡ Lindeman's 10% Law</h4>
+            <p>Only <strong>10% of energy</strong> is transferred from one trophic level to the next. The remaining 90% is used for metabolism and lost as heat.</p>
+            <p>Example: If grass has 10,000 J → Grasshopper gets 1,000 J → Frog gets 100 J → Snake gets 10 J → Eagle gets 1 J</p>
+            <p>This is why food chains are usually limited to 3–5 levels — very little energy reaches the top!</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Vegetarian Diet is More Efficient</h4>
+            <p>Since only 10% transfers at each step, eating plants directly gives you more energy than eating animals (which ate plants). If 10,000 J is in plants → you get 1,000 J if you eat them directly (as a vegetarian) but only 100 J if you eat an animal that ate the plant. So vegetarian diets support 10× more people per hectare of land!</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Biological Magnification</h2>
+
+          <div class="definition-box">
+            <h4>📖 Biomagnification</h4>
+            <p><strong>Biological magnification</strong> (bioaccumulation/biomagnification): The increase in concentration of harmful chemicals (pesticides like DDT) at each trophic level of a food chain.</p>
+            <p>Non-biodegradable chemicals → not broken down → accumulate in organisms → concentration increases up the food chain → top predators most affected!</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: DDT Magnification</h4>
+            <p>Water: 0.003 ppm DDT → Algae: 0.04 ppm → Small fish: 0.5 ppm → Large fish: 2 ppm → Bird (top): 25 ppm</p>
+            <p>DDT concentration increased by ~10,000× from water to top predator! This is why bald eagles (fish-eaters) nearly went extinct — DDT weakened their eggshells.</p>
+          </div>
+
+          <h2 class="chapter-heading">5. Ozone Layer Depletion</h2>
+
+          <div class="definition-box">
+            <h4>📖 Ozone Layer</h4>
+            <p>Ozone (O₃) layer in stratosphere (15–35 km altitude) absorbs harmful UV radiation from sun.</p>
+            <p>UV rays cause: skin cancer, cataracts, immune system damage, harm to aquatic life</p>
+            <p><strong>Cause of depletion:</strong> CFCs (Chlorofluorocarbons) from refrigerators, AC, aerosols → break down ozone.</p>
+            <p>CFC → releases Cl radicals → Cl + O₃ → ClO + O₂ → ClO + O → Cl + O₂ (Cl regenerated — catalytic cycle!)</p>
+            <p><strong>Solution:</strong> Montreal Protocol (1987) — international treaty to phase out CFCs</p>
+          </div>
+
+          <h2 class="chapter-heading">6. Waste Management</h2>
+
+          <table class="comparison-table">
+            <thead><tr><th>Type</th><th>Examples</th><th>Disposal</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Biodegradable</strong></td><td>Food waste, paper, cotton, wood, vegetable peels</td><td>Composting, landfill (decomposes naturally)</td></tr>
+              <tr><td><strong>Non-biodegradable</strong></td><td>Plastics, glass, metals, synthetic fibres, e-waste, pesticides</td><td>Recycling, incineration, landfill (doesn't decompose — long-term problem)</td></tr>
+            </tbody>
+          </table>
+
+          <div class="key-points">
+            <h4>🔑 3R Principle</h4>
+            <ul>
+              <li><strong>Reduce:</strong> Use less — buy only what you need; avoid single-use plastics</li>
+              <li><strong>Reuse:</strong> Use things again — glass bottles, cloth bags</li>
+              <li><strong>Recycle:</strong> Convert waste into useful products — paper, metals, plastics can be recycled</li>
+            </ul>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Key Points for Examination</h4>
+            <p>• Decomposers return minerals to ecosystem — essential for nutrient cycling</p>
+            <p>• Non-biodegradable pollutants bioaccumulate in food chains</p>
+            <p>• Only 10% energy transfers between trophic levels</p>
+            <p>• Ozone hole over Antarctica is the most severe</p>
+            <p>• CFCs are the main cause of ozone depletion</p>
+            <p>• More biodiversity = more stable ecosystem</p>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

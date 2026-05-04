@@ -7,83 +7,165 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Coordinate Geometry</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Coordinate Geometry</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Coordinate Geometry - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">📐 Coordinate Geometry — Class 10</h1>
+        <p class="page-description">Distance formula, section formula, area of triangle using coordinates</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Distance Formula</h2>
+          <div class="definition-box">
+            <h4>📖 Distance Between Two Points</h4>
+            <p>The distance between two points P(x₁, y₁) and Q(x₂, y₂) is:</p>
+            <p><strong>PQ = √[(x₂ – x₁)² + (y₂ – y₁)²]</strong></p>
+            <p>This is derived from the Pythagorean theorem where PQ is the hypotenuse.</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Distance from Origin</h4>
+            <p>The distance of a point P(x, y) from the origin O(0, 0):</p>
+            <p><strong>OP = √(x² + y²)</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Find distance between A(3, 4) and B(7, 1)</h4>
+            <p>AB = √[(7–3)² + (1–4)²] = √[4² + (–3)²] = √[16 + 9] = √25 = <strong>5 units</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Show that (3, 0), (6, 4), (–1, 3) form a right triangle</h4>
+            <p>Let A(3,0), B(6,4), C(–1,3)</p>
+            <p>AB = √[(6–3)² + (4–0)²] = √[9+16] = √25 = 5</p>
+            <p>BC = √[(–1–6)² + (3–4)²] = √[49+1] = √50 = 5√2</p>
+            <p>CA = √[(3–(–1))² + (0–3)²] = √[16+9] = √25 = 5</p>
+            <p>AB² + CA² = 25 + 25 = 50 = BC² ✓</p>
+            <p><strong>Answer: Triangle ABC is right-angled at A (AB = CA → also isosceles right triangle)</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Find value of y if A(3, y) is equidistant from P(6, 5) and Q(0, –3)</h4>
+            <p>AP = AQ (given)</p>
+            <p>√[(6–3)² + (5–y)²] = √[(0–3)² + (–3–y)²]</p>
+            <p>Squaring: 9 + (5–y)² = 9 + (–3–y)²</p>
+            <p>(5–y)² = (–3–y)² → 25 – 10y + y² = 9 + 6y + y²</p>
+            <p>16 = 16y → <strong>y = 1</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">2. Section Formula</h2>
+
+          <div class="definition-box">
+            <h4>📖 Internal Division</h4>
+            <p>If point P divides the line segment joining A(x₁, y₁) and B(x₂, y₂) internally in ratio m:n, then:</p>
+            <p><strong>P = [(mx₂ + nx₁)/(m+n), (my₂ + ny₁)/(m+n)]</strong></p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Midpoint Formula</h4>
+            <p>Midpoint M of line segment joining A(x₁, y₁) and B(x₂, y₂):</p>
+            <p><strong>M = [(x₁ + x₂)/2, (y₁ + y₂)/2]</strong></p>
+            <p>(This is just section formula with m = n = 1)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Section Formula</h4>
+            <p><strong>Q:</strong> Find the point which divides the line segment joining A(2, –3) and B(5, 6) in ratio 1:2 internally.</p>
+            <p>m = 1, n = 2, x₁ = 2, y₁ = –3, x₂ = 5, y₂ = 6</p>
+            <p>x = (1×5 + 2×2)/(1+2) = (5+4)/3 = 9/3 = 3</p>
+            <p>y = (1×6 + 2×(–3))/(1+2) = (6–6)/3 = 0/3 = 0</p>
+            <p><strong>Answer: Point P = (3, 0)</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Midpoint</h4>
+            <p><strong>Q:</strong> Find midpoint of A(–2, 3) and B(4, –1).</p>
+            <p>M = [(–2+4)/2, (3–1)/2] = [2/2, 2/2] = <strong>(1, 1)</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Finding ratio</h4>
+            <p><strong>Q:</strong> In what ratio does point P(4, 5) divide the line joining A(1, 2) and B(7, 8)?</p>
+            <p>Let ratio = k:1</p>
+            <p>x-coordinate: (7k + 1)/(k+1) = 4 → 7k+1 = 4k+4 → 3k = 3 → k = 1</p>
+            <p><strong>Answer: P divides AB in ratio 1:1 (midpoint!)</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">3. Area of a Triangle</h2>
+
+          <div class="definition-box">
+            <h4>📖 Area Using Coordinates</h4>
+            <p>Area of triangle with vertices A(x₁, y₁), B(x₂, y₂), C(x₃, y₃):</p>
+            <p><strong>Area = ½ |x₁(y₂ – y₃) + x₂(y₃ – y₁) + x₃(y₁ – y₂)|</strong></p>
+            <p>The modulus | | ensures area is always positive.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Collinearity Condition</h4>
+            <p>Three points A, B, C are <strong>collinear</strong> (lie on a straight line) if and only if the area of △ABC = 0.</p>
+            <p>i.e., x₁(y₂–y₃) + x₂(y₃–y₁) + x₃(y₁–y₂) = 0</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Find area of triangle</h4>
+            <p><strong>Q:</strong> Find area of triangle with vertices A(5, 2), B(4, 7), C(7, –4).</p>
+            <p>Area = ½ |5(7–(–4)) + 4(–4–2) + 7(2–7)|</p>
+            <p>= ½ |5(11) + 4(–6) + 7(–5)|</p>
+            <p>= ½ |55 – 24 – 35|</p>
+            <p>= ½ |–4| = ½ × 4 = <strong>2 sq. units</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Check Collinearity</h4>
+            <p><strong>Q:</strong> Are A(2, 3), B(4, 5), C(6, 7) collinear?</p>
+            <p>Area = ½ |2(5–7) + 4(7–3) + 6(3–5)|</p>
+            <p>= ½ |2(–2) + 4(4) + 6(–2)| = ½ |–4 + 16 – 12| = ½ |0| = 0</p>
+            <p><strong>Yes, the points are collinear.</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Key Points to Remember</h2>
+          <ul>
+            <li>Distance formula works for any two points in coordinate plane.</li>
+            <li>Section formula: internal division gives a point between A and B.</li>
+            <li>Midpoint is a special case of section formula (m = n).</li>
+            <li>Area of triangle = 0 means the three points are collinear.</li>
+            <li>Always take modulus when computing area to get positive value.</li>
+          </ul>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet — Coordinate Geometry</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Distance Formula</h3>
+                <p>d = √[(x₂–x₁)² + (y₂–y₁)²]</p>
+              </div>
+              <div class="formula-card">
+                <h3>Section Formula (m:n)</h3>
+                <p>x = (mx₂+nx₁)/(m+n)</p>
+                <p>y = (my₂+ny₁)/(m+n)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Midpoint</h3>
+                <p>M = ((x₁+x₂)/2, (y₁+y₂)/2)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Area of Triangle</h3>
+                <p>½|x₁(y₂–y₃)+x₂(y₃–y₁)+x₃(y₁–y₂)|</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

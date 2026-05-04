@@ -7,83 +7,124 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{border-left-color:#667eea;transform:translateX(5px)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>How Do Organisms Reproduce</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>How Do Organisms Reproduce</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">How Do Organisms Reproduce - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">🌱 How Do Organisms Reproduce — Class 10</h1>
+        <p class="page-description">Asexual and sexual reproduction in plants and animals, pollination, fertilisation, contraception</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Why Reproduce?</h2>
+          <p>Reproduction is essential for the <strong>continuity of life</strong> on Earth. While not essential for the survival of an individual organism, it is critical for the survival of the species.</p>
+
+          <div class="definition-box">
+            <h4>📖 Types of Reproduction</h4>
+            <p><strong>Asexual Reproduction:</strong> Only one parent involved. Offspring are genetically identical (clones). Faster, no need for a partner.</p>
+            <p><strong>Sexual Reproduction:</strong> Two parents involved (male and female gametes). Offspring show variation. Slower, requires more energy.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Asexual Reproduction</h2>
+
+          <table class="comparison-table">
+            <thead><tr><th>Method</th><th>Organism</th><th>How it Works</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Binary Fission</strong></td><td>Amoeba, Bacteria, Paramecium</td><td>Cell divides into two equal halves</td></tr>
+              <tr><td><strong>Budding</strong></td><td>Yeast, Hydra</td><td>Outgrowth (bud) forms on parent, detaches</td></tr>
+              <tr><td><strong>Fragmentation</strong></td><td>Spirogyra, Planaria</td><td>Organism breaks into pieces; each regenerates</td></tr>
+              <tr><td><strong>Regeneration</strong></td><td>Planaria, Hydra, Starfish</td><td>Lost body part regenerates into complete organism</td></tr>
+              <tr><td><strong>Spore formation</strong></td><td>Rhizopus, Mucor, Moss</td><td>Spores released from sporangia; germinate when conditions are favourable</td></tr>
+              <tr><td><strong>Vegetative propagation</strong></td><td>Plants (potato, rose, grass)</td><td>New plant from part of parent (stem, leaf, root)</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-heading">2.1 Vegetative Propagation in Plants</h3>
+          <ul>
+            <li><strong>Natural:</strong> Potato (stem tuber), Ginger (rhizome), Onion (bulb), Dahlia (root tuber), Bryophyllum (leaf buds)</li>
+            <li><strong>Artificial — Cutting:</strong> Rose, Cane — a piece of stem placed in soil, forms roots</li>
+            <li><strong>Artificial — Grafting:</strong> Mango, Apple — join shoot (scion) of desired plant onto root (stock) of hardy plant</li>
+            <li><strong>Artificial — Layering:</strong> Jasmine — bend stem into soil while still attached to parent plant, roots form, then separate</li>
+            <li><strong>Artificial — Tissue culture:</strong> Orchids, Banana — grow cells from meristem in lab (allows mass production)</li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Sexual Reproduction in Flowering Plants</h2>
+
+          <div class="definition-box">
+            <h4>📖 Structure of Flower</h4>
+            <p><strong>Stamen (male)</strong> = Anther + Filament → anther produces pollen (male gametes)</p>
+            <p><strong>Pistil/Carpel (female)</strong> = Stigma + Style + Ovary → ovary contains ovules (female gametes)</p>
+          </div>
+
+          <h3 class="sub-heading">3.1 Pollination</h3>
+          <div class="definition-box">
+            <h4>📖 Types of Pollination</h4>
+            <p><strong>Self-pollination:</strong> Pollen from same flower or same plant falls on stigma → less variation</p>
+            <p><strong>Cross-pollination:</strong> Pollen from different plant of same species → more genetic variation</p>
+            <p>Agents: Wind (light, dry, numerous pollen), Insects (sticky, scented pollen), Water, Birds, Bats</p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Fertilisation in Plants</h3>
+          <div class="definition-box">
+            <h4>📖 Double Fertilisation (unique to angiosperms)</h4>
+            <p>1. Pollen lands on stigma → pollen tube grows through style to ovule</p>
+            <p>2. Pollen has 2 male nuclei:</p>
+            <p>• 1st nucleus + egg cell (n) → Zygote (2n) → Embryo</p>
+            <p>• 2nd nucleus + 2 polar bodies (n + n) → Endosperm (3n) — nutrition for embryo</p>
+            <p>Ovule → Seed &nbsp;|&nbsp; Ovary → Fruit</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Sexual Reproduction in Humans</h2>
+
+          <h3 class="sub-heading">4.1 Male Reproductive System</h3>
+          <ul>
+            <li><strong>Testes:</strong> Produce sperms (male gametes) and testosterone. Located in scrotum (cooler than body) — sperm need slightly lower temperature.</li>
+            <li><strong>Epididymis:</strong> Sperms mature here</li>
+            <li><strong>Vas deferens:</strong> Carries sperm to urethra</li>
+            <li><strong>Accessory glands:</strong> Seminal vesicles, prostate, Cowper's glands — provide fluid + nutrients for sperm (together = semen)</li>
+          </ul>
+
+          <h3 class="sub-heading">4.2 Female Reproductive System</h3>
+          <ul>
+            <li><strong>Ovaries:</strong> Produce eggs (ova) and hormones (oestrogen, progesterone)</li>
+            <li><strong>Fallopian tubes:</strong> Carry eggs from ovary to uterus; fertilisation occurs here</li>
+            <li><strong>Uterus:</strong> Where fertilised egg (zygote) implants and develops into baby</li>
+            <li><strong>Cervix:</strong> Lower narrow part of uterus</li>
+            <li><strong>Vagina:</strong> Birth canal; receives penis during intercourse</li>
+          </ul>
+
+          <h3 class="sub-heading">4.3 Menstrual Cycle</h3>
+          <div class="definition-box">
+            <h4>📖 28-day Cycle</h4>
+            <p>Day 1–5: Menstruation (shedding of uterine lining if no fertilisation)</p>
+            <p>Day 6–13: Follicular phase — egg matures in ovary</p>
+            <p>Day 14: Ovulation — egg released from ovary</p>
+            <p>Day 15–28: Luteal phase — uterine wall thickens, prepares for implantation</p>
+            <p>If egg is fertilised → implants → pregnancy. If not → cycle repeats.</p>
+          </div>
+
+          <h2 class="chapter-heading">5. Contraception</h2>
+          <table class="comparison-table">
+            <thead><tr><th>Method</th><th>Type</th><th>How it works</th></tr></thead>
+            <tbody>
+              <tr><td>Condom</td><td>Barrier</td><td>Prevents sperm reaching egg; also prevents STDs</td></tr>
+              <tr><td>Oral pills</td><td>Hormonal</td><td>Prevents ovulation (oestrogen/progesterone)</td></tr>
+              <tr><td>Copper-T (IUD)</td><td>Intrauterine</td><td>Prevents implantation in uterus</td></tr>
+              <tr><td>Vasectomy</td><td>Surgical (male)</td><td>Cuts/blocks vas deferens</td></tr>
+              <tr><td>Tubectomy</td><td>Surgical (female)</td><td>Cuts/blocks fallopian tubes</td></tr>
+            </tbody>
+          </table>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>
