@@ -7,83 +7,177 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Triangles</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Triangles</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Triangles - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">📐 Triangles — Class 10</h1>
+        <p class="page-description">Similar triangles, criteria for similarity, areas, and Pythagoras theorem</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Similar Figures</h2>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p><strong>Similar figures</strong> have the same shape but not necessarily the same size. All corresponding angles are equal and corresponding sides are proportional.</p>
+            <p>Important: All congruent figures are similar, but all similar figures are NOT congruent.</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Examples</h4>
+            <p>• Photographs enlarged or reduced — same shape, different size<br>
+            • A map and the actual country — similar shapes at different scales<br>
+            • All circles are similar (but not congruent unless same radius)<br>
+            • All squares are similar (but not all rectangles)</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Similar Triangles</h2>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>Two triangles are <strong>similar</strong> (△ABC ~ △DEF) if:</p>
+            <p><strong>(i)</strong> Corresponding angles are equal: ∠A = ∠D, ∠B = ∠E, ∠C = ∠F</p>
+            <p><strong>(ii)</strong> Corresponding sides are proportional: AB/DE = BC/EF = CA/FD</p>
+            <p>Note: Both conditions automatically imply each other for triangles.</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Basic Proportionality Theorem (Thales' Theorem)</h2>
+
+          <div class="important-note">
+            <h4>⚡ Theorem Statement</h4>
+            <p>If a line is drawn parallel to one side of a triangle to intersect the other two sides in distinct points, the other two sides are divided in the same ratio.</p>
+            <p><strong>If DE ∥ BC in △ABC, then: AD/DB = AE/EC</strong></p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Converse of BPT</h4>
+            <p>If a line divides any two sides of a triangle in the same ratio, then the line is parallel to the third side.</p>
+            <p><strong>If AD/DB = AE/EC, then DE ∥ BC</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Using BPT</h4>
+            <p><strong>Q:</strong> In △ABC, DE ∥ BC. If AD = 3, DB = 5, and AE = 4.5, find EC.</p>
+            <p>By BPT: AD/DB = AE/EC</p>
+            <p>3/5 = 4.5/EC → EC = (4.5 × 5)/3 = 22.5/3 = <strong>7.5</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Criteria for Similarity of Triangles</h2>
+
+          <table class="comparison-table">
+            <thead><tr><th>Criterion</th><th>Full Name</th><th>Condition</th></tr></thead>
+            <tbody>
+              <tr><td><strong>AA</strong></td><td>Angle-Angle</td><td>If 2 angles of one Δ = 2 angles of another, they are similar</td></tr>
+              <tr><td><strong>SSS</strong></td><td>Side-Side-Side</td><td>If 3 pairs of corresponding sides are proportional</td></tr>
+              <tr><td><strong>SAS</strong></td><td>Side-Angle-Side</td><td>If 2 sides proportional AND included angle equal</td></tr>
+            </tbody>
+          </table>
+
+          <div class="example-box">
+            <h4>💡 Example: AA Similarity</h4>
+            <p><strong>Q:</strong> In △ABC and △PQR, ∠A = 60°, ∠B = 70°, ∠P = 60°, ∠Q = 70°. Are they similar?</p>
+            <p>∠A = ∠P = 60° and ∠B = ∠Q = 70°</p>
+            <p>By AA criterion: △ABC ~ △PQR ✓</p>
+            <p>Note: ∠C = 180° – 60° – 70° = 50° = ∠R (third angle also equal)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: SSS Similarity</h4>
+            <p><strong>Q:</strong> Check if △ABC with sides 3,4,5 is similar to △PQR with sides 6,8,10.</p>
+            <p>AB/PQ = 3/6 = 1/2 &nbsp;|&nbsp; BC/QR = 4/8 = 1/2 &nbsp;|&nbsp; CA/RP = 5/10 = 1/2</p>
+            <p>All ratios equal → By SSS criterion: <strong>△ABC ~ △PQR</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">5. Areas of Similar Triangles</h2>
+
+          <div class="definition-box">
+            <h4>📖 Theorem</h4>
+            <p>The ratio of areas of two similar triangles equals the <strong>square of the ratio of their corresponding sides</strong>.</p>
+            <p><strong>Area(△ABC) / Area(△DEF) = (AB/DE)² = (BC/EF)² = (CA/FD)²</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Areas of Similar Triangles</h4>
+            <p><strong>Q:</strong> △ABC ~ △DEF. If AB = 6 and DE = 4, find the ratio of their areas.</p>
+            <p>Area(△ABC) / Area(△DEF) = (AB/DE)² = (6/4)² = (3/2)² = <strong>9/4</strong></p>
+            <p>So area of △ABC is 9/4 times the area of △DEF.</p>
+          </div>
+
+          <h2 class="chapter-heading">6. Pythagoras Theorem</h2>
+
+          <div class="definition-box">
+            <h4>📖 Theorem Statement</h4>
+            <p>In a right-angled triangle, the square of the hypotenuse equals the sum of squares of the other two sides.</p>
+            <p><strong>If ∠B = 90° in △ABC, then: AC² = AB² + BC²</strong></p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Converse of Pythagoras Theorem</h4>
+            <p>If in a triangle, the square of one side equals the sum of squares of the other two sides, then the angle opposite the first side is a right angle.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Applying Pythagoras Theorem</h4>
+            <p><strong>Q:</strong> A ladder 10 m long leans against a wall. If the foot of the ladder is 6 m from the wall, how high up the wall does the ladder reach?</p>
+            <p>The ladder, wall, and ground form a right triangle.</p>
+            <p>Hypotenuse = 10 m, Base = 6 m, Height = ?</p>
+            <p>h² = 10² – 6² = 100 – 36 = 64 → h = 8 m</p>
+            <p><strong>Answer: The ladder reaches 8 m up the wall.</strong></p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Common Pythagorean Triplets</h4>
+            <ul>
+              <li>3, 4, 5 (3² + 4² = 5²)</li>
+              <li>5, 12, 13 (5² + 12² = 13²)</li>
+              <li>8, 15, 17 (8² + 15² = 17²)</li>
+              <li>7, 24, 25 (7² + 24² = 25²)</li>
+              <li>Multiples also work: 6,8,10 | 9,12,15 | 10,24,26</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">7. Important Theorems Summary</h2>
+          <ul>
+            <li><strong>BPT:</strong> Line parallel to one side divides other two sides proportionally.</li>
+            <li><strong>AA Similarity:</strong> Two angles equal → triangles similar.</li>
+            <li><strong>SSS Similarity:</strong> Three sides proportional → triangles similar.</li>
+            <li><strong>SAS Similarity:</strong> Two sides proportional + included angle equal → triangles similar.</li>
+            <li><strong>Area theorem:</strong> Ratio of areas = square of ratio of corresponding sides.</li>
+            <li><strong>Pythagoras:</strong> In right triangle, hypotenuse² = sum of squares of legs.</li>
+          </ul>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet — Triangles</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>BPT</h3>
+                <p>DE ∥ BC → AD/DB = AE/EC</p>
+              </div>
+              <div class="formula-card">
+                <h3>Area Ratio</h3>
+                <p>Area₁/Area₂ = (side₁/side₂)²</p>
+              </div>
+              <div class="formula-card">
+                <h3>Pythagoras</h3>
+                <p>AC² = AB² + BC²</p>
+                <p>(∠B = 90°)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Similarity Criteria</h3>
+                <p>AA / SAS / SSS</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

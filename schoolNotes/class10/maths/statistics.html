@@ -7,83 +7,173 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:.8rem;text-align:left;font-weight:600}.comparison-table td{padding:.8rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Statistics</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Statistics</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Statistics - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">📊 Statistics — Class 10</h1>
+        <p class="page-description">Mean, Mode, Median of grouped data, and Ogive curves</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction</h2>
+          <p>In Class 9, we studied raw data (ungrouped). In Class 10, we deal with <strong>grouped data</strong> presented in frequency distribution tables. We find three measures of central tendency: <strong>Mean, Mode, and Median</strong>.</p>
+
+          <h2 class="chapter-heading">2. Mean of Grouped Data</h2>
+
+          <div class="definition-box">
+            <h4>📖 Method 1 — Direct Method</h4>
+            <p><strong>x̄ = Σfᵢxᵢ / Σfᵢ</strong></p>
+            <p>where xᵢ = class mark (midpoint) = (upper limit + lower limit)/2</p>
+            <p>fᵢ = frequency of each class</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Method 2 — Assumed Mean Method (Shortcut)</h4>
+            <p><strong>x̄ = a + (Σfᵢdᵢ / Σfᵢ)</strong></p>
+            <p>where a = assumed mean (any class mark), dᵢ = xᵢ – a</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Method 3 — Step Deviation Method</h4>
+            <p><strong>x̄ = a + (Σfᵢuᵢ / Σfᵢ) × h</strong></p>
+            <p>where uᵢ = (xᵢ – a)/h, h = class size (width)</p>
+            <p>Best used when class widths are equal and numbers are large.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Mean by Direct Method</h4>
+            <p>Find mean of the following data:</p>
+            <table class="comparison-table" style="margin:0.5rem 0">
+              <thead><tr><th>Class</th><th>Frequency (f)</th><th>Midpoint (x)</th><th>fx</th></tr></thead>
+              <tbody>
+                <tr><td>0–10</td><td>5</td><td>5</td><td>25</td></tr>
+                <tr><td>10–20</td><td>8</td><td>15</td><td>120</td></tr>
+                <tr><td>20–30</td><td>15</td><td>25</td><td>375</td></tr>
+                <tr><td>30–40</td><td>10</td><td>35</td><td>350</td></tr>
+                <tr><td>40–50</td><td>7</td><td>45</td><td>315</td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>45</strong></td><td></td><td><strong>1185</strong></td></tr>
+              </tbody>
+            </table>
+            <p>Mean = Σfx / Σf = 1185 / 45 = <strong>26.33</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">3. Mode of Grouped Data</h2>
+
+          <div class="definition-box">
+            <h4>📖 Modal Class and Formula</h4>
+            <p>The <strong>modal class</strong> is the class with the highest frequency.</p>
+            <p><strong>Mode = l + [(f₁ – f₀) / (2f₁ – f₀ – f₂)] × h</strong></p>
+            <p>where:<br>
+            l = lower boundary of modal class<br>
+            f₁ = frequency of modal class<br>
+            f₀ = frequency of class before modal class<br>
+            f₂ = frequency of class after modal class<br>
+            h = class width</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Finding Mode</h4>
+            <p>Using the above data: Modal class = 20–30 (highest f = 15)</p>
+            <p>l = 20, f₁ = 15, f₀ = 8, f₂ = 10, h = 10</p>
+            <p>Mode = 20 + [(15–8)/(2×15–8–10)] × 10</p>
+            <p>= 20 + [7/(30–18)] × 10 = 20 + (7/12) × 10 = 20 + 5.83 = <strong>25.83</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Median of Grouped Data</h2>
+
+          <div class="definition-box">
+            <h4>📖 Cumulative Frequency and Formula</h4>
+            <p>First, create a <strong>cumulative frequency table</strong>. The <strong>median class</strong> is the class where cumulative frequency first exceeds n/2 (n = total frequency).</p>
+            <p><strong>Median = l + [(n/2 – cf) / f] × h</strong></p>
+            <p>where:<br>
+            l = lower boundary of median class<br>
+            n = total frequency<br>
+            cf = cumulative frequency before the median class<br>
+            f = frequency of median class<br>
+            h = class width</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Finding Median</h4>
+            <table class="comparison-table" style="margin:0.5rem 0">
+              <thead><tr><th>Class</th><th>f</th><th>Cumulative f (cf)</th></tr></thead>
+              <tbody>
+                <tr><td>0–10</td><td>5</td><td>5</td></tr>
+                <tr><td>10–20</td><td>8</td><td>13</td></tr>
+                <tr><td>20–30</td><td>15</td><td>28</td></tr>
+                <tr><td>30–40</td><td>10</td><td>38</td></tr>
+                <tr><td>40–50</td><td>7</td><td>45</td></tr>
+              </tbody>
+            </table>
+            <p>n = 45, n/2 = 22.5</p>
+            <p>Median class: cf first exceeds 22.5 → class 20–30 (cf = 28 &gt; 22.5)</p>
+            <p>l = 20, cf = 13, f = 15, h = 10</p>
+            <p>Median = 20 + [(22.5 – 13)/15] × 10 = 20 + [9.5/15] × 10 = 20 + 6.33 = <strong>26.33</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">5. Graphical Representation — Ogive</h2>
+
+          <div class="definition-box">
+            <h4>📖 Ogive (Cumulative Frequency Curve)</h4>
+            <p>An <strong>ogive</strong> is a graph drawn by plotting cumulative frequencies against class boundaries.</p>
+            <p><strong>Less Than Ogive:</strong> Plot (upper boundary, cumulative frequency). Curve goes upward.</p>
+            <p><strong>More Than Ogive:</strong> Plot (lower boundary, total cf – previous cf). Curve goes downward.</p>
+            <p>The intersection of both ogives gives the <strong>Median</strong>.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Empirical Relationship</h4>
+            <p><strong>Mode = 3 × Median – 2 × Mean</strong></p>
+            <p>This formula is approximate and holds for moderately skewed distributions. It's useful for finding one measure when the other two are known.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 When to Use Which Measure</h4>
+            <ul>
+              <li><strong>Mean:</strong> Best for symmetric data; uses all data values. Affected by extreme values.</li>
+              <li><strong>Median:</strong> Best for skewed data or when outliers are present; not affected by extremes.</li>
+              <li><strong>Mode:</strong> Best for categorical data; most frequently occurring value.</li>
+            </ul>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Statistics Formula Sheet</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Mean (Direct)</h3>
+                <p>x̄ = Σfᵢxᵢ / Σfᵢ</p>
+              </div>
+              <div class="formula-card">
+                <h3>Mean (Step Deviation)</h3>
+                <p>x̄ = a + (Σfᵢuᵢ/Σfᵢ) × h</p>
+                <p>uᵢ = (xᵢ – a) / h</p>
+              </div>
+              <div class="formula-card">
+                <h3>Mode</h3>
+                <p>l + [(f₁–f₀)/(2f₁–f₀–f₂)] × h</p>
+              </div>
+              <div class="formula-card">
+                <h3>Median</h3>
+                <p>l + [(n/2 – cf)/f] × h</p>
+              </div>
+              <div class="formula-card">
+                <h3>Empirical Relation</h3>
+                <p>Mode = 3×Median – 2×Mean</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

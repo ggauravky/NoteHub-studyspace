@@ -7,83 +7,170 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Probability</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Probability</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Probability - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">🎲 Probability — Class 10</h1>
+        <p class="page-description">Theoretical probability, equally likely outcomes, cards, dice, and word problems</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction</h2>
+          <p>In Class 9, we studied <strong>experimental (empirical) probability</strong> based on actual experiments. In Class 10, we study <strong>theoretical (classical) probability</strong> based on equally likely outcomes.</p>
+
+          <div class="definition-box">
+            <h4>📖 Theoretical Probability</h4>
+            <p><strong>P(E) = Number of outcomes favourable to E / Total number of equally likely outcomes</strong></p>
+            <p>This formula is valid only when all outcomes are <strong>equally likely</strong>.</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Real-Life Connection</h4>
+            <p>When you flip a fair coin, both heads and tails are equally likely. You don't need to flip it 1000 times — you can mathematically say: P(Heads) = 1/2. That's theoretical probability! It's based on logic, not actual experiments.</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Key Terms</h2>
+
+          <div class="definition-box">
+            <h4>📖 Important Definitions</h4>
+            <p><strong>Random Experiment:</strong> An experiment where outcome cannot be predicted with certainty. Example: tossing a coin, rolling a die.</p>
+            <p><strong>Sample Space (S):</strong> The set of all possible outcomes of a random experiment.</p>
+            <p><strong>Event (E):</strong> A subset of the sample space (one or more outcomes).</p>
+            <p><strong>Elementary Event:</strong> An event with only one outcome.</p>
+            <p><strong>Compound Event:</strong> An event with more than one outcome.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Range of Probability</h4>
+            <p><strong>0 ≤ P(E) ≤ 1</strong></p>
+            <p>P(E) = 0 → Impossible event (e.g., getting 7 on a die)</p>
+            <p>P(E) = 1 → Sure/Certain event (e.g., getting a number &lt;7 on a die)</p>
+            <p>P(E) + P(Ē) = 1 where Ē is the complementary event (E not occurring)</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Problems Based on Coins</h2>
+
+          <div class="definition-box">
+            <h4>📖 Sample Space for Coins</h4>
+            <p><strong>1 coin:</strong> S = {H, T} → Total = 2 outcomes</p>
+            <p><strong>2 coins:</strong> S = {HH, HT, TH, TT} → Total = 4 outcomes</p>
+            <p><strong>3 coins:</strong> S = {HHH, HHT, HTH, THH, HTT, THT, TTH, TTT} → Total = 8 outcomes</p>
+            <p><strong>n coins:</strong> Total outcomes = 2ⁿ</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Two Coins</h4>
+            <p><strong>Q:</strong> Two unbiased coins are tossed. Find P(exactly one head).</p>
+            <p>S = {HH, HT, TH, TT} → n(S) = 4</p>
+            <p>Favourable outcomes (exactly 1 head): HT, TH → n(E) = 2</p>
+            <p>P(E) = 2/4 = <strong>1/2</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Problems Based on Dice</h2>
+
+          <div class="definition-box">
+            <h4>📖 Sample Space for Dice</h4>
+            <p><strong>1 die:</strong> S = {1, 2, 3, 4, 5, 6} → Total = 6 outcomes</p>
+            <p><strong>2 dice:</strong> Total = 6 × 6 = 36 outcomes</p>
+            <p>For 2 dice, sample space is written as (d₁, d₂) ordered pairs.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Single Die</h4>
+            <p><strong>Q:</strong> A die is thrown once. Find probability of getting: (a) a prime number, (b) a number divisible by 3.</p>
+            <p>S = {1,2,3,4,5,6}, n(S) = 6</p>
+            <p>(a) Prime numbers: 2, 3, 5 → P = 3/6 = <strong>1/2</strong></p>
+            <p>(b) Divisible by 3: 3, 6 → P = 2/6 = <strong>1/3</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Two Dice</h4>
+            <p><strong>Q:</strong> Two dice are thrown. Find P(sum = 7).</p>
+            <p>Favourable outcomes with sum 7: (1,6), (2,5), (3,4), (4,3), (5,2), (6,1) → 6 outcomes</p>
+            <p>P(sum=7) = 6/36 = <strong>1/6</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">5. Problems Based on Playing Cards</h2>
+
+          <div class="definition-box">
+            <h4>📖 Deck of 52 Cards</h4>
+            <p><strong>4 suits:</strong> Hearts ♥ (red), Diamonds ♦ (red), Clubs ♣ (black), Spades ♠ (black)</p>
+            <p><strong>Each suit has 13 cards:</strong> A, 2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K</p>
+            <p><strong>Face cards:</strong> J (Jack), Q (Queen), K (King) → 3 per suit → 12 total</p>
+            <p><strong>Aces:</strong> 4 (one per suit)</p>
+            <p><strong>Total:</strong> 52 cards</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Cards</h4>
+            <p><strong>Q:</strong> One card is drawn from a well-shuffled pack. Find:</p>
+            <p>(a) P(red card) = 26/52 = <strong>1/2</strong></p>
+            <p>(b) P(face card) = 12/52 = <strong>3/13</strong></p>
+            <p>(c) P(ace of spades) = 1/52</p>
+            <p>(d) P(neither a king nor a queen) = (52–4–4)/52 = 44/52 = <strong>11/13</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">6. Problems Based on Bags/Balls</h2>
+
+          <div class="example-box">
+            <h4>💡 Example: Balls in a Bag</h4>
+            <p><strong>Q:</strong> A bag contains 3 red, 5 black, and 7 white balls. A ball is drawn at random. Find probability that it is: (a) black, (b) not white.</p>
+            <p>Total balls = 3 + 5 + 7 = 15</p>
+            <p>(a) P(black) = 5/15 = <strong>1/3</strong></p>
+            <p>(b) P(not white) = (15–7)/15 = 8/15</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Notes</h4>
+            <ul>
+              <li>Probability is always between 0 and 1 (inclusive).</li>
+              <li>Sum of probabilities of all elementary events = 1.</li>
+              <li>P(Ē) = 1 – P(E) (complementary rule).</li>
+              <li>All outcomes must be equally likely for classical probability.</li>
+              <li>For 2 dice: always list ordered pairs to avoid missing outcomes.</li>
+            </ul>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Probability Formula Sheet</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic Formula</h3>
+                <p>P(E) = n(E) / n(S)</p>
+                <p>Favourable / Total</p>
+              </div>
+              <div class="formula-card">
+                <h3>Range</h3>
+                <p>0 ≤ P(E) ≤ 1</p>
+                <p>P(impossible) = 0</p>
+                <p>P(certain) = 1</p>
+              </div>
+              <div class="formula-card">
+                <h3>Complement</h3>
+                <p>P(Ē) = 1 – P(E)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Sample Spaces</h3>
+                <p>1 coin: 2 outcomes</p>
+                <p>2 coins: 4 outcomes</p>
+                <p>1 die: 6 outcomes</p>
+                <p>2 dice: 36 outcomes</p>
+                <p>Cards: 52 outcomes</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

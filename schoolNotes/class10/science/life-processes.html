@@ -7,83 +7,151 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Life Processes</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Life Processes</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Life Processes - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">🌿 Life Processes — Class 10</h1>
+        <p class="page-description">Nutrition, respiration, transportation, excretion in plants and animals</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction — What are Life Processes?</h2>
+          <div class="definition-box">
+            <h4>📖 Life Processes</h4>
+            <p>All living beings perform certain basic functions essential for life, called <strong>life processes</strong>. These include:</p>
+            <p>Nutrition → Respiration → Transportation → Excretion</p>
+            <p>Without these, an organism cannot survive. They require energy (obtained from nutrition).</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Nutrition</h2>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p><strong>Nutrition</strong> is the process by which organisms obtain and use food/energy to sustain life, growth, and repair.</p>
+            <p><strong>Autotrophs:</strong> Make their own food (plants, algae, some bacteria)</p>
+            <p><strong>Heterotrophs:</strong> Cannot make own food; depend on others (animals, fungi, most bacteria)</p>
+          </div>
+
+          <h3 class="sub-heading">2.1 Photosynthesis (Autotrophic Nutrition)</h3>
+          <div class="important-note">
+            <h4>⚡ Equation of Photosynthesis</h4>
+            <p><strong>6CO₂ + 6H₂O + Sunlight → C₆H₁₂O₆ + 6O₂</strong></p>
+            <p>Carbon dioxide + Water + Light Energy → Glucose + Oxygen</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Conditions Required for Photosynthesis</h4>
+            <p>• <strong>Sunlight</strong> — source of energy</p>
+            <p>• <strong>Chlorophyll</strong> — green pigment that absorbs light (found in chloroplasts)</p>
+            <p>• <strong>CO₂</strong> — enters through stomata in leaves</p>
+            <p>• <strong>Water</strong> — absorbed through roots, transported to leaves</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Photosynthesis = Solar-Powered Kitchen</h4>
+            <p>Think of a leaf as a kitchen. The sun provides energy (like electricity). CO₂ and water are the ingredients. Chlorophyll is the chef who converts these into food (glucose). Oxygen is the "exhaust" let out as a by-product — and we breathe it!</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Stages of Photosynthesis</h4>
+            <p><strong>1. Light Reactions (in thylakoids):</strong></p>
+            <p>• Chlorophyll absorbs light → splits water into H⁺, e⁻, and O₂ (photolysis)</p>
+            <p>• O₂ is released as by-product</p>
+            <p>• ATP and NADPH (energy carriers) are produced</p>
+            <p><strong>2. Dark Reactions / Calvin Cycle (in stroma):</strong></p>
+            <p>• CO₂ is fixed using ATP and NADPH → Glucose is synthesised</p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Heterotrophic Nutrition (in Animals)</h3>
+          <div class="definition-box">
+            <h4>📖 Human Digestive System</h4>
+            <p>Mouth → Oesophagus → Stomach → Small Intestine → Large Intestine → Rectum → Anus</p>
+          </div>
+          <ul>
+            <li><strong>Mouth:</strong> Chewing (mechanical), salivary amylase breaks starch → maltose (chemical)</li>
+            <li><strong>Oesophagus:</strong> Pushes food to stomach by peristalsis (wave-like muscle contractions)</li>
+            <li><strong>Stomach:</strong> HCl (kills bacteria, activates pepsinogen), pepsin digests proteins, mucus protects stomach wall</li>
+            <li><strong>Small intestine (main digestion site):</strong> Pancreatic juice (lipase, amylase, trypsin), bile (emulsifies fats from liver), intestinal juice → all nutrients digested here</li>
+            <li><strong>Absorption:</strong> Villi and microvilli increase surface area in small intestine — nutrients absorbed into blood</li>
+            <li><strong>Large intestine:</strong> Water absorption, faeces formation</li>
+          </ul>
+
+          <h2 class="chapter-heading">3. Respiration</h2>
+          <div class="definition-box">
+            <h4>📖 Aerobic vs Anaerobic</h4>
+            <p><strong>Aerobic Respiration</strong> (with oxygen): C₆H₁₂O₆ + 6O₂ → 6CO₂ + 6H₂O + 38 ATP (energy)</p>
+            <p><strong>Anaerobic Respiration</strong> (without oxygen):</p>
+            <p>In yeast: C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ + 2 ATP (fermentation)</p>
+            <p>In muscles (during intense exercise): C₆H₁₂O₆ → 2C₃H₆O₃ (lactic acid) + 2 ATP</p>
+            <p>Lactic acid buildup causes muscle cramps and fatigue</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Breathing vs Respiration</h4>
+            <p><strong>Breathing</strong>: Physical process — inhaling/exhaling air (mechanical)</p>
+            <p><strong>Respiration</strong>: Chemical process — oxidation of glucose to release energy (at cellular level)</p>
+            <p>Breathing brings oxygen needed for cellular respiration. They are NOT the same!</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Transportation</h2>
+
+          <h3 class="sub-heading">4.1 In Plants</h3>
+          <div class="definition-box">
+            <h4>📖 Xylem and Phloem</h4>
+            <p><strong>Xylem:</strong> Transports water and mineral salts from roots to leaves (upward only)</p>
+            <p>Mechanism: Transpiration pull (evaporation from leaves creates suction)</p>
+            <p><strong>Phloem:</strong> Transports food (glucose, sucrose) from leaves to other parts (bidirectional)</p>
+            <p>Mechanism: Translocation — driven by pressure</p>
+          </div>
+
+          <h3 class="sub-heading">4.2 In Humans (Circulatory System)</h3>
+          <div class="definition-box">
+            <h4>📖 Double Circulation</h4>
+            <p>Human heart has 4 chambers: 2 atria (upper) + 2 ventricles (lower)</p>
+            <p><strong>Pulmonary circulation:</strong> Heart → Lungs → Heart (deoxygenated to oxygenated)</p>
+            <p><strong>Systemic circulation:</strong> Heart → Body → Heart (oxygenated blood to body)</p>
+            <p>This double circulation ensures oxygenated and deoxygenated blood don't mix → more efficient!</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Blood Vessels</h4>
+            <ul>
+              <li><strong>Arteries:</strong> Carry blood away from heart; thick, elastic walls; oxygenated (except pulmonary artery)</li>
+              <li><strong>Veins:</strong> Carry blood to heart; thin walls, valves prevent backflow; deoxygenated (except pulmonary vein)</li>
+              <li><strong>Capillaries:</strong> Thinnest, single-cell thick walls — site of gas and nutrient exchange</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">5. Excretion</h2>
+
+          <h3 class="sub-heading">5.1 In Humans (Kidneys)</h3>
+          <div class="definition-box">
+            <h4>📖 How Kidneys Work</h4>
+            <p>Kidneys filter blood using millions of units called <strong>nephrons</strong>.</p>
+            <p><strong>Step 1 — Filtration:</strong> Blood enters Bowman's capsule, all small molecules (water, glucose, urea, salts) filtered out</p>
+            <p><strong>Step 2 — Selective Reabsorption:</strong> Useful substances (glucose, amino acids, most water, salts) reabsorbed back into blood</p>
+            <p><strong>Step 3 — Secretion:</strong> Some extra waste substances added from blood to filtrate</p>
+            <p><strong>Product:</strong> Urine = water + urea + salts + excess substances → stored in bladder → eliminated via urethra</p>
+          </div>
+
+          <h3 class="sub-heading">5.2 In Plants</h3>
+          <ul>
+            <li>CO₂ and O₂ are waste gases, removed through stomata</li>
+            <li>Excess water removed by transpiration</li>
+            <li>Some waste stored in leaves, bark, vacuoles — shed periodically</li>
+            <li>Resin, latex, gum — stored waste products in various plants</li>
+          </ul>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

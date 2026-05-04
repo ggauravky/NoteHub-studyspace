@@ -3,87 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Development - Class 10 Socialscience - NoteHub</title>
+    <title>Development - Class 10 Economics - NoteHub</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{border-left-color:#667eea;transform:translateX(5px)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/socialscience10.html">Social Science</a> / <span>Development (Economics)</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/socialscience10.html">Socialscience</a> / <span>Development</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Development - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">💰 Development — Class 10 Economics</h1>
+        <p class="page-description">Development goals, national income, per capita income, HDI, and sustainability</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. What is Development?</h2>
+
+          <div class="definition-box">
+            <h4>📖 Development Means Different Things to Different People</h4>
+            <p>Development has multiple meanings — it's not just about money. Different people have different goals:</p>
+            <p>• A landless agricultural worker wants more days of work and better wages</p>
+            <p>• A prosperous farmer wants better irrigation facilities</p>
+            <p>• A girl from a rich urban family wants freedom and equal status</p>
+            <p><strong>Development = improving the well-being and freedom of all people</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Conflicting Development Goals</h4>
+            <p>Sometimes, what is good for one person/group is not good for another:</p>
+            <p>• Building a dam: good for farmers (irrigation) but may displace tribal communities</p>
+            <p>• Industrial growth: more jobs but may cause pollution for residents</p>
+            <p>So development involves trade-offs and choices!</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Income and Development</h2>
+
+          <div class="definition-box">
+            <h4>📖 Per Capita Income</h4>
+            <p><strong>Per Capita Income</strong> = Total Income of Country / Total Population</p>
+            <p>Used by the World Bank to classify countries:</p>
+            <p>• Rich (developed): Per capita income &gt; $12,056 per year</p>
+            <p>• Middle income: $1,036 – $12,055 per year</p>
+            <p>• Low income (developing): &lt; $1,036 per year</p>
+            <p>India is in the <strong>lower middle income</strong> category.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Limitation of Per Capita Income</h4>
+            <p>Per capita income doesn't tell us how income is distributed. Two countries with the same per capita income may have very different levels of equality.</p>
+            <p>Example: If a country has 5 people with incomes: ₹10,000; ₹1,000; ₹500; ₹500; ₹500 → Average = ₹2,500 → But 4 out of 5 earn below average!</p>
+            <p>So average/mean income can be misleading when inequality is high.</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Human Development Index (HDI)</h2>
+
+          <div class="definition-box">
+            <h4>📖 HDI — A Better Measure?</h4>
+            <p>The <strong>Human Development Index (HDI)</strong> was developed by the United Nations Development Programme (UNDP). It ranks countries not just on income but on three dimensions:</p>
+            <p><strong>1. Long and healthy life</strong> → Life expectancy at birth</p>
+            <p><strong>2. Education</strong> → Mean years of schooling + Expected years of schooling</p>
+            <p><strong>3. Decent standard of living</strong> → Gross National Income per capita (PPP $)</p>
+            <p>HDI score: 0 (lowest) to 1 (highest)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Kerala vs Punjab — A Comparison</h4>
+            <p>Punjab has higher per capita income than Kerala.</p>
+            <p>But Kerala has better literacy rate, lower infant mortality, higher life expectancy.</p>
+            <p>Which state is more "developed"? It depends on what you value!</p>
+            <p>Kerala shows that high income is not the only path to well-being — good public services (health, education) matter equally.</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Other Important Indicators</h2>
+
+          <table class="comparison-table">
+            <thead><tr><th>Indicator</th><th>What it Measures</th><th>India's Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Life Expectancy</strong></td><td>Average years a person is expected to live</td><td>~70 years (improving)</td></tr>
+              <tr><td><strong>Literacy Rate</strong></td><td>% of population that can read and write</td><td>~77% (Gender gap remains)</td></tr>
+              <tr><td><strong>Infant Mortality Rate (IMR)</strong></td><td>Deaths per 1000 live births under age 1</td><td>~28 (decreasing)</td></tr>
+              <tr><td><strong>Net Attendance Ratio</strong></td><td>% of children enrolled in school</td><td>Improving</td></tr>
+              <tr><td><strong>GDP (Gross Domestic Product)</strong></td><td>Total value of goods/services produced in a country in a year</td><td>India = ~$3.7 trillion (5th largest)</td></tr>
+            </tbody>
+          </table>
+
+          <h2 class="chapter-heading">5. Sustainability of Development</h2>
+
+          <div class="definition-box">
+            <h4>📖 Sustainable Development</h4>
+            <p><strong>Sustainable development</strong> means meeting the needs of the present without compromising the ability of future generations to meet their own needs.</p>
+            <p>The key question: Are we using resources responsibly so our children and grandchildren can also have a good life?</p>
+            <p>Environmental sustainability: Not exhausting natural resources (water, forests, minerals, clean air)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Problem of Groundwater</h4>
+            <p>In Punjab and Haryana, farmers have over-extracted groundwater for agriculture. Water levels are falling rapidly. The next generation may face water scarcity.</p>
+            <p>The development of the current generation (more food production, more income) is at the cost of future generations — <strong>not sustainable</strong>!</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Key Points for Examination</h4>
+            <ul>
+              <li>Development goals differ among individuals and groups</li>
+              <li>Per capita income = total income / total population — most common measure</li>
+              <li>Limitation: Doesn't reflect income distribution/equality</li>
+              <li>HDI = Life expectancy + Education + Per capita income (3 dimensions)</li>
+              <li>Infant mortality rate = deaths of children under 1 year per 1000 live births</li>
+              <li>Sustainable development = present needs without harming future generations</li>
+              <li>Non-renewable resources (coal, oil) cannot be used unsustainably</li>
+            </ul>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

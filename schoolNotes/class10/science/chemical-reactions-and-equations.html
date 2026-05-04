@@ -7,83 +7,167 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">📚</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Chemical Reactions &amp; Equations</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Chemical Reactions and Equations</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">🔬 Chemical Reactions and Equations - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">⚗️ Chemical Reactions and Equations — Class 10</h1>
+        <p class="page-description">Types of reactions, balancing equations, oxidation-reduction, and corrosion</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Chemical Reactions</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Chemical Reaction?</h4>
+            <p>A <strong>chemical reaction</strong> is a process in which substances (reactants) are converted into new substances (products) with different properties. During a chemical reaction, bonds in reactants break and new bonds form in products.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Signs of a Chemical Reaction</h4>
+            <p>• <strong>Change in colour</strong> (e.g., copper turns black when heated in air)</p>
+            <p>• <strong>Change in state</strong> (e.g., liquid → gas, solid → liquid)</p>
+            <p>• <strong>Evolution of gas</strong> (e.g., bubbles when vinegar + baking soda)</p>
+            <p>• <strong>Formation of precipitate</strong> (insoluble solid formed in solution)</p>
+            <p>• <strong>Change in temperature</strong> (heat absorbed or released)</p>
+            <p>• <strong>Change in smell</strong> (new odour produced)</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Chemical Equations</h2>
+
+          <div class="definition-box">
+            <h4>📖 Writing Chemical Equations</h4>
+            <p>A <strong>chemical equation</strong> is a symbolic representation of a chemical reaction.</p>
+            <p>Format: Reactants → Products</p>
+            <p>Example: Magnesium + Oxygen → Magnesium Oxide</p>
+            <p>Word equation: 2Mg + O₂ → 2MgO</p>
+            <p>States: (s) = solid, (l) = liquid, (g) = gas, (aq) = aqueous (dissolved in water)</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ Balancing Chemical Equations</h4>
+            <p>A balanced equation obeys the <strong>Law of Conservation of Mass</strong>: atoms of each element must be equal on both sides.</p>
+            <p><strong>Method: Hit and Trial</strong></p>
+            <p>Example: H₂ + O₂ → H₂O</p>
+            <p>Count: Left: 2H, 2O &nbsp;|&nbsp; Right: 2H, 1O → Oxygen not balanced</p>
+            <p>Balanced: 2H₂ + O₂ → 2H₂O ✓ (4H, 2O on both sides)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Balance Fe + H₂O → Fe₃O₄ + H₂</h4>
+            <p>Start with Fe₃O₄ (most complex): needs 3Fe, 4O on left</p>
+            <p>3Fe + 4H₂O → Fe₃O₄ + H₂</p>
+            <p>Count: Left: 3Fe, 4O, 8H &nbsp;|&nbsp; Right: 3Fe, 4O, 2H → H not balanced</p>
+            <p>Balanced: <strong>3Fe + 4H₂O → Fe₃O₄ + 4H₂</strong></p>
+            <p>Verify: 3Fe, 4O, 8H on both sides ✓</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Types of Chemical Reactions</h2>
+
+          <h3 class="sub-heading">3.1 Combination Reaction</h3>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>Two or more substances combine to form a single product: <strong>A + B → AB</strong></p>
+          </div>
+          <ul>
+            <li><strong>Burning of coal:</strong> C + O₂ → CO₂</li>
+            <li><strong>Formation of water:</strong> 2H₂ + O₂ → 2H₂O</li>
+            <li><strong>Slaking of lime:</strong> CaO + H₂O → Ca(OH)₂ (exothermic — generates heat)</li>
+            <li><strong>Quick lime + water:</strong> Heat is released, used in hand warmers</li>
+          </ul>
+
+          <h3 class="sub-heading">3.2 Decomposition Reaction</h3>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>A single compound breaks into two or more substances: <strong>AB → A + B</strong></p>
+            <p>Requires energy input: heat (thermal), electricity (electrolysis), or light (photolysis)</p>
+          </div>
+          <ul>
+            <li><strong>Thermal decomposition of calcium carbonate:</strong> CaCO₃ → CaO + CO₂ (used in cement industry)</li>
+            <li><strong>Electrolysis of water:</strong> 2H₂O → 2H₂ + O₂ (electricity used)</li>
+            <li><strong>Decomposition of silver chloride by light:</strong> 2AgCl → 2Ag + Cl₂ (photolysis — used in photography)</li>
+          </ul>
+
+          <h3 class="sub-heading">3.3 Displacement Reaction</h3>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>A more reactive element displaces a less reactive element from its compound: <strong>A + BC → AC + B</strong></p>
+          </div>
+          <ul>
+            <li>Zn + CuSO₄ → ZnSO₄ + Cu (Zinc displaces Copper — Zn more reactive)</li>
+            <li>Fe + CuSO₄ → FeSO₄ + Cu (Iron displaces Copper)</li>
+            <li>Cu + FeSO₄ → No reaction (Cu less reactive than Fe)</li>
+          </ul>
+
+          <h3 class="sub-heading">3.4 Double Displacement (Precipitation) Reaction</h3>
+          <div class="definition-box">
+            <h4>📖 Definition</h4>
+            <p>Two compounds exchange ions to form two new compounds. Often one product is a precipitate (insoluble solid): <strong>AB + CD → AD + CB</strong></p>
+          </div>
+          <ul>
+            <li>Na₂SO₄ + BaCl₂ → BaSO₄↓ + 2NaCl (white precipitate of BaSO₄ forms)</li>
+            <li>NaOH + HCl → NaCl + H₂O (neutralisation reaction)</li>
+            <li>AgNO₃ + NaCl → AgCl↓ + NaNO₃ (white precipitate of AgCl)</li>
+          </ul>
+
+          <h3 class="sub-heading">3.5 Oxidation and Reduction (Redox)</h3>
+          <div class="definition-box">
+            <h4>📖 Definitions</h4>
+            <p><strong>Oxidation:</strong> Gain of oxygen OR loss of hydrogen OR loss of electrons</p>
+            <p><strong>Reduction:</strong> Loss of oxygen OR gain of hydrogen OR gain of electrons</p>
+            <p><strong>Redox reaction:</strong> Oxidation and reduction occur simultaneously</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: CuO + H₂ → Cu + H₂O</h4>
+            <p>CuO loses oxygen → CuO is <strong>reduced</strong> (it's an oxidising agent)</p>
+            <p>H₂ gains oxygen → H₂ is <strong>oxidised</strong> (it's a reducing agent)</p>
+            <p>Remember: OIL RIG — <strong>O</strong>xidation <strong>I</strong>s <strong>L</strong>oss, <strong>R</strong>eduction <strong>I</strong>s <strong>G</strong>ain (of electrons)</p>
+          </div>
+
+          <h2 class="chapter-heading">4. Effects of Oxidation in Daily Life</h2>
+
+          <h3 class="sub-heading">4.1 Corrosion</h3>
+          <div class="definition-box">
+            <h4>📖 What is Corrosion?</h4>
+            <p><strong>Corrosion</strong> is the slow deterioration of a metal due to chemical reactions with moisture and air in the environment.</p>
+            <p>• <strong>Rusting of iron:</strong> 4Fe + 3O₂ + xH₂O → 2Fe₂O₃.xH₂O (rust, reddish-brown)</p>
+            <p>• <strong>Blackening of silver:</strong> 2Ag + H₂S → Ag₂S + H₂ (tarnishing)</p>
+            <p>• <strong>Greenish layer on copper:</strong> Cu + CO₂ + H₂O → basic copper carbonate</p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Rancidity</h3>
+          <div class="definition-box">
+            <h4>📖 What is Rancidity?</h4>
+            <p><strong>Rancidity</strong> is the oxidation of oils and fats in food, producing an unpleasant smell and taste.</p>
+            <p><strong>Prevention:</strong></p>
+            <p>• Store food in airtight containers</p>
+            <p>• Add antioxidants (BHA, BHT) — used in chips, fried snacks</p>
+            <p>• Refrigerate food (low temperature slows oxidation)</p>
+            <p>• Replace air with nitrogen gas (nitrogen flushing in packaged food)</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Summary of All Reaction Types</h4>
+            <ul>
+              <li><strong>Combination:</strong> A + B → AB (two become one)</li>
+              <li><strong>Decomposition:</strong> AB → A + B (one splits into many)</li>
+              <li><strong>Displacement:</strong> A + BC → AC + B (one element displaces another)</li>
+              <li><strong>Double Displacement:</strong> AB + CD → AD + CB (exchange of partners)</li>
+              <li><strong>Redox:</strong> Simultaneous oxidation + reduction (always together)</li>
+            </ul>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with 💙 by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
     <button id="backToTop" class="back-to-top">↑</button>
-
-    <!-- JavaScript -->
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -7,83 +7,128 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Constructions</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Constructions</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Constructions - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">📐 Constructions — Class 10</h1>
+        <p class="page-description">Division of line segments, construction of tangents to a circle</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Introduction</h2>
+          <p>In Class 10 Constructions, we use only compass and ruler (straightedge). We learn two major constructions: <strong>dividing a line segment</strong> in a given ratio, and <strong>drawing tangents</strong> to a circle from an external point.</p>
+
+          <div class="analogy-box">
+            <h4>🌟 Why Learn Constructions?</h4>
+            <p>Geometric constructions are the basis of engineering drawings, architecture blueprints, and CAD design. Understanding how to precisely divide segments and draw tangents develops spatial reasoning and accuracy — skills used by architects, engineers, and surveyors every day!</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Division of a Line Segment</h2>
+          <h3 class="sub-heading">2.1 Dividing in a Given Ratio (Internal Division)</h3>
+
+          <div class="definition-box">
+            <h4>📖 Construction: Divide AB in ratio m:n</h4>
+            <p><strong>Given:</strong> Line segment AB</p>
+            <p><strong>Required:</strong> Point P on AB such that AP:PB = m:n</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Steps: Divide AB in ratio 3:2</h4>
+            <p><strong>Step 1:</strong> Draw a ray AX making an acute angle with AB.</p>
+            <p><strong>Step 2:</strong> Starting from A, mark (m+n) = 5 equal arcs on AX. Label them A₁, A₂, A₃, A₄, A₅.</p>
+            <p><strong>Step 3:</strong> Join A₅ to B.</p>
+            <p><strong>Step 4:</strong> Through A₃ (the mth point), draw a line parallel to A₅B (using the properties of parallel lines).</p>
+            <p><strong>Step 5:</strong> Let this parallel line meet AB at point P.</p>
+            <p><strong>Result:</strong> AP:PB = 3:2 ✓</p>
+            <p><em>Justification: By Basic Proportionality Theorem, P divides AB in ratio AA₃:A₃A₅ = 3:2</em></p>
+          </div>
+
+          <h3 class="sub-heading">2.2 Construction of a Triangle Similar to a Given Triangle</h3>
+
+          <div class="definition-box">
+            <h4>📖 Cases</h4>
+            <p><strong>Case 1 — Scale factor m/n where m &lt; n (smaller triangle):</strong></p>
+            <p>The new triangle is smaller than the given triangle.</p>
+            <p><strong>Case 2 — Scale factor m/n where m &gt; n (larger triangle):</strong></p>
+            <p>The new triangle is larger than the given triangle.</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Construct triangle similar to △ABC with scale factor 2/3</h4>
+            <p><strong>Given:</strong> △ABC. Required: △A'B'C' ~ △ABC with A'B'/AB = 2/3</p>
+            <p><strong>Step 1:</strong> Draw a ray BX from B making an acute angle with BC.</p>
+            <p><strong>Step 2:</strong> Mark 3 equal arcs on BX: B₁, B₂, B₃ (taking the larger denominator).</p>
+            <p><strong>Step 3:</strong> Join B₃C.</p>
+            <p><strong>Step 4:</strong> Through B₂ (the numerator point), draw B₂C' ∥ B₃C meeting BC at C'.</p>
+            <p><strong>Step 5:</strong> Through C', draw C'A' ∥ CA meeting BA at A'.</p>
+            <p><strong>Result:</strong> △A'B'C' is the required triangle with scale factor 2/3.</p>
+          </div>
+
+          <div class="important-note">
+            <h4>⚡ For scale factor m/n where m &gt; n (extend beyond)</h4>
+            <p>When the scale factor is greater than 1, the new triangle is larger. In this case, you extend BC beyond C and BA beyond A to locate C' and A' respectively.</p>
+            <p>Example: Scale factor 3/2 → Mark 3 arcs (larger number), join B₂C, draw B₃C' ∥ B₂C where C' is on BC extended.</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Construction of Tangents to a Circle</h2>
+
+          <h3 class="sub-heading">3.1 Tangent at a Point on the Circle</h3>
+          <div class="definition-box">
+            <h4>📖 Steps</h4>
+            <p><strong>Given:</strong> Circle with centre O. Point P on the circle.</p>
+            <p><strong>Step 1:</strong> Join OP.</p>
+            <p><strong>Step 2:</strong> Extend PO beyond P to get a ray.</p>
+            <p><strong>Step 3:</strong> Draw a line perpendicular to OP at P.</p>
+            <p><strong>Result:</strong> This perpendicular line is the tangent at P (since tangent ⊥ radius at contact point).</p>
+          </div>
+
+          <h3 class="sub-heading">3.2 Tangents from an External Point (Two Tangents)</h3>
+          <div class="example-box">
+            <h4>💡 Steps: Draw tangents from external point P to circle with centre O</h4>
+            <p><strong>Step 1:</strong> Join OP.</p>
+            <p><strong>Step 2:</strong> Find midpoint M of OP (perpendicular bisector of OP).</p>
+            <p><strong>Step 3:</strong> Draw a circle with M as centre and MO (= MP) as radius. This circle intersects the original circle at two points — call them A and B.</p>
+            <p><strong>Step 4:</strong> Join PA and PB.</p>
+            <p><strong>Result:</strong> PA and PB are the two required tangents from P. PA = PB (verified!).</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Justification (Why does this work?)</h4>
+            <p>The circle with diameter OP passes through A and B (since ∠OAP = ∠OBP = 90° — angle in semicircle).</p>
+            <p>Since OA ⊥ PA and OB ⊥ PB, PA and PB are tangents by the converse of "tangent ⊥ radius" theorem.</p>
+          </div>
+
+          <div class="key-points">
+            <h4>🔑 Important Rules for Constructions</h4>
+            <ul>
+              <li>Only compass and ruler — no protractor or measuring scale allowed.</li>
+              <li>Construction lines (arcs and rays) must remain visible — don't erase them.</li>
+              <li>Label all construction points clearly.</li>
+              <li>For parallel lines: use the property that equal alternate angles confirm parallelism.</li>
+              <li>For tangents: the key is that the angle in a semicircle is 90°.</li>
+            </ul>
+          </div>
+
+          <h2 class="chapter-heading">4. Summary</h2>
+          <ul>
+            <li><strong>Segment division m:n</strong> → Draw ray, mark (m+n) arcs, join last to B, draw parallel from mth point.</li>
+            <li><strong>Similar triangle (smaller)</strong> → Use denominator arcs, draw parallel from numerator point.</li>
+            <li><strong>Similar triangle (larger)</strong> → Use larger number of arcs, extend sides beyond original points.</li>
+            <li><strong>Tangent at point on circle</strong> → Draw radius, draw perpendicular at the point.</li>
+            <li><strong>Tangents from external point</strong> → Find midpoint of OP, draw circle with radius MP, intersections give tangent points.</li>
+          </ul>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

@@ -3,87 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Areas Related To Circles - Class 10 Maths - NoteHub</title>
+    <title>Areas Related to Circles - Class 10 Maths - NoteHub</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Mathematics</a> / <span>Areas Related to Circles</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/maths10.html">Maths</a> / <span>Areas Related To Circles</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Areas Related To Circles - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">⭕ Areas Related to Circles — Class 10</h1>
+        <p class="page-description">Sector, segment, arc length, and areas of combinations of figures</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Perimeter and Area of a Circle</h2>
+
+          <div class="definition-box">
+            <h4>📖 Basic Circle Formulas</h4>
+            <p><strong>Circumference (Perimeter) = 2πr</strong></p>
+            <p><strong>Area = πr²</strong></p>
+            <p>where r = radius of circle and π = 22/7 or 3.14 (approximately)</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Sector of a Circle</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Sector?</h4>
+            <p>A <strong>sector</strong> is the region bounded by two radii of a circle and the arc between them.</p>
+            <p>• <strong>Minor sector</strong>: the smaller region (angle &lt; 180°)</p>
+            <p>• <strong>Major sector</strong>: the larger region (angle &gt; 180°)</p>
+            <p>• <strong>Semicircle</strong>: when angle = 180°</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Sector Formulas (angle θ in degrees)</h4>
+            <p><strong>Length of arc = (θ/360°) × 2πr</strong></p>
+            <p><strong>Area of sector = (θ/360°) × πr²</strong></p>
+            <p>where θ is the central angle in degrees</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Think of it Like a Pizza Slice</h4>
+            <p>A sector is like a pizza slice! If the full pizza is 360°, a slice with angle θ is (θ/360)th of the total pizza. So its area is (θ/360) × total area. The curved edge of the slice is the arc length!</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 1: Sector Calculations</h4>
+            <p><strong>Q:</strong> A circle has radius 6 cm. Find the area and arc length of a sector with angle 60°.</p>
+            <p>Arc length = (60/360) × 2π × 6 = (1/6) × 12π = <strong>2π cm ≈ 6.28 cm</strong></p>
+            <p>Area of sector = (60/360) × π × 6² = (1/6) × 36π = <strong>6π cm² ≈ 18.86 cm²</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">3. Segment of a Circle</h2>
+
+          <div class="definition-box">
+            <h4>📖 What is a Segment?</h4>
+            <p>A <strong>segment</strong> is the region between a chord and the arc it cuts off.</p>
+            <p>• <strong>Minor segment</strong>: smaller region (corresponding to minor arc)</p>
+            <p>• <strong>Major segment</strong>: larger region (corresponding to major arc)</p>
+            <p><strong>Area of Minor Segment = Area of Sector – Area of Triangle</strong></p>
+            <p><strong>Area of Major Segment = Area of Circle – Area of Minor Segment</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 2: Area of Segment</h4>
+            <p><strong>Q:</strong> Find area of minor segment of a circle of radius 14 cm, if the central angle is 60°.</p>
+            <p>Area of sector AOB = (60/360) × π × 14² = (1/6) × 22/7 × 196 = (1/6) × 616 = 102.67 cm²</p>
+            <p>Since ∠AOB = 60° and OA = OB = 14 cm (radii), triangle AOB is equilateral.</p>
+            <p>Area of equilateral △AOB = (√3/4) × 14² = (√3/4) × 196 = 49√3 ≈ 84.87 cm²</p>
+            <p>Area of minor segment = 102.67 – 84.87 = <strong>≈ 17.8 cm²</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Areas of Combinations of Plane Figures</h2>
+          <p>Many problems involve finding areas of regions that are combinations of circles, triangles, rectangles, etc.</p>
+
+          <div class="key-points">
+            <h4>🔑 Strategy for Combination Problems</h4>
+            <ul>
+              <li>Identify the individual shapes that make up the figure.</li>
+              <li>Use appropriate formulas for each shape.</li>
+              <li>Add or subtract areas as needed.</li>
+              <li>Required Area = (Area of larger shape) ± (Areas of smaller shapes)</li>
+            </ul>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 3: Semicircle &amp; Rectangle</h4>
+            <p><strong>Q:</strong> A garden is in the shape of a rectangle 40 m × 20 m with a semicircle on one of the shorter sides. Find total area.</p>
+            <p>Area of rectangle = 40 × 20 = 800 m²</p>
+            <p>Radius of semicircle = 20/2 = 10 m</p>
+            <p>Area of semicircle = (1/2) × π × 10² = 50π ≈ 157 m²</p>
+            <p><strong>Total area = 800 + 157 = 957 m²</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 4: Shaded Area between square and circle</h4>
+            <p><strong>Q:</strong> A circle of radius 7 cm is inscribed in a square. Find area of the shaded region (four corners).</p>
+            <p>Side of square = diameter = 2 × 7 = 14 cm</p>
+            <p>Area of square = 14² = 196 cm²</p>
+            <p>Area of circle = π × 7² = 22/7 × 49 = 154 cm²</p>
+            <p>Shaded area (four corners) = 196 – 154 = <strong>42 cm²</strong></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example 5: Flower Petal Design</h4>
+            <p><strong>Q:</strong> Four equal circles each of radius 5 cm are drawn inside a square of side 10 cm. Find shaded area (central region).</p>
+            <p>Area of square = 100 cm²</p>
+            <p>Each circle has area = π × 5² = 25π, and 4 circles but they overlap inside the square... (advanced combination)</p>
+            <p>Area of 4 quarter-circles from corners = 4 × (1/4)πr² = π × 5² = 25π ≈ 78.5 cm²</p>
+            <p>Shaded region = 100 – 25π ≈ <strong>21.5 cm²</strong></p>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Formula Sheet — Areas Related to Circles</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Circle</h3>
+                <p>Circumference = 2πr</p>
+                <p>Area = πr²</p>
+              </div>
+              <div class="formula-card">
+                <h3>Sector (angle θ°)</h3>
+                <p>Arc = (θ/360) × 2πr</p>
+                <p>Area = (θ/360) × πr²</p>
+              </div>
+              <div class="formula-card">
+                <h3>Segment</h3>
+                <p>Area = Area(sector) – Area(triangle)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Special Triangles in Circle</h3>
+                <p>Equilateral (60°): (√3/4)a²</p>
+                <p>Right (90°): (1/2) × base × height</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>

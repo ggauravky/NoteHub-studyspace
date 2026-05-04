@@ -7,83 +7,170 @@
     <link rel="stylesheet" href="/assets/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .notes-section {
-            padding: 3rem 0;
-        }
-        .notes-content {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--color-white);
-            padding: 3rem;
-            border-radius: 16px;
-            box-shadow: var(--shadow-md);
-        }
-        .chapter-heading {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #667eea;
-            margin: 2.5rem 0 1rem;
-            padding: 1rem;
-            background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%);
-            border-left: 5px solid #667eea;
-            border-radius: 8px;
-        }
+        .notes-section{padding:3rem 0}.notes-content{max-width:900px;margin:0 auto;background:var(--color-white);padding:3rem;border-radius:16px;box-shadow:var(--shadow-md)}.chapter-heading{font-size:2rem;font-weight:700;color:#667eea;margin:2.5rem 0 1rem;padding:1rem;background:linear-gradient(135deg,#f8f9ff 0%,#e8ebff 100%);border-left:5px solid #667eea;border-radius:8px}.sub-heading{font-size:1.5rem;font-weight:600;color:#764ba2;margin:2rem 0 1rem;padding-left:1rem;border-left:4px solid #4facfe}.notes-content p{margin-bottom:1rem;line-height:1.8;color:#555;text-align:justify}.notes-content ul{list-style:none;padding:0;margin:1.5rem 0}.notes-content ul li{position:relative;padding:12px 16px 12px 45px;margin-bottom:10px;background:linear-gradient(135deg,#f8f9ff 0%,#fff 100%);border-left:4px solid #4facfe;border-radius:8px;color:#555;font-size:.95rem;transition:all .3s ease;box-shadow:0 2px 5px rgba(0,0,0,.05);line-height:1.6}.notes-content ul li:hover{background:linear-gradient(135deg,#e8f4ff 0%,#f8f9ff 100%);border-left-color:#667eea;transform:translateX(5px);box-shadow:0 4px 10px rgba(102,126,234,.15)}.notes-content ul li::before{content:"✓";position:absolute;left:15px;top:50%;transform:translateY(-50%);width:22px;height:22px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700}.example-box{background:#fff9e6;border-left:4px solid #ffc107;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.example-box h4{color:#ff9800;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.example-box p{color:#666;margin-bottom:.5rem}.important-note{background:#e8f5e9;border-left:4px solid #4caf50;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.important-note h4{color:#2e7d32;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.important-note p{color:#555}.definition-box{background:#e3f2fd;border-left:4px solid #2196f3;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.definition-box h4{color:#1565c0;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.definition-box p{color:#555}.analogy-box{background:#fff3e0;border-left:4px solid #ff9800;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.analogy-box h4{color:#e65100;font-size:1.1rem;margin-bottom:.8rem;font-weight:600}.analogy-box p{color:#666}.key-points{background:#f3e5f5;border-left:4px solid #9c27b0;padding:1.5rem;border-radius:8px;margin:1.5rem 0}.key-points h4{color:#6a1b9a;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.key-points ul li{background:transparent;border:none;box-shadow:none;padding:.5rem 0 .5rem 1.5rem}.key-points ul li::before{left:0}.comparison-table{width:100%;border-collapse:collapse;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,.1);border-radius:8px;overflow:hidden}.comparison-table th{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:1rem;text-align:left;font-weight:600}.comparison-table td{padding:1rem;border-bottom:1px solid #eee;color:#555}.comparison-table tr:hover{background:#f8f9ff}.formula-sheet{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:#fff;padding:3rem 2rem;border-radius:16px;margin-top:3rem;box-shadow:0 8px 24px rgba(102,126,234,.3)}.formula-sheet h2{text-align:center;font-size:2rem;margin-bottom:2rem;font-weight:700}.formula-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem}.formula-card{background:rgba(255,255,255,.95);padding:1.5rem;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,.1)}.formula-card h3{color:#667eea;font-size:1.1rem;margin-bottom:1rem;font-weight:600}.formula-card p{color:#555;margin-bottom:.8rem;font-family:'Courier New',monospace;font-size:.9rem;background:#f8f9ff;padding:.5rem;border-radius:6px}@media(max-width:768px){.notes-content{padding:1.5rem}.chapter-heading{font-size:1.5rem}.formula-grid{grid-template-columns:1fr}}
     </style>
 </head>
 <body>
-    <!-- Header Navigation -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">
-                    <span class="logo-icon">ðŸ“š</span>
-                    <span class="logo-text">NoteHub</span>
-                </div>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="/index.html">Home</a></li>
-                    <li><a href="/school.html" class="active">School</a></li>
-                    <li><a href="/college.html">College</a></li>
-                    <li><a href="/about.html">About</a></li>
-                    <li><a href="/contact.html">Contact</a></li>
-                </ul>
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Electricity</span></div></div>
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="container">
-            <a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class10.html">Class 10</a> / <a href="/subjects/school/class_10/science10.html">Science</a> / <span>Electricity</span>
-        </div>
-    </div>
-
-    <!-- Notes Section -->
     <section class="notes-section">
-        <div class="container">
-            <h1 class="page-title">Electricity - Class 10</h1>
-            <p class="page-description">
-                Notes coming soon...
-            </p>
+      <div class="container">
+        <h1 class="page-title">⚡ Electricity — Class 10</h1>
+        <p class="page-description">Ohm's law, resistance, series &amp; parallel circuits, heating effect, and power</p>
+        <div class="notes-content">
+
+          <h2 class="chapter-heading">1. Electric Charge and Current</h2>
+
+          <div class="definition-box">
+            <h4>📖 Key Definitions</h4>
+            <p><strong>Electric charge (Q):</strong> Property of matter that causes force between particles. SI unit: Coulomb (C)</p>
+            <p><strong>Electric current (I):</strong> Rate of flow of electric charge. I = Q/t</p>
+            <p>SI unit: Ampere (A) = Coulombs/second</p>
+            <p><strong>Conventional current:</strong> Flows from + to – (positive terminal to negative) — opposite to electron flow</p>
+          </div>
+
+          <div class="definition-box">
+            <h4>📖 Electric Potential and Potential Difference</h4>
+            <p><strong>Electric potential:</strong> Work done to bring unit positive charge from infinity to that point.</p>
+            <p><strong>Potential difference (V):</strong> Work done to move unit charge between two points.</p>
+            <p><strong>V = W/Q</strong> &nbsp;|&nbsp; SI unit: Volt (V)</p>
+            <p>1 Volt = 1 Joule per Coulomb (1 V = 1 J/C)</p>
+          </div>
+
+          <h2 class="chapter-heading">2. Ohm's Law</h2>
+
+          <div class="definition-box">
+            <h4>📖 Statement</h4>
+            <p>At constant temperature, the <strong>current through a conductor is directly proportional to the potential difference across its ends</strong>.</p>
+            <p><strong>V ∝ I → V = IR</strong></p>
+            <p>where R = resistance of the conductor</p>
+            <p>SI unit of resistance: Ohm (Ω) &nbsp;|&nbsp; 1Ω = 1 V/A</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Water Pipe Analogy</h4>
+            <p>Electricity is like water flowing through a pipe:<br>
+            • <strong>Voltage (V)</strong> = water pressure (higher pressure = more flow)<br>
+            • <strong>Current (I)</strong> = rate of water flow<br>
+            • <strong>Resistance (R)</strong> = narrowness of pipe (more narrow = more resistance = less flow)</p>
+          </div>
+
+          <h2 class="chapter-heading">3. Resistance and Resistivity</h2>
+
+          <div class="definition-box">
+            <h4>📖 Factors Affecting Resistance</h4>
+            <p><strong>R = ρl/A</strong></p>
+            <p>where ρ = resistivity (or specific resistance), l = length, A = cross-sectional area</p>
+            <p>• R ∝ l (longer wire → more resistance)</p>
+            <p>• R ∝ 1/A (thicker wire → less resistance)</p>
+            <p>• ρ depends on material and temperature</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Resistance Calculation</h4>
+            <p><strong>Q:</strong> A wire of resistivity 1.6 × 10⁻⁸ Ωm has length 1 m and area 1 mm² = 1 × 10⁻⁶ m². Find resistance.</p>
+            <p>R = ρl/A = (1.6 × 10⁻⁸ × 1) / (1 × 10⁻⁶) = 1.6 × 10⁻² Ω = <strong>0.016 Ω</strong></p>
+          </div>
+
+          <h2 class="chapter-heading">4. Series and Parallel Circuits</h2>
+
+          <h3 class="sub-heading">4.1 Series Circuit</h3>
+          <div class="definition-box">
+            <h4>📖 Series Combination</h4>
+            <p><strong>Total Resistance: R = R₁ + R₂ + R₃</strong></p>
+            <p>Same current flows through all components: I = I₁ = I₂ = I₃</p>
+            <p>Voltage divides: V = V₁ + V₂ + V₃</p>
+            <p><em>Disadvantage: If one component fails, all stop working (old Christmas lights!)</em></p>
+          </div>
+
+          <h3 class="sub-heading">4.2 Parallel Circuit</h3>
+          <div class="definition-box">
+            <h4>📖 Parallel Combination</h4>
+            <p><strong>1/R = 1/R₁ + 1/R₂ + 1/R₃</strong></p>
+            <p>Same voltage across all: V = V₁ = V₂ = V₃</p>
+            <p>Current divides: I = I₁ + I₂ + I₃</p>
+            <p><em>Advantage: If one fails, others keep working. Used in home wiring!</em></p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Series-Parallel Circuit</h4>
+            <p><strong>Q:</strong> Resistors 3Ω, 6Ω are in parallel. The combination is in series with 4Ω. Total voltage = 10V. Find current through each resistor.</p>
+            <p>Parallel combination: 1/R = 1/3 + 1/6 = 2/6 + 1/6 = 3/6 = 1/2 → R_parallel = 2Ω</p>
+            <p>Total R = 4 + 2 = 6Ω</p>
+            <p>Total I = V/R = 10/6 = 5/3 A</p>
+            <p>Voltage across 4Ω = (5/3) × 4 = 20/3 V</p>
+            <p>Voltage across parallel = 10 – 20/3 = 10/3 V</p>
+            <p>I through 3Ω = (10/3)/3 = 10/9 A &nbsp;|&nbsp; I through 6Ω = (10/3)/6 = 5/9 A</p>
+          </div>
+
+          <h2 class="chapter-heading">5. Heating Effect of Electric Current</h2>
+
+          <div class="definition-box">
+            <h4>📖 Joule's Law of Heating</h4>
+            <p>Heat produced in a conductor: <strong>H = I²Rt</strong></p>
+            <p>where H = heat (Joules), I = current (A), R = resistance (Ω), t = time (s)</p>
+            <p>Also: P = I²R = V²/R = VI (power dissipated as heat)</p>
+          </div>
+
+          <div class="analogy-box">
+            <h4>🌟 Applications of Heating Effect</h4>
+            <p>• <strong>Electric bulb:</strong> Tungsten filament gets so hot (3000°C) it glows<br>
+            • <strong>Electric iron / heater / toaster:</strong> Heating by high-resistance element<br>
+            • <strong>Fuse:</strong> Thin wire melts when excess current flows — saves circuit<br>
+            • <strong>Electric kettle:</strong> Immersion heater boils water</p>
+          </div>
+
+          <h2 class="chapter-heading">6. Electric Power</h2>
+
+          <div class="definition-box">
+            <h4>📖 Power</h4>
+            <p><strong>P = VI = I²R = V²/R</strong></p>
+            <p>SI unit: Watt (W) = Joules/second</p>
+            <p><strong>1 kWh (kilowatt-hour) = commercial unit of electrical energy</strong></p>
+            <p>1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ J = 3.6 MJ</p>
+            <p>Electricity bill = Power (kW) × Time (h) × Rate (₹/kWh)</p>
+          </div>
+
+          <div class="example-box">
+            <h4>💡 Example: Electricity Bill</h4>
+            <p><strong>Q:</strong> A house uses a 1500W AC, 5 bulbs of 60W each, and a 100W TV for 5 hours daily. Find monthly bill at ₹5/kWh.</p>
+            <p>Daily power = 1500 + 5×60 + 100 = 1500 + 300 + 100 = 1900 W = 1.9 kW</p>
+            <p>Daily units = 1.9 × 5 = 9.5 kWh</p>
+            <p>Monthly units = 9.5 × 30 = 285 kWh</p>
+            <p>Bill = 285 × 5 = <strong>₹1425</strong></p>
+          </div>
+
+          <div class="formula-sheet">
+            <h2>📋 Electricity Formula Sheet</h2>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <h3>Basic</h3>
+                <p>I = Q/t</p>
+                <p>V = W/Q</p>
+                <p>V = IR (Ohm's Law)</p>
+              </div>
+              <div class="formula-card">
+                <h3>Resistance</h3>
+                <p>R = ρl/A</p>
+                <p>Series: R = R₁+R₂+R₃</p>
+                <p>Parallel: 1/R = 1/R₁+1/R₂+1/R₃</p>
+              </div>
+              <div class="formula-card">
+                <h3>Power &amp; Energy</h3>
+                <p>P = VI = I²R = V²/R</p>
+                <p>H = I²Rt (Joule's law)</p>
+                <p>1 kWh = 3.6×10⁶ J</p>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="footer-credit">Made with ðŸ’™ by Gaurav, Nikhil & Devansh</p>
-            <p class="footer-copyright">Â© 2025 NoteHub StudySpace</p>
-        </div>
-    </footer>
-
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">â†‘</button>
-
-    <!-- JavaScript -->
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
     <script src="/assets/js/main.js"></script>
 </body>
 </html>
