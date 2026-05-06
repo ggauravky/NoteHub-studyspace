@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science - Class 11 - NoteHub</title>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .subject-section { margin-bottom: 4rem; }
+        .subject-heading { font-size: 2rem; font-weight: 700; color: #667eea; margin: 2rem 0 1.5rem; padding: 1rem; background: linear-gradient(135deg, #f8f9ff 0%, #e8ebff 100%); border-left: 5px solid #667eea; border-radius: 8px; }
+        .topic-content ul { list-style: none; padding: 0; margin: 1.5rem 0; }
+        .topic-content ul li { position: relative; padding: 12px 16px 12px 45px; margin-bottom: 10px; background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%); border-left: 4px solid #4facfe; border-radius: 8px; color: #555; font-size: 0.95rem; transition: all 0.3s ease; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); }
+        .topic-content ul li:hover { background: linear-gradient(135deg, #e8f4ff 0%, #f8f9ff 100%); border-left-color: #667eea; transform: translateX(5px); box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15); }
+        .topic-content ul li::before { content: "✓"; position: absolute; left: 15px; top: 50%; transform: translateY(-50%); width: 22px; height: 22px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; }
+        .topic-content > p { background: #fff9e6; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #ffc107; margin-bottom: 1.5rem; line-height: 1.8; color: #555; }
+        .topic-content p strong { color: #667eea; font-size: 1.05rem; display: block; margin-bottom: 8px; }
+        .formula-box { background: #f0f9ff; border-left: 4px solid #0ea5e9; padding: 15px 20px; border-radius: 8px; margin: 1rem 0; font-family: 'Courier New', monospace; }
+    </style>
+</head>
+<body>
+    <header class="header"><div class="container"><nav class="navbar"><div class="logo"><span class="logo-icon">📚</span><span class="logo-text">NoteHub</span></div><ul class="nav-menu" id="navMenu"><li><a href="/index.html">Home</a></li><li><a href="/school.html" class="active">School</a></li><li><a href="/college.html">College</a></li><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li></ul><div class="hamburger" id="hamburger"><span></span><span></span><span></span></div></nav></div></header>
+    <div class="breadcrumb"><div class="container"><a href="/index.html">Home</a> / <a href="/school.html">School</a> / <a href="/class11.html">Class 11</a> / <span>Computer Science</span></div></div>
+    <section class="content-section"><div class="container">
+        <h1 class="page-title">💻 Class 11 Computer Science</h1>
+        <p class="page-description">Complete chapter-wise notes for Computer Science (Python)</p>
+        <div class="topics-list">            <details class="topic-item">
+                <summary>Chapter 1: Computer System Overview</summary>
+                <div class="topic-content">
+                    <p>Hardware, software, OS, memory, and logic gates.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Basic Computer Organisation</li><li>Types of Software</li><li>Operating System</li><li>Boolean Logic</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/computer-system.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 2: Data Representation</summary>
+                <div class="topic-content">
+                    <p>Number systems, ASCII, ISCII, and Unicode.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Binary, Octal, Decimal, Hexadecimal</li><li>Number Conversions</li><li>ASCII and Unicode</li><li>Encoding Schemes</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/data-representation.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 3: Introduction to Python</summary>
+                <div class="topic-content">
+                    <p>Python basics, variables, datatypes, and operators.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Python Interpreter</li><li>Variables and Data Types</li><li>Operators</li><li>Input and Output</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/python-intro.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 4: Flow of Control</summary>
+                <div class="topic-content">
+                    <p>If-else statements, for loops, and while loops.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Selection (if, elif, else)</li><li>Iteration (for, while)</li><li>Break and Continue</li><li>Nested Loops</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/flow-of-control.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 5: Strings in Python</summary>
+                <div class="topic-content">
+                    <p>String operations, slicing, and built-in methods.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>String Traversal</li><li>String Operators</li><li>String Slicing</li><li>String Methods and Functions</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/python-strings.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 6: Lists in Python</summary>
+                <div class="topic-content">
+                    <p>List creation, indexing, mutability, and list methods.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>List Operations</li><li>Traversing a List</li><li>List Methods</li><li>Nested Lists</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/python-lists.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 7: Tuples and Dictionaries</summary>
+                <div class="topic-content">
+                    <p>Immutable tuples, key-value dictionaries, and their methods.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Tuple Creation and Access</li><li>Tuple Operations</li><li>Dictionary Key-Value Pairs</li><li>Dictionary Methods</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/tuples-dictionaries.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>            <details class="topic-item">
+                <summary>Chapter 8: Societal Impacts</summary>
+                <div class="topic-content">
+                    <p>Cyber safety, digital footprint, cybercrime, and e-waste.</p>
+                    <p><strong>Key Topics:</strong></p>
+                    <ul><li>Digital Footprint</li><li>Netiquette and Cyber Safety</li><li>Cybercrime and IT Act</li><li>E-waste Management</li>                    </ul>
+                    <a href="/schoolNotes/class11/computer/societal-impacts.html" class="btn-secondary">View Complete Notes</a>
+                </div>
+            </details>        </div>
+    </div></section>
+    <footer class="footer"><div class="container"><p class="footer-credit">Made with 💙 by Gaurav, Nikhil &amp; Devansh</p><p class="footer-copyright">© 2025 NoteHub StudySpace</p></div></footer>
+    <button id="backToTop" class="back-to-top">↑</button>
+    <script src="/assets/js/main.js"></script>
+</body>
+</html>
