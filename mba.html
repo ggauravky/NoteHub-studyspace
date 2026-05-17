@@ -1,43 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comming Soon | NoteHub</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>MBA Notes - NoteHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-
-    .coming-soon {
-        text-align: center;
-        padding: 100px 20px;
-    }
-
-    .coming-soon-title {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-
-    .coming-soon-message {
-        font-size: 24px;
-        margin-bottom: 40px;
-    }
-
-    .coming-soon a {
-        text-decoration: none;
-        color: #fff;
-        background-color: #007BFF;
-        padding: 12px 24px;
-        border-radius: 5px;
-        font-size: 18px;
-    }
-
-    .coming-soon a:hover {
-        background-color: #0056b3;
-    }
-
-    </style>
 </head>
 <body>
     <header class="header">
@@ -48,11 +17,11 @@
                     <span class="logo-text">NoteHub</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../school.html" >School</a></li>
-                    <li><a href="../college.html">College</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="school.html" >School</a></li>
+                    <li><a href="college.html" class="active">College</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -63,17 +32,25 @@
         </div>
     </header>
 
-    <section class="coming-soon">
+    <div class="breadcrumb">
         <div class="container">
-            <h1 class="coming-soon-title">Coming Soon!</h1>
-            <p class="coming-soon-message">We're working hard to bring you this feature. Stay tuned!</p>
-            <a href="../index.html" class="btn-primary">Back to Home</a>
+            <a href="index.html">Home</a> / <a href="college.html">College</a> / <span>MBA</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">MBA Notes</h1>
+            <p class="page-description">Select your semester to access comprehensive Master of Business Administration notes</p>
+
+            <div class="cards-grid">
+                <a href="/subjects/college/mba/sem1/sem1_mba.html" class="content-card"><div class="card-icon">1️⃣</div><h3>Semester 1</h3><p>Mgmt & OB | Economics | Financial Accounting | Statistics | Communication</p></a>
+                <a href="/subjects/college/mba/sem2/sem2_mba.html" class="content-card"><div class="card-icon">2️⃣</div><h3>Semester 2</h3><p>Financial Mgmt | Marketing | HRM | Operations | Research Methods</p></a>
+                <a href="/subjects/college/mba/sem3/sem3_mba.html" class="content-card"><div class="card-icon">3️⃣</div><h3>Semester 3</h3><p>Strategic Mgmt | Ethics | Consumer Behavior | Investment | Labor Laws</p></a>
+                <a href="/subjects/college/mba/sem4/sem4_mba.html" class="content-card"><div class="card-icon">4️⃣</div><h3>Semester 4</h3><p>International Business | SCM | Digital Marketing | Derivatives | Project</p></a>
+            </div>
         </div>
     </section>
-
-
-
-
 
     <footer class="footer">
         <div class="container">
@@ -81,9 +58,7 @@
             <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
         </div>
     </footer>
-
     <button id="backToTop" class="back-to-top">↑</button>
-
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

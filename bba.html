@@ -1,43 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comming Soon | NoteHub</title>
-    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>BBA Notes - NoteHub</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-
-    .coming-soon {
-        text-align: center;
-        padding: 100px 20px;
-    }
-
-    .coming-soon-title {
-        font-size: 48px;
-        margin-bottom: 20px;
-    }
-
-    .coming-soon-message {
-        font-size: 24px;
-        margin-bottom: 40px;
-    }
-
-    .coming-soon a {
-        text-decoration: none;
-        color: #fff;
-        background-color: #007BFF;
-        padding: 12px 24px;
-        border-radius: 5px;
-        font-size: 18px;
-    }
-
-    .coming-soon a:hover {
-        background-color: #0056b3;
-    }
-
-    </style>
 </head>
 <body>
     <header class="header">
@@ -48,11 +17,11 @@
                     <span class="logo-text">NoteHub</span>
                 </div>
                 <ul class="nav-menu" id="navMenu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../school.html" >School</a></li>
-                    <li><a href="../college.html">College</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="school.html" >School</a></li>
+                    <li><a href="college.html" class="active">College</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
                 <div class="hamburger" id="hamburger">
                     <span></span>
@@ -63,17 +32,27 @@
         </div>
     </header>
 
-    <section class="coming-soon">
+    <div class="breadcrumb">
         <div class="container">
-            <h1 class="coming-soon-title">Coming Soon!</h1>
-            <p class="coming-soon-message">We're working hard to bring you this feature. Stay tuned!</p>
-            <a href="../index.html" class="btn-primary">Back to Home</a>
+            <a href="index.html">Home</a> / <a href="college.html">College</a> / <span>BBA</span>
+        </div>
+    </div>
+
+    <section class="content-section">
+        <div class="container">
+            <h1 class="page-title">BBA Notes</h1>
+            <p class="page-description">Select your semester to access comprehensive Business Administration notes</p>
+
+            <div class="cards-grid">
+                <a href="/subjects/college/bba/sem1/sem1_bba.html" class="content-card"><div class="card-icon">1️⃣</div><h3>Semester 1</h3><p>Principles of Mgmt | Communication | Accounting | Microeconomics | Maths</p></a>
+                <a href="/subjects/college/bba/sem2/sem2_bba.html" class="content-card"><div class="card-icon">2️⃣</div><h3>Semester 2</h3><p>Org Behavior | Business Env | Macroeconomics | Cost Accounting | Statistics</p></a>
+                <a href="/subjects/college/bba/sem3/sem3_bba.html" class="content-card"><div class="card-icon">3️⃣</div><h3>Semester 3</h3><p>Marketing | Finance | HRM | Business Law | Mgmt Accounting</p></a>
+                <a href="/subjects/college/bba/sem4/sem4_bba.html" class="content-card"><div class="card-icon">4️⃣</div><h3>Semester 4</h3><p>Operations | Consumer Behavior | Ethics | Company Law | Entrepreneurship</p></a>
+                <a href="/subjects/college/bba/sem5/sem5_bba.html" class="content-card"><div class="card-icon">5️⃣</div><h3>Semester 5</h3><p>Strategic Mgmt | Intl Business | E-Commerce | Research | Investment</p></a>
+                <a href="/subjects/college/bba/sem6/sem6_bba.html" class="content-card"><div class="card-icon">6️⃣</div><h3>Semester 6</h3><p>Retail Mgmt | Project Mgmt | Digital Marketing | Taxation Law</p></a>
+            </div>
         </div>
     </section>
-
-
-
-
 
     <footer class="footer">
         <div class="container">
@@ -81,9 +60,7 @@
             <p class="footer-copyright">© 2025 NoteHub StudySpace</p>
         </div>
     </footer>
-
     <button id="backToTop" class="back-to-top">↑</button>
-
-    <script src="../assets/js/main.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
