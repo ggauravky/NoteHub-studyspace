@@ -874,3 +874,252 @@ a{
         right: 20px;
     }
 }
+
+/* =========================================================================
+   V2.0 HOMEPAGE OVERHAUL & POLISH
+   ========================================================================= */
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+.mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+
+/* Hero Section Enhancements */
+.hero.animated-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #6a11cb, #2575fc, #8e2de2, #4a00e0);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+.hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(5px);
+    animation: fadeInUp 0.5s ease;
+}
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 2rem;
+    animation: fadeInUp 1.4s ease;
+}
+.btn-outline {
+    display: inline-block;
+    padding: 12px 32px;
+    background: transparent;
+    color: var(--color-white);
+    border: 2px solid var(--color-white);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+.btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.pulse-btn {
+    animation: pulse 2s infinite;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+    70% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
+}
+.cursor {
+    display: inline-block;
+    width: 3px;
+    background-color: white;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Floating Shapes */
+.floating-shape {
+    position: absolute;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+.shape-1 { width: 300px; height: 300px; top: -100px; left: -50px; animation: float 6s ease-in-out infinite; }
+.shape-2 { width: 200px; height: 200px; bottom: -50px; right: -50px; animation: float 8s ease-in-out infinite reverse; }
+.shape-3 { width: 100px; height: 100px; top: 50%; left: 80%; animation: float 5s ease-in-out infinite; }
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.hero-content { position: relative; z-index: 1; }
+
+/* Bento Box Grid */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+.bento-card {
+    background: var(--color-white);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bento-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.bento-large {
+    grid-column: span 2;
+    grid-row: span 2;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+}
+.bento-medium {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.bg-gradient-1 {
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    color: #fff;
+}
+.bg-gradient-1 h3, .bg-gradient-1 p { color: #fff; }
+.bento-small {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.bento-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Portals Section */
+.portal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+.portal-card {
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    text-decoration: none;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease;
+    display: block;
+}
+.portal-card:hover {
+    transform: translateY(-10px);
+}
+.school-portal {
+    background: linear-gradient(135deg, #FF9A9E 0%, #FECFEF 99%, #FECFEF 100%);
+    box-shadow: 0 15px 30px rgba(255, 154, 158, 0.3);
+}
+.college-portal {
+    background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    box-shadow: 0 15px 30px rgba(161, 140, 209, 0.3);
+}
+.portal-content {
+    position: relative;
+    z-index: 2;
+}
+.portal-icon { font-size: 4rem; margin-bottom: 1rem; }
+.portal-card h3 { font-size: 2rem; margin-bottom: 1rem; color: #fff; }
+.portal-card p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; color: #fff;}
+.portal-link-text {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(255,255,255,0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+}
+
+.text-center { text-align: center; }
+.section-header { margin-bottom: 3rem; }
+
+/* Responsive Overrides for V2.0 */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .bento-large { grid-column: span 2; grid-row: auto; }
+    .bento-medium { grid-column: span 2; grid-row: auto; }
+    .bento-small { grid-column: span 1; grid-row: auto; }
+}
+
+@media (max-width: 768px) {
+    /* Overriding the old broken mobile menu */
+    .nav-menu {
+        position: fixed !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) scale(0.9) !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999;
+        transition: all 0.3s ease !important;
+    }
+    .nav-menu.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        transform: translate(-50%, -50%) scale(1) !important;
+    }
+    .nav-menu a {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+    
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .bento-large, .bento-medium, .bento-small { grid-column: span 1; }
+    .portal-grid { grid-template-columns: 1fr; }
+    .hero-buttons { flex-direction: column; }
+    .hero-title { font-size: 2.2rem !important; }
+}

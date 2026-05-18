@@ -6,15 +6,19 @@
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
     <title>NoteHub - Your Smart Study Space</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
     <header class="header">
         <div class="container">
             <nav class="navbar">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <span class="logo-icon">📚</span>
                     <span class="logo-text">NoteHub</span>
-                </div>
+                </a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="school.html">School</a></li>
@@ -31,74 +35,92 @@
         </div>
     </header>
 
-
-    <section class="hero">
+    <section class="hero animated-bg">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Welcome to NoteHub</h1>
-                <p class="hero-subtitle">Your Smart Study Space – Notes for School & College Students</p>
-                <p class="hero-description">All your school and college notes in one place. Learn smarter, not harder.</p>
-                <a href="#quick-access" class="btn-primary">Start Learning</a>
+                <div class="hero-badge">✨ V2.0 Now Live</div>
+                <h1 class="hero-title">Your ultimate hub for <br><span class="typing-text"></span><span class="cursor">|</span></h1>
+                <p class="hero-description">All your school and college academic materials in one place. Beautifully designed, meticulously organized, and 100% free.</p>
+                <div class="hero-buttons">
+                    <a href="#quick-access" class="btn-primary pulse-btn">Start Learning</a>
+                    <a href="about.html" class="btn-outline">Our Story</a>
+                </div>
             </div>
+            
+            <!-- Floating Decorative Elements -->
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
         </div>
     </section>
 
-
-    <section class="features">
+    <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Why NoteHub?</h2>
-            <p class="section-description">
-                NoteHub is built for learners who value simplicity and quality. Whether you're revising for exams or exploring new topics, 
-                our platform organizes study materials by class, subject, and topic — helping you focus only on what matters.
-            </p>
+            <div class="section-header">
+                <h2 class="section-title">Why choose NoteHub?</h2>
+                <p class="section-description">Built for modern students who demand simplicity, speed, and premium quality in their study materials.</p>
+            </div>
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📖</div>
-                    <h3>Easy Access to Notes</h3>
-                    <p>Find all your study materials organized by class and subject, accessible anytime, anywhere.</p>
+            <!-- Modern Bento Box Grid -->
+            <div class="bento-grid">
+                <!-- Large Card -->
+                <div class="bento-card bento-large">
+                    <div class="bento-icon">⚡</div>
+                    <h3>Lightning Fast Navigation</h3>
+                    <p>Stop wasting time digging through PDFs. Our hierarchical hub system lets you jump from your Class to your Subject to your exact Chapter in less than 3 seconds.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">⚡</div>
-                    <h3>Fast Navigation</h3>
-                    <p>Intuitive interface lets you quickly navigate to the exact topic you need without any hassle.</p>
+                
+                <!-- Medium Card -->
+                <div class="bento-card bento-medium bg-gradient-1">
+                    <div class="bento-icon">📖</div>
+                    <h3>Structured Perfectly</h3>
+                    <p>Every note features beautiful formula boxes, code snippets, and key definitions.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">🌍</div>
-                    <h3>Free & Open for Everyone</h3>
-                    <p>Completely free platform dedicated to making quality education accessible to all students.</p>
+                
+                <!-- Small Cards -->
+                <div class="bento-card bento-small">
+                    <div class="bento-icon">🌍</div>
+                    <h3>100% Free Forever</h3>
+                    <p>Education shouldn't have a paywall.</p>
                 </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">💡</div>
-                    <h3>Created by Students</h3>
-                    <p>Created by students, for students. We understand what you need to excel in your studies.</p>
+                
+                <div class="bento-card bento-small">
+                    <div class="bento-icon">💡</div>
+                    <h3>By Students, For Students</h3>
+                    <p>We know exactly what you need to ace exams.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section class="quick-access" id="quick-access">
         <div class="container">
-            <h2 class="section-title">Quick Access</h2>
-            <div class="access-grid">
-                <a href="school.html" class="access-card">
-                    <div class="access-icon">🎓</div>
-                    <h3>School Notes</h3>
-                    <p>Classes 9-12</p>
+            <div class="section-header text-center">
+                <h2 class="section-title">Select Your Portal</h2>
+                <p class="section-description">Dive right into your curriculum.</p>
+            </div>
+            
+            <div class="portal-grid">
+                <a href="school.html" class="portal-card school-portal">
+                    <div class="portal-content">
+                        <div class="portal-icon">🎓</div>
+                        <h3>School Notes</h3>
+                        <p>Comprehensive curriculum for Classes 9 through 12 across all major streams.</p>
+                        <span class="portal-link-text">Enter Portal &rarr;</span>
+                    </div>
                 </a>
-                <a href="college.html" class="access-card">
-                    <div class="access-icon">🏛️</div>
-                    <h3>College Notes</h3>
-                    <p>BCA, B.Tech & More</p>
+                
+                <a href="college.html" class="portal-card college-portal">
+                    <div class="portal-content">
+                        <div class="portal-icon">🏛️</div>
+                        <h3>College Notes</h3>
+                        <p>Deep academic content for B.Tech, BCA, BBA, and MBA degree programs.</p>
+                        <span class="portal-link-text">Enter Portal &rarr;</span>
+                    </div>
                 </a>
             </div>
         </div>
     </section>
-
 
     <footer class="footer">
         <div class="container">
@@ -107,9 +129,7 @@
         </div>
     </footer>
 
-
     <button id="backToTop" class="back-to-top">↑</button>
-
 
     <script src="assets/js/main.js"></script>
 </body>
